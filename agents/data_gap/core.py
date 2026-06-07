@@ -3,6 +3,7 @@
 from typing import List, Dict, Any
 from shared.schemas import OpsSignal, RootCauseReport, ImpactAnalysis, PreventionPlan
 from orchestration import RLMClient
+import json
 
 class DataGapAgent:
     """

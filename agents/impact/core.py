@@ -3,6 +3,7 @@
 from typing import List, Dict, Any
 from shared.schemas import OpsSignal, RootCauseReport, ImpactAnalysis
 from orchestration import RLMClient
+import json
 
 class CapabilityImpactAgent:
     """

@@ -7,7 +7,7 @@ import json
 import asyncio
 from shared.schemas import OpsSignal, Runbook, RunbookStatus
 from orchestration.config import get_logger
-from orchestration.database import RunbookRegistryDB
+from orchestration.database import RunbookDB
 from orchestration import RLMClient # Import RLMClient from package namespace
 
 # Import the core logic of each agent (now as classes)
@@ -18,7 +18,7 @@ from agents.eval.core import EvalAgent
 from agents.fix_plan.core import FixPlanAgent
 
 LOGGER = get_logger(__name__)
-db = RunbookRegistryDB()
+db = RunbookDB()
 
 async def execute_pipeline(signal_data: dict) -> Runbook:
     """
@@ -49,7 +49,7 @@ async def execute_pipeline(signal_data: dict) -> Runbook:
     print("  ...querying Runbook Registry for past incidents...")
     await asyncio.sleep(0.5)
     
-    historical_data = await db.get_historical_fix(ops_signal.signal_type, ops_signal.summary)
+    historical_data = db.get_historical_fix(ops_signal.signal_type, ops_signal.summary)
     
     if historical_data:
         print("  ⚡ HISTORICAL FIX FOUND! Bypassing AI Agents.")
@@ -131,7 +131,7 @@ async def execute_pipeline(signal_data: dict) -> Runbook:
     print("-" * 60)
     print("  ...saving verified runbook to persistent storage...")
     final_runbook.status = RunbookStatus.COMPLETED # Set status before saving
-    await db.save_runbook(final_runbook)
+    db.save_runbook(final_runbook)
     print("  ✅ Save complete.")
     
     print("\n" + "="*60)

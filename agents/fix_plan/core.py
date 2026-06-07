@@ -46,7 +46,7 @@ class FixPlanAgent:
 
         owner_info = owner_tools.CAPABILITY_OWNERS.get(mapped_key, {"primary_owner": "Search Lead"})
         owner = owner_info.get("primary_owner", "Search Lead")
-        needs_approval = approval_tools.requires_human_approval(root_cause.affected_capability, impact.business_impact, eval_report.assessment_state)
+        needs_approval = approval_tools.requires_human_approval(root_cause.affected_capability, impact.business_impact)
 
         print(f"[FixPlanAgent]: Fix plan generated for {signal.signal_id}. Owner: {owner}, Approval Required: {needs_approval}")
 

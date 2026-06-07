@@ -15,7 +15,7 @@ class EvalAgent:
     """
     def __init__(self, rlm_client: RLMClient):
         self.rlm_client = rlm_client # Retain for consistency, even if not directly used here
-        print("[EvalAgent]: Initialized (RLMClient for potential future use)."
+        print("[EvalAgent]: Initialized (RLMClient for potential future use).")
 
     async def run(self, signal: OpsSignal, root_cause_report: RootCauseReport) -> EvalReport:
         """Run shadow test comparison and generate evaluation report."""
