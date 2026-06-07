@@ -1,0 +1,3206 @@
+{
+  "category": "bags",
+  "description": "Mock bag catalog data for laptop, travel, and outdoor search simulations.",
+  "products": [
+    {
+      "id": "BAGS-001",
+      "title": "Commuter Laptop Backpack 001",
+      "description": "Commuter Laptop Backpack 001 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 66.25,
+      "stock": 7,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-002",
+      "title": "Canvas Messenger Bag 002",
+      "description": "Canvas Messenger Bag 002 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 83.5,
+      "stock": 36,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-003",
+      "title": "Waterproof Travel Duffel 003",
+      "description": "Waterproof Travel Duffel 003 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 100.75,
+      "stock": 49,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-004",
+      "title": "Rolltop City Pack 004",
+      "description": "Rolltop City Pack 004 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 117.0,
+      "stock": 62,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-005",
+      "title": "Trail Hydration Pack 005",
+      "description": "Trail Hydration Pack 005 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 134.25,
+      "stock": 75,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-006",
+      "title": "Executive Leather Brief 006",
+      "description": "Executive Leather Brief 006 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 151.5,
+      "stock": 88,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-007",
+      "title": "Commuter Laptop Backpack 007",
+      "description": "Commuter Laptop Backpack 007 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 168.75,
+      "stock": 101,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-008",
+      "title": "Canvas Messenger Bag 008",
+      "description": "Canvas Messenger Bag 008 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 185.0,
+      "stock": 114,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-009",
+      "title": "Waterproof Travel Duffel 009",
+      "description": "Waterproof Travel Duffel 009 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 202.25,
+      "stock": 127,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-010",
+      "title": "Rolltop City Pack 010",
+      "description": "Rolltop City Pack 010 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 219.5,
+      "stock": 140,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-011",
+      "title": "Trail Hydration Pack 011",
+      "description": "Trail Hydration Pack 011 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 236.75,
+      "stock": 153,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-012",
+      "title": "Executive Leather Brief 012",
+      "description": "Executive Leather Brief 012 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 52.0,
+      "stock": 166,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-013",
+      "title": "Commuter Laptop Backpack 013",
+      "description": "Commuter Laptop Backpack 013 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 69.25,
+      "stock": 179,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-014",
+      "title": "Canvas Messenger Bag 014",
+      "description": "Canvas Messenger Bag 014 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 86.5,
+      "stock": 192,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-015",
+      "title": "Waterproof Travel Duffel 015",
+      "description": "Waterproof Travel Duffel 015 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 103.75,
+      "stock": 14,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-016",
+      "title": "Rolltop City Pack 016",
+      "description": "Rolltop City Pack 016 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 120.0,
+      "stock": 27,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-017",
+      "title": "Trail Hydration Pack 017",
+      "description": "Trail Hydration Pack 017 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 137.25,
+      "stock": 40,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-018",
+      "title": "Executive Leather Brief 018",
+      "description": "Executive Leather Brief 018 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 154.5,
+      "stock": 53,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-019",
+      "title": "Commuter Laptop Backpack 019",
+      "description": "Commuter Laptop Backpack 019 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 171.75,
+      "stock": 66,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-020",
+      "title": "Canvas Messenger Bag 020",
+      "description": "Canvas Messenger Bag 020 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 188.0,
+      "stock": 79,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-021",
+      "title": "Waterproof Travel Duffel 021",
+      "description": "Waterproof Travel Duffel 021 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 205.25,
+      "stock": 92,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-022",
+      "title": "Rolltop City Pack 022",
+      "description": "Rolltop City Pack 022 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 222.5,
+      "stock": 105,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-023",
+      "title": "Trail Hydration Pack 023",
+      "description": "Trail Hydration Pack 023 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 239.75,
+      "stock": 118,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-024",
+      "title": "Executive Leather Brief 024",
+      "description": "Executive Leather Brief 024 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 55.0,
+      "stock": 131,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-025",
+      "title": "Commuter Laptop Backpack 025",
+      "description": "Commuter Laptop Backpack 025 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 72.25,
+      "stock": 144,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-026",
+      "title": "Canvas Messenger Bag 026",
+      "description": "Canvas Messenger Bag 026 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 89.5,
+      "stock": 157,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-027",
+      "title": "Waterproof Travel Duffel 027",
+      "description": "Waterproof Travel Duffel 027 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 106.75,
+      "stock": 170,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-028",
+      "title": "Rolltop City Pack 028",
+      "description": "Rolltop City Pack 028 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 123.0,
+      "stock": 183,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-029",
+      "title": "Trail Hydration Pack 029",
+      "description": "Trail Hydration Pack 029 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 140.25,
+      "stock": 196,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-030",
+      "title": "Executive Leather Brief 030",
+      "description": "Executive Leather Brief 030 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 157.5,
+      "stock": 18,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-031",
+      "title": "Commuter Laptop Backpack 031",
+      "description": "Commuter Laptop Backpack 031 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 174.75,
+      "stock": 31,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-032",
+      "title": "Canvas Messenger Bag 032",
+      "description": "Canvas Messenger Bag 032 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 191.0,
+      "stock": 44,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-033",
+      "title": "Waterproof Travel Duffel 033",
+      "description": "Waterproof Travel Duffel 033 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 208.25,
+      "stock": 57,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-034",
+      "title": "Rolltop City Pack 034",
+      "description": "Rolltop City Pack 034 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 225.5,
+      "stock": 70,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-035",
+      "title": "Trail Hydration Pack 035",
+      "description": "Trail Hydration Pack 035 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 242.75,
+      "stock": 83,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-036",
+      "title": "Executive Leather Brief 036",
+      "description": "Executive Leather Brief 036 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 58.0,
+      "stock": 96,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-037",
+      "title": "Commuter Laptop Backpack 037",
+      "description": "Commuter Laptop Backpack 037 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 75.25,
+      "stock": 109,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-038",
+      "title": "Canvas Messenger Bag 038",
+      "description": "Canvas Messenger Bag 038 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 92.5,
+      "stock": 122,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-039",
+      "title": "Waterproof Travel Duffel 039",
+      "description": "Waterproof Travel Duffel 039 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 109.75,
+      "stock": 135,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-040",
+      "title": "Rolltop City Pack 040",
+      "description": "Rolltop City Pack 040 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 126.0,
+      "stock": 148,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-041",
+      "title": "Trail Hydration Pack 041",
+      "description": "Trail Hydration Pack 041 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 143.25,
+      "stock": 161,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-042",
+      "title": "Executive Leather Brief 042",
+      "description": "Executive Leather Brief 042 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 160.5,
+      "stock": 174,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-043",
+      "title": "Commuter Laptop Backpack 043",
+      "description": "Commuter Laptop Backpack 043 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 177.75,
+      "stock": 187,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-044",
+      "title": "Canvas Messenger Bag 044",
+      "description": "Canvas Messenger Bag 044 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 194.0,
+      "stock": 200,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-045",
+      "title": "Waterproof Travel Duffel 045",
+      "description": "Waterproof Travel Duffel 045 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 211.25,
+      "stock": 22,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-046",
+      "title": "Rolltop City Pack 046",
+      "description": "Rolltop City Pack 046 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 228.5,
+      "stock": 35,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-047",
+      "title": "Trail Hydration Pack 047",
+      "description": "Trail Hydration Pack 047 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 245.75,
+      "stock": 48,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-048",
+      "title": "Executive Leather Brief 048",
+      "description": "Executive Leather Brief 048 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 61.0,
+      "stock": 61,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-049",
+      "title": "Commuter Laptop Backpack 049",
+      "description": "Commuter Laptop Backpack 049 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 78.25,
+      "stock": 74,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-050",
+      "title": "Canvas Messenger Bag 050",
+      "description": "Canvas Messenger Bag 050 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 95.5,
+      "stock": 87,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-051",
+      "title": "Waterproof Travel Duffel 051",
+      "description": "Waterproof Travel Duffel 051 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 112.75,
+      "stock": 100,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-052",
+      "title": "Rolltop City Pack 052",
+      "description": "Rolltop City Pack 052 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 129.0,
+      "stock": 113,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-053",
+      "title": "Trail Hydration Pack 053",
+      "description": "Trail Hydration Pack 053 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 146.25,
+      "stock": 126,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-054",
+      "title": "Executive Leather Brief 054",
+      "description": "Executive Leather Brief 054 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 163.5,
+      "stock": 139,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-055",
+      "title": "Commuter Laptop Backpack 055",
+      "description": "Commuter Laptop Backpack 055 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 180.75,
+      "stock": 152,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-056",
+      "title": "Canvas Messenger Bag 056",
+      "description": "Canvas Messenger Bag 056 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 197.0,
+      "stock": 165,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-057",
+      "title": "Waterproof Travel Duffel 057",
+      "description": "Waterproof Travel Duffel 057 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 214.25,
+      "stock": 178,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-058",
+      "title": "Rolltop City Pack 058",
+      "description": "Rolltop City Pack 058 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 231.5,
+      "stock": 191,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-059",
+      "title": "Trail Hydration Pack 059",
+      "description": "Trail Hydration Pack 059 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 248.75,
+      "stock": 13,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-060",
+      "title": "Executive Leather Brief 060",
+      "description": "Executive Leather Brief 060 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 64.0,
+      "stock": 26,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-061",
+      "title": "Commuter Laptop Backpack 061",
+      "description": "Commuter Laptop Backpack 061 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 81.25,
+      "stock": 39,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-062",
+      "title": "Canvas Messenger Bag 062",
+      "description": "Canvas Messenger Bag 062 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 98.5,
+      "stock": 52,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-063",
+      "title": "Waterproof Travel Duffel 063",
+      "description": "Waterproof Travel Duffel 063 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 115.75,
+      "stock": 65,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-064",
+      "title": "Rolltop City Pack 064",
+      "description": "Rolltop City Pack 064 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 132.0,
+      "stock": 78,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-065",
+      "title": "Trail Hydration Pack 065",
+      "description": "Trail Hydration Pack 065 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 149.25,
+      "stock": 91,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-066",
+      "title": "Executive Leather Brief 066",
+      "description": "Executive Leather Brief 066 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 166.5,
+      "stock": 104,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-067",
+      "title": "Commuter Laptop Backpack 067",
+      "description": "Commuter Laptop Backpack 067 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 183.75,
+      "stock": 117,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-068",
+      "title": "Canvas Messenger Bag 068",
+      "description": "Canvas Messenger Bag 068 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 200.0,
+      "stock": 130,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-069",
+      "title": "Waterproof Travel Duffel 069",
+      "description": "Waterproof Travel Duffel 069 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 217.25,
+      "stock": 143,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-070",
+      "title": "Rolltop City Pack 070",
+      "description": "Rolltop City Pack 070 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 234.5,
+      "stock": 156,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-071",
+      "title": "Trail Hydration Pack 071",
+      "description": "Trail Hydration Pack 071 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 50.75,
+      "stock": 169,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-072",
+      "title": "Executive Leather Brief 072",
+      "description": "Executive Leather Brief 072 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 67.0,
+      "stock": 182,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-073",
+      "title": "Commuter Laptop Backpack 073",
+      "description": "Commuter Laptop Backpack 073 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 84.25,
+      "stock": 195,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-074",
+      "title": "Canvas Messenger Bag 074",
+      "description": "Canvas Messenger Bag 074 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 101.5,
+      "stock": 17,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-075",
+      "title": "Waterproof Travel Duffel 075",
+      "description": "Waterproof Travel Duffel 075 is a weather-ready duffel for weekend trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 118.75,
+      "stock": 30,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": "15inch",
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-076",
+      "title": "Rolltop City Pack 076",
+      "description": "Rolltop City Pack 076 is a expandable rolltop pack for mixed commute loads. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 135.0,
+      "stock": 43,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-077",
+      "title": "Trail Hydration Pack 077",
+      "description": "Trail Hydration Pack 077 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 152.25,
+      "stock": 56,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-078",
+      "title": "Executive Leather Brief 078",
+      "description": "Executive Leather Brief 078 is a polished brief with protected laptop storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 169.5,
+      "stock": 69,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": "15inch",
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-079",
+      "title": "Commuter Laptop Backpack 079",
+      "description": "Commuter Laptop Backpack 079 is a organized backpack for work gear and daily carry. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 186.75,
+      "stock": 82,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-080",
+      "title": "Canvas Messenger Bag 080",
+      "description": "Canvas Messenger Bag 080 is a structured messenger bag with quick-access storage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 203.0,
+      "stock": 95,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": "13inch",
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-081",
+      "title": "Waterproof Travel Duffel Lite 081",
+      "description": "Waterproof Travel Duffel Lite 081 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 220.25,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-082",
+      "title": "Rolltop City Pack Lite 082",
+      "description": "Rolltop City Pack Lite 082 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 237.5,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-083",
+      "title": "Trail Hydration Pack Lite 083",
+      "description": "Trail Hydration Pack Lite 083 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 53.75,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-084",
+      "title": "Executive Leather Brief Lite 084",
+      "description": "Executive Leather Brief Lite 084 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 70.0,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-085",
+      "title": "Commuter Laptop Backpack Lite 085",
+      "description": "Commuter Laptop Backpack Lite 085 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 87.25,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-086",
+      "title": "Canvas Messenger Bag Lite 086",
+      "description": "Canvas Messenger Bag Lite 086 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 104.5,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-087",
+      "title": "Waterproof Travel Duffel Lite 087",
+      "description": "Waterproof Travel Duffel Lite 087 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 121.75,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-088",
+      "title": "Rolltop City Pack Lite 088",
+      "description": "Rolltop City Pack Lite 088 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 138.0,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-089",
+      "title": "Trail Hydration Pack Lite 089",
+      "description": "Trail Hydration Pack Lite 089 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 155.25,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-090",
+      "title": "Executive Leather Brief Lite 090",
+      "description": "Executive Leather Brief Lite 090 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 172.5,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-091",
+      "title": "Commuter Laptop Backpack Lite 091",
+      "description": "Commuter Laptop Backpack Lite 091 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 189.75,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-092",
+      "title": "Canvas Messenger Bag Lite 092",
+      "description": "Canvas Messenger Bag Lite 092 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 206.0,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-093",
+      "title": "Waterproof Travel Duffel Lite 093",
+      "description": "Waterproof Travel Duffel Lite 093 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 223.25,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-094",
+      "title": "Rolltop City Pack Lite 094",
+      "description": "Rolltop City Pack Lite 094 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 240.5,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-095",
+      "title": "Trail Hydration Pack Lite 095",
+      "description": "Trail Hydration Pack Lite 095 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 56.75,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-096",
+      "title": "Executive Leather Brief Lite 096",
+      "description": "Executive Leather Brief Lite 096 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 73.0,
+      "stock": 0,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-097",
+      "title": "Commuter Laptop Backpack Lite 097",
+      "description": "Commuter Laptop Backpack Lite 097 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 90.25,
+      "stock": 1,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-098",
+      "title": "Canvas Messenger Bag Lite 098",
+      "description": "Canvas Messenger Bag Lite 098 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 107.5,
+      "stock": 2,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-099",
+      "title": "Waterproof Travel Duffel Lite 099",
+      "description": "Waterproof Travel Duffel Lite 099 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 124.75,
+      "stock": 3,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-100",
+      "title": "Rolltop City Pack Lite 100",
+      "description": "Rolltop City Pack Lite 100 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 141.0,
+      "stock": 4,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-101",
+      "title": "Trail Hydration Pack Lite 101",
+      "description": "Trail Hydration Pack Lite 101 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 158.25,
+      "stock": 5,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-102",
+      "title": "Executive Leather Brief Lite 102",
+      "description": "Executive Leather Brief Lite 102 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 175.5,
+      "stock": 6,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-103",
+      "title": "Commuter Laptop Backpack Lite 103",
+      "description": "Commuter Laptop Backpack Lite 103 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 192.75,
+      "stock": 7,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-104",
+      "title": "Canvas Messenger Bag Lite 104",
+      "description": "Canvas Messenger Bag Lite 104 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 209.0,
+      "stock": 8,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-105",
+      "title": "Waterproof Travel Duffel Lite 105",
+      "description": "Waterproof Travel Duffel Lite 105 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 226.25,
+      "stock": 9,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-106",
+      "title": "Rolltop City Pack Lite 106",
+      "description": "Rolltop City Pack Lite 106 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 243.5,
+      "stock": 10,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-107",
+      "title": "Trail Hydration Pack Lite 107",
+      "description": "Trail Hydration Pack Lite 107 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 59.75,
+      "stock": 1,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-108",
+      "title": "Executive Leather Brief Lite 108",
+      "description": "Executive Leather Brief Lite 108 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 76.0,
+      "stock": 2,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-109",
+      "title": "Commuter Laptop Backpack Lite 109",
+      "description": "Commuter Laptop Backpack Lite 109 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 93.25,
+      "stock": 3,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-110",
+      "title": "Canvas Messenger Bag Lite 110",
+      "description": "Canvas Messenger Bag Lite 110 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 110.5,
+      "stock": 4,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-111",
+      "title": "Waterproof Travel Duffel Lite 111",
+      "description": "Waterproof Travel Duffel Lite 111 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 127.75,
+      "stock": 5,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-112",
+      "title": "Rolltop City Pack Lite 112",
+      "description": "Rolltop City Pack Lite 112 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 144.0,
+      "stock": 6,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-113",
+      "title": "Trail Hydration Pack Lite 113",
+      "description": "Trail Hydration Pack Lite 113 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 161.25,
+      "stock": 7,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-114",
+      "title": "Executive Leather Brief Lite 114",
+      "description": "Executive Leather Brief Lite 114 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 178.5,
+      "stock": 8,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-115",
+      "title": "Commuter Laptop Backpack Lite 115",
+      "description": "Commuter Laptop Backpack Lite 115 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 195.75,
+      "stock": 9,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-116",
+      "title": "Canvas Messenger Bag Lite 116",
+      "description": "Canvas Messenger Bag Lite 116 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 212.0,
+      "stock": 10,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-117",
+      "title": "Waterproof Travel Duffel Lite 117",
+      "description": "Waterproof Travel Duffel Lite 117 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 229.25,
+      "stock": 1,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-118",
+      "title": "Rolltop City Pack Lite 118",
+      "description": "Rolltop City Pack Lite 118 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 246.5,
+      "stock": 2,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-119",
+      "title": "Trail Hydration Pack Lite 119",
+      "description": "Trail Hydration Pack Lite 119 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 62.75,
+      "stock": 34,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-120",
+      "title": "Executive Leather Brief Lite 120",
+      "description": "Executive Leather Brief Lite 120 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 79.0,
+      "stock": 41,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-121",
+      "title": "Commuter Laptop Backpack Lite 121",
+      "description": "Commuter Laptop Backpack Lite 121 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 96.25,
+      "stock": 48,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-122",
+      "title": "Canvas Messenger Bag Lite 122",
+      "description": "Canvas Messenger Bag Lite 122 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 113.5,
+      "stock": 55,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-123",
+      "title": "Waterproof Travel Duffel Lite 123",
+      "description": "Waterproof Travel Duffel Lite 123 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 130.75,
+      "stock": 62,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-124",
+      "title": "Rolltop City Pack Lite 124",
+      "description": "Rolltop City Pack Lite 124 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 147.0,
+      "stock": 69,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-125",
+      "title": "Trail Hydration Pack Lite 125",
+      "description": "Trail Hydration Pack Lite 125 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 164.25,
+      "stock": 76,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-126",
+      "title": "Executive Leather Brief Lite 126",
+      "description": "Executive Leather Brief Lite 126 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 181.5,
+      "stock": 83,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-127",
+      "title": "Commuter Laptop Backpack Lite 127",
+      "description": "Commuter Laptop Backpack Lite 127 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 198.75,
+      "stock": 90,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-128",
+      "title": "Canvas Messenger Bag Lite 128",
+      "description": "Canvas Messenger Bag Lite 128 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 215.0,
+      "stock": 97,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-129",
+      "title": "Waterproof Travel Duffel Lite 129",
+      "description": "Waterproof Travel Duffel Lite 129 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 232.25,
+      "stock": 14,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-130",
+      "title": "Rolltop City Pack Lite 130",
+      "description": "Rolltop City Pack Lite 130 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 249.5,
+      "stock": 21,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-131",
+      "title": "Trail Hydration Pack Lite 131",
+      "description": "Trail Hydration Pack Lite 131 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 65.75,
+      "stock": 28,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-132",
+      "title": "Executive Leather Brief Lite 132",
+      "description": "Executive Leather Brief Lite 132 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 82.0,
+      "stock": 35,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-133",
+      "title": "Commuter Laptop Backpack Lite 133",
+      "description": "Commuter Laptop Backpack Lite 133 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 99.25,
+      "stock": 42,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "nylon",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-134",
+      "title": "Canvas Messenger Bag Lite 134",
+      "description": "Canvas Messenger Bag Lite 134 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 116.5,
+      "stock": 49,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-135",
+      "title": "Waterproof Travel Duffel Lite 135",
+      "description": "Waterproof Travel Duffel Lite 135 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 133.75,
+      "stock": 56,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-136",
+      "title": "Rolltop City Pack Lite 136",
+      "description": "Rolltop City Pack Lite 136 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 150.0,
+      "stock": 63,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "leather",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-137",
+      "title": "Trail Hydration Pack Lite 137",
+      "description": "Trail Hydration Pack Lite 137 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 167.25,
+      "stock": 70,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "ripstop",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-138",
+      "title": "Executive Leather Brief Lite 138",
+      "description": "Executive Leather Brief Lite 138 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 184.5,
+      "stock": 77,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-139",
+      "title": "Commuter Laptop Backpack Lite 139",
+      "description": "Commuter Laptop Backpack Lite 139 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 201.75,
+      "stock": 84,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "canvas",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-140",
+      "title": "Canvas Messenger Bag Lite 140",
+      "description": "Canvas Messenger Bag Lite 140 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 218.0,
+      "stock": 91,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": "polyester",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-141",
+      "title": "Product BAGS-141",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 235.25,
+      "stock": 20,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-142",
+      "title": "Product BAGS-142",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 51.5,
+      "stock": 25,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-143",
+      "title": "Product BAGS-143",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 68.75,
+      "stock": 30,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-144",
+      "title": "Product BAGS-144",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 85.0,
+      "stock": 35,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-145",
+      "title": "Product BAGS-145",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 102.25,
+      "stock": 40,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-146",
+      "title": "Product BAGS-146",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 119.5,
+      "stock": 45,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-147",
+      "title": "Product BAGS-147",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 136.75,
+      "stock": 50,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-148",
+      "title": "Product BAGS-148",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 153.0,
+      "stock": 9,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-149",
+      "title": "Product BAGS-149",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 170.25,
+      "stock": 14,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-150",
+      "title": "Product BAGS-150",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 187.5,
+      "stock": 19,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-151",
+      "title": "Product BAGS-151",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 204.75,
+      "stock": 24,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-152",
+      "title": "Product BAGS-152",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 221.0,
+      "stock": 29,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-153",
+      "title": "Product BAGS-153",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 238.25,
+      "stock": 34,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-154",
+      "title": "Product BAGS-154",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 54.5,
+      "stock": 39,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-155",
+      "title": "Product BAGS-155",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 71.75,
+      "stock": 44,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-156",
+      "title": "Product BAGS-156",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 88.0,
+      "stock": 49,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-157",
+      "title": "Product BAGS-157",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 105.25,
+      "stock": 8,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-158",
+      "title": "Product BAGS-158",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 122.5,
+      "stock": 13,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-159",
+      "title": "Product BAGS-159",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 139.75,
+      "stock": 18,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-160",
+      "title": "Product BAGS-160",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 156.0,
+      "stock": 23,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-161",
+      "title": "Product BAGS-161",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 173.25,
+      "stock": 28,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-162",
+      "title": "Product BAGS-162",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 190.5,
+      "stock": 33,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-163",
+      "title": "Product BAGS-163",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 207.75,
+      "stock": 38,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-164",
+      "title": "Product BAGS-164",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 224.0,
+      "stock": 43,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-165",
+      "title": "Product BAGS-165",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 241.25,
+      "stock": 48,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-166",
+      "title": "Product BAGS-166",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 57.5,
+      "stock": 7,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-167",
+      "title": "Product BAGS-167",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 74.75,
+      "stock": 12,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-168",
+      "title": "Product BAGS-168",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 91.0,
+      "stock": 17,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-169",
+      "title": "Product BAGS-169",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 108.25,
+      "stock": 22,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-170",
+      "title": "Product BAGS-170",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 125.5,
+      "stock": 27,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-171",
+      "title": "Product BAGS-171",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 142.75,
+      "stock": 32,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-172",
+      "title": "Product BAGS-172",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 159.0,
+      "stock": 37,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-173",
+      "title": "Product BAGS-173",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 176.25,
+      "stock": 42,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-174",
+      "title": "Product BAGS-174",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 193.5,
+      "stock": 47,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-175",
+      "title": "Product BAGS-175",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 210.75,
+      "stock": 6,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-176",
+      "title": "Product BAGS-176",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 227.0,
+      "stock": 11,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-177",
+      "title": "Product BAGS-177",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 244.25,
+      "stock": 16,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-178",
+      "title": "Product BAGS-178",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 60.5,
+      "stock": 21,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-179",
+      "title": "Product BAGS-179",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 77.75,
+      "stock": 26,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-180",
+      "title": "Product BAGS-180",
+      "description": "Bags item",
+      "category": "bags",
+      "brand": null,
+      "price": 94.0,
+      "stock": 31,
+      "attributes": {
+        "capacity_liters": null,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-181",
+      "title": "New Commuter Laptop Backpack 181",
+      "description": "New Commuter Laptop Backpack 181 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 111.25,
+      "stock": 29,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-182",
+      "title": "New Canvas Messenger Bag 182",
+      "description": "New Canvas Messenger Bag 182 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 128.5,
+      "stock": 38,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-183",
+      "title": "New Waterproof Travel Duffel 183",
+      "description": "New Waterproof Travel Duffel 183 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 145.75,
+      "stock": 47,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-184",
+      "title": "New Rolltop City Pack 184",
+      "description": "New Rolltop City Pack 184 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 162.0,
+      "stock": 56,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-185",
+      "title": "New Trail Hydration Pack 185",
+      "description": "New Trail Hydration Pack 185 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 179.25,
+      "stock": 65,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-186",
+      "title": "New Executive Leather Brief 186",
+      "description": "New Executive Leather Brief 186 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 196.5,
+      "stock": 74,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-187",
+      "title": "New Commuter Laptop Backpack 187",
+      "description": "New Commuter Laptop Backpack 187 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 213.75,
+      "stock": 83,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-188",
+      "title": "New Canvas Messenger Bag 188",
+      "description": "New Canvas Messenger Bag 188 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 230.0,
+      "stock": 92,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-189",
+      "title": "New Waterproof Travel Duffel 189",
+      "description": "New Waterproof Travel Duffel 189 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 247.25,
+      "stock": 20,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-190",
+      "title": "New Rolltop City Pack 190",
+      "description": "New Rolltop City Pack 190 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 63.5,
+      "stock": 29,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-191",
+      "title": "New Trail Hydration Pack 191",
+      "description": "New Trail Hydration Pack 191 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 80.75,
+      "stock": 38,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-192",
+      "title": "New Executive Leather Brief 192",
+      "description": "New Executive Leather Brief 192 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 97.0,
+      "stock": 47,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-193",
+      "title": "New Commuter Laptop Backpack 193",
+      "description": "New Commuter Laptop Backpack 193 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 114.25,
+      "stock": 56,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-194",
+      "title": "New Canvas Messenger Bag 194",
+      "description": "New Canvas Messenger Bag 194 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 131.5,
+      "stock": 65,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-195",
+      "title": "New Waterproof Travel Duffel 195",
+      "description": "New Waterproof Travel Duffel 195 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "MetroTrek",
+      "price": 148.75,
+      "stock": 74,
+      "attributes": {
+        "capacity_liters": 34,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-196",
+      "title": "New Rolltop City Pack 196",
+      "description": "New Rolltop City Pack 196 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 165.0,
+      "stock": 83,
+      "attributes": {
+        "capacity_liters": 45,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-197",
+      "title": "New Trail Hydration Pack 197",
+      "description": "New Trail Hydration Pack 197 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "UrbanCarry",
+      "price": 182.25,
+      "stock": 92,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-198",
+      "title": "New Executive Leather Brief 198",
+      "description": "New Executive Leather Brief 198 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "RidgeLine",
+      "price": 199.5,
+      "stock": 20,
+      "attributes": {
+        "capacity_liters": 18,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-199",
+      "title": "New Commuter Laptop Backpack 199",
+      "description": "New Commuter Laptop Backpack 199 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "Nomad Works",
+      "price": 216.75,
+      "stock": 29,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-200",
+      "title": "New Canvas Messenger Bag 200",
+      "description": "New Canvas Messenger Bag 200 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 233.0,
+      "stock": 38,
+      "attributes": {
+        "capacity_liters": 28,
+        "laptop_size": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    }
+  ]
+}

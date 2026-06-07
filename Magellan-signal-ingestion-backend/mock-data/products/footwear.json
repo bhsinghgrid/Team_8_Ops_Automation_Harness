@@ -1,0 +1,4806 @@
+{
+  "category": "footwear",
+  "description": "Mock footwear catalog data for catalog delta and search simulations.",
+  "products": [
+    {
+      "id": "FOOT-001",
+      "title": "Waterproof Trail Runner 001",
+      "description": "Waterproof Trail Runner 001 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 86.25,
+      "stock": 23,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-002",
+      "title": "Road Tempo Sneaker 002",
+      "description": "Road Tempo Sneaker 002 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 103.5,
+      "stock": 36,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-003",
+      "title": "Casual Canvas Low Top 003",
+      "description": "Casual Canvas Low Top 003 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 120.75,
+      "stock": 49,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-004",
+      "title": "Gym Flex Trainer 004",
+      "description": "Gym Flex Trainer 004 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 137.0,
+      "stock": 62,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-005",
+      "title": "Leather Approach Shoe 005",
+      "description": "Leather Approach Shoe 005 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 154.25,
+      "stock": 75,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-006",
+      "title": "Mesh Distance Runner 006",
+      "description": "Mesh Distance Runner 006 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 171.5,
+      "stock": 88,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-007",
+      "title": "Waterproof Trail Runner 007",
+      "description": "Waterproof Trail Runner 007 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 188.75,
+      "stock": 101,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-008",
+      "title": "Road Tempo Sneaker 008",
+      "description": "Road Tempo Sneaker 008 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 205.0,
+      "stock": 114,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-009",
+      "title": "Casual Canvas Low Top 009",
+      "description": "Casual Canvas Low Top 009 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 71.25,
+      "stock": 127,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-010",
+      "title": "Gym Flex Trainer 010",
+      "description": "Gym Flex Trainer 010 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 88.5,
+      "stock": 140,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-011",
+      "title": "Leather Approach Shoe 011",
+      "description": "Leather Approach Shoe 011 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 105.75,
+      "stock": 153,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-012",
+      "title": "Mesh Distance Runner 012",
+      "description": "Mesh Distance Runner 012 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 122.0,
+      "stock": 166,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-013",
+      "title": "Waterproof Trail Runner 013",
+      "description": "Waterproof Trail Runner 013 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 139.25,
+      "stock": 179,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-014",
+      "title": "Road Tempo Sneaker 014",
+      "description": "Road Tempo Sneaker 014 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 156.5,
+      "stock": 192,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-015",
+      "title": "Casual Canvas Low Top 015",
+      "description": "Casual Canvas Low Top 015 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 173.75,
+      "stock": 14,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-016",
+      "title": "Gym Flex Trainer 016",
+      "description": "Gym Flex Trainer 016 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 190.0,
+      "stock": 27,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-017",
+      "title": "Leather Approach Shoe 017",
+      "description": "Leather Approach Shoe 017 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 207.25,
+      "stock": 40,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-018",
+      "title": "Mesh Distance Runner 018",
+      "description": "Mesh Distance Runner 018 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 73.5,
+      "stock": 53,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-019",
+      "title": "Waterproof Trail Runner 019",
+      "description": "Waterproof Trail Runner 019 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 90.75,
+      "stock": 66,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-020",
+      "title": "Road Tempo Sneaker 020",
+      "description": "Road Tempo Sneaker 020 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 107.0,
+      "stock": 79,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-021",
+      "title": "Casual Canvas Low Top 021",
+      "description": "Casual Canvas Low Top 021 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 124.25,
+      "stock": 92,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-022",
+      "title": "Gym Flex Trainer 022",
+      "description": "Gym Flex Trainer 022 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 141.5,
+      "stock": 105,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-023",
+      "title": "Leather Approach Shoe 023",
+      "description": "Leather Approach Shoe 023 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 158.75,
+      "stock": 118,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-024",
+      "title": "Mesh Distance Runner 024",
+      "description": "Mesh Distance Runner 024 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 175.0,
+      "stock": 131,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-025",
+      "title": "Waterproof Trail Runner 025",
+      "description": "Waterproof Trail Runner 025 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 192.25,
+      "stock": 144,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-026",
+      "title": "Road Tempo Sneaker 026",
+      "description": "Road Tempo Sneaker 026 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 209.5,
+      "stock": 157,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-027",
+      "title": "Casual Canvas Low Top 027",
+      "description": "Casual Canvas Low Top 027 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 75.75,
+      "stock": 170,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-028",
+      "title": "Gym Flex Trainer 028",
+      "description": "Gym Flex Trainer 028 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 92.0,
+      "stock": 183,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-029",
+      "title": "Leather Approach Shoe 029",
+      "description": "Leather Approach Shoe 029 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 109.25,
+      "stock": 196,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-030",
+      "title": "Mesh Distance Runner 030",
+      "description": "Mesh Distance Runner 030 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 126.5,
+      "stock": 18,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-031",
+      "title": "Waterproof Trail Runner 031",
+      "description": "Waterproof Trail Runner 031 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 143.75,
+      "stock": 31,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-032",
+      "title": "Road Tempo Sneaker 032",
+      "description": "Road Tempo Sneaker 032 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 160.0,
+      "stock": 44,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-033",
+      "title": "Casual Canvas Low Top 033",
+      "description": "Casual Canvas Low Top 033 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 177.25,
+      "stock": 57,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-034",
+      "title": "Gym Flex Trainer 034",
+      "description": "Gym Flex Trainer 034 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 194.5,
+      "stock": 70,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-035",
+      "title": "Leather Approach Shoe 035",
+      "description": "Leather Approach Shoe 035 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 211.75,
+      "stock": 83,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-036",
+      "title": "Mesh Distance Runner 036",
+      "description": "Mesh Distance Runner 036 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 77.0,
+      "stock": 96,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-037",
+      "title": "Waterproof Trail Runner 037",
+      "description": "Waterproof Trail Runner 037 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 94.25,
+      "stock": 109,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-038",
+      "title": "Road Tempo Sneaker 038",
+      "description": "Road Tempo Sneaker 038 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 111.5,
+      "stock": 122,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-039",
+      "title": "Casual Canvas Low Top 039",
+      "description": "Casual Canvas Low Top 039 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 128.75,
+      "stock": 135,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-040",
+      "title": "Gym Flex Trainer 040",
+      "description": "Gym Flex Trainer 040 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 145.0,
+      "stock": 148,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-041",
+      "title": "Leather Approach Shoe 041",
+      "description": "Leather Approach Shoe 041 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 162.25,
+      "stock": 161,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-042",
+      "title": "Mesh Distance Runner 042",
+      "description": "Mesh Distance Runner 042 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 179.5,
+      "stock": 174,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-043",
+      "title": "Waterproof Trail Runner 043",
+      "description": "Waterproof Trail Runner 043 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 196.75,
+      "stock": 187,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-044",
+      "title": "Road Tempo Sneaker 044",
+      "description": "Road Tempo Sneaker 044 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 213.0,
+      "stock": 200,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-045",
+      "title": "Casual Canvas Low Top 045",
+      "description": "Casual Canvas Low Top 045 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 79.25,
+      "stock": 22,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-046",
+      "title": "Gym Flex Trainer 046",
+      "description": "Gym Flex Trainer 046 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 96.5,
+      "stock": 35,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-047",
+      "title": "Leather Approach Shoe 047",
+      "description": "Leather Approach Shoe 047 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 113.75,
+      "stock": 48,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-048",
+      "title": "Mesh Distance Runner 048",
+      "description": "Mesh Distance Runner 048 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 130.0,
+      "stock": 61,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-049",
+      "title": "Waterproof Trail Runner 049",
+      "description": "Waterproof Trail Runner 049 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 147.25,
+      "stock": 74,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-050",
+      "title": "Road Tempo Sneaker 050",
+      "description": "Road Tempo Sneaker 050 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 164.5,
+      "stock": 87,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-051",
+      "title": "Casual Canvas Low Top 051",
+      "description": "Casual Canvas Low Top 051 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 181.75,
+      "stock": 100,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-052",
+      "title": "Gym Flex Trainer 052",
+      "description": "Gym Flex Trainer 052 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 198.0,
+      "stock": 113,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-053",
+      "title": "Leather Approach Shoe 053",
+      "description": "Leather Approach Shoe 053 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 215.25,
+      "stock": 126,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-054",
+      "title": "Mesh Distance Runner 054",
+      "description": "Mesh Distance Runner 054 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 81.5,
+      "stock": 139,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-055",
+      "title": "Waterproof Trail Runner 055",
+      "description": "Waterproof Trail Runner 055 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 98.75,
+      "stock": 152,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-056",
+      "title": "Road Tempo Sneaker 056",
+      "description": "Road Tempo Sneaker 056 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 115.0,
+      "stock": 165,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-057",
+      "title": "Casual Canvas Low Top 057",
+      "description": "Casual Canvas Low Top 057 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 132.25,
+      "stock": 178,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-058",
+      "title": "Gym Flex Trainer 058",
+      "description": "Gym Flex Trainer 058 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 149.5,
+      "stock": 191,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-059",
+      "title": "Leather Approach Shoe 059",
+      "description": "Leather Approach Shoe 059 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 166.75,
+      "stock": 13,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-060",
+      "title": "Mesh Distance Runner 060",
+      "description": "Mesh Distance Runner 060 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 183.0,
+      "stock": 26,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-061",
+      "title": "Waterproof Trail Runner 061",
+      "description": "Waterproof Trail Runner 061 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 200.25,
+      "stock": 39,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-062",
+      "title": "Road Tempo Sneaker 062",
+      "description": "Road Tempo Sneaker 062 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 217.5,
+      "stock": 52,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-063",
+      "title": "Casual Canvas Low Top 063",
+      "description": "Casual Canvas Low Top 063 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 83.75,
+      "stock": 65,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-064",
+      "title": "Gym Flex Trainer 064",
+      "description": "Gym Flex Trainer 064 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 100.0,
+      "stock": 78,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-065",
+      "title": "Leather Approach Shoe 065",
+      "description": "Leather Approach Shoe 065 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 117.25,
+      "stock": 91,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-066",
+      "title": "Mesh Distance Runner 066",
+      "description": "Mesh Distance Runner 066 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 134.5,
+      "stock": 104,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-067",
+      "title": "Waterproof Trail Runner 067",
+      "description": "Waterproof Trail Runner 067 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 151.75,
+      "stock": 117,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-068",
+      "title": "Road Tempo Sneaker 068",
+      "description": "Road Tempo Sneaker 068 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 168.0,
+      "stock": 130,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-069",
+      "title": "Casual Canvas Low Top 069",
+      "description": "Casual Canvas Low Top 069 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 185.25,
+      "stock": 143,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-070",
+      "title": "Gym Flex Trainer 070",
+      "description": "Gym Flex Trainer 070 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 202.5,
+      "stock": 156,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-071",
+      "title": "Leather Approach Shoe 071",
+      "description": "Leather Approach Shoe 071 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 219.75,
+      "stock": 169,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-072",
+      "title": "Mesh Distance Runner 072",
+      "description": "Mesh Distance Runner 072 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 85.0,
+      "stock": 182,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-073",
+      "title": "Waterproof Trail Runner 073",
+      "description": "Waterproof Trail Runner 073 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 102.25,
+      "stock": 195,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-074",
+      "title": "Road Tempo Sneaker 074",
+      "description": "Road Tempo Sneaker 074 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 119.5,
+      "stock": 17,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-075",
+      "title": "Casual Canvas Low Top 075",
+      "description": "Casual Canvas Low Top 075 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 136.75,
+      "stock": 30,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-076",
+      "title": "Gym Flex Trainer 076",
+      "description": "Gym Flex Trainer 076 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 153.0,
+      "stock": 43,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-077",
+      "title": "Leather Approach Shoe 077",
+      "description": "Leather Approach Shoe 077 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 170.25,
+      "stock": 56,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-078",
+      "title": "Mesh Distance Runner 078",
+      "description": "Mesh Distance Runner 078 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 187.5,
+      "stock": 69,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-079",
+      "title": "Waterproof Trail Runner 079",
+      "description": "Waterproof Trail Runner 079 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 204.75,
+      "stock": 82,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-080",
+      "title": "Road Tempo Sneaker 080",
+      "description": "Road Tempo Sneaker 080 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 70.0,
+      "stock": 95,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-081",
+      "title": "Casual Canvas Low Top 081",
+      "description": "Casual Canvas Low Top 081 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 87.25,
+      "stock": 108,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-082",
+      "title": "Gym Flex Trainer 082",
+      "description": "Gym Flex Trainer 082 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 104.5,
+      "stock": 121,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-083",
+      "title": "Leather Approach Shoe 083",
+      "description": "Leather Approach Shoe 083 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 121.75,
+      "stock": 134,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-084",
+      "title": "Mesh Distance Runner 084",
+      "description": "Mesh Distance Runner 084 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 138.0,
+      "stock": 147,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-085",
+      "title": "Waterproof Trail Runner 085",
+      "description": "Waterproof Trail Runner 085 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 155.25,
+      "stock": 160,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-086",
+      "title": "Road Tempo Sneaker 086",
+      "description": "Road Tempo Sneaker 086 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 172.5,
+      "stock": 173,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-087",
+      "title": "Casual Canvas Low Top 087",
+      "description": "Casual Canvas Low Top 087 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 189.75,
+      "stock": 186,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-088",
+      "title": "Gym Flex Trainer 088",
+      "description": "Gym Flex Trainer 088 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 206.0,
+      "stock": 199,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-089",
+      "title": "Leather Approach Shoe 089",
+      "description": "Leather Approach Shoe 089 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 72.25,
+      "stock": 21,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-090",
+      "title": "Mesh Distance Runner 090",
+      "description": "Mesh Distance Runner 090 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 89.5,
+      "stock": 34,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-091",
+      "title": "Waterproof Trail Runner 091",
+      "description": "Waterproof Trail Runner 091 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 106.75,
+      "stock": 47,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-092",
+      "title": "Road Tempo Sneaker 092",
+      "description": "Road Tempo Sneaker 092 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 123.0,
+      "stock": 60,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-093",
+      "title": "Casual Canvas Low Top 093",
+      "description": "Casual Canvas Low Top 093 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 140.25,
+      "stock": 73,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-094",
+      "title": "Gym Flex Trainer 094",
+      "description": "Gym Flex Trainer 094 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 157.5,
+      "stock": 86,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-095",
+      "title": "Leather Approach Shoe 095",
+      "description": "Leather Approach Shoe 095 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 174.75,
+      "stock": 99,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-096",
+      "title": "Mesh Distance Runner 096",
+      "description": "Mesh Distance Runner 096 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 191.0,
+      "stock": 112,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-097",
+      "title": "Waterproof Trail Runner 097",
+      "description": "Waterproof Trail Runner 097 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 208.25,
+      "stock": 125,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-098",
+      "title": "Road Tempo Sneaker 098",
+      "description": "Road Tempo Sneaker 098 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 74.5,
+      "stock": 138,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-099",
+      "title": "Casual Canvas Low Top 099",
+      "description": "Casual Canvas Low Top 099 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 91.75,
+      "stock": 151,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-100",
+      "title": "Gym Flex Trainer 100",
+      "description": "Gym Flex Trainer 100 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 108.0,
+      "stock": 164,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-101",
+      "title": "Leather Approach Shoe 101",
+      "description": "Leather Approach Shoe 101 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 125.25,
+      "stock": 177,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-102",
+      "title": "Mesh Distance Runner 102",
+      "description": "Mesh Distance Runner 102 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 142.5,
+      "stock": 190,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-103",
+      "title": "Waterproof Trail Runner 103",
+      "description": "Waterproof Trail Runner 103 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 159.75,
+      "stock": 12,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-104",
+      "title": "Road Tempo Sneaker 104",
+      "description": "Road Tempo Sneaker 104 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 176.0,
+      "stock": 25,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-105",
+      "title": "Casual Canvas Low Top 105",
+      "description": "Casual Canvas Low Top 105 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 193.25,
+      "stock": 38,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-106",
+      "title": "Gym Flex Trainer 106",
+      "description": "Gym Flex Trainer 106 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 210.5,
+      "stock": 51,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-107",
+      "title": "Leather Approach Shoe 107",
+      "description": "Leather Approach Shoe 107 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 76.75,
+      "stock": 64,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-108",
+      "title": "Mesh Distance Runner 108",
+      "description": "Mesh Distance Runner 108 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 93.0,
+      "stock": 77,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-109",
+      "title": "Waterproof Trail Runner 109",
+      "description": "Waterproof Trail Runner 109 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 110.25,
+      "stock": 90,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-110",
+      "title": "Road Tempo Sneaker 110",
+      "description": "Road Tempo Sneaker 110 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 127.5,
+      "stock": 103,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-111",
+      "title": "Casual Canvas Low Top 111",
+      "description": "Casual Canvas Low Top 111 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 144.75,
+      "stock": 116,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-112",
+      "title": "Gym Flex Trainer 112",
+      "description": "Gym Flex Trainer 112 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 161.0,
+      "stock": 129,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-113",
+      "title": "Leather Approach Shoe 113",
+      "description": "Leather Approach Shoe 113 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 178.25,
+      "stock": 142,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-114",
+      "title": "Mesh Distance Runner 114",
+      "description": "Mesh Distance Runner 114 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 195.5,
+      "stock": 155,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-115",
+      "title": "Waterproof Trail Runner 115",
+      "description": "Waterproof Trail Runner 115 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 212.75,
+      "stock": 168,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-116",
+      "title": "Road Tempo Sneaker 116",
+      "description": "Road Tempo Sneaker 116 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 78.0,
+      "stock": 181,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-117",
+      "title": "Casual Canvas Low Top 117",
+      "description": "Casual Canvas Low Top 117 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 95.25,
+      "stock": 194,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-118",
+      "title": "Gym Flex Trainer 118",
+      "description": "Gym Flex Trainer 118 is a supportive gym shoe for lifting and conditioning. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 112.5,
+      "stock": 16,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "gym",
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-119",
+      "title": "Leather Approach Shoe 119",
+      "description": "Leather Approach Shoe 119 is a durable leather shoe for travel and light trails. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 129.75,
+      "stock": 29,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "trail",
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-120",
+      "title": "Mesh Distance Runner 120",
+      "description": "Mesh Distance Runner 120 is a lightweight mesh runner for long training days. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 146.0,
+      "stock": 42,
+      "attributes": {
+        "waterproof": true,
+        "terrain": "road",
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-121",
+      "title": "Waterproof Trail Runner Lite 121",
+      "description": "Waterproof Trail Runner Lite 121 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 163.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-122",
+      "title": "Road Tempo Sneaker Lite 122",
+      "description": "Road Tempo Sneaker Lite 122 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 180.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-123",
+      "title": "Casual Canvas Low Top Lite 123",
+      "description": "Casual Canvas Low Top Lite 123 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 197.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-124",
+      "title": "Gym Flex Trainer Lite 124",
+      "description": "Gym Flex Trainer Lite 124 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 214.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-125",
+      "title": "Leather Approach Shoe Lite 125",
+      "description": "Leather Approach Shoe Lite 125 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 80.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-126",
+      "title": "Mesh Distance Runner Lite 126",
+      "description": "Mesh Distance Runner Lite 126 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 97.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-127",
+      "title": "Waterproof Trail Runner Lite 127",
+      "description": "Waterproof Trail Runner Lite 127 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 114.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-128",
+      "title": "Road Tempo Sneaker Lite 128",
+      "description": "Road Tempo Sneaker Lite 128 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 131.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-129",
+      "title": "Casual Canvas Low Top Lite 129",
+      "description": "Casual Canvas Low Top Lite 129 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 148.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-130",
+      "title": "Gym Flex Trainer Lite 130",
+      "description": "Gym Flex Trainer Lite 130 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 165.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-131",
+      "title": "Leather Approach Shoe Lite 131",
+      "description": "Leather Approach Shoe Lite 131 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 182.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-132",
+      "title": "Mesh Distance Runner Lite 132",
+      "description": "Mesh Distance Runner Lite 132 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 199.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-133",
+      "title": "Waterproof Trail Runner Lite 133",
+      "description": "Waterproof Trail Runner Lite 133 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 216.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-134",
+      "title": "Road Tempo Sneaker Lite 134",
+      "description": "Road Tempo Sneaker Lite 134 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 82.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-135",
+      "title": "Casual Canvas Low Top Lite 135",
+      "description": "Casual Canvas Low Top Lite 135 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 99.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-136",
+      "title": "Gym Flex Trainer Lite 136",
+      "description": "Gym Flex Trainer Lite 136 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 116.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-137",
+      "title": "Leather Approach Shoe Lite 137",
+      "description": "Leather Approach Shoe Lite 137 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 133.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-138",
+      "title": "Mesh Distance Runner Lite 138",
+      "description": "Mesh Distance Runner Lite 138 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 150.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-139",
+      "title": "Waterproof Trail Runner Lite 139",
+      "description": "Waterproof Trail Runner Lite 139 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 167.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-140",
+      "title": "Road Tempo Sneaker Lite 140",
+      "description": "Road Tempo Sneaker Lite 140 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 184.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-141",
+      "title": "Casual Canvas Low Top Lite 141",
+      "description": "Casual Canvas Low Top Lite 141 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 201.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-142",
+      "title": "Gym Flex Trainer Lite 142",
+      "description": "Gym Flex Trainer Lite 142 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 218.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-143",
+      "title": "Leather Approach Shoe Lite 143",
+      "description": "Leather Approach Shoe Lite 143 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 84.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-144",
+      "title": "Mesh Distance Runner Lite 144",
+      "description": "Mesh Distance Runner Lite 144 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 101.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-145",
+      "title": "Waterproof Trail Runner Lite 145",
+      "description": "Waterproof Trail Runner Lite 145 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 118.25,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-146",
+      "title": "Road Tempo Sneaker Lite 146",
+      "description": "Road Tempo Sneaker Lite 146 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 135.5,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-147",
+      "title": "Casual Canvas Low Top Lite 147",
+      "description": "Casual Canvas Low Top Lite 147 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 152.75,
+      "stock": 3,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-148",
+      "title": "Gym Flex Trainer Lite 148",
+      "description": "Gym Flex Trainer Lite 148 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 169.0,
+      "stock": 4,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-149",
+      "title": "Leather Approach Shoe Lite 149",
+      "description": "Leather Approach Shoe Lite 149 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 186.25,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-150",
+      "title": "Mesh Distance Runner Lite 150",
+      "description": "Mesh Distance Runner Lite 150 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 203.5,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-151",
+      "title": "Waterproof Trail Runner Lite 151",
+      "description": "Waterproof Trail Runner Lite 151 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 69.75,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-152",
+      "title": "Road Tempo Sneaker Lite 152",
+      "description": "Road Tempo Sneaker Lite 152 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 86.0,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-153",
+      "title": "Casual Canvas Low Top Lite 153",
+      "description": "Casual Canvas Low Top Lite 153 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 103.25,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-154",
+      "title": "Gym Flex Trainer Lite 154",
+      "description": "Gym Flex Trainer Lite 154 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 120.5,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-155",
+      "title": "Leather Approach Shoe Lite 155",
+      "description": "Leather Approach Shoe Lite 155 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 137.75,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-156",
+      "title": "Mesh Distance Runner Lite 156",
+      "description": "Mesh Distance Runner Lite 156 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 154.0,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-157",
+      "title": "Waterproof Trail Runner Lite 157",
+      "description": "Waterproof Trail Runner Lite 157 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 171.25,
+      "stock": 3,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-158",
+      "title": "Road Tempo Sneaker Lite 158",
+      "description": "Road Tempo Sneaker Lite 158 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 188.5,
+      "stock": 4,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-159",
+      "title": "Casual Canvas Low Top Lite 159",
+      "description": "Casual Canvas Low Top Lite 159 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 205.75,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-160",
+      "title": "Gym Flex Trainer Lite 160",
+      "description": "Gym Flex Trainer Lite 160 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 71.0,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-161",
+      "title": "Leather Approach Shoe Lite 161",
+      "description": "Leather Approach Shoe Lite 161 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 88.25,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-162",
+      "title": "Mesh Distance Runner Lite 162",
+      "description": "Mesh Distance Runner Lite 162 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 105.5,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-163",
+      "title": "Waterproof Trail Runner Lite 163",
+      "description": "Waterproof Trail Runner Lite 163 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 122.75,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-164",
+      "title": "Road Tempo Sneaker Lite 164",
+      "description": "Road Tempo Sneaker Lite 164 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 139.0,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-165",
+      "title": "Casual Canvas Low Top Lite 165",
+      "description": "Casual Canvas Low Top Lite 165 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 156.25,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-166",
+      "title": "Gym Flex Trainer Lite 166",
+      "description": "Gym Flex Trainer Lite 166 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 173.5,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-167",
+      "title": "Leather Approach Shoe Lite 167",
+      "description": "Leather Approach Shoe Lite 167 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 190.75,
+      "stock": 3,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-168",
+      "title": "Mesh Distance Runner Lite 168",
+      "description": "Mesh Distance Runner Lite 168 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 207.0,
+      "stock": 4,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-169",
+      "title": "Waterproof Trail Runner Lite 169",
+      "description": "Waterproof Trail Runner Lite 169 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 73.25,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-170",
+      "title": "Road Tempo Sneaker Lite 170",
+      "description": "Road Tempo Sneaker Lite 170 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 90.5,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-171",
+      "title": "Casual Canvas Low Top Lite 171",
+      "description": "Casual Canvas Low Top Lite 171 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 107.75,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-172",
+      "title": "Gym Flex Trainer Lite 172",
+      "description": "Gym Flex Trainer Lite 172 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 124.0,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-173",
+      "title": "Leather Approach Shoe Lite 173",
+      "description": "Leather Approach Shoe Lite 173 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 141.25,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-174",
+      "title": "Mesh Distance Runner Lite 174",
+      "description": "Mesh Distance Runner Lite 174 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 158.5,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-175",
+      "title": "Waterproof Trail Runner Lite 175",
+      "description": "Waterproof Trail Runner Lite 175 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 175.75,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-176",
+      "title": "Road Tempo Sneaker Lite 176",
+      "description": "Road Tempo Sneaker Lite 176 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 192.0,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-177",
+      "title": "Casual Canvas Low Top Lite 177",
+      "description": "Casual Canvas Low Top Lite 177 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 209.25,
+      "stock": 80,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-178",
+      "title": "Gym Flex Trainer Lite 178",
+      "description": "Gym Flex Trainer Lite 178 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 75.5,
+      "stock": 87,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-179",
+      "title": "Leather Approach Shoe Lite 179",
+      "description": "Leather Approach Shoe Lite 179 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 92.75,
+      "stock": 94,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-180",
+      "title": "Mesh Distance Runner Lite 180",
+      "description": "Mesh Distance Runner Lite 180 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 109.0,
+      "stock": 11,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-181",
+      "title": "Waterproof Trail Runner Lite 181",
+      "description": "Waterproof Trail Runner Lite 181 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 126.25,
+      "stock": 18,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-182",
+      "title": "Road Tempo Sneaker Lite 182",
+      "description": "Road Tempo Sneaker Lite 182 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 143.5,
+      "stock": 25,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-183",
+      "title": "Casual Canvas Low Top Lite 183",
+      "description": "Casual Canvas Low Top Lite 183 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 160.75,
+      "stock": 32,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-184",
+      "title": "Gym Flex Trainer Lite 184",
+      "description": "Gym Flex Trainer Lite 184 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 177.0,
+      "stock": 39,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-185",
+      "title": "Leather Approach Shoe Lite 185",
+      "description": "Leather Approach Shoe Lite 185 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 194.25,
+      "stock": 46,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-186",
+      "title": "Mesh Distance Runner Lite 186",
+      "description": "Mesh Distance Runner Lite 186 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 211.5,
+      "stock": 53,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-187",
+      "title": "Waterproof Trail Runner Lite 187",
+      "description": "Waterproof Trail Runner Lite 187 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 77.75,
+      "stock": 60,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-188",
+      "title": "Road Tempo Sneaker Lite 188",
+      "description": "Road Tempo Sneaker Lite 188 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 94.0,
+      "stock": 67,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-189",
+      "title": "Casual Canvas Low Top Lite 189",
+      "description": "Casual Canvas Low Top Lite 189 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 111.25,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-190",
+      "title": "Gym Flex Trainer Lite 190",
+      "description": "Gym Flex Trainer Lite 190 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 128.5,
+      "stock": 81,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-191",
+      "title": "Leather Approach Shoe Lite 191",
+      "description": "Leather Approach Shoe Lite 191 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 145.75,
+      "stock": 88,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-192",
+      "title": "Mesh Distance Runner Lite 192",
+      "description": "Mesh Distance Runner Lite 192 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 162.0,
+      "stock": 95,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-193",
+      "title": "Waterproof Trail Runner Lite 193",
+      "description": "Waterproof Trail Runner Lite 193 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 179.25,
+      "stock": 12,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-194",
+      "title": "Road Tempo Sneaker Lite 194",
+      "description": "Road Tempo Sneaker Lite 194 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 196.5,
+      "stock": 19,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-195",
+      "title": "Casual Canvas Low Top Lite 195",
+      "description": "Casual Canvas Low Top Lite 195 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 213.75,
+      "stock": 26,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-196",
+      "title": "Gym Flex Trainer Lite 196",
+      "description": "Gym Flex Trainer Lite 196 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 79.0,
+      "stock": 33,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-197",
+      "title": "Leather Approach Shoe Lite 197",
+      "description": "Leather Approach Shoe Lite 197 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 96.25,
+      "stock": 40,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-198",
+      "title": "Mesh Distance Runner Lite 198",
+      "description": "Mesh Distance Runner Lite 198 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 113.5,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-199",
+      "title": "Waterproof Trail Runner Lite 199",
+      "description": "Waterproof Trail Runner Lite 199 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 130.75,
+      "stock": 54,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-200",
+      "title": "Road Tempo Sneaker Lite 200",
+      "description": "Road Tempo Sneaker Lite 200 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 147.0,
+      "stock": 61,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-201",
+      "title": "Casual Canvas Low Top Lite 201",
+      "description": "Casual Canvas Low Top Lite 201 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 164.25,
+      "stock": 68,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-202",
+      "title": "Gym Flex Trainer Lite 202",
+      "description": "Gym Flex Trainer Lite 202 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 181.5,
+      "stock": 75,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-203",
+      "title": "Leather Approach Shoe Lite 203",
+      "description": "Leather Approach Shoe Lite 203 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 198.75,
+      "stock": 82,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-204",
+      "title": "Mesh Distance Runner Lite 204",
+      "description": "Mesh Distance Runner Lite 204 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 215.0,
+      "stock": 89,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-205",
+      "title": "Waterproof Trail Runner Lite 205",
+      "description": "Waterproof Trail Runner Lite 205 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 81.25,
+      "stock": 96,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-206",
+      "title": "Road Tempo Sneaker Lite 206",
+      "description": "Road Tempo Sneaker Lite 206 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 98.5,
+      "stock": 13,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-207",
+      "title": "Casual Canvas Low Top Lite 207",
+      "description": "Casual Canvas Low Top Lite 207 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 115.75,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-208",
+      "title": "Gym Flex Trainer Lite 208",
+      "description": "Gym Flex Trainer Lite 208 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 132.0,
+      "stock": 27,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "synthetic",
+        "size_range": "7-14"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-209",
+      "title": "Leather Approach Shoe Lite 209",
+      "description": "Leather Approach Shoe Lite 209 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 149.25,
+      "stock": 34,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-210",
+      "title": "Mesh Distance Runner Lite 210",
+      "description": "Mesh Distance Runner Lite 210 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 166.5,
+      "stock": 41,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-211",
+      "title": "Product FOOT-211",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 183.75,
+      "stock": 48,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-212",
+      "title": "Product FOOT-212",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 200.0,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-213",
+      "title": "Product FOOT-213",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 217.25,
+      "stock": 12,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-214",
+      "title": "Product FOOT-214",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 83.5,
+      "stock": 17,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-215",
+      "title": "Product FOOT-215",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 100.75,
+      "stock": 22,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-216",
+      "title": "Product FOOT-216",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 117.0,
+      "stock": 27,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-217",
+      "title": "Product FOOT-217",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 134.25,
+      "stock": 32,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-218",
+      "title": "Product FOOT-218",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 151.5,
+      "stock": 37,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-219",
+      "title": "Product FOOT-219",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 168.75,
+      "stock": 42,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-220",
+      "title": "Product FOOT-220",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 185.0,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-221",
+      "title": "Product FOOT-221",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 202.25,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-222",
+      "title": "Product FOOT-222",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 219.5,
+      "stock": 11,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-223",
+      "title": "Product FOOT-223",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 85.75,
+      "stock": 16,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-224",
+      "title": "Product FOOT-224",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 102.0,
+      "stock": 21,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-225",
+      "title": "Product FOOT-225",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 119.25,
+      "stock": 26,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-226",
+      "title": "Product FOOT-226",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 136.5,
+      "stock": 31,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-227",
+      "title": "Product FOOT-227",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 153.75,
+      "stock": 36,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-228",
+      "title": "Product FOOT-228",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 170.0,
+      "stock": 41,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-229",
+      "title": "Product FOOT-229",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 187.25,
+      "stock": 46,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-230",
+      "title": "Product FOOT-230",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 204.5,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-231",
+      "title": "Product FOOT-231",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 70.75,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-232",
+      "title": "Product FOOT-232",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 87.0,
+      "stock": 15,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-233",
+      "title": "Product FOOT-233",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 104.25,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-234",
+      "title": "Product FOOT-234",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 121.5,
+      "stock": 25,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-235",
+      "title": "Product FOOT-235",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 138.75,
+      "stock": 30,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-236",
+      "title": "Product FOOT-236",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 155.0,
+      "stock": 35,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-237",
+      "title": "Product FOOT-237",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 172.25,
+      "stock": 40,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-238",
+      "title": "Product FOOT-238",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 189.5,
+      "stock": 45,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-239",
+      "title": "Product FOOT-239",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 206.75,
+      "stock": 50,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-240",
+      "title": "Product FOOT-240",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 72.0,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-241",
+      "title": "Product FOOT-241",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 89.25,
+      "stock": 14,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-242",
+      "title": "Product FOOT-242",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 106.5,
+      "stock": 19,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-243",
+      "title": "Product FOOT-243",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 123.75,
+      "stock": 24,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-244",
+      "title": "Product FOOT-244",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 140.0,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-245",
+      "title": "Product FOOT-245",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 157.25,
+      "stock": 34,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-246",
+      "title": "Product FOOT-246",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 174.5,
+      "stock": 39,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-247",
+      "title": "Product FOOT-247",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 191.75,
+      "stock": 44,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-248",
+      "title": "Product FOOT-248",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 208.0,
+      "stock": 49,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-249",
+      "title": "Product FOOT-249",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 74.25,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-250",
+      "title": "Product FOOT-250",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 91.5,
+      "stock": 13,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-251",
+      "title": "Product FOOT-251",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 108.75,
+      "stock": 18,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-252",
+      "title": "Product FOOT-252",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 125.0,
+      "stock": 23,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-253",
+      "title": "Product FOOT-253",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 142.25,
+      "stock": 28,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-254",
+      "title": "Product FOOT-254",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 159.5,
+      "stock": 33,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-255",
+      "title": "Product FOOT-255",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 176.75,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-256",
+      "title": "Product FOOT-256",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 193.0,
+      "stock": 43,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-257",
+      "title": "Product FOOT-257",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 210.25,
+      "stock": 48,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-258",
+      "title": "Product FOOT-258",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 76.5,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-259",
+      "title": "Product FOOT-259",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 93.75,
+      "stock": 12,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-260",
+      "title": "Product FOOT-260",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 110.0,
+      "stock": 17,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-261",
+      "title": "Product FOOT-261",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 127.25,
+      "stock": 22,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-262",
+      "title": "Product FOOT-262",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 144.5,
+      "stock": 27,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-263",
+      "title": "Product FOOT-263",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 161.75,
+      "stock": 32,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-264",
+      "title": "Product FOOT-264",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 178.0,
+      "stock": 37,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-265",
+      "title": "Product FOOT-265",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 195.25,
+      "stock": 42,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-266",
+      "title": "Product FOOT-266",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 212.5,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-267",
+      "title": "Product FOOT-267",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 78.75,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-268",
+      "title": "Product FOOT-268",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 95.0,
+      "stock": 11,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-269",
+      "title": "Product FOOT-269",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 112.25,
+      "stock": 16,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-270",
+      "title": "Product FOOT-270",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 129.5,
+      "stock": 21,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-271",
+      "title": "New Waterproof Trail Runner 271",
+      "description": "New Waterproof Trail Runner 271 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 146.75,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-272",
+      "title": "New Road Tempo Sneaker 272",
+      "description": "New Road Tempo Sneaker 272 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 163.0,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-273",
+      "title": "New Casual Canvas Low Top 273",
+      "description": "New Casual Canvas Low Top 273 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 180.25,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-274",
+      "title": "New Gym Flex Trainer 274",
+      "description": "New Gym Flex Trainer 274 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 197.5,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-275",
+      "title": "New Leather Approach Shoe 275",
+      "description": "New Leather Approach Shoe 275 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 214.75,
+      "stock": 65,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-276",
+      "title": "New Mesh Distance Runner 276",
+      "description": "New Mesh Distance Runner 276 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 80.0,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-277",
+      "title": "New Waterproof Trail Runner 277",
+      "description": "New Waterproof Trail Runner 277 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 97.25,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-278",
+      "title": "New Road Tempo Sneaker 278",
+      "description": "New Road Tempo Sneaker 278 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 114.5,
+      "stock": 92,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-279",
+      "title": "New Casual Canvas Low Top 279",
+      "description": "New Casual Canvas Low Top 279 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 131.75,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-280",
+      "title": "New Gym Flex Trainer 280",
+      "description": "New Gym Flex Trainer 280 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 148.0,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-281",
+      "title": "New Leather Approach Shoe 281",
+      "description": "New Leather Approach Shoe 281 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 165.25,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-282",
+      "title": "New Mesh Distance Runner 282",
+      "description": "New Mesh Distance Runner 282 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 182.5,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-283",
+      "title": "New Waterproof Trail Runner 283",
+      "description": "New Waterproof Trail Runner 283 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 199.75,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-284",
+      "title": "New Road Tempo Sneaker 284",
+      "description": "New Road Tempo Sneaker 284 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 216.0,
+      "stock": 65,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-285",
+      "title": "New Casual Canvas Low Top 285",
+      "description": "New Casual Canvas Low Top 285 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 82.25,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-286",
+      "title": "New Gym Flex Trainer 286",
+      "description": "New Gym Flex Trainer 286 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 99.5,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-287",
+      "title": "New Leather Approach Shoe 287",
+      "description": "New Leather Approach Shoe 287 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 116.75,
+      "stock": 92,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-288",
+      "title": "New Mesh Distance Runner 288",
+      "description": "New Mesh Distance Runner 288 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 133.0,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-289",
+      "title": "New Waterproof Trail Runner 289",
+      "description": "New Waterproof Trail Runner 289 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 150.25,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-290",
+      "title": "New Road Tempo Sneaker 290",
+      "description": "New Road Tempo Sneaker 290 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 167.5,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-291",
+      "title": "New Casual Canvas Low Top 291",
+      "description": "New Casual Canvas Low Top 291 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 184.75,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-292",
+      "title": "New Gym Flex Trainer 292",
+      "description": "New Gym Flex Trainer 292 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 201.0,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-293",
+      "title": "New Leather Approach Shoe 293",
+      "description": "New Leather Approach Shoe 293 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 218.25,
+      "stock": 65,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-294",
+      "title": "New Mesh Distance Runner 294",
+      "description": "New Mesh Distance Runner 294 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 84.5,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-295",
+      "title": "New Waterproof Trail Runner 295",
+      "description": "New Waterproof Trail Runner 295 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 101.75,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-296",
+      "title": "New Road Tempo Sneaker 296",
+      "description": "New Road Tempo Sneaker 296 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "AeroStep",
+      "price": 118.0,
+      "stock": 92,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-297",
+      "title": "New Casual Canvas Low Top 297",
+      "description": "New Casual Canvas Low Top 297 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "SummitSole",
+      "price": 135.25,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "5-11"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-298",
+      "title": "New Gym Flex Trainer 298",
+      "description": "New Gym Flex Trainer 298 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 152.5,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-12"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-299",
+      "title": "New Leather Approach Shoe 299",
+      "description": "New Leather Approach Shoe 299 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 169.75,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "6-13"
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-300",
+      "title": "New Mesh Distance Runner 300",
+      "description": "New Mesh Distance Runner 300 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 186.0,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": "7-14"
+      },
+      "data_quality": "new_arrival"
+    }
+  ]
+}

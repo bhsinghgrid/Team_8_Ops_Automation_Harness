@@ -1,0 +1,3206 @@
+{
+  "category": "outerwear",
+  "description": "Mock outerwear catalog data for jackets, shells, and insulated layers.",
+  "products": [
+    {
+      "id": "OUT-001",
+      "title": "Gore-Tex Rain Jacket 001",
+      "description": "Gore-Tex Rain Jacket 001 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 106.25,
+      "stock": 23,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-002",
+      "title": "Packable Wind Shell 002",
+      "description": "Packable Wind Shell 002 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 123.5,
+      "stock": 36,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-003",
+      "title": "Down Alpine Parka 003",
+      "description": "Down Alpine Parka 003 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 140.75,
+      "stock": 49,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-004",
+      "title": "Waterproof Field Jacket 004",
+      "description": "Waterproof Field Jacket 004 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 157.0,
+      "stock": 62,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-005",
+      "title": "Softshell Trek Hoodie 005",
+      "description": "Softshell Trek Hoodie 005 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 174.25,
+      "stock": 75,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-006",
+      "title": "Urban Insulated Coat 006",
+      "description": "Urban Insulated Coat 006 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 191.5,
+      "stock": 88,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-007",
+      "title": "Gore-Tex Rain Jacket 007",
+      "description": "Gore-Tex Rain Jacket 007 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 208.75,
+      "stock": 101,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-008",
+      "title": "Packable Wind Shell 008",
+      "description": "Packable Wind Shell 008 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 225.0,
+      "stock": 114,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-009",
+      "title": "Down Alpine Parka 009",
+      "description": "Down Alpine Parka 009 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 242.25,
+      "stock": 127,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-010",
+      "title": "Waterproof Field Jacket 010",
+      "description": "Waterproof Field Jacket 010 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 259.5,
+      "stock": 140,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-011",
+      "title": "Softshell Trek Hoodie 011",
+      "description": "Softshell Trek Hoodie 011 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 276.75,
+      "stock": 153,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-012",
+      "title": "Urban Insulated Coat 012",
+      "description": "Urban Insulated Coat 012 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 293.0,
+      "stock": 166,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-013",
+      "title": "Gore-Tex Rain Jacket 013",
+      "description": "Gore-Tex Rain Jacket 013 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 310.25,
+      "stock": 179,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-014",
+      "title": "Packable Wind Shell 014",
+      "description": "Packable Wind Shell 014 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 327.5,
+      "stock": 192,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-015",
+      "title": "Down Alpine Parka 015",
+      "description": "Down Alpine Parka 015 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 344.75,
+      "stock": 14,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-016",
+      "title": "Waterproof Field Jacket 016",
+      "description": "Waterproof Field Jacket 016 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 361.0,
+      "stock": 27,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-017",
+      "title": "Softshell Trek Hoodie 017",
+      "description": "Softshell Trek Hoodie 017 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 378.25,
+      "stock": 40,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-018",
+      "title": "Urban Insulated Coat 018",
+      "description": "Urban Insulated Coat 018 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 395.5,
+      "stock": 53,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-019",
+      "title": "Gore-Tex Rain Jacket 019",
+      "description": "Gore-Tex Rain Jacket 019 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 101.75,
+      "stock": 66,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-020",
+      "title": "Packable Wind Shell 020",
+      "description": "Packable Wind Shell 020 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 118.0,
+      "stock": 79,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-021",
+      "title": "Down Alpine Parka 021",
+      "description": "Down Alpine Parka 021 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 135.25,
+      "stock": 92,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-022",
+      "title": "Waterproof Field Jacket 022",
+      "description": "Waterproof Field Jacket 022 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 152.5,
+      "stock": 105,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-023",
+      "title": "Softshell Trek Hoodie 023",
+      "description": "Softshell Trek Hoodie 023 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 169.75,
+      "stock": 118,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-024",
+      "title": "Urban Insulated Coat 024",
+      "description": "Urban Insulated Coat 024 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 186.0,
+      "stock": 131,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-025",
+      "title": "Gore-Tex Rain Jacket 025",
+      "description": "Gore-Tex Rain Jacket 025 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 203.25,
+      "stock": 144,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-026",
+      "title": "Packable Wind Shell 026",
+      "description": "Packable Wind Shell 026 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 220.5,
+      "stock": 157,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-027",
+      "title": "Down Alpine Parka 027",
+      "description": "Down Alpine Parka 027 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 237.75,
+      "stock": 170,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-028",
+      "title": "Waterproof Field Jacket 028",
+      "description": "Waterproof Field Jacket 028 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 254.0,
+      "stock": 183,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-029",
+      "title": "Softshell Trek Hoodie 029",
+      "description": "Softshell Trek Hoodie 029 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 271.25,
+      "stock": 196,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-030",
+      "title": "Urban Insulated Coat 030",
+      "description": "Urban Insulated Coat 030 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 288.5,
+      "stock": 18,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-031",
+      "title": "Gore-Tex Rain Jacket 031",
+      "description": "Gore-Tex Rain Jacket 031 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 305.75,
+      "stock": 31,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-032",
+      "title": "Packable Wind Shell 032",
+      "description": "Packable Wind Shell 032 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 322.0,
+      "stock": 44,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-033",
+      "title": "Down Alpine Parka 033",
+      "description": "Down Alpine Parka 033 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 339.25,
+      "stock": 57,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-034",
+      "title": "Waterproof Field Jacket 034",
+      "description": "Waterproof Field Jacket 034 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 356.5,
+      "stock": 70,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-035",
+      "title": "Softshell Trek Hoodie 035",
+      "description": "Softshell Trek Hoodie 035 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 373.75,
+      "stock": 83,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-036",
+      "title": "Urban Insulated Coat 036",
+      "description": "Urban Insulated Coat 036 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 390.0,
+      "stock": 96,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-037",
+      "title": "Gore-Tex Rain Jacket 037",
+      "description": "Gore-Tex Rain Jacket 037 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 96.25,
+      "stock": 109,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-038",
+      "title": "Packable Wind Shell 038",
+      "description": "Packable Wind Shell 038 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 113.5,
+      "stock": 122,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-039",
+      "title": "Down Alpine Parka 039",
+      "description": "Down Alpine Parka 039 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 130.75,
+      "stock": 135,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-040",
+      "title": "Waterproof Field Jacket 040",
+      "description": "Waterproof Field Jacket 040 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 147.0,
+      "stock": 148,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-041",
+      "title": "Softshell Trek Hoodie 041",
+      "description": "Softshell Trek Hoodie 041 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 164.25,
+      "stock": 161,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-042",
+      "title": "Urban Insulated Coat 042",
+      "description": "Urban Insulated Coat 042 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 181.5,
+      "stock": 174,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-043",
+      "title": "Gore-Tex Rain Jacket 043",
+      "description": "Gore-Tex Rain Jacket 043 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 198.75,
+      "stock": 187,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-044",
+      "title": "Packable Wind Shell 044",
+      "description": "Packable Wind Shell 044 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 215.0,
+      "stock": 200,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-045",
+      "title": "Down Alpine Parka 045",
+      "description": "Down Alpine Parka 045 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 232.25,
+      "stock": 22,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-046",
+      "title": "Waterproof Field Jacket 046",
+      "description": "Waterproof Field Jacket 046 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 249.5,
+      "stock": 35,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-047",
+      "title": "Softshell Trek Hoodie 047",
+      "description": "Softshell Trek Hoodie 047 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 266.75,
+      "stock": 48,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-048",
+      "title": "Urban Insulated Coat 048",
+      "description": "Urban Insulated Coat 048 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 283.0,
+      "stock": 61,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-049",
+      "title": "Gore-Tex Rain Jacket 049",
+      "description": "Gore-Tex Rain Jacket 049 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 300.25,
+      "stock": 74,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-050",
+      "title": "Packable Wind Shell 050",
+      "description": "Packable Wind Shell 050 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 317.5,
+      "stock": 87,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-051",
+      "title": "Down Alpine Parka 051",
+      "description": "Down Alpine Parka 051 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 334.75,
+      "stock": 100,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-052",
+      "title": "Waterproof Field Jacket 052",
+      "description": "Waterproof Field Jacket 052 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 351.0,
+      "stock": 113,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-053",
+      "title": "Softshell Trek Hoodie 053",
+      "description": "Softshell Trek Hoodie 053 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 368.25,
+      "stock": 126,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-054",
+      "title": "Urban Insulated Coat 054",
+      "description": "Urban Insulated Coat 054 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 385.5,
+      "stock": 139,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-055",
+      "title": "Gore-Tex Rain Jacket 055",
+      "description": "Gore-Tex Rain Jacket 055 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 91.75,
+      "stock": 152,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-056",
+      "title": "Packable Wind Shell 056",
+      "description": "Packable Wind Shell 056 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 108.0,
+      "stock": 165,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-057",
+      "title": "Down Alpine Parka 057",
+      "description": "Down Alpine Parka 057 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 125.25,
+      "stock": 178,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-058",
+      "title": "Waterproof Field Jacket 058",
+      "description": "Waterproof Field Jacket 058 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 142.5,
+      "stock": 191,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-059",
+      "title": "Softshell Trek Hoodie 059",
+      "description": "Softshell Trek Hoodie 059 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 159.75,
+      "stock": 13,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-060",
+      "title": "Urban Insulated Coat 060",
+      "description": "Urban Insulated Coat 060 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 176.0,
+      "stock": 26,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-061",
+      "title": "Gore-Tex Rain Jacket 061",
+      "description": "Gore-Tex Rain Jacket 061 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 193.25,
+      "stock": 39,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-062",
+      "title": "Packable Wind Shell 062",
+      "description": "Packable Wind Shell 062 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 210.5,
+      "stock": 52,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-063",
+      "title": "Down Alpine Parka 063",
+      "description": "Down Alpine Parka 063 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 227.75,
+      "stock": 65,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-064",
+      "title": "Waterproof Field Jacket 064",
+      "description": "Waterproof Field Jacket 064 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 244.0,
+      "stock": 78,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-065",
+      "title": "Softshell Trek Hoodie 065",
+      "description": "Softshell Trek Hoodie 065 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 261.25,
+      "stock": 91,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-066",
+      "title": "Urban Insulated Coat 066",
+      "description": "Urban Insulated Coat 066 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 278.5,
+      "stock": 104,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-067",
+      "title": "Gore-Tex Rain Jacket 067",
+      "description": "Gore-Tex Rain Jacket 067 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 295.75,
+      "stock": 117,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-068",
+      "title": "Packable Wind Shell 068",
+      "description": "Packable Wind Shell 068 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 312.0,
+      "stock": 130,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-069",
+      "title": "Down Alpine Parka 069",
+      "description": "Down Alpine Parka 069 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 329.25,
+      "stock": 143,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-070",
+      "title": "Waterproof Field Jacket 070",
+      "description": "Waterproof Field Jacket 070 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 346.5,
+      "stock": 156,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-071",
+      "title": "Softshell Trek Hoodie 071",
+      "description": "Softshell Trek Hoodie 071 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 363.75,
+      "stock": 169,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-072",
+      "title": "Urban Insulated Coat 072",
+      "description": "Urban Insulated Coat 072 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 380.0,
+      "stock": 182,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-073",
+      "title": "Gore-Tex Rain Jacket 073",
+      "description": "Gore-Tex Rain Jacket 073 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 397.25,
+      "stock": 195,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-074",
+      "title": "Packable Wind Shell 074",
+      "description": "Packable Wind Shell 074 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 103.5,
+      "stock": 17,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-075",
+      "title": "Down Alpine Parka 075",
+      "description": "Down Alpine Parka 075 is a warm insulated parka for cold-weather coverage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 120.75,
+      "stock": 30,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 240
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-076",
+      "title": "Waterproof Field Jacket 076",
+      "description": "Waterproof Field Jacket 076 is a durable field jacket with sealed weather protection. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 137.0,
+      "stock": 43,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-077",
+      "title": "Softshell Trek Hoodie 077",
+      "description": "Softshell Trek Hoodie 077 is a stretch softshell for active cool-weather use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 154.25,
+      "stock": 56,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-078",
+      "title": "Urban Insulated Coat 078",
+      "description": "Urban Insulated Coat 078 is a streamlined insulated coat for everyday winter wear. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 171.5,
+      "stock": 69,
+      "attributes": {
+        "waterproof": true,
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 560
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-079",
+      "title": "Gore-Tex Rain Jacket 079",
+      "description": "Gore-Tex Rain Jacket 079 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 188.75,
+      "stock": 82,
+      "attributes": {
+        "waterproof": false,
+        "material": "gore-tex",
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-080",
+      "title": "Packable Wind Shell 080",
+      "description": "Packable Wind Shell 080 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 205.0,
+      "stock": 95,
+      "attributes": {
+        "waterproof": true,
+        "material": "nylon",
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-081",
+      "title": "Down Alpine Parka Lite 081",
+      "description": "Down Alpine Parka Lite 081 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 222.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-082",
+      "title": "Waterproof Field Jacket Lite 082",
+      "description": "Waterproof Field Jacket Lite 082 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 239.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-083",
+      "title": "Softshell Trek Hoodie Lite 083",
+      "description": "Softshell Trek Hoodie Lite 083 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 256.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-084",
+      "title": "Urban Insulated Coat Lite 084",
+      "description": "Urban Insulated Coat Lite 084 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 273.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-085",
+      "title": "Gore-Tex Rain Jacket Lite 085",
+      "description": "Gore-Tex Rain Jacket Lite 085 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 290.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-086",
+      "title": "Packable Wind Shell Lite 086",
+      "description": "Packable Wind Shell Lite 086 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 307.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-087",
+      "title": "Down Alpine Parka Lite 087",
+      "description": "Down Alpine Parka Lite 087 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 324.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-088",
+      "title": "Waterproof Field Jacket Lite 088",
+      "description": "Waterproof Field Jacket Lite 088 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 341.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-089",
+      "title": "Softshell Trek Hoodie Lite 089",
+      "description": "Softshell Trek Hoodie Lite 089 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 358.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-090",
+      "title": "Urban Insulated Coat Lite 090",
+      "description": "Urban Insulated Coat Lite 090 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 375.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-091",
+      "title": "Gore-Tex Rain Jacket Lite 091",
+      "description": "Gore-Tex Rain Jacket Lite 091 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 392.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-092",
+      "title": "Packable Wind Shell Lite 092",
+      "description": "Packable Wind Shell Lite 092 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 98.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-093",
+      "title": "Down Alpine Parka Lite 093",
+      "description": "Down Alpine Parka Lite 093 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 115.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-094",
+      "title": "Waterproof Field Jacket Lite 094",
+      "description": "Waterproof Field Jacket Lite 094 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 132.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-095",
+      "title": "Softshell Trek Hoodie Lite 095",
+      "description": "Softshell Trek Hoodie Lite 095 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 149.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-096",
+      "title": "Urban Insulated Coat Lite 096",
+      "description": "Urban Insulated Coat Lite 096 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 166.0,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-097",
+      "title": "Gore-Tex Rain Jacket Lite 097",
+      "description": "Gore-Tex Rain Jacket Lite 097 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 183.25,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-098",
+      "title": "Packable Wind Shell Lite 098",
+      "description": "Packable Wind Shell Lite 098 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 200.5,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-099",
+      "title": "Down Alpine Parka Lite 099",
+      "description": "Down Alpine Parka Lite 099 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 217.75,
+      "stock": 3,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-100",
+      "title": "Waterproof Field Jacket Lite 100",
+      "description": "Waterproof Field Jacket Lite 100 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 234.0,
+      "stock": 4,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-101",
+      "title": "Softshell Trek Hoodie Lite 101",
+      "description": "Softshell Trek Hoodie Lite 101 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 251.25,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-102",
+      "title": "Urban Insulated Coat Lite 102",
+      "description": "Urban Insulated Coat Lite 102 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 268.5,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-103",
+      "title": "Gore-Tex Rain Jacket Lite 103",
+      "description": "Gore-Tex Rain Jacket Lite 103 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 285.75,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-104",
+      "title": "Packable Wind Shell Lite 104",
+      "description": "Packable Wind Shell Lite 104 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 302.0,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-105",
+      "title": "Down Alpine Parka Lite 105",
+      "description": "Down Alpine Parka Lite 105 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 319.25,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-106",
+      "title": "Waterproof Field Jacket Lite 106",
+      "description": "Waterproof Field Jacket Lite 106 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 336.5,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-107",
+      "title": "Softshell Trek Hoodie Lite 107",
+      "description": "Softshell Trek Hoodie Lite 107 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 353.75,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-108",
+      "title": "Urban Insulated Coat Lite 108",
+      "description": "Urban Insulated Coat Lite 108 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 370.0,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-109",
+      "title": "Gore-Tex Rain Jacket Lite 109",
+      "description": "Gore-Tex Rain Jacket Lite 109 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 387.25,
+      "stock": 3,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-110",
+      "title": "Packable Wind Shell Lite 110",
+      "description": "Packable Wind Shell Lite 110 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 93.5,
+      "stock": 4,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-111",
+      "title": "Down Alpine Parka Lite 111",
+      "description": "Down Alpine Parka Lite 111 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 110.75,
+      "stock": 5,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-112",
+      "title": "Waterproof Field Jacket Lite 112",
+      "description": "Waterproof Field Jacket Lite 112 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 127.0,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-113",
+      "title": "Softshell Trek Hoodie Lite 113",
+      "description": "Softshell Trek Hoodie Lite 113 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 144.25,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-114",
+      "title": "Urban Insulated Coat Lite 114",
+      "description": "Urban Insulated Coat Lite 114 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 161.5,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-115",
+      "title": "Gore-Tex Rain Jacket Lite 115",
+      "description": "Gore-Tex Rain Jacket Lite 115 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 178.75,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-116",
+      "title": "Packable Wind Shell Lite 116",
+      "description": "Packable Wind Shell Lite 116 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 195.0,
+      "stock": 10,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-117",
+      "title": "Down Alpine Parka Lite 117",
+      "description": "Down Alpine Parka Lite 117 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 212.25,
+      "stock": 1,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-118",
+      "title": "Waterproof Field Jacket Lite 118",
+      "description": "Waterproof Field Jacket Lite 118 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 229.5,
+      "stock": 2,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-119",
+      "title": "Softshell Trek Hoodie Lite 119",
+      "description": "Softshell Trek Hoodie Lite 119 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 246.75,
+      "stock": 34,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-120",
+      "title": "Urban Insulated Coat Lite 120",
+      "description": "Urban Insulated Coat Lite 120 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 263.0,
+      "stock": 41,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-121",
+      "title": "Gore-Tex Rain Jacket Lite 121",
+      "description": "Gore-Tex Rain Jacket Lite 121 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 280.25,
+      "stock": 48,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-122",
+      "title": "Packable Wind Shell Lite 122",
+      "description": "Packable Wind Shell Lite 122 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 297.5,
+      "stock": 55,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-123",
+      "title": "Down Alpine Parka Lite 123",
+      "description": "Down Alpine Parka Lite 123 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 314.75,
+      "stock": 62,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-124",
+      "title": "Waterproof Field Jacket Lite 124",
+      "description": "Waterproof Field Jacket Lite 124 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 331.0,
+      "stock": 69,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-125",
+      "title": "Softshell Trek Hoodie Lite 125",
+      "description": "Softshell Trek Hoodie Lite 125 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 348.25,
+      "stock": 76,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-126",
+      "title": "Urban Insulated Coat Lite 126",
+      "description": "Urban Insulated Coat Lite 126 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 365.5,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-127",
+      "title": "Gore-Tex Rain Jacket Lite 127",
+      "description": "Gore-Tex Rain Jacket Lite 127 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 382.75,
+      "stock": 90,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-128",
+      "title": "Packable Wind Shell Lite 128",
+      "description": "Packable Wind Shell Lite 128 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 399.0,
+      "stock": 97,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-129",
+      "title": "Down Alpine Parka Lite 129",
+      "description": "Down Alpine Parka Lite 129 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 105.25,
+      "stock": 14,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-130",
+      "title": "Waterproof Field Jacket Lite 130",
+      "description": "Waterproof Field Jacket Lite 130 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 122.5,
+      "stock": 21,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-131",
+      "title": "Softshell Trek Hoodie Lite 131",
+      "description": "Softshell Trek Hoodie Lite 131 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 139.75,
+      "stock": 28,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-132",
+      "title": "Urban Insulated Coat Lite 132",
+      "description": "Urban Insulated Coat Lite 132 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 156.0,
+      "stock": 35,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-133",
+      "title": "Gore-Tex Rain Jacket Lite 133",
+      "description": "Gore-Tex Rain Jacket Lite 133 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 173.25,
+      "stock": 42,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-134",
+      "title": "Packable Wind Shell Lite 134",
+      "description": "Packable Wind Shell Lite 134 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 190.5,
+      "stock": 49,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-135",
+      "title": "Down Alpine Parka Lite 135",
+      "description": "Down Alpine Parka Lite 135 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 207.75,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-136",
+      "title": "Waterproof Field Jacket Lite 136",
+      "description": "Waterproof Field Jacket Lite 136 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 224.0,
+      "stock": 63,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 310
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-137",
+      "title": "Softshell Trek Hoodie Lite 137",
+      "description": "Softshell Trek Hoodie Lite 137 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 241.25,
+      "stock": 70,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": 420
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-138",
+      "title": "Urban Insulated Coat Lite 138",
+      "description": "Urban Insulated Coat Lite 138 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 258.5,
+      "stock": 77,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 560
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-139",
+      "title": "Gore-Tex Rain Jacket Lite 139",
+      "description": "Gore-Tex Rain Jacket Lite 139 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 275.75,
+      "stock": 84,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": 780
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-140",
+      "title": "Packable Wind Shell Lite 140",
+      "description": "Packable Wind Shell Lite 140 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 292.0,
+      "stock": 91,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": 920
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-141",
+      "title": "Product OUT-141",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 309.25,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-142",
+      "title": "Product OUT-142",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 326.5,
+      "stock": 25,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-143",
+      "title": "Product OUT-143",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 343.75,
+      "stock": 30,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-144",
+      "title": "Product OUT-144",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 360.0,
+      "stock": 35,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-145",
+      "title": "Product OUT-145",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 377.25,
+      "stock": 40,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-146",
+      "title": "Product OUT-146",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 394.5,
+      "stock": 45,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-147",
+      "title": "Product OUT-147",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 100.75,
+      "stock": 50,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-148",
+      "title": "Product OUT-148",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 117.0,
+      "stock": 9,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-149",
+      "title": "Product OUT-149",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 134.25,
+      "stock": 14,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-150",
+      "title": "Product OUT-150",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 151.5,
+      "stock": 19,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-151",
+      "title": "Product OUT-151",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 168.75,
+      "stock": 24,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-152",
+      "title": "Product OUT-152",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 185.0,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-153",
+      "title": "Product OUT-153",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 202.25,
+      "stock": 34,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-154",
+      "title": "Product OUT-154",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 219.5,
+      "stock": 39,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-155",
+      "title": "Product OUT-155",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 236.75,
+      "stock": 44,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-156",
+      "title": "Product OUT-156",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 253.0,
+      "stock": 49,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-157",
+      "title": "Product OUT-157",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 270.25,
+      "stock": 8,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-158",
+      "title": "Product OUT-158",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 287.5,
+      "stock": 13,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-159",
+      "title": "Product OUT-159",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 304.75,
+      "stock": 18,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-160",
+      "title": "Product OUT-160",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 321.0,
+      "stock": 23,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-161",
+      "title": "Product OUT-161",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 338.25,
+      "stock": 28,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-162",
+      "title": "Product OUT-162",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 355.5,
+      "stock": 33,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-163",
+      "title": "Product OUT-163",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 372.75,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-164",
+      "title": "Product OUT-164",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 389.0,
+      "stock": 43,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-165",
+      "title": "Product OUT-165",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 95.25,
+      "stock": 48,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-166",
+      "title": "Product OUT-166",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 112.5,
+      "stock": 7,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-167",
+      "title": "Product OUT-167",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 129.75,
+      "stock": 12,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-168",
+      "title": "Product OUT-168",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 146.0,
+      "stock": 17,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-169",
+      "title": "Product OUT-169",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 163.25,
+      "stock": 22,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-170",
+      "title": "Product OUT-170",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 180.5,
+      "stock": 27,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-171",
+      "title": "Product OUT-171",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 197.75,
+      "stock": 32,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-172",
+      "title": "Product OUT-172",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 214.0,
+      "stock": 37,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-173",
+      "title": "Product OUT-173",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 231.25,
+      "stock": 42,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-174",
+      "title": "Product OUT-174",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 248.5,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-175",
+      "title": "Product OUT-175",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 265.75,
+      "stock": 6,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-176",
+      "title": "Product OUT-176",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 282.0,
+      "stock": 11,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-177",
+      "title": "Product OUT-177",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 299.25,
+      "stock": 16,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-178",
+      "title": "Product OUT-178",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 316.5,
+      "stock": 21,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-179",
+      "title": "Product OUT-179",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 333.75,
+      "stock": 26,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-180",
+      "title": "Product OUT-180",
+      "description": "Outerwear item",
+      "category": "outerwear",
+      "brand": null,
+      "price": 350.0,
+      "stock": 31,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-181",
+      "title": "New Gore-Tex Rain Jacket 181",
+      "description": "New Gore-Tex Rain Jacket 181 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 367.25,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-182",
+      "title": "New Packable Wind Shell 182",
+      "description": "New Packable Wind Shell 182 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 384.5,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-183",
+      "title": "New Down Alpine Parka 183",
+      "description": "New Down Alpine Parka 183 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 90.75,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-184",
+      "title": "New Waterproof Field Jacket 184",
+      "description": "New Waterproof Field Jacket 184 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 107.0,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-185",
+      "title": "New Softshell Trek Hoodie 185",
+      "description": "New Softshell Trek Hoodie 185 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 124.25,
+      "stock": 65,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-186",
+      "title": "New Urban Insulated Coat 186",
+      "description": "New Urban Insulated Coat 186 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 141.5,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-187",
+      "title": "New Gore-Tex Rain Jacket 187",
+      "description": "New Gore-Tex Rain Jacket 187 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 158.75,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-188",
+      "title": "New Packable Wind Shell 188",
+      "description": "New Packable Wind Shell 188 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 175.0,
+      "stock": 92,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-189",
+      "title": "New Down Alpine Parka 189",
+      "description": "New Down Alpine Parka 189 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 192.25,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-190",
+      "title": "New Waterproof Field Jacket 190",
+      "description": "New Waterproof Field Jacket 190 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 209.5,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-191",
+      "title": "New Softshell Trek Hoodie 191",
+      "description": "New Softshell Trek Hoodie 191 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 226.75,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-192",
+      "title": "New Urban Insulated Coat 192",
+      "description": "New Urban Insulated Coat 192 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 243.0,
+      "stock": 47,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-193",
+      "title": "New Gore-Tex Rain Jacket 193",
+      "description": "New Gore-Tex Rain Jacket 193 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 260.25,
+      "stock": 56,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-194",
+      "title": "New Packable Wind Shell 194",
+      "description": "New Packable Wind Shell 194 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 277.5,
+      "stock": 65,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-195",
+      "title": "New Down Alpine Parka 195",
+      "description": "New Down Alpine Parka 195 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "DriftLayer",
+      "price": 294.75,
+      "stock": 74,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-196",
+      "title": "New Waterproof Field Jacket 196",
+      "description": "New Waterproof Field Jacket 196 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 311.0,
+      "stock": 83,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-197",
+      "title": "New Softshell Trek Hoodie 197",
+      "description": "New Softshell Trek Hoodie 197 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 328.25,
+      "stock": 92,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-3XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-198",
+      "title": "New Urban Insulated Coat 198",
+      "description": "New Urban Insulated Coat 198 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CloudShell",
+      "price": 345.5,
+      "stock": 20,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "XS-XL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-199",
+      "title": "New Gore-Tex Rain Jacket 199",
+      "description": "New Gore-Tex Rain Jacket 199 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "Northline",
+      "price": 362.75,
+      "stock": 29,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "S-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-200",
+      "title": "New Packable Wind Shell 200",
+      "description": "New Packable Wind Shell 200 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 379.0,
+      "stock": 38,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": "M-XXL",
+        "weight_grams": null
+      },
+      "data_quality": "new_arrival"
+    }
+  ]
+}

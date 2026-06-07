@@ -1,0 +1,6 @@
+{
+  "event_id": "MXP-20260607-xxxxxxxx",
+  "severity": "critical",
+  "event_type": "rule_diff",
+  "message": "Rule diff ingested and applied for MXP-001"
+}

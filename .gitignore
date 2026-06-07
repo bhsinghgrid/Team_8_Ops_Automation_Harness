@@ -1,0 +1,49 @@
+# Root OS files
+.DS_Store
+
+# Magellan signal ingestion backend: OS files
+Magellan-signal-ingestion-backend/.DS_Store
+Magellan-signal-ingestion-backend/**/.DS_Store
+
+# Magellan signal ingestion backend: local environment and secrets
+Magellan-signal-ingestion-backend/.env
+Magellan-signal-ingestion-backend/.env.*
+!Magellan-signal-ingestion-backend/.env.example
+
+# Magellan signal ingestion backend: Python caches and build output
+Magellan-signal-ingestion-backend/**/__pycache__/
+Magellan-signal-ingestion-backend/**/*.py[cod]
+Magellan-signal-ingestion-backend/*$py.class
+Magellan-signal-ingestion-backend/.pytest_cache/
+Magellan-signal-ingestion-backend/.mypy_cache/
+Magellan-signal-ingestion-backend/.ruff_cache/
+Magellan-signal-ingestion-backend/.coverage
+Magellan-signal-ingestion-backend/.coverage.*
+Magellan-signal-ingestion-backend/htmlcov/
+Magellan-signal-ingestion-backend/**/*.egg-info/
+Magellan-signal-ingestion-backend/build/
+Magellan-signal-ingestion-backend/dist/
+
+# Magellan signal ingestion backend: virtual environments
+Magellan-signal-ingestion-backend/venv/
+Magellan-signal-ingestion-backend/.venv/
+Magellan-signal-ingestion-backend/env/
+Magellan-signal-ingestion-backend/ENV/
+
+# Magellan signal ingestion backend: logs and runtime files
+Magellan-signal-ingestion-backend/*.log
+Magellan-signal-ingestion-backend/logs/
+Magellan-signal-ingestion-backend/*.pid
+Magellan-signal-ingestion-backend/*.seed
+
+# Editor settings
+.vscode/
+.idea/
+Magellan-signal-ingestion-backend/.vscode/
+Magellan-signal-ingestion-backend/.idea/
+Magellan-signal-ingestion-backend/*.swp
+Magellan-signal-ingestion-backend/*.swo
+
+# Magellan signal ingestion backend: Docker/local data
+Magellan-signal-ingestion-backend/.docker/
+Magellan-signal-ingestion-backend/docker-data/
