@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magellan-app-canary
+  labels:
+    app: magellan-app
+    version: canary
+spec:
+  replicas: 1 # Start with a small replica count for canary
+  selector:
+    matchLabels:
+      app: magellan-app
+      version: canary
+  template:
+    metadata:
+      labels:
+        app: magellan-app
+        version: canary
+    spec:
+      containers:
+      - name: magellan-app
+        image: your-search-app:candidate # New candidate image
+        ports:
+        - containerPort: 80

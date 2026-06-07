@@ -1,0 +1,10 @@
+{
+    "signals": [
+        {
+            "id": "ops-vocab-gap-01",
+            "type": "vocabulary_gap",
+            "summary": "High exit rate on queries for 'kicks' (slang for sneakers).",
+            "raw_data": {}
+        }
+    ]
+}

@@ -1,0 +1,35 @@
+{
+    "tenant": "products",
+    "detectedAt": "2026-06-05T10:00:00Z",
+    "telemetry": {
+        "hitCount": 0,
+        "matchCount": 0,
+        "queryCluster": "waterproof trail shoes"
+    },
+    "signals": [
+        {
+            "id": "ops-catalog-relevance-delta-01",
+            "type": "catalog_gap",
+            "source": "ingestion_monitor",
+            "severity": "high",
+            "summary": "New seasonal trail shoes ship with missing waterproof and terrain attributes.",
+            "detectedAt": "2026-06-05T10:00:00Z",
+            "entities": {
+                "category": "Footwear",
+                "brand": "Trailhead XT"
+            },
+            "metrics": {
+                "missingAttributeCount": 2,
+                "affectedSkuCount": 128
+            },
+            "evidence": [
+                {
+                    "field": "waterproof_flag",
+                    "value": "null",
+                    "message": "Required attribute for semantic vector alignment is missing."
+                }
+            ],
+            "recommendedAction": "Generate enrichment patch and scope targeted re-embedding job."
+        }
+    ]
+}

@@ -1,0 +1,10 @@
+{
+    "signals": [
+        {
+            "id": "ops-mxp-conflict-99",
+            "type": "mxp_conflict",
+            "summary": "Merchandising rule conflict detected.",
+            "raw_data": {}
+        }
+    ]
+}

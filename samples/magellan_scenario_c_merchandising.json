@@ -1,0 +1,34 @@
+{
+    "tenant": "products",
+    "detectedAt": "2026-06-05T12:00:00Z",
+    "telemetry": {
+        "conversionDrop": 0.08,
+        "activeCampaign": "Spring Boost 2026"
+    },
+    "signals": [
+        {
+            "id": "ops-mxp-rule-clash-03",
+            "type": "mxp_conflict",
+            "source": "governance_monitor",
+            "severity": "high",
+            "summary": "Campaign boost promotes low-stock products and suppresses higher-converting substitutes.",
+            "detectedAt": "2026-06-05T11:55:00Z",
+            "entities": {
+                "campaignId": "SPR-26",
+                "conflictingRule": "Global Inventory Filter"
+            },
+            "metrics": {
+                "lowStockItemCount": 45,
+                "revenueImpact": -12000.50
+            },
+            "evidence": [
+                {
+                    "field": "MXP_Rules",
+                    "value": "overlap",
+                    "message": "Boost logic [rank:10] contradicts Suppress logic [rank:5]."
+                }
+            ],
+            "recommendedAction": "Propose boost override bundle and wait for Merchandising Owner approval."
+        }
+    ]
+}

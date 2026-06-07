@@ -1,0 +1,35 @@
+{
+    "tenant": "products",
+    "detectedAt": "2026-06-05T11:30:00Z",
+    "telemetry": {
+        "exitRate": 0.42,
+        "searchVolume": 12500,
+        "prefix": "hybrid work"
+    },
+    "signals": [
+        {
+            "id": "ops-autocomplete-drift-02",
+            "type": "vocabulary_gap",
+            "source": "clickstream_analytics",
+            "severity": "medium",
+            "summary": "Mobile searches for 'hybrid work backpack' show rising exits due to missing suggestions.",
+            "detectedAt": "2026-06-05T11:25:00Z",
+            "entities": {
+                "prefix": "hybrid work",
+                "target_cluster": "backpacks"
+            },
+            "metrics": {
+                "exitRateUplift": 15.5,
+                "opportunityLoss": 2400.00
+            },
+            "evidence": [
+                {
+                    "field": "suggestions",
+                    "value": "empty",
+                    "message": "Top trending prefix has no mapped autocomplete results."
+                }
+            ],
+            "recommendedAction": "Generate suggestion pack and route to Human Search Lead for review."
+        }
+    ]
+}

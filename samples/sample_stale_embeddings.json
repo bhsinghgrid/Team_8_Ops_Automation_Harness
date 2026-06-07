@@ -1,0 +1,10 @@
+{
+    "signals": [
+        {
+            "id": "ops-stale-embed-01",
+            "type": "stale_embedding",
+            "summary": "High drift detected in vector embeddings for new catalog items.",
+            "raw_data": {}
+        }
+    ]
+}

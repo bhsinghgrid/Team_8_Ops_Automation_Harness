@@ -1,0 +1,65 @@
+{
+  "index": "products",
+  "query": "hybrid work backpack",
+  "userContext": {
+    "channel": "mobile",
+    "locale": "en",
+    "sessionId": "optional-session-id"
+  },
+  "signalsByType": {
+    "failed_query": [
+      {
+        "id": "sig-hybrid-work-backpack-failed-query",
+        "type": "failed_query",
+        "severity": "high",
+        "summary": "Query returned zero search matches.",
+        "entities": { "query": "hybrid work backpack" },
+        "metrics": { "matchCount": 0 },
+        "evidence": [{ "field": "slices.matchCount", "value": 0 }]
+      }
+    ],
+    "autocomplete_miss": [
+      {
+        "id": "sig-hybrid-work-backpack-autocomplete-miss",
+        "type": "autocomplete_miss",
+        "severity": "high",
+        "summary": "Autocomplete returned no suggestions for multiple prefixes.",
+        "entities": { "prefixes": ["hy", "hyb", "hybr", "hybri"] },
+        "metrics": { "missedPrefixCount": 4 }
+      }
+    ],
+    "catalog_delta": [
+      {
+        "id": "sig-hybrid-work-backpack-catalog-delta",
+        "type": "catalog_delta",
+        "severity": "high",
+        "summary": "Catalog product is missing terrain attribute.",
+        "entities": {
+          "productIds": ["sku-backpack-1"],
+          "attributes": ["terrain"]
+        },
+        "metrics": { "affectedDocumentCount": 1 }
+      }
+    ],
+    "stale_embedding": [
+      {
+        "id": "sig-sku-backpack-1-stale-embedding",
+        "type": "stale_embedding",
+        "severity": "medium",
+        "summary": "Embedding timestamp is older than catalog timestamp.",
+        "entities": { "productIds": ["sku-backpack-1"] },
+        "metrics": { "staleEmbeddingCount": 1 }
+      }
+    ],
+    "merchandising_rule_conflict": [
+      {
+        "id": "sig-hybrid-work-backpack-merch-rule",
+        "type": "merchandising_rule_conflict",
+        "severity": "critical",
+        "summary": "Campaign boost promotes low-stock products and suppresses substitutes.",
+        "entities": { "ruleIds": ["mxp-rule-campaign-boost"] },
+        "metrics": { "conflictCount": 1 }
+      }
+    ]
+  }
+}

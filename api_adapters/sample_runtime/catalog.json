@@ -1,0 +1,26 @@
+[
+  {
+    "id": "backpack-001",
+    "title": "Hybrid Work Backpack",
+    "description": "Professional backpack for remote and office work",
+    "tags": ["backpack", "work", "hybrid", "professional"],
+    "price": 89.99,
+    "stock": 150
+  },
+  {
+    "id": "backpack-002",
+    "title": "Laptop Backpack",
+    "description": "Durable backpack with laptop compartment",
+    "tags": ["backpack", "laptop", "travel"],
+    "price": 79.99,
+    "stock": 200
+  },
+  {
+    "id": "bag-001",
+    "title": "Work Bag",
+    "description": "Professional work bag with multiple compartments",
+    "tags": ["bag", "work", "professional"],
+    "price": 129.99,
+    "stock": 75
+  }
+]

@@ -1,0 +1,16 @@
+{
+    "signals": [
+        {
+            "id": "ops-catalog-delta-4f72",
+            "type": "catalog_gap",
+            "source": "ingestion_monitor",
+            "severity": "high",
+            "summary": "Catalog update resulted in missing attributes for new products.",
+            "detectedAt": "2026-06-05T11:00:00Z",
+            "entities": { "product_line": "trail_shoes", "tenant": "products" },
+            "metrics": { "missing_attributes": ["waterproof", "terrain"], "affected_sku_count": 128 },
+            "evidence": [ { "field": "attributes", "value": "missing", "message": "Key attributes for semantic search are null." } ],
+            "recommendedAction": "Trigger catalog enrichment and schedule a scoped re-indexing job."
+        }
+    ]
+}

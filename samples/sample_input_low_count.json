@@ -1,0 +1,16 @@
+{
+    "signals": [
+        {
+            "id": "ocs-products-unknown-low_result_count",
+            "type": "low_result_count",
+            "source": "search_api",
+            "severity": "medium",
+            "summary": "Search returned fewer products than the minimum result threshold.",
+            "detectedAt": "2026-06-05T10:00:00Z",
+            "entities": { "query": "trailhead xt", "tenant": "products" },
+            "metrics": { "minResults": 3, "matchCount": 2 },
+            "evidence": [ { "field": "matchCount", "value": 2, "message": "Result count is below threshold." } ],
+            "recommendedAction": "Review recall, filters, searchable attributes, and synonym coverage."
+        }
+    ]
+}

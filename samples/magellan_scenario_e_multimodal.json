@@ -1,0 +1,34 @@
+{
+    "tenant": "products",
+    "detectedAt": "2026-06-05T14:20:00Z",
+    "telemetry": {
+        "imageSearchSuccess": 0.38,
+        "inputMode": "visual"
+    },
+    "signals": [
+        {
+            "id": "ops-multimodal-shift-05",
+            "type": "multimodal_failure",
+            "source": "visual_search_api",
+            "severity": "high",
+            "summary": "Visual search alignment shift: image uploads for 'summer dresses' returning mismatched accessories.",
+            "detectedAt": "2026-06-05T14:15:00Z",
+            "entities": {
+                "inputMode": "image",
+                "embeddingModel": "clip-L/14"
+            },
+            "metrics": {
+                "precisionAt10": 0.42,
+                "mismatchRate": 0.58
+            },
+            "evidence": [
+                {
+                    "field": "semantic_closeness",
+                    "value": "low",
+                    "message": "Secondary query intent (accessories) is overriding primary intent (apparel)."
+                }
+            ],
+            "recommendedAction": "Run shadow replay against re-trained CLIP weights and wait for Human verification."
+        }
+    ]
+}

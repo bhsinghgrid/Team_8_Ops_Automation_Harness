@@ -1,0 +1,10 @@
+{
+    "signals": [
+        {
+            "id": "ops-infra-vector-01",
+            "type": "vector_mismatch",
+            "summary": "Invariant Breach Signal: Schema mismatch on vector ingestion.",
+            "raw_data": {}
+        }
+    ]
+}

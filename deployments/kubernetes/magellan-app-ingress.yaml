@@ -1,0 +1,22 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: magellan-app-ingress
+  annotations:
+    # Example Nginx annotations for traffic splitting - adjust based on your ingress controller
+    nginx.ingress.kubernetes.io/canary: "true"
+    nginx.ingress.kubernetes.io/canary-weight: "0" # Start with 0% traffic to canary
+spec:
+  rules:
+  - host: magellan.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: magellan-app-stable-service # Initially points to stable
+            port:
+              number: 80
+  # This is a simplified representation. In a real scenario, you'd have more sophisticated rules
+  # or use a service mesh for traffic splitting.
