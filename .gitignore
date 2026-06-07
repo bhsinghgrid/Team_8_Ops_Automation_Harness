@@ -3,4 +3,8 @@ deployments/
 governance/
 __pycache__/
 *.pyc
+<<<<<<< HEAD
 *.sqlite
+=======
+*.sqlite
+>>>>>>> 8ad6d418badaae20a37108b1d4d22c4e8f5b3a62
