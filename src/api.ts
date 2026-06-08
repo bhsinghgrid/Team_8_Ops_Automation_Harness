@@ -28,9 +28,24 @@ export interface TemporalWorkflowSummary {
   checkpoints: string[];
 }
 
+export interface TemporalLiveWorkflow {
+  workflow_id: string;
+  run_id: string;
+  workflow_type: string;
+  status: string;
+  task_queue: string;
+  start_time: string;
+  close_time: string;
+}
+
 export interface TemporalDetails {
   namespace: string;
   status: string;
+  backend_address: string;
+  backend_connected: boolean;
+  backend_error: string | null;
+  task_queue: string;
+  action_workflow_type: string;
   workflows_url: string;
   redirect_endpoint: string;
   cors_origins: string[];
@@ -44,6 +59,7 @@ export interface RunbookActionResponse {
   action: RunbookAction;
   status: string;
   temporal_workflows_url: string;
+  temporal_workflow_id?: string | null;
   message: string;
 }
 
@@ -52,6 +68,7 @@ export interface BackendRoot {
   status: string;
   docs: string;
   backend_base_url: string;
+  temporal_backend_address: string;
   temporal_workflows_url: string;
   data_sources: Record<string, { configured: boolean; url: string }>;
   endpoints: Record<string, string>;
@@ -60,6 +77,7 @@ export interface BackendRoot {
 export interface HealthStatus {
   status: string;
   backend_base_url?: string;
+  temporal_backend_address?: string;
   temporal_workflows_url: string;
   data_sources_configured?: string;
 }
@@ -97,6 +115,7 @@ export const api = {
   getQueryClusters: () => request<QueryClusterRow[]>('/api/query-clusters'),
   getTemporalLink: () => request<TemporalLink>('/api/temporal'),
   getTemporalDetails: () => request<TemporalDetails>('/api/temporal/details'),
+  getTemporalLiveWorkflows: () => request<TemporalLiveWorkflow[]>('/api/temporal/live-workflows'),
   runRunbookAction: (runbookId: string, action: RunbookAction) =>
     request<RunbookActionResponse>(`/api/runbooks/${runbookId}/actions/${action}`, {
       method: 'POST',

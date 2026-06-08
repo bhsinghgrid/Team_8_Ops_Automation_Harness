@@ -154,7 +154,7 @@ export const Overview: React.FC<OverviewProps> = ({
           <Workflow size={18} />
           <span>Temporal namespace</span>
           <strong>{temporalDetails?.namespace ?? 'default'}</strong>
-          <small>{temporalDetails?.workflow_count ?? runbooks.length} workflows returned</small>
+          <small>{temporalDetails?.backend_address ?? 'localhost:7233'} · {temporalDetails?.backend_connected ? 'connected' : 'not connected'}</small>
         </div>
         <div className="backend-inline-card">
           <Workflow size={18} />

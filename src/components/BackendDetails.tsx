@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Database, ExternalLink, RefreshCw, Server, ShieldCheck } from 'lucide-react';
-import { api, API_BASE_URL, type BackendRoot, type HealthStatus, type TemporalDetails } from '../api';
+import { api, API_BASE_URL, type BackendRoot, type HealthStatus, type TemporalDetails, type TemporalLiveWorkflow } from '../api';
 import type { AuditRow, QueryClusterRow, Runbook } from '../types';
 
 interface BackendSnapshot {
@@ -10,6 +10,7 @@ interface BackendSnapshot {
   runbooks: Runbook[];
   audit: AuditRow[];
   clusters: QueryClusterRow[];
+  liveWorkflows: TemporalLiveWorkflow[];
 }
 
 export const BackendDetails: React.FC = () => {
@@ -22,16 +23,17 @@ export const BackendDetails: React.FC = () => {
     setError('');
 
     try {
-      const [root, health, temporal, runbooks, audit, clusters] = await Promise.all([
+      const [root, health, temporal, runbooks, audit, clusters, liveWorkflows] = await Promise.all([
         api.getRoot(),
         api.getHealth(),
         api.getTemporalDetails(),
         api.getRunbooks(),
         api.getAudit(),
         api.getQueryClusters(),
+        api.getTemporalLiveWorkflows().catch(() => []),
       ]);
 
-      setSnapshot({ root, health, temporal, runbooks, audit, clusters });
+      setSnapshot({ root, health, temporal, runbooks, audit, clusters, liveWorkflows });
       setStatus('connected');
     } catch (err) {
       setSnapshot(null);
@@ -86,8 +88,8 @@ export const BackendDetails: React.FC = () => {
         </div>
         <div className="backend-summary-card">
           <ShieldCheck size={18} />
-          <span>CORS origins</span>
-          <strong>{snapshot?.temporal.cors_origins.length ?? 0}</strong>
+          <span>Temporal service</span>
+          <strong>{snapshot?.temporal.backend_connected ? 'connected' : 'not connected'}</strong>
         </div>
         <div className="backend-summary-card">
           <Database size={18} />
@@ -96,8 +98,8 @@ export const BackendDetails: React.FC = () => {
         </div>
         <div className="backend-summary-card">
           <Database size={18} />
-          <span>Audit rows</span>
-          <strong>{snapshot?.audit.length ?? 0}</strong>
+          <span>Live workflows</span>
+          <strong>{snapshot?.liveWorkflows.length ?? 0}</strong>
         </div>
       </div>
 
@@ -144,6 +146,22 @@ export const BackendDetails: React.FC = () => {
               <strong>{snapshot?.temporal.namespace ?? 'default'}</strong>
             </div>
             <div className="backend-kv-row">
+              <span>Temporal Service Address</span>
+              <strong>{snapshot?.temporal.backend_address ?? 'localhost:7233'}</strong>
+            </div>
+            <div className="backend-kv-row">
+              <span>Temporal Service Status</span>
+              <strong>{snapshot?.temporal.backend_connected ? 'connected' : 'not connected'}</strong>
+            </div>
+            <div className="backend-kv-row">
+              <span>Task Queue</span>
+              <strong>{snapshot?.temporal.task_queue ?? 'not configured'}</strong>
+            </div>
+            <div className="backend-kv-row">
+              <span>Action Workflow Type</span>
+              <strong>{snapshot?.temporal.action_workflow_type ?? 'not configured'}</strong>
+            </div>
+            <div className="backend-kv-row">
               <span>Temporal Web URL</span>
               <strong>{temporalUrl}</strong>
             </div>
@@ -159,9 +177,54 @@ export const BackendDetails: React.FC = () => {
               <span>CORS Origins</span>
               <strong>{snapshot?.temporal.cors_origins.join(', ') ?? 'not loaded'}</strong>
             </div>
+            {snapshot?.temporal.backend_error && (
+              <div className="backend-kv-row">
+                <span>Connection Error</span>
+                <strong>{snapshot.temporal.backend_error}</strong>
+              </div>
+            )}
           </div>
         </section>
       </div>
+
+      <section className="card backend-card">
+        <div className="card-header">
+          <h3>Live Temporal Workflows From Service</h3>
+        </div>
+        <div className="backend-table-wrap">
+          <table className="cluster-table">
+            <thead>
+              <tr>
+                <th>Workflow ID</th>
+                <th>Run ID</th>
+                <th>Type</th>
+                <th>Status</th>
+                <th>Task Queue</th>
+                <th>Start Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {(snapshot?.liveWorkflows ?? []).length === 0 && (
+                <tr>
+                  <td colSpan={6} style={{ color: 'var(--text-muted)', padding: '1.4rem', textAlign: 'center' }}>
+                    No live workflows returned from Temporal service.
+                  </td>
+                </tr>
+              )}
+              {(snapshot?.liveWorkflows ?? []).map((workflow) => (
+                <tr key={`${workflow.workflow_id}-${workflow.run_id}`}>
+                  <td className="cluster-query">{workflow.workflow_id}</td>
+                  <td>{workflow.run_id}</td>
+                  <td>{workflow.workflow_type}</td>
+                  <td>{workflow.status}</td>
+                  <td>{workflow.task_queue}</td>
+                  <td>{workflow.start_time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
 
       <section className="card backend-card">
         <div className="card-header">

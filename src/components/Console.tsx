@@ -226,6 +226,9 @@ export const Console: React.FC<ConsoleProps> = ({
       const backendResponse = await api.runRunbookAction(selectedRunbook.id, type);
       setBackendStatus('connected');
       await addLog(`[BACKEND] FastAPI accepted ${backendResponse.action}; status=${backendResponse.status}.`, 200);
+      if (backendResponse.temporal_workflow_id) {
+        await addLog(`[TEMPORAL] Started workflow ${backendResponse.temporal_workflow_id}.`, 250);
+      }
       await addLog(`[BACKEND] Temporal UI linked: ${backendResponse.temporal_workflows_url}`, 250);
     } catch (error) {
       setBackendStatus('offline');
@@ -610,8 +613,8 @@ export const Console: React.FC<ConsoleProps> = ({
                   <strong>{temporalDetails?.namespace ?? 'default'}</strong>
                 </div>
                 <div>
-                  <span>Backend status</span>
-                  <strong>{temporalDetails?.status ?? backendStatus}</strong>
+                  <span>Temporal service</span>
+                  <strong>{temporalDetails?.backend_connected ? 'connected' : temporalDetails?.status ?? backendStatus}</strong>
                 </div>
                 <div>
                   <span>Workflow count</span>
@@ -632,8 +635,20 @@ export const Console: React.FC<ConsoleProps> = ({
               </div>
               <div className="temporal-detail-panel">
                 <div>
+                  <span>Temporal Service</span>
+                  <strong>{temporalDetails?.backend_address ?? 'localhost:7233'}</strong>
+                </div>
+                <div>
                   <span>Temporal Web</span>
                   <strong>{temporalDetails?.workflows_url ?? 'http://localhost:8233/namespaces/default/workflows'}</strong>
+                </div>
+                <div>
+                  <span>Task queue</span>
+                  <strong>{temporalDetails?.task_queue ?? 'not configured'}</strong>
+                </div>
+                <div>
+                  <span>Action workflow</span>
+                  <strong>{temporalDetails?.action_workflow_type ?? 'not configured'}</strong>
                 </div>
                 <div>
                   <span>FastAPI redirect</span>

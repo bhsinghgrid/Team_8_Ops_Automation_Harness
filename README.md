@@ -43,8 +43,13 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 FASTAPI_HOST=127.0.0.1
 FASTAPI_PORT=8000
 PUBLIC_BACKEND_URL=http://127.0.0.1:8000
+TEMPORAL_ADDRESS=localhost:7233
 TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
+TEMPORAL_TASK_QUEUE=
+TEMPORAL_ACTION_WORKFLOW_TYPE=
+TEMPORAL_TLS_ENABLED=false
+TEMPORAL_CONNECTION_TIMEOUT_SECONDS=5
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 FRONTEND_ORIGIN_REGEX=http://(localhost|127\.0\.0\.1|0\.0\.0\.0):[0-9]+
 RUNBOOKS_API_URL=
@@ -56,6 +61,27 @@ BACKEND_REQUEST_TIMEOUT_SECONDS=8
 ```
 
 If you change `.env`, restart both the backend and frontend.
+
+Temporal uses two different local addresses:
+
+```bash
+TEMPORAL_ADDRESS=localhost:7233
+```
+
+This is the Temporal service/backend address used by the Python SDK.
+
+```bash
+TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
+```
+
+This is only the Temporal Web UI link opened from the dashboard.
+
+To start workflows from FastAPI, configure a workflow type and task queue:
+
+```bash
+TEMPORAL_TASK_QUEUE=your-task-queue
+TEMPORAL_ACTION_WORKFLOW_TYPE=YourWorkflowType
+```
 
 For real pipeline data, set these URLs in `.env`:
 
@@ -128,6 +154,8 @@ If the frontend is using the wrong backend URL, check `VITE_API_BASE_URL` in `.e
 If the browser blocks API calls, check `FRONTEND_ORIGINS` and `FRONTEND_ORIGIN_REGEX` in `.env`.
 
 If the Temporal button does not open workflows, check that Temporal Web is running and update `TEMPORAL_WORKFLOWS_URL` in `.env`.
+
+If Temporal service shows `not connected`, check that Temporal server is running on `TEMPORAL_ADDRESS` and that backend dependencies are installed from `requirements.txt`.
 
 ## Current Data Source
 

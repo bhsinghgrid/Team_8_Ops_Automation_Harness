@@ -1,9 +1,12 @@
+import asyncio
+import importlib
 import os
 import json
 from pathlib import Path
 from typing import Any, Literal
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
+from uuid import uuid4
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -34,11 +37,16 @@ load_env_file()
 FASTAPI_HOST = os.getenv("FASTAPI_HOST", "127.0.0.1")
 FASTAPI_PORT = os.getenv("FASTAPI_PORT", "8000")
 PUBLIC_BACKEND_URL = os.getenv("PUBLIC_BACKEND_URL", f"http://{FASTAPI_HOST}:{FASTAPI_PORT}")
+TEMPORAL_ADDRESS = os.getenv("TEMPORAL_ADDRESS", "localhost:7233")
 TEMPORAL_NAMESPACE = os.getenv("TEMPORAL_NAMESPACE", "default")
 TEMPORAL_WORKFLOWS_URL = os.getenv(
     "TEMPORAL_WORKFLOWS_URL",
     "http://localhost:8233/namespaces/default/workflows",
 )
+TEMPORAL_TASK_QUEUE = os.getenv("TEMPORAL_TASK_QUEUE", "").strip()
+TEMPORAL_ACTION_WORKFLOW_TYPE = os.getenv("TEMPORAL_ACTION_WORKFLOW_TYPE", "").strip()
+TEMPORAL_TLS_ENABLED = os.getenv("TEMPORAL_TLS_ENABLED", "false").lower() == "true"
+TEMPORAL_CONNECTION_TIMEOUT_SECONDS = float(os.getenv("TEMPORAL_CONNECTION_TIMEOUT_SECONDS", "5"))
 BACKEND_REQUEST_TIMEOUT_SECONDS = float(os.getenv("BACKEND_REQUEST_TIMEOUT_SECONDS", "8"))
 
 DATA_SOURCE_URLS = {
@@ -325,6 +333,167 @@ def normalize_query_cluster(row: dict) -> dict:
     }
 
 
+def status_from_temporal_workflow(status: str) -> str:
+    status_map = {
+        "RUNNING": "Shadow Test",
+        "COMPLETED": "Released",
+        "FAILED": "Rollback Candidate",
+        "TERMINATED": "Rolled Back",
+        "CANCELED": "Rolled Back",
+        "TIMED_OUT": "Rollback Candidate",
+    }
+    return status_map.get(status.upper(), "Eval Ready")
+
+
+def build_runbook_from_temporal_workflow(workflow: dict[str, str]) -> dict:
+    workflow_id = workflow.get("workflow_id") or "unknown-workflow"
+    workflow_type = workflow.get("workflow_type") or "TemporalWorkflow"
+    status = workflow.get("status") or "UNKNOWN"
+    task_queue = workflow.get("task_queue") or "not provided"
+    run_id = workflow.get("run_id") or "not provided"
+
+    return normalize_runbook(
+        {
+            "id": workflow_id,
+            "title": f"{workflow_type} - {status}",
+            "description": (
+                f"Live Temporal workflow from backend service {TEMPORAL_ADDRESS}. "
+                f"Run ID: {run_id}. Task queue: {task_queue}."
+            ),
+            "visualCode": "".join(part[:1] for part in workflow_type.split("_"))[:2].upper() or "TW",
+            "capability": "semantic search",
+            "signalType": "catalog gap",
+            "risk": "high" if status.upper() == "FAILED" else "low",
+            "confidence": 100 if status.upper() in {"RUNNING", "COMPLETED"} else 50,
+            "tags": ["temporal-backend", workflow_type, status.lower()],
+            "status": status_from_temporal_workflow(status),
+            "offlineEvalCoverage": 0,
+            "businessImpact": 0,
+            "approvalPolicy": "Temporal backend workflow record. No mock approval policy generated.",
+            "evidenceNotes": (
+                f"Workflow ID {workflow_id} is returned from Temporal service at {TEMPORAL_ADDRESS}. "
+                f"Started at {workflow.get('start_time') or 'not provided'}."
+            ),
+            "agent": {
+                "name": workflow_type,
+                "role": "Temporal workflow execution record from backend service.",
+                "autonomyLevel": "Reported by Temporal service.",
+                "behaviors": [
+                    f"Workflow status: {status}.",
+                    f"Task queue: {task_queue}.",
+                    f"Run ID: {run_id}.",
+                ],
+                "decisionRecord": (
+                    "This record is derived from Temporal backend workflow metadata, "
+                    "not from local mock data."
+                ),
+            },
+            "temporal": {
+                "workflowId": workflow_id,
+                "cadence": f"Started at {workflow.get('start_time') or 'not provided'}",
+                "retryPolicy": "Read from Temporal workflow metadata only; retry policy not exposed by list API.",
+                "sla": f"Status: {status}",
+                "checkpoints": [
+                    f"Workflow type: {workflow_type}",
+                    f"Task queue: {task_queue}",
+                    f"Run ID: {run_id}",
+                ],
+            },
+            "humanApproval": {
+                "mode": "conditional",
+                "owner": "Temporal operator",
+                "status": "Not requested",
+                "reason": "Live Temporal workflow record does not include approval state.",
+                "expiry": "Not provided by Temporal workflow list.",
+                "record": "No local approval record created.",
+            },
+            "monitoringSignals": [
+                {
+                    "label": "Temporal status",
+                    "value": status,
+                    "status": "blocked" if status.upper() == "FAILED" else "healthy",
+                    "detail": f"Workflow status reported by Temporal service at {TEMPORAL_ADDRESS}.",
+                },
+                {
+                    "label": "Task queue",
+                    "value": task_queue,
+                    "status": "healthy",
+                    "detail": "Task queue returned by Temporal workflow listing.",
+                },
+            ],
+            "feedbackLoop": "Refresh Backend Details or Temporal Web to inspect latest workflow state.",
+            "liveMetrics": {
+                "queryVolume": 0,
+                "exitRate": 0,
+                "revenueLoss": 0,
+                "baselineNdcg": 0,
+                "proposedNdcg": 0,
+                "p95Latency": 0,
+            },
+            "beforeQuery": workflow_id,
+            "beforeResults": [],
+            "afterResults": [],
+        }
+    )
+
+
+def build_audit_from_temporal_workflow(workflow: dict[str, str]) -> dict:
+    workflow_id = workflow.get("workflow_id") or "unknown-workflow"
+    status = workflow.get("status") or "UNKNOWN"
+    workflow_type = workflow.get("workflow_type") or "TemporalWorkflow"
+
+    return normalize_audit_row(
+        {
+            "time": workflow.get("start_time") or "not provided",
+            "runbookId": workflow_id,
+            "title": workflow_type,
+            "action": f"Temporal workflow observed with status {status}",
+            "approver": "temporal:service",
+            "agentName": workflow_type,
+            "agentBehavior": f"Task queue: {workflow.get('task_queue') or 'not provided'}",
+            "temporalWorkflowId": workflow_id,
+            "approvalGate": "No approval state returned by Temporal workflow list.",
+            "monitoringSummary": f"Status: {status}; Run ID: {workflow.get('run_id') or 'not provided'}",
+            "feedbackRecord": "Live Temporal backend record rendered in frontend.",
+            "recordType": "rollback" if status.upper() == "FAILED" else "monitoring",
+            "hash": workflow.get("run_id") or workflow_id,
+            "isRollback": status.upper() == "FAILED",
+        }
+    )
+
+
+async def get_runbook_records() -> list[dict]:
+    if DATA_SOURCE_URLS["runbooks"]:
+        return [
+            normalize_runbook(runbook)
+            for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
+        ]
+
+    try:
+        return [
+            build_runbook_from_temporal_workflow(workflow)
+            for workflow in await list_temporal_backend_workflows()
+        ]
+    except Exception:
+        return []
+
+
+async def get_audit_records() -> list[dict]:
+    if DATA_SOURCE_URLS["audit"]:
+        return [
+            normalize_audit_row(row)
+            for row in fetch_remote_list("audit", ["audit", "audit_rows", "items", "data", "results"])
+        ]
+
+    try:
+        return [
+            build_audit_from_temporal_workflow(workflow)
+            for workflow in await list_temporal_backend_workflows()
+        ]
+    except Exception:
+        return []
+
+
 def build_workflow_summary(runbook: dict) -> "TemporalWorkflowSummary":
     runbook_id = str(get_runbook_value(runbook, "id", "runbook_id", default="unknown"))
     checkpoints = get_runbook_value(
@@ -393,6 +562,112 @@ def forward_runbook_action(runbook_id: str, action: str) -> bool:
         ) from exc
 
 
+def get_temporal_client_class() -> Any:
+    try:
+        temporal_client_module = importlib.import_module("temporalio.client")
+    except ModuleNotFoundError:
+        return None
+    return temporal_client_module.Client
+
+
+async def connect_temporal_client() -> Any:
+    client_class = get_temporal_client_class()
+    if client_class is None:
+        raise RuntimeError(
+            "temporalio package is not installed. Install backend dependencies with "
+            "`python3 -m pip install -r requirements.txt`."
+        )
+
+    connect_options: dict[str, Any] = {"namespace": TEMPORAL_NAMESPACE}
+    if TEMPORAL_TLS_ENABLED:
+        connect_options["tls"] = True
+
+    return await asyncio.wait_for(
+        client_class.connect(TEMPORAL_ADDRESS, **connect_options),
+        timeout=TEMPORAL_CONNECTION_TIMEOUT_SECONDS,
+    )
+
+
+async def inspect_temporal_backend() -> dict[str, Any]:
+    sdk_installed = get_temporal_client_class() is not None
+    base_status = {
+        "address": TEMPORAL_ADDRESS,
+        "namespace": TEMPORAL_NAMESPACE,
+        "web_url": TEMPORAL_WORKFLOWS_URL,
+        "sdk_installed": sdk_installed,
+        "connected": False,
+        "tls_enabled": TEMPORAL_TLS_ENABLED,
+        "task_queue": TEMPORAL_TASK_QUEUE or "not configured",
+        "action_workflow_type": TEMPORAL_ACTION_WORKFLOW_TYPE or "not configured",
+        "error": None,
+    }
+
+    if not sdk_installed:
+        return {
+            **base_status,
+            "error": "temporalio package is not installed.",
+        }
+
+    try:
+        await connect_temporal_client()
+        return {
+            **base_status,
+            "connected": True,
+        }
+    except Exception as exc:
+        return {
+            **base_status,
+            "error": str(exc),
+        }
+
+
+async def start_temporal_action_workflow(runbook_id: str, action: str) -> str:
+    if not TEMPORAL_ACTION_WORKFLOW_TYPE or not TEMPORAL_TASK_QUEUE:
+        return ""
+
+    client = await connect_temporal_client()
+    workflow_id = f"runbook-action-{runbook_id}-{action}-{uuid4().hex[:10]}"
+    handle = await client.start_workflow(
+        TEMPORAL_ACTION_WORKFLOW_TYPE,
+        {
+            "runbook_id": runbook_id,
+            "action": action,
+        },
+        id=workflow_id,
+        task_queue=TEMPORAL_TASK_QUEUE,
+    )
+    return str(getattr(handle, "id", workflow_id))
+
+
+def serialize_temporal_workflow(workflow: Any) -> dict[str, str]:
+    status = getattr(workflow, "status", "")
+    workflow_type = getattr(workflow, "workflow_type", "")
+    start_time = getattr(workflow, "start_time", "")
+    close_time = getattr(workflow, "close_time", "")
+
+    return {
+        "workflow_id": str(getattr(workflow, "id", "")),
+        "run_id": str(getattr(workflow, "run_id", "")),
+        "workflow_type": str(getattr(workflow_type, "name", workflow_type)),
+        "status": str(getattr(status, "name", status)),
+        "task_queue": str(getattr(workflow, "task_queue", "")),
+        "start_time": str(start_time),
+        "close_time": str(close_time),
+    }
+
+
+async def list_temporal_backend_workflows(limit: int = 25) -> list[dict[str, str]]:
+    client = await connect_temporal_client()
+    workflows: list[dict[str, str]] = []
+
+    async for workflow in client.list_workflows():
+        workflows.append(serialize_temporal_workflow(workflow))
+        if len(workflows) >= limit:
+            break
+
+    return workflows
+
+
 class TemporalLink(BaseModel):
     namespace: str
     workflows_url: str
@@ -413,6 +688,11 @@ class TemporalWorkflowSummary(BaseModel):
 class TemporalDetails(BaseModel):
     namespace: str
     status: str
+    backend_address: str
+    backend_connected: bool
+    backend_error: str | None
+    task_queue: str
+    action_workflow_type: str
     workflows_url: str
     redirect_endpoint: str
     cors_origins: list[str]
@@ -426,7 +706,20 @@ class RunbookActionResponse(BaseModel):
     action: str
     status: str
     temporal_workflows_url: str
+    temporal_workflow_id: str | None = None
     message: str
+
+
+class TemporalBackendConnection(BaseModel):
+    address: str
+    namespace: str
+    web_url: str
+    sdk_installed: bool
+    connected: bool
+    tls_enabled: bool
+    task_queue: str
+    action_workflow_type: str
+    error: str | None = None
 
 
 app = FastAPI(
@@ -452,6 +745,7 @@ def root() -> dict:
         "status": "ok",
         "docs": "/docs",
         "backend_base_url": PUBLIC_BACKEND_URL,
+        "temporal_backend_address": TEMPORAL_ADDRESS,
         "temporal_workflows_url": TEMPORAL_WORKFLOWS_URL,
         "data_sources": data_source_status(),
         "endpoints": {
@@ -462,6 +756,8 @@ def root() -> dict:
             "data_sources": "/api/data-sources",
             "temporal": "/api/temporal",
             "temporal_details": "/api/temporal/details",
+            "temporal_backend": "/api/temporal/backend",
+            "temporal_live_workflows": "/api/temporal/live-workflows",
             "temporal_workflows_redirect": "/api/temporal/workflows",
             "runbook_action": "/api/runbooks/{runbook_id}/actions/{action}",
         },
@@ -473,6 +769,7 @@ def health() -> dict[str, str]:
     return {
         "status": "ok",
         "backend_base_url": PUBLIC_BACKEND_URL,
+        "temporal_backend_address": TEMPORAL_ADDRESS,
         "temporal_workflows_url": TEMPORAL_WORKFLOWS_URL,
         "data_sources_configured": str(
             sum(1 for source in data_source_status().values() if source["configured"])
@@ -490,12 +787,18 @@ def get_temporal_link() -> TemporalLink:
 
 
 @app.get("/api/temporal/details", response_model=TemporalDetails)
-def get_temporal_details() -> TemporalDetails:
-    workflows = [build_workflow_summary(runbook) for runbook in get_runbooks()]
+async def get_temporal_details() -> TemporalDetails:
+    workflows = [build_workflow_summary(runbook) for runbook in await get_runbook_records()]
+    temporal_backend = await inspect_temporal_backend()
 
     return TemporalDetails(
         namespace=TEMPORAL_NAMESPACE,
-        status="configured" if DATA_SOURCE_URLS["runbooks"] else "runbook source not configured",
+        status="connected" if temporal_backend["connected"] else "temporal backend not connected",
+        backend_address=TEMPORAL_ADDRESS,
+        backend_connected=temporal_backend["connected"],
+        backend_error=temporal_backend["error"],
+        task_queue=temporal_backend["task_queue"],
+        action_workflow_type=temporal_backend["action_workflow_type"],
         workflows_url=TEMPORAL_WORKFLOWS_URL,
         redirect_endpoint="/api/temporal/workflows",
         cors_origins=FRONTEND_ORIGINS,
@@ -515,25 +818,35 @@ def open_temporal_workflows() -> RedirectResponse:
     return RedirectResponse(TEMPORAL_WORKFLOWS_URL, status_code=307)
 
 
+@app.get("/api/temporal/backend", response_model=TemporalBackendConnection)
+async def get_temporal_backend() -> TemporalBackendConnection:
+    return TemporalBackendConnection(**await inspect_temporal_backend())
+
+
+@app.get("/api/temporal/live-workflows")
+async def get_temporal_live_workflows() -> list[dict[str, str]]:
+    try:
+        return await list_temporal_backend_workflows()
+    except Exception as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"Temporal backend workflow list failed: {exc}",
+        ) from exc
+
+
 @app.get("/api/data-sources")
 def get_data_sources() -> dict[str, dict[str, str | bool]]:
     return data_source_status()
 
 
 @app.get("/api/runbooks")
-def get_runbooks() -> list[dict]:
-    return [
-        normalize_runbook(runbook)
-        for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
-    ]
+async def get_runbooks() -> list[dict]:
+    return await get_runbook_records()
 
 
 @app.get("/api/audit")
-def get_audit() -> list[dict]:
-    return [
-        normalize_audit_row(row)
-        for row in fetch_remote_list("audit", ["audit", "audit_rows", "items", "data", "results"])
-    ]
+async def get_audit() -> list[dict]:
+    return await get_audit_records()
 
 
 @app.get("/api/query-clusters")
@@ -545,20 +858,29 @@ def get_query_clusters() -> list[dict]:
 
 
 @app.post("/api/runbooks/{runbook_id}/actions/{action}", response_model=RunbookActionResponse)
-def run_runbook_action(
+async def run_runbook_action(
     runbook_id: str,
     action: Literal["evaluate", "release", "rollback"],
 ) -> RunbookActionResponse:
     forwarded = forward_runbook_action(runbook_id, action)
+    temporal_workflow_id = ""
+    if not forwarded:
+        temporal_workflow_id = await start_temporal_action_workflow(runbook_id, action)
 
     return RunbookActionResponse(
         runbook_id=runbook_id,
         action=action,
-        status="forwarded" if forwarded else "not_configured",
+        status="forwarded" if forwarded else "temporal_started" if temporal_workflow_id else "not_configured",
         temporal_workflows_url=TEMPORAL_WORKFLOWS_URL,
+        temporal_workflow_id=temporal_workflow_id or None,
         message=(
             "Action was forwarded to the configured RUNBOOK_ACTION_API_URL."
             if forwarded
-            else "No RUNBOOK_ACTION_API_URL configured. FastAPI did not execute a mock mutation."
+            else f"Temporal workflow started with id {temporal_workflow_id}."
+            if temporal_workflow_id
+            else (
+                "No RUNBOOK_ACTION_API_URL or Temporal action workflow is configured. "
+                "FastAPI did not execute a mock mutation."
+            )
         ),
     )

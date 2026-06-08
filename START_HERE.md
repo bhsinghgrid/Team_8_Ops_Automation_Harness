@@ -21,8 +21,13 @@ VITE_API_BASE_URL=http://127.0.0.1:8000
 FASTAPI_HOST=127.0.0.1
 FASTAPI_PORT=8000
 PUBLIC_BACKEND_URL=http://127.0.0.1:8000
+TEMPORAL_ADDRESS=localhost:7233
 TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
+TEMPORAL_TASK_QUEUE=
+TEMPORAL_ACTION_WORKFLOW_TYPE=
+TEMPORAL_TLS_ENABLED=false
+TEMPORAL_CONNECTION_TIMEOUT_SECONDS=5
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 FRONTEND_ORIGIN_REGEX=http://(localhost|127\.0\.0\.1|0\.0\.0\.0):[0-9]+
 RUNBOOKS_API_URL=
@@ -43,6 +48,15 @@ RUNBOOK_ACTION_API_URL=http://your-pipeline-host/api/runbooks/{runbook_id}/actio
 ```
 
 If these are blank, backend returns empty data instead of dummy data.
+
+Temporal service and Temporal Web are different:
+
+```bash
+TEMPORAL_ADDRESS=localhost:7233
+TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
+```
+
+Set `TEMPORAL_TASK_QUEUE` and `TEMPORAL_ACTION_WORKFLOW_TYPE` only when you have a worker registered for action workflows.
 
 ## 3. Install Backend
 
