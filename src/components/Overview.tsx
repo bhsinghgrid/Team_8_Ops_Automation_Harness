@@ -21,7 +21,7 @@ interface OverviewProps {
   runbooks: Runbook[];
   auditCount: number;
   queryClusterCount: number;
-  backendStatus: 'loading' | 'connected' | 'fallback';
+  backendStatus: 'loading' | 'connected' | 'offline';
   apiBaseUrl: string;
   temporalDetails: TemporalDetails | null;
   onNavigateToQueue: () => void;
@@ -105,6 +105,7 @@ export const Overview: React.FC<OverviewProps> = ({
   const exitHealthPoints = buildSvgPoints(trendRows.map((row) => 100 - row.currentExitRate));
   const latencyHealthPoints = buildSvgPoints(trendRows.map((row) => Math.max(0, 180 - row.p95Latency)));
   const highestRiskRow = [...trendRows].sort((a, b) => b.currentExitRate - a.currentExitRate)[0];
+  const hasTrendRows = trendRows.length > 0;
 
   const recentEvents = [
     { type: 'success', time: '09:22:14', text: 'Scoped re-index refresh job complete for catalog-enrichment-qa.' },
@@ -120,7 +121,15 @@ export const Overview: React.FC<OverviewProps> = ({
         <div className="alert-banner-text" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
           <AlertTriangle size={18} />
           <span>
-            <strong>Attention:</strong> {trendRows.length} AI Search anomalies are tracked from live runbook data. Highest current exit risk is <strong>{highestRiskRow?.code}</strong> at <strong>{highestRiskRow?.currentExitRate.toFixed(1)}%</strong>.
+            {hasTrendRows ? (
+              <>
+                <strong>Attention:</strong> {trendRows.length} AI Search anomalies are tracked from live runbook data. Highest current exit risk is <strong>{highestRiskRow?.code ?? 'n/a'}</strong> at <strong>{highestRiskRow?.currentExitRate.toFixed(1) ?? '0.0'}%</strong>.
+              </>
+            ) : (
+              <>
+                <strong>No live runbooks loaded.</strong> Configure <code>RUNBOOKS_API_URL</code> in <code>.env</code>, then restart FastAPI.
+              </>
+            )}
           </span>
         </div>
         <button className="alert-btn" type="button" onClick={onNavigateToQueue}>
@@ -132,7 +141,7 @@ export const Overview: React.FC<OverviewProps> = ({
         <div className={`backend-inline-card ${backendStatus}`}>
           <Database size={18} />
           <span>Data source</span>
-          <strong>{backendStatus === 'connected' ? 'FastAPI backend' : backendStatus === 'loading' ? 'Loading backend' : 'Local fallback'}</strong>
+          <strong>{backendStatus === 'connected' ? 'FastAPI backend' : backendStatus === 'loading' ? 'Loading backend' : 'Backend offline'}</strong>
           <small>{apiBaseUrl}</small>
         </div>
         <div className="backend-inline-card">
@@ -226,7 +235,8 @@ export const Overview: React.FC<OverviewProps> = ({
             <span><i className="legend-dot latency" /> Latency health</span>
           </div>
           <div className="chart-wrapper">
-            <svg className="svg-chart" viewBox="0 0 300 120" preserveAspectRatio="none">
+            {hasTrendRows ? (
+              <svg className="svg-chart" viewBox="0 0 300 120" preserveAspectRatio="none">
               <defs>
                 <linearGradient id="chartGrad" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stopColor="var(--primary)" stopOpacity="0.4" />
@@ -266,16 +276,21 @@ export const Overview: React.FC<OverviewProps> = ({
                 const [x, y] = p.split(',');
                 return <circle key={`lat-${idx}`} cx={x} cy={y} r="4" className="chart-point" style={{ stroke: 'var(--info)' }} />;
               })}
-            </svg>
+              </svg>
+            ) : (
+              <div className="empty-state">
+                No runbook metrics returned from backend. The chart will render after your real runbook source returns data.
+              </div>
+            )}
           </div>
           <div className="trend-data-grid">
             {trendRows.map((row) => (
-              <div key={row.id} className="trend-data-card">
-                <strong>{row.code}</strong>
-                <span>{row.status}</span>
-                <small>NDCG {row.currentNdcg.toFixed(2)} · Exits {row.currentExitRate.toFixed(1)}% · P95 {row.p95Latency}ms</small>
-              </div>
-            ))}
+                <div key={row.id} className="trend-data-card">
+                  <strong>{row.code}</strong>
+                  <span>{row.status}</span>
+                  <small>NDCG {row.currentNdcg.toFixed(2)} · Exits {row.currentExitRate.toFixed(1)}% · P95 {row.p95Latency}ms</small>
+                </div>
+              ))}
           </div>
         </div>
 

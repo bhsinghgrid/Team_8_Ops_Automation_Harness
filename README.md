@@ -42,12 +42,31 @@ The app reads URLs and backend settings from `.env`.
 VITE_API_BASE_URL=http://127.0.0.1:8000
 FASTAPI_HOST=127.0.0.1
 FASTAPI_PORT=8000
+PUBLIC_BACKEND_URL=http://127.0.0.1:8000
+TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 FRONTEND_ORIGIN_REGEX=http://(localhost|127\.0\.0\.1|0\.0\.0\.0):[0-9]+
+RUNBOOKS_API_URL=
+AUDIT_API_URL=
+QUERY_CLUSTERS_API_URL=
+RUNBOOK_ACTION_API_URL=
+DATA_API_BEARER_TOKEN=
+BACKEND_REQUEST_TIMEOUT_SECONDS=8
 ```
 
 If you change `.env`, restart both the backend and frontend.
+
+For real pipeline data, set these URLs in `.env`:
+
+```bash
+RUNBOOKS_API_URL=http://your-pipeline-host/api/runbooks
+AUDIT_API_URL=http://your-pipeline-host/api/audit
+QUERY_CLUSTERS_API_URL=http://your-pipeline-host/api/query-clusters
+RUNBOOK_ACTION_API_URL=http://your-pipeline-host/api/runbooks/{runbook_id}/actions/{action}
+```
+
+If these URLs are blank, FastAPI returns empty lists. It does not return mock runbook data.
 
 ## Start Backend
 
@@ -112,4 +131,4 @@ If the Temporal button does not open workflows, check that Temporal Web is runni
 
 ## Current Data Source
 
-The FastAPI backend currently serves local runbook, audit, query-cluster, monitoring, approval, agent, and Temporal metadata from `fastapi_app.py`. Replace those data sections or connect real pipeline APIs later without changing the frontend API structure.
+The FastAPI backend reads runbook, audit, query-cluster, and action data from the URLs configured in `.env`. The frontend API structure stays the same when those pipeline URLs change.

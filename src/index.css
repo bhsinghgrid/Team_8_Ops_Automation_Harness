@@ -452,7 +452,7 @@ button, input, select, textarea {
   border-left-color: var(--warning);
 }
 
-.backend-inline-card.fallback {
+.backend-inline-card.offline {
   border-left-color: var(--error);
 }
 
@@ -480,6 +480,18 @@ button, input, select, textarea {
   font-size: 0.68rem;
   line-height: 1.35;
   overflow-wrap: anywhere;
+}
+
+.empty-state {
+  border: 1px dashed rgba(31, 107, 119, 0.28);
+  border-radius: var(--radius-md);
+  color: var(--text-muted);
+  min-height: 140px;
+  padding: 2rem;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  background: rgba(255,255,255,0.45);
 }
 
 @media (max-width: 1024px) {
@@ -845,7 +857,7 @@ button, input, select, textarea {
   border-left-color: var(--warning);
 }
 
-.runbook-backend-source.fallback {
+.runbook-backend-source.offline {
   border-left-color: var(--error);
 }
 

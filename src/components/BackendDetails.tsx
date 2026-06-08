@@ -67,7 +67,7 @@ export const BackendDetails: React.FC = () => {
       {status === 'offline' && (
         <div className="alert-banner error">
           <div className="alert-banner-text">
-            <strong>Backend not reachable.</strong> Start FastAPI with `python3 -m uvicorn fastapi_app:app --reload --port 8000`.
+            <strong>Backend not reachable.</strong> Start FastAPI with `python3 run_fastapi.py`.
             {error && <span> Error: {error}</span>}
           </div>
         </div>
@@ -111,6 +111,20 @@ export const BackendDetails: React.FC = () => {
               <div key={label} className="backend-kv-row">
                 <span>{label.replace(/_/g, ' ')}</span>
                 <strong>{api.url(path)}</strong>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="card backend-card">
+          <div className="card-header">
+            <h3>Configured Data Sources</h3>
+          </div>
+          <div className="backend-kv-list">
+            {Object.entries(snapshot?.root.data_sources ?? {}).map(([label, source]) => (
+              <div key={label} className="backend-kv-row">
+                <span>{label.replace(/_/g, ' ')}</span>
+                <strong>{source.configured ? source.url : 'not configured'}</strong>
               </div>
             ))}
           </div>

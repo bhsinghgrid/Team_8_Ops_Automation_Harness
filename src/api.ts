@@ -51,13 +51,17 @@ export interface BackendRoot {
   service: string;
   status: string;
   docs: string;
+  backend_base_url: string;
   temporal_workflows_url: string;
+  data_sources: Record<string, { configured: boolean; url: string }>;
   endpoints: Record<string, string>;
 }
 
 export interface HealthStatus {
   status: string;
+  backend_base_url?: string;
   temporal_workflows_url: string;
+  data_sources_configured?: string;
 }
 
 const buildApiUrl = (path: string) => {

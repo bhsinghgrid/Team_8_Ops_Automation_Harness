@@ -6,62 +6,7 @@ interface QueryClustersProps {
   clusters: QueryClusterRow[];
 }
 
-const fallbackClusters: QueryClusterRow[] = [
-    {
-      query: 'waterproof trail shoes',
-      volume: '12,800',
-      exits: '18%',
-      loss: '-$4,200',
-      impact: 'High',
-      tag: 'Catalog attribute gap',
-      badgeClass: 'waterproof',
-      status: 'Active Runbook (ops-4f72)'
-    },
-    {
-      query: 'hydra p / hydra pack',
-      volume: '5,400',
-      exits: '32%',
-      loss: '-$2,100',
-      impact: 'Med',
-      tag: 'Typo synonym miss',
-      badgeClass: 'typo',
-      status: 'Active Runbook (ops-1a88)'
-    },
-    {
-      query: 'winter jacket clearance',
-      volume: '9,100',
-      exits: '14%',
-      loss: '-$3,500',
-      impact: 'Med',
-      tag: 'MXP Boost conflict',
-      badgeClass: 'rules',
-      status: 'Active Runbook (ops-7b19)'
-    },
-    {
-      query: 'voice: hiking boots goretex',
-      volume: '2,800',
-      exits: '42%',
-      loss: '-$1,800',
-      impact: 'Med',
-      tag: 'Multimodal image QA',
-      badgeClass: 'waterproof',
-      status: 'Shadow Test Queued'
-    },
-    {
-      query: 'running jackets lightweight',
-      volume: '15,200',
-      exits: '4%',
-      loss: '-$400',
-      impact: 'Low',
-      tag: 'Healthy relevance',
-      badgeClass: 'rules',
-      status: 'Auto-closed (Healthy)'
-    }
-  ];
-
 export const QueryClusters: React.FC<QueryClustersProps> = ({ clusters }) => {
-  const rows = clusters.length > 0 ? clusters : fallbackClusters;
-
   return (
     <div className="card">
       <div className="card-header">
@@ -92,7 +37,14 @@ export const QueryClusters: React.FC<QueryClustersProps> = ({ clusters }) => {
             </tr>
           </thead>
           <tbody>
-            {rows.map((c, idx) => (
+            {clusters.length === 0 && (
+              <tr>
+                <td colSpan={7} style={{ color: 'var(--text-muted)', padding: '1.4rem', textAlign: 'center' }}>
+                  No query cluster data returned. Configure <code>QUERY_CLUSTERS_API_URL</code> in <code>.env</code>.
+                </td>
+              </tr>
+            )}
+            {clusters.map((c, idx) => (
               <tr key={idx}>
                 <td className="cluster-query">"{c.query}"</td>
                 <td className="cluster-volume">{c.volume}</td>

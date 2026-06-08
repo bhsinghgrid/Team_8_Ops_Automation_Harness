@@ -29,7 +29,7 @@ interface ConsoleProps {
     mxpGovernance: boolean;
     multimodalQa: boolean;
   };
-  appBackendStatus: 'loading' | 'connected' | 'fallback';
+  appBackendStatus: 'loading' | 'connected' | 'offline';
   apiBaseUrl: string;
 }
 
@@ -94,7 +94,7 @@ export const Console: React.FC<ConsoleProps> = ({
         <AlertOctagon size={36} style={{ color: 'var(--warning)', marginBottom: '0.75rem' }} />
         <h3 style={{ fontFamily: 'var(--serif)', marginBottom: '0.35rem' }}>No runbooks available</h3>
         <p className="policy-description">
-          FastAPI returned no runbook records and no local fallback is available. Check `/api/runbooks`,
+          FastAPI returned no runbook records. Check `/api/runbooks`,
           then refresh the frontend.
         </p>
       </div>
@@ -316,7 +316,7 @@ export const Console: React.FC<ConsoleProps> = ({
               ? 'Ops Runbooks are loaded from FastAPI.'
               : appBackendStatus === 'loading'
                 ? 'Trying to load FastAPI data.'
-                : 'FastAPI not reachable; showing local fallback data.'}
+                : 'FastAPI not reachable; no mock fallback data is used.'}
           </div>
         </div>
 

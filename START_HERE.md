@@ -20,10 +20,29 @@ Default `.env` values:
 VITE_API_BASE_URL=http://127.0.0.1:8000
 FASTAPI_HOST=127.0.0.1
 FASTAPI_PORT=8000
+PUBLIC_BACKEND_URL=http://127.0.0.1:8000
+TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 FRONTEND_ORIGIN_REGEX=http://(localhost|127\.0\.0\.1|0\.0\.0\.0):[0-9]+
+RUNBOOKS_API_URL=
+AUDIT_API_URL=
+QUERY_CLUSTERS_API_URL=
+RUNBOOK_ACTION_API_URL=
+DATA_API_BEARER_TOKEN=
+BACKEND_REQUEST_TIMEOUT_SECONDS=8
 ```
+
+To connect real pipeline data, fill these values:
+
+```bash
+RUNBOOKS_API_URL=http://your-pipeline-host/api/runbooks
+AUDIT_API_URL=http://your-pipeline-host/api/audit
+QUERY_CLUSTERS_API_URL=http://your-pipeline-host/api/query-clusters
+RUNBOOK_ACTION_API_URL=http://your-pipeline-host/api/runbooks/{runbook_id}/actions/{action}
+```
+
+If these are blank, backend returns empty data instead of dummy data.
 
 ## 3. Install Backend
 

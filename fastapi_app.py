@@ -1,10 +1,11 @@
 import os
-from copy import deepcopy
-from datetime import datetime
+import json
 from pathlib import Path
-from typing import Literal
+from typing import Any, Literal
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
 
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
 from pydantic import BaseModel
@@ -30,10 +31,24 @@ def load_env_file(env_path: str = ".env") -> None:
 load_env_file()
 
 
+FASTAPI_HOST = os.getenv("FASTAPI_HOST", "127.0.0.1")
+FASTAPI_PORT = os.getenv("FASTAPI_PORT", "8000")
+PUBLIC_BACKEND_URL = os.getenv("PUBLIC_BACKEND_URL", f"http://{FASTAPI_HOST}:{FASTAPI_PORT}")
+TEMPORAL_NAMESPACE = os.getenv("TEMPORAL_NAMESPACE", "default")
 TEMPORAL_WORKFLOWS_URL = os.getenv(
     "TEMPORAL_WORKFLOWS_URL",
     "http://localhost:8233/namespaces/default/workflows",
 )
+BACKEND_REQUEST_TIMEOUT_SECONDS = float(os.getenv("BACKEND_REQUEST_TIMEOUT_SECONDS", "8"))
+
+DATA_SOURCE_URLS = {
+    "runbooks": os.getenv("RUNBOOKS_API_URL", "").strip(),
+    "audit": os.getenv("AUDIT_API_URL", "").strip(),
+    "query_clusters": os.getenv("QUERY_CLUSTERS_API_URL", "").strip(),
+}
+
+RUNBOOK_ACTION_API_URL = os.getenv("RUNBOOK_ACTION_API_URL", "").strip()
+DATA_API_BEARER_TOKEN = os.getenv("DATA_API_BEARER_TOKEN", "").strip()
 
 FRONTEND_ORIGINS = [
     origin.strip()
@@ -48,6 +63,334 @@ FRONTEND_ORIGIN_REGEX = os.getenv(
     "FRONTEND_ORIGIN_REGEX",
     r"http://(localhost|127\.0\.0\.1|0\.0\.0\.0):[0-9]+",
 )
+
+
+def request_headers(content_type: str | None = None) -> dict[str, str]:
+    headers = {"Accept": "application/json"}
+    if content_type:
+        headers["Content-Type"] = content_type
+    if DATA_API_BEARER_TOKEN:
+        headers["Authorization"] = f"Bearer {DATA_API_BEARER_TOKEN}"
+    return headers
+
+
+def extract_list_payload(payload: Any, keys: list[str]) -> list[dict]:
+    if isinstance(payload, list):
+        return [item for item in payload if isinstance(item, dict)]
+
+    if isinstance(payload, dict):
+        for key in keys:
+            value = payload.get(key)
+            if isinstance(value, list):
+                return [item for item in value if isinstance(item, dict)]
+
+    return []
+
+
+def fetch_remote_list(source_name: str, keys: list[str]) -> list[dict]:
+    url = DATA_SOURCE_URLS.get(source_name, "")
+    if not url:
+        return []
+
+    try:
+        request = Request(url, headers=request_headers())
+        with urlopen(request, timeout=BACKEND_REQUEST_TIMEOUT_SECONDS) as response:
+            payload = json.loads(response.read().decode("utf-8"))
+    except HTTPError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"{source_name} source returned HTTP {exc.code}: {url}",
+        ) from exc
+    except (URLError, TimeoutError, json.JSONDecodeError) as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"{source_name} source is not reachable or returned invalid JSON: {url}",
+        ) from exc
+
+    return extract_list_payload(payload, keys)
+
+
+def data_source_status() -> dict[str, dict[str, str | bool]]:
+    return {
+        name: {
+            "configured": bool(url),
+            "url": url if url else "not configured",
+        }
+        for name, url in DATA_SOURCE_URLS.items()
+    }
+
+
+def get_runbook_value(runbook: dict, *keys: str, default: Any = "") -> Any:
+    for key in keys:
+        value: Any = runbook
+        for part in key.split("."):
+            if not isinstance(value, dict) or part not in value:
+                value = None
+                break
+            value = value[part]
+        if value not in (None, ""):
+            return value
+    return default
+
+
+def number_value(value: Any, default: float = 0) -> float:
+    try:
+        return float(str(value).replace(",", "").replace("%", ""))
+    except (TypeError, ValueError):
+        return default
+
+
+def int_value(value: Any, default: int = 0) -> int:
+    return int(number_value(value, default))
+
+
+def list_value(value: Any) -> list:
+    if isinstance(value, list):
+        return value
+    if value in (None, ""):
+        return []
+    return [value]
+
+
+def allowed_value(value: Any, allowed: set[str], default: str) -> str:
+    value_as_text = str(value).strip()
+    return value_as_text if value_as_text in allowed else default
+
+
+def normalize_search_results(value: Any) -> list[dict]:
+    if not isinstance(value, list):
+        return []
+    return [item for item in value if isinstance(item, dict)]
+
+
+def normalize_monitoring_signals(value: Any) -> list[dict]:
+    if isinstance(value, list):
+        signals = [item for item in value if isinstance(item, dict)]
+    else:
+        signals = []
+
+    normalized = [
+        {
+            "label": str(signal.get("label") or signal.get("name") or "Monitoring signal"),
+            "value": str(signal.get("value") or signal.get("metric") or "not provided"),
+            "status": allowed_value(signal.get("status", "watch"), {"healthy", "watch", "blocked"}, "watch"),
+            "detail": str(signal.get("detail") or signal.get("description") or "Provided by upstream source."),
+        }
+        for signal in signals
+    ]
+
+    while len(normalized) < 2:
+        normalized.append(
+            {
+                "label": "Source data",
+                "value": "configured",
+                "status": "healthy",
+                "detail": "Default monitoring placeholder because upstream did not provide two signals.",
+            }
+        )
+
+    return normalized
+
+
+def normalize_runbook(runbook: dict) -> dict:
+    runbook_id = str(get_runbook_value(runbook, "id", "runbook_id", default="unknown"))
+    title = str(get_runbook_value(runbook, "title", "name", default=runbook_id))
+    agent = get_runbook_value(runbook, "agent", default={})
+    temporal = get_runbook_value(runbook, "temporal", default={})
+    human_approval = get_runbook_value(runbook, "humanApproval", "human_approval", default={})
+    live_metrics = get_runbook_value(runbook, "liveMetrics", "live_metrics", "metrics", default={})
+
+    if not isinstance(agent, dict):
+        agent = {}
+    if not isinstance(temporal, dict):
+        temporal = {}
+    if not isinstance(human_approval, dict):
+        human_approval = {}
+    if not isinstance(live_metrics, dict):
+        live_metrics = {}
+
+    return {
+        "id": runbook_id,
+        "title": title,
+        "description": str(get_runbook_value(runbook, "description", "summary", default="No description provided.")),
+        "visualCode": str(get_runbook_value(runbook, "visualCode", "visual_code", "code", default=runbook_id[:2].upper())),
+        "capability": allowed_value(
+            get_runbook_value(runbook, "capability", default="semantic search"),
+            {"semantic search", "smart autocomplete", "merchandising"},
+            "semantic search",
+        ),
+        "signalType": allowed_value(
+            get_runbook_value(runbook, "signalType", "signal_type", default="catalog gap"),
+            {"catalog gap", "zero-result cluster", "mxp rule conflict"},
+            "catalog gap",
+        ),
+        "risk": allowed_value(get_runbook_value(runbook, "risk", "severity", default="low"), {"low", "med", "high"}, "low"),
+        "confidence": int_value(get_runbook_value(runbook, "confidence", "score", default=0)),
+        "tags": [str(tag) for tag in list_value(get_runbook_value(runbook, "tags", default=[]))],
+        "status": allowed_value(
+            get_runbook_value(runbook, "status", default="Eval Ready"),
+            {
+                "Eval Ready",
+                "Shadow Test",
+                "Canary 5%",
+                "Canary 25%",
+                "Canary 100%",
+                "Owner Review",
+                "Rollback Candidate",
+                "Released",
+                "Rolled Back",
+            },
+            "Eval Ready",
+        ),
+        "offlineEvalCoverage": int_value(get_runbook_value(runbook, "offlineEvalCoverage", "offline_eval_coverage", default=0)),
+        "businessImpact": int_value(get_runbook_value(runbook, "businessImpact", "business_impact", "impact_score", default=0)),
+        "approvalPolicy": str(get_runbook_value(runbook, "approvalPolicy", "approval_policy", default="Approval policy not provided.")),
+        "evidenceNotes": str(get_runbook_value(runbook, "evidenceNotes", "evidence_notes", "evidence", default="No evidence notes provided.")),
+        "agent": {
+            "name": str(agent.get("name") or agent.get("agent_name") or "Pipeline Agent"),
+            "role": str(agent.get("role") or "Provided by upstream pipeline."),
+            "autonomyLevel": str(agent.get("autonomyLevel") or agent.get("autonomy_level") or "Not provided."),
+            "behaviors": [str(item) for item in list_value(agent.get("behaviors") or ["No behavior details provided."])],
+            "decisionRecord": str(agent.get("decisionRecord") or agent.get("decision_record") or "No decision record provided."),
+        },
+        "temporal": {
+            "workflowId": str(
+                temporal.get("workflowId")
+                or temporal.get("workflow_id")
+                or get_runbook_value(runbook, "workflow_id", "temporalWorkflowId", default=f"workflow/{runbook_id}")
+            ),
+            "cadence": str(temporal.get("cadence") or get_runbook_value(runbook, "cadence", default="not provided")),
+            "retryPolicy": str(temporal.get("retryPolicy") or temporal.get("retry_policy") or get_runbook_value(runbook, "retry_policy", default="not provided")),
+            "sla": str(temporal.get("sla") or get_runbook_value(runbook, "sla", default="not provided")),
+            "checkpoints": [str(item) for item in list_value(temporal.get("checkpoints") or get_runbook_value(runbook, "checkpoints", default=[]))],
+        },
+        "humanApproval": {
+            "mode": allowed_value(human_approval.get("mode", "conditional"), {"auto", "required", "conditional"}, "conditional"),
+            "owner": str(human_approval.get("owner") or human_approval.get("approver") or "Not assigned"),
+            "status": str(human_approval.get("status") or "Not requested"),
+            "reason": str(human_approval.get("reason") or "No approval reason provided."),
+            "expiry": str(human_approval.get("expiry") or "No expiry provided."),
+            "record": str(human_approval.get("record") or "No approval record provided."),
+        },
+        "monitoringSignals": normalize_monitoring_signals(
+            get_runbook_value(runbook, "monitoringSignals", "monitoring_signals", default=[])
+        ),
+        "feedbackLoop": str(get_runbook_value(runbook, "feedbackLoop", "feedback_loop", default="No feedback loop provided.")),
+        "liveMetrics": {
+            "queryVolume": int_value(live_metrics.get("queryVolume") or live_metrics.get("query_volume") or get_runbook_value(runbook, "query_volume", default=0)),
+            "exitRate": number_value(live_metrics.get("exitRate") or live_metrics.get("exit_rate") or get_runbook_value(runbook, "exit_rate", default=0)),
+            "revenueLoss": int_value(live_metrics.get("revenueLoss") or live_metrics.get("revenue_loss") or get_runbook_value(runbook, "revenue_loss", default=0)),
+            "baselineNdcg": number_value(live_metrics.get("baselineNdcg") or live_metrics.get("baseline_ndcg") or get_runbook_value(runbook, "baseline_ndcg", default=0)),
+            "proposedNdcg": number_value(live_metrics.get("proposedNdcg") or live_metrics.get("proposed_ndcg") or get_runbook_value(runbook, "proposed_ndcg", default=0)),
+            "p95Latency": int_value(live_metrics.get("p95Latency") or live_metrics.get("p95_latency") or get_runbook_value(runbook, "p95_latency", default=0)),
+        },
+        "accent": str(get_runbook_value(runbook, "accent", default="#1F6B77")),
+        "accentGlow": str(get_runbook_value(runbook, "accentGlow", "accent_glow", default="rgba(31,107,119,0.12)")),
+        "accentBorder": str(get_runbook_value(runbook, "accentBorder", "accent_border", default="rgba(31,107,119,0.25)")),
+        "beforeQuery": str(get_runbook_value(runbook, "beforeQuery", "before_query", "query", default="")),
+        "beforeResults": normalize_search_results(get_runbook_value(runbook, "beforeResults", "before_results", default=[])),
+        "afterResults": normalize_search_results(get_runbook_value(runbook, "afterResults", "after_results", default=[])),
+    }
+
+
+def normalize_audit_row(row: dict) -> dict:
+    return {
+        "time": str(row.get("time") or row.get("created_at") or "not provided"),
+        "runbookId": str(row.get("runbookId") or row.get("runbook_id") or "unknown"),
+        "title": str(row.get("title") or "Audit record"),
+        "action": str(row.get("action") or row.get("event") or "not provided"),
+        "approver": str(row.get("approver") or row.get("actor") or "not provided"),
+        "agentName": str(row.get("agentName") or row.get("agent_name") or "not provided"),
+        "agentBehavior": str(row.get("agentBehavior") or row.get("agent_behavior") or "not provided"),
+        "temporalWorkflowId": str(row.get("temporalWorkflowId") or row.get("temporal_workflow_id") or row.get("workflow_id") or "not provided"),
+        "approvalGate": str(row.get("approvalGate") or row.get("approval_gate") or "not provided"),
+        "monitoringSummary": str(row.get("monitoringSummary") or row.get("monitoring_summary") or "not provided"),
+        "feedbackRecord": str(row.get("feedbackRecord") or row.get("feedback_record") or "not provided"),
+        "recordType": allowed_value(row.get("recordType") or row.get("record_type"), {"evaluation", "approval", "release", "rollback", "monitoring"}, "monitoring"),
+        "hash": str(row.get("hash") or row.get("id") or "not provided"),
+        "isRollback": bool(row.get("isRollback") or row.get("is_rollback") or False),
+    }
+
+
+def normalize_query_cluster(row: dict) -> dict:
+    return {
+        "query": str(row.get("query") or row.get("cluster") or "unknown"),
+        "volume": str(row.get("volume") or row.get("monthly_volume") or "0"),
+        "exits": str(row.get("exits") or row.get("exit_rate") or "0%"),
+        "loss": str(row.get("loss") or row.get("revenue_loss") or "$0"),
+        "impact": allowed_value(row.get("impact") or row.get("impact_rank"), {"High", "Med", "Low"}, "Low"),
+        "tag": str(row.get("tag") or row.get("issue_type") or "Unclassified"),
+        "badgeClass": allowed_value(row.get("badgeClass") or row.get("badge_class"), {"waterproof", "typo", "rules"}, "rules"),
+        "status": str(row.get("status") or "not triaged"),
+    }
+
+
+def build_workflow_summary(runbook: dict) -> "TemporalWorkflowSummary":
+    runbook_id = str(get_runbook_value(runbook, "id", "runbook_id", default="unknown"))
+    checkpoints = get_runbook_value(
+        runbook,
+        "temporal.checkpoints",
+        "checkpoints",
+        default=[],
+    )
+    if not isinstance(checkpoints, list):
+        checkpoints = [str(checkpoints)] if checkpoints else []
+
+    return TemporalWorkflowSummary(
+        runbook_id=runbook_id,
+        title=str(get_runbook_value(runbook, "title", "name", default=runbook_id)),
+        workflow_id=str(
+            get_runbook_value(
+                runbook,
+                "temporal.workflowId",
+                "workflow_id",
+                "temporalWorkflowId",
+                default=f"workflow/{runbook_id}",
+            )
+        ),
+        status=str(get_runbook_value(runbook, "status", default="unknown")),
+        cadence=str(get_runbook_value(runbook, "temporal.cadence", "cadence", default="not provided")),
+        retry_policy=str(
+            get_runbook_value(runbook, "temporal.retryPolicy", "retry_policy", default="not provided")
+        ),
+        sla=str(get_runbook_value(runbook, "temporal.sla", "sla", default="not provided")),
+        checkpoints=[str(checkpoint) for checkpoint in checkpoints],
+    )
+
+
+def build_action_url(runbook_id: str, action: str) -> str:
+    if not RUNBOOK_ACTION_API_URL:
+        return ""
+    if "{runbook_id}" in RUNBOOK_ACTION_API_URL or "{action}" in RUNBOOK_ACTION_API_URL:
+        return RUNBOOK_ACTION_API_URL.format(runbook_id=runbook_id, action=action)
+    return f"{RUNBOOK_ACTION_API_URL.rstrip('/')}/{runbook_id}/actions/{action}"
+
+
+def forward_runbook_action(runbook_id: str, action: str) -> bool:
+    action_url = build_action_url(runbook_id, action)
+    if not action_url:
+        return False
+
+    body = json.dumps({"runbook_id": runbook_id, "action": action}).encode("utf-8")
+    try:
+        request = Request(
+            action_url,
+            data=body,
+            headers=request_headers("application/json"),
+            method="POST",
+        )
+        with urlopen(request, timeout=BACKEND_REQUEST_TIMEOUT_SECONDS):
+            return True
+    except HTTPError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"runbook action source returned HTTP {exc.code}: {action_url}",
+        ) from exc
+    except (URLError, TimeoutError) as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"runbook action source is not reachable: {action_url}",
+        ) from exc
 
 
 class TemporalLink(BaseModel):
@@ -86,310 +429,6 @@ class RunbookActionResponse(BaseModel):
     message: str
 
 
-RUNBOOKS = [
-    {
-        "id": "ops-4f72",
-        "title": 'Catalog Enrichment — "Waterproof" Attribute Gap',
-        "description": 'AI Search fails to surface waterproof trail shoes because the catalog lacks a structured "waterproof" attribute. Embedding drift compounds missed synonym expansions.',
-        "visualCode": "CE",
-        "capability": "semantic search",
-        "signalType": "catalog gap",
-        "risk": "high",
-        "confidence": 91,
-        "tags": ["catalog-enrichment-qa", "semantic-search"],
-        "status": "Eval Ready",
-        "offlineEvalCoverage": 91,
-        "businessImpact": 78,
-        "approvalPolicy": "Auto-approve if NDCG ≥ 0.84",
-        "evidenceNotes": 'Magellan detects 18% search-exit rate on the query cluster "waterproof trail shoes." Root cause: missing structured attribute in product taxonomy. AI suggests adding a boolean waterproof facet and re-indexing the vector store.',
-        "agent": {
-            "name": "Catalog Optimization Agent",
-            "role": "Diagnoses missing catalog attributes and proposes index-safe enrichment patches.",
-            "autonomyLevel": "Autonomous evaluation and canary release when all policy gates pass.",
-            "behaviors": [
-                "Clusters failed queries against product taxonomy gaps.",
-                "Generates facet and synonym patch candidates with bounded schema changes.",
-                "Blocks release when NDCG, latency, or inventory coverage gates fail.",
-            ],
-            "decisionRecord": "Stores structured rationale, evidence IDs, policy checks, and recommendation outcome. Private chain-of-thought is not stored.",
-        },
-        "temporal": {
-            "workflowId": "temporal/catalog-gap/ops-4f72",
-            "cadence": "Triggered when exit-rate cluster exceeds 1,000 failed sessions/day.",
-            "retryPolicy": "Retry enrichment, eval, and shadow tasks up to 3 times with exponential backoff.",
-            "sla": "30 minute eval SLA; page owner only if quality or latency gates fail.",
-            "checkpoints": [
-                "Evidence capture",
-                "Schema patch draft",
-                "Offline relevance eval",
-                "Shadow traffic replay",
-                "Canary telemetry monitor",
-            ],
-        },
-        "humanApproval": {
-            "mode": "auto",
-            "owner": "Search relevance lead on exception",
-            "status": "Not required",
-            "reason": "Policy allows automation when NDCG >= floor and monitoring checks stay healthy.",
-            "expiry": "Exception review within 4 business hours if triggered.",
-            "record": "No human approval requested unless an eval or canary guardrail fails.",
-        },
-        "monitoringSignals": [
-            {"label": "NDCG delta", "value": "+0.31", "status": "healthy", "detail": "Expected relevance lift clears policy floor."},
-            {"label": "P95 latency", "value": "118ms", "status": "healthy", "detail": "Below global 150ms ceiling."},
-            {"label": "Zero-result exits", "value": "-18%", "status": "watch", "detail": "Watched during canary for waterproof query cluster."},
-        ],
-        "feedbackLoop": "Post-release clicks, add-to-cart rate, and exit deltas are fed back into the taxonomy gap detector for 7-day drift review.",
-        "liveMetrics": {
-            "queryVolume": 12800,
-            "exitRate": 18,
-            "revenueLoss": 4200,
-            "baselineNdcg": 0.6,
-            "proposedNdcg": 0.91,
-            "p95Latency": 118,
-        },
-        "accent": "#8B3A2B",
-        "accentGlow": "rgba(139,58,43,0.12)",
-        "accentBorder": "rgba(139,58,43,0.25)",
-        "beforeQuery": "waterproof trail shoes",
-        "beforeResults": [
-            {"name": "Trail Runner X1", "price": 89, "stock": 4, "score": "0.41"},
-            {"name": "Summer Sandal Pro", "price": 32, "stock": 18, "score": "0.38"},
-            {"name": "Office Loafer Classic", "price": 65, "stock": 11, "score": "0.22"},
-        ],
-        "afterResults": [
-            {"name": "AquaShield GTX Boot", "price": 149, "stock": 22, "score": "0.94"},
-            {"name": "StormProof Trail Pro", "price": 119, "stock": 15, "score": "0.91"},
-            {"name": "RainGuard Hiker", "price": 99, "stock": 8, "score": "0.88"},
-        ],
-    },
-    {
-        "id": "ops-1a88",
-        "title": 'Autocomplete Exits — "Hydration Pack" Typo Cluster',
-        "description": 'Smart autocomplete fails on user typos like "hydra p" and "hydra pack". The synonym graph lacks phonetic fuzzy matches for hydration-related queries.',
-        "visualCode": "AC",
-        "capability": "smart autocomplete",
-        "signalType": "zero-result cluster",
-        "risk": "med",
-        "confidence": 86,
-        "tags": ["autocomplete-tuning", "synonym-gap"],
-        "status": "Eval Ready",
-        "offlineEvalCoverage": 86,
-        "businessImpact": 62,
-        "approvalPolicy": "Auto-approve if NDCG ≥ 0.84",
-        "evidenceNotes": 'Magellan clusters 5,400 monthly queries around "hydra p / hydra pack" with a 32% exit rate. No synonym mapping exists for these typos. Autocomplete Agent recommends phonetic fuzzy-match rules.',
-        "agent": {
-            "name": "Smart Autocomplete Agent",
-            "role": "Finds failed prefixes, typo clusters, and missing synonym expansions.",
-            "autonomyLevel": "Autonomous rule proposal with conditional approval for high-volume prefix rewrites.",
-            "behaviors": [
-                "Compares prefix failures with successful downstream product clicks.",
-                "Builds phonetic and slang synonym candidates with rollback-safe rule IDs.",
-                "Escalates if a rewrite affects protected brand or compliance terms.",
-            ],
-            "decisionRecord": "Stores detected prefix cluster, generated rule IDs, confidence score, and release decision. Private chain-of-thought is not stored.",
-        },
-        "temporal": {
-            "workflowId": "temporal/autocomplete-tuning/ops-1a88",
-            "cadence": "Runs hourly against failed-prefix logs and queued zero-result clusters.",
-            "retryPolicy": "Retry prefix replay and latency tests twice; hold queue after repeated misses.",
-            "sla": "15 minute tuning SLA; route to owner if affected query volume crosses 10k/month.",
-            "checkpoints": [
-                "Prefix cluster intake",
-                "Synonym candidate generation",
-                "Offline replay",
-                "Shadow suggest API",
-                "Canary conversion monitor",
-            ],
-        },
-        "humanApproval": {
-            "mode": "conditional",
-            "owner": "Search experience owner",
-            "status": "Not required",
-            "reason": "Automation allowed unless protected terms or excessive rewrite scope are detected.",
-            "expiry": "Conditional review due within 2 business hours if triggered.",
-            "record": "Approval-not-needed record is saved when protected-term checks pass.",
-        },
-        "monitoringSignals": [
-            {"label": "Prefix recall", "value": "+42%", "status": "healthy", "detail": "Hydration pack variants now map to expected product family."},
-            {"label": "Suggest latency", "value": "91ms", "status": "healthy", "detail": "Autocomplete stays under latency ceiling."},
-            {"label": "Rewrite scope", "value": "3 rules", "status": "watch", "detail": "Limited rollout monitors accidental broad matches."},
-        ],
-        "feedbackLoop": "Accepted suggestions, abandoned prefixes, and downstream conversion deltas update the typo-cluster model after each canary window.",
-        "liveMetrics": {
-            "queryVolume": 5400,
-            "exitRate": 32,
-            "revenueLoss": 2100,
-            "baselineNdcg": 0.54,
-            "proposedNdcg": 0.86,
-            "p95Latency": 91,
-        },
-        "accent": "#1F6B77",
-        "accentGlow": "rgba(31,107,119,0.12)",
-        "accentBorder": "rgba(31,107,119,0.25)",
-        "beforeQuery": "hydra pack",
-        "beforeResults": [
-            {"name": "Hydra Skin Cream", "price": 12, "stock": 40, "score": "0.30"},
-            {"name": "Dragon Action Figure", "price": 19, "stock": 7, "score": "0.18"},
-        ],
-        "afterResults": [
-            {"name": "CamelBak Hydration Pack 3L", "price": 79, "stock": 34, "score": "0.96"},
-            {"name": "Osprey Hydration Reservoir", "price": 45, "stock": 18, "score": "0.92"},
-            {"name": "TrailSip Hydra-Pack 2L", "price": 39, "stock": 22, "score": "0.89"},
-        ],
-    },
-    {
-        "id": "ops-7b19",
-        "title": "MXP Merchandising Rule Conflict — Winter Clearance",
-        "description": 'A manual merchandising boost for "winter jacket clearance" is pinning stale clearance inventory above higher-converting new arrivals. Conversion rate drops 14%.',
-        "visualCode": "MX",
-        "capability": "merchandising",
-        "signalType": "mxp rule conflict",
-        "risk": "high",
-        "confidence": 88,
-        "tags": ["mxp-rule-governance", "merchandising"],
-        "status": "Owner Review",
-        "offlineEvalCoverage": 88,
-        "businessImpact": 85,
-        "approvalPolicy": "Requires search lead manual sign-off",
-        "evidenceNotes": "Magellan detects a manual boost rule pinning out-of-season clearance stock in position 1-3, overriding the ML relevance model. Exit rate is 14% while top competitor pages convert at 6%.",
-        "agent": {
-            "name": "Merchandising Rules Agent",
-            "role": "Detects conflicts between manual boosts, inventory health, and relevance models.",
-            "autonomyLevel": "Recommend-only until a human search lead signs the override change.",
-            "behaviors": [
-                "Compares pinned inventory against conversion, stock, seasonality, and relevance score.",
-                "Suggests boost demotion or expiry changes with rollback snapshots.",
-                "Requires owner approval before changing merchandising rules in production.",
-            ],
-            "decisionRecord": "Stores the conflict evidence, proposed rule diff, approval signature, and monitoring outcome. Private chain-of-thought is not stored.",
-        },
-        "temporal": {
-            "workflowId": "temporal/mxp-governance/ops-7b19",
-            "cadence": "Runs every 6 hours and immediately when exit-rate anomaly exceeds threshold.",
-            "retryPolicy": "Retry rule snapshot and shadow replay twice; never retry production mutation without approval.",
-            "sla": "Manual approval due within 1 business hour for high-risk merchandising conflicts.",
-            "checkpoints": [
-                "Rule conflict capture",
-                "Owner approval request",
-                "Shadow relevance replay",
-                "Canary traffic gate",
-                "Rollback snapshot retention",
-            ],
-        },
-        "humanApproval": {
-            "mode": "required",
-            "owner": "Search lead: Priya Menon",
-            "status": "Pending",
-            "reason": "High-risk merchandising rule change touches promoted inventory and revenue ordering.",
-            "expiry": "Approval expires 1 business hour after request.",
-            "record": "A signed human approval must be recorded before canary deployment.",
-        },
-        "monitoringSignals": [
-            {"label": "Conversion risk", "value": "14% drop", "status": "blocked", "detail": "Current rule pins stale inventory above better matches."},
-            {"label": "Inventory health", "value": "3 units", "status": "watch", "detail": "Low stock on pinned clearance SKU creates poor landing experience."},
-            {"label": "Rollback snapshot", "value": "v1.0.4", "status": "healthy", "detail": "Baseline rule state is retained for emergency reset."},
-        ],
-        "feedbackLoop": "Post-approval canary feedback compares conversion, exit rate, and SKU availability before promotion beyond 25% traffic.",
-        "liveMetrics": {
-            "queryVolume": 9100,
-            "exitRate": 14,
-            "revenueLoss": 3500,
-            "baselineNdcg": 0.63,
-            "proposedNdcg": 0.88,
-            "p95Latency": 124,
-        },
-        "accent": "#2F5D50",
-        "accentGlow": "rgba(47,93,80,0.12)",
-        "accentBorder": "rgba(47,93,80,0.25)",
-        "beforeQuery": "winter jacket clearance",
-        "beforeResults": [
-            {"name": "Last Season Parka (Clearance)", "price": 45, "stock": 3, "detail": "pinned #1 by MXP rule"},
-            {"name": "Old Fleece Vest (Clearance)", "price": 22, "stock": 1, "detail": "pinned #2 by MXP rule"},
-        ],
-        "afterResults": [
-            {"name": "Alpine Down Jacket 2025", "price": 189, "stock": 42, "score": "0.93"},
-            {"name": "ThermoShell Pro Coat", "price": 149, "stock": 28, "score": "0.90"},
-            {"name": "Last Season Parka (Clearance)", "price": 45, "stock": 3, "score": "0.72"},
-        ],
-    },
-]
-
-
-QUERY_CLUSTERS = [
-    {
-        "query": "waterproof trail shoes",
-        "volume": "12,800",
-        "exits": "18%",
-        "loss": "-$4,200",
-        "impact": "High",
-        "tag": "Catalog attribute gap",
-        "badgeClass": "waterproof",
-        "status": "Active Runbook (ops-4f72)",
-    },
-    {
-        "query": "hydra p / hydra pack",
-        "volume": "5,400",
-        "exits": "32%",
-        "loss": "-$2,100",
-        "impact": "Med",
-        "tag": "Typo synonym miss",
-        "badgeClass": "typo",
-        "status": "Active Runbook (ops-1a88)",
-    },
-    {
-        "query": "winter jacket clearance",
-        "volume": "9,100",
-        "exits": "14%",
-        "loss": "-$3,500",
-        "impact": "Med",
-        "tag": "MXP Boost conflict",
-        "badgeClass": "rules",
-        "status": "Active Runbook (ops-7b19)",
-    },
-    {
-        "query": "voice: hiking boots goretex",
-        "volume": "2,800",
-        "exits": "42%",
-        "loss": "-$1,800",
-        "impact": "Med",
-        "tag": "Multimodal image QA",
-        "badgeClass": "waterproof",
-        "status": "Shadow Test Queued",
-    },
-    {
-        "query": "running jackets lightweight",
-        "volume": "15,200",
-        "exits": "4%",
-        "loss": "-$400",
-        "impact": "Low",
-        "tag": "Healthy relevance",
-        "badgeClass": "rules",
-        "status": "Auto-closed (Healthy)",
-    },
-]
-
-
-AUDIT_ROWS = [
-    {
-        "time": "backend",
-        "runbookId": "ops-4f72",
-        "title": 'Catalog Enrichment — "Waterproof" Attribute Gap',
-        "action": "Backend data loaded into UI",
-        "approver": "system:fastapi",
-        "agentName": "Catalog Optimization Agent",
-        "agentBehavior": "Clusters failed queries against product taxonomy gaps.",
-        "temporalWorkflowId": "temporal/catalog-gap/ops-4f72",
-        "approvalGate": "Approval not requested: policy gates pass.",
-        "monitoringSummary": "NDCG delta: +0.31 (healthy); P95 latency: 118ms (healthy)",
-        "feedbackRecord": "Backend source-of-truth payload available to frontend.",
-        "recordType": "monitoring",
-        "hash": "sha256:backend",
-        "isRollback": False,
-    }
-]
-
-
 app = FastAPI(
     title="Magellan AI Search Ops Backend",
     version="1.0.0",
@@ -412,12 +451,15 @@ def root() -> dict:
         "service": "Magellan AI Search Ops Backend",
         "status": "ok",
         "docs": "/docs",
+        "backend_base_url": PUBLIC_BACKEND_URL,
         "temporal_workflows_url": TEMPORAL_WORKFLOWS_URL,
+        "data_sources": data_source_status(),
         "endpoints": {
             "health": "/health",
             "runbooks": "/api/runbooks",
             "audit": "/api/audit",
             "query_clusters": "/api/query-clusters",
+            "data_sources": "/api/data-sources",
             "temporal": "/api/temporal",
             "temporal_details": "/api/temporal/details",
             "temporal_workflows_redirect": "/api/temporal/workflows",
@@ -430,14 +472,18 @@ def root() -> dict:
 def health() -> dict[str, str]:
     return {
         "status": "ok",
+        "backend_base_url": PUBLIC_BACKEND_URL,
         "temporal_workflows_url": TEMPORAL_WORKFLOWS_URL,
+        "data_sources_configured": str(
+            sum(1 for source in data_source_status().values() if source["configured"])
+        ),
     }
 
 
 @app.get("/api/temporal", response_model=TemporalLink)
 def get_temporal_link() -> TemporalLink:
     return TemporalLink(
-        namespace="default",
+        namespace=TEMPORAL_NAMESPACE,
         workflows_url=TEMPORAL_WORKFLOWS_URL,
         redirect_endpoint="/api/temporal/workflows",
     )
@@ -445,23 +491,11 @@ def get_temporal_link() -> TemporalLink:
 
 @app.get("/api/temporal/details", response_model=TemporalDetails)
 def get_temporal_details() -> TemporalDetails:
-    workflows = [
-        TemporalWorkflowSummary(
-            runbook_id=runbook["id"],
-            title=runbook["title"],
-            workflow_id=runbook["temporal"]["workflowId"],
-            status=runbook["status"],
-            cadence=runbook["temporal"]["cadence"],
-            retry_policy=runbook["temporal"]["retryPolicy"],
-            sla=runbook["temporal"]["sla"],
-            checkpoints=runbook["temporal"]["checkpoints"],
-        )
-        for runbook in RUNBOOKS
-    ]
+    workflows = [build_workflow_summary(runbook) for runbook in get_runbooks()]
 
     return TemporalDetails(
-        namespace="default",
-        status="configured",
+        namespace=TEMPORAL_NAMESPACE,
+        status="configured" if DATA_SOURCE_URLS["runbooks"] else "runbook source not configured",
         workflows_url=TEMPORAL_WORKFLOWS_URL,
         redirect_endpoint="/api/temporal/workflows",
         cors_origins=FRONTEND_ORIGINS,
@@ -481,19 +515,33 @@ def open_temporal_workflows() -> RedirectResponse:
     return RedirectResponse(TEMPORAL_WORKFLOWS_URL, status_code=307)
 
 
+@app.get("/api/data-sources")
+def get_data_sources() -> dict[str, dict[str, str | bool]]:
+    return data_source_status()
+
+
 @app.get("/api/runbooks")
 def get_runbooks() -> list[dict]:
-    return deepcopy(RUNBOOKS)
+    return [
+        normalize_runbook(runbook)
+        for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
+    ]
 
 
 @app.get("/api/audit")
 def get_audit() -> list[dict]:
-    return deepcopy(AUDIT_ROWS)
+    return [
+        normalize_audit_row(row)
+        for row in fetch_remote_list("audit", ["audit", "audit_rows", "items", "data", "results"])
+    ]
 
 
 @app.get("/api/query-clusters")
 def get_query_clusters() -> list[dict]:
-    return deepcopy(QUERY_CLUSTERS)
+    return [
+        normalize_query_cluster(row)
+        for row in fetch_remote_list("query_clusters", ["query_clusters", "clusters", "items", "data", "results"])
+    ]
 
 
 @app.post("/api/runbooks/{runbook_id}/actions/{action}", response_model=RunbookActionResponse)
@@ -501,45 +549,16 @@ def run_runbook_action(
     runbook_id: str,
     action: Literal["evaluate", "release", "rollback"],
 ) -> RunbookActionResponse:
-    status_by_action = {
-        "evaluate": "Shadow Test",
-        "release": "Released",
-        "rollback": "Rolled Back",
-    }
-
-    runbook = next((item for item in RUNBOOKS if item["id"] == runbook_id), None)
-    if runbook is not None:
-        runbook["status"] = status_by_action[action]
-        AUDIT_ROWS.insert(
-            0,
-            {
-                "time": datetime.now().strftime("%H:%M:%S"),
-                "runbookId": runbook["id"],
-                "title": runbook["title"],
-                "action": f"Backend queued {action} action",
-                "approver": "system:fastapi",
-                "agentName": runbook["agent"]["name"],
-                "agentBehavior": runbook["agent"]["behaviors"][0],
-                "temporalWorkflowId": runbook["temporal"]["workflowId"],
-                "approvalGate": runbook["humanApproval"]["record"],
-                "monitoringSummary": "; ".join(
-                    f"{signal['label']}: {signal['value']} ({signal['status']})"
-                    for signal in runbook["monitoringSignals"]
-                ),
-                "feedbackRecord": runbook["feedbackLoop"],
-                "recordType": "rollback" if action == "rollback" else "release" if action == "release" else "evaluation",
-                "hash": f"sha256:fastapi-{runbook_id}-{action}",
-                "isRollback": action == "rollback",
-            },
-        )
+    forwarded = forward_runbook_action(runbook_id, action)
 
     return RunbookActionResponse(
         runbook_id=runbook_id,
         action=action,
-        status="queued",
+        status="forwarded" if forwarded else "not_configured",
         temporal_workflows_url=TEMPORAL_WORKFLOWS_URL,
         message=(
-            "Action accepted by FastAPI bridge. Use temporal_workflows_url "
-            "to inspect the workflow in Temporal Web."
+            "Action was forwarded to the configured RUNBOOK_ACTION_API_URL."
+            if forwarded
+            else "No RUNBOOK_ACTION_API_URL configured. FastAPI did not execute a mock mutation."
         ),
     )
