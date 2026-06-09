@@ -1,0 +1,6821 @@
+{
+  "description": "Flat index of all product IDs for quick lookup",
+  "total": 1000,
+  "products": [
+    {
+      "id": "FOOT-001",
+      "category": "footwear",
+      "stock": 23,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-002",
+      "category": "footwear",
+      "stock": 36,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-003",
+      "category": "footwear",
+      "stock": 49,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-004",
+      "category": "footwear",
+      "stock": 62,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-005",
+      "category": "footwear",
+      "stock": 75,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-006",
+      "category": "footwear",
+      "stock": 88,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-007",
+      "category": "footwear",
+      "stock": 101,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-008",
+      "category": "footwear",
+      "stock": 114,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-009",
+      "category": "footwear",
+      "stock": 127,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-010",
+      "category": "footwear",
+      "stock": 140,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-011",
+      "category": "footwear",
+      "stock": 153,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-012",
+      "category": "footwear",
+      "stock": 166,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-013",
+      "category": "footwear",
+      "stock": 179,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-014",
+      "category": "footwear",
+      "stock": 192,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-015",
+      "category": "footwear",
+      "stock": 14,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-016",
+      "category": "footwear",
+      "stock": 27,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-017",
+      "category": "footwear",
+      "stock": 40,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-018",
+      "category": "footwear",
+      "stock": 53,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-019",
+      "category": "footwear",
+      "stock": 66,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-020",
+      "category": "footwear",
+      "stock": 79,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-021",
+      "category": "footwear",
+      "stock": 92,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-022",
+      "category": "footwear",
+      "stock": 105,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-023",
+      "category": "footwear",
+      "stock": 118,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-024",
+      "category": "footwear",
+      "stock": 131,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-025",
+      "category": "footwear",
+      "stock": 144,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-026",
+      "category": "footwear",
+      "stock": 157,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-027",
+      "category": "footwear",
+      "stock": 170,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-028",
+      "category": "footwear",
+      "stock": 183,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-029",
+      "category": "footwear",
+      "stock": 196,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-030",
+      "category": "footwear",
+      "stock": 18,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-031",
+      "category": "footwear",
+      "stock": 31,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-032",
+      "category": "footwear",
+      "stock": 44,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-033",
+      "category": "footwear",
+      "stock": 57,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-034",
+      "category": "footwear",
+      "stock": 70,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-035",
+      "category": "footwear",
+      "stock": 83,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-036",
+      "category": "footwear",
+      "stock": 96,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-037",
+      "category": "footwear",
+      "stock": 109,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-038",
+      "category": "footwear",
+      "stock": 122,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-039",
+      "category": "footwear",
+      "stock": 135,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-040",
+      "category": "footwear",
+      "stock": 148,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-041",
+      "category": "footwear",
+      "stock": 161,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-042",
+      "category": "footwear",
+      "stock": 174,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-043",
+      "category": "footwear",
+      "stock": 187,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-044",
+      "category": "footwear",
+      "stock": 200,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-045",
+      "category": "footwear",
+      "stock": 22,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-046",
+      "category": "footwear",
+      "stock": 35,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-047",
+      "category": "footwear",
+      "stock": 48,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-048",
+      "category": "footwear",
+      "stock": 61,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-049",
+      "category": "footwear",
+      "stock": 74,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-050",
+      "category": "footwear",
+      "stock": 87,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-051",
+      "category": "footwear",
+      "stock": 100,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-052",
+      "category": "footwear",
+      "stock": 113,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-053",
+      "category": "footwear",
+      "stock": 126,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-054",
+      "category": "footwear",
+      "stock": 139,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-055",
+      "category": "footwear",
+      "stock": 152,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-056",
+      "category": "footwear",
+      "stock": 165,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-057",
+      "category": "footwear",
+      "stock": 178,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-058",
+      "category": "footwear",
+      "stock": 191,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-059",
+      "category": "footwear",
+      "stock": 13,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-060",
+      "category": "footwear",
+      "stock": 26,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-061",
+      "category": "footwear",
+      "stock": 39,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-062",
+      "category": "footwear",
+      "stock": 52,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-063",
+      "category": "footwear",
+      "stock": 65,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-064",
+      "category": "footwear",
+      "stock": 78,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-065",
+      "category": "footwear",
+      "stock": 91,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-066",
+      "category": "footwear",
+      "stock": 104,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-067",
+      "category": "footwear",
+      "stock": 117,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-068",
+      "category": "footwear",
+      "stock": 130,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-069",
+      "category": "footwear",
+      "stock": 143,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-070",
+      "category": "footwear",
+      "stock": 156,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-071",
+      "category": "footwear",
+      "stock": 169,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-072",
+      "category": "footwear",
+      "stock": 182,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-073",
+      "category": "footwear",
+      "stock": 195,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-074",
+      "category": "footwear",
+      "stock": 17,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-075",
+      "category": "footwear",
+      "stock": 30,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-076",
+      "category": "footwear",
+      "stock": 43,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-077",
+      "category": "footwear",
+      "stock": 56,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-078",
+      "category": "footwear",
+      "stock": 69,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-079",
+      "category": "footwear",
+      "stock": 82,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-080",
+      "category": "footwear",
+      "stock": 95,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-081",
+      "category": "footwear",
+      "stock": 108,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-082",
+      "category": "footwear",
+      "stock": 121,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-083",
+      "category": "footwear",
+      "stock": 134,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-084",
+      "category": "footwear",
+      "stock": 147,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-085",
+      "category": "footwear",
+      "stock": 160,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-086",
+      "category": "footwear",
+      "stock": 173,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-087",
+      "category": "footwear",
+      "stock": 186,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-088",
+      "category": "footwear",
+      "stock": 199,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-089",
+      "category": "footwear",
+      "stock": 21,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-090",
+      "category": "footwear",
+      "stock": 34,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-091",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-092",
+      "category": "footwear",
+      "stock": 60,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-093",
+      "category": "footwear",
+      "stock": 73,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-094",
+      "category": "footwear",
+      "stock": 86,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-095",
+      "category": "footwear",
+      "stock": 99,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-096",
+      "category": "footwear",
+      "stock": 112,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-097",
+      "category": "footwear",
+      "stock": 125,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-098",
+      "category": "footwear",
+      "stock": 138,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-099",
+      "category": "footwear",
+      "stock": 151,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-100",
+      "category": "footwear",
+      "stock": 164,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-101",
+      "category": "footwear",
+      "stock": 177,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-102",
+      "category": "footwear",
+      "stock": 190,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-103",
+      "category": "footwear",
+      "stock": 12,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-104",
+      "category": "footwear",
+      "stock": 25,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-105",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-106",
+      "category": "footwear",
+      "stock": 51,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-107",
+      "category": "footwear",
+      "stock": 64,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-108",
+      "category": "footwear",
+      "stock": 77,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-109",
+      "category": "footwear",
+      "stock": 90,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-110",
+      "category": "footwear",
+      "stock": 103,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-111",
+      "category": "footwear",
+      "stock": 116,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-112",
+      "category": "footwear",
+      "stock": 129,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-113",
+      "category": "footwear",
+      "stock": 142,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-114",
+      "category": "footwear",
+      "stock": 155,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-115",
+      "category": "footwear",
+      "stock": 168,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-116",
+      "category": "footwear",
+      "stock": 181,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-117",
+      "category": "footwear",
+      "stock": 194,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-118",
+      "category": "footwear",
+      "stock": 16,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-119",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-120",
+      "category": "footwear",
+      "stock": 42,
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-121",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-122",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-123",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-124",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-125",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-126",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-127",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-128",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-129",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-130",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-131",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-132",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-133",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-134",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-135",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-136",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-137",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-138",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-139",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-140",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-141",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-142",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-143",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-144",
+      "category": "footwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-145",
+      "category": "footwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-146",
+      "category": "footwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-147",
+      "category": "footwear",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-148",
+      "category": "footwear",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-149",
+      "category": "footwear",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-150",
+      "category": "footwear",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-151",
+      "category": "footwear",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-152",
+      "category": "footwear",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-153",
+      "category": "footwear",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-154",
+      "category": "footwear",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-155",
+      "category": "footwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-156",
+      "category": "footwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-157",
+      "category": "footwear",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-158",
+      "category": "footwear",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-159",
+      "category": "footwear",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-160",
+      "category": "footwear",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-161",
+      "category": "footwear",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-162",
+      "category": "footwear",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-163",
+      "category": "footwear",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-164",
+      "category": "footwear",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-165",
+      "category": "footwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-166",
+      "category": "footwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-167",
+      "category": "footwear",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-168",
+      "category": "footwear",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-169",
+      "category": "footwear",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-170",
+      "category": "footwear",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-171",
+      "category": "footwear",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-172",
+      "category": "footwear",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-173",
+      "category": "footwear",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-174",
+      "category": "footwear",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-175",
+      "category": "footwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-176",
+      "category": "footwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-177",
+      "category": "footwear",
+      "stock": 80,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-178",
+      "category": "footwear",
+      "stock": 87,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-179",
+      "category": "footwear",
+      "stock": 94,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-180",
+      "category": "footwear",
+      "stock": 11,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-181",
+      "category": "footwear",
+      "stock": 18,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-182",
+      "category": "footwear",
+      "stock": 25,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-183",
+      "category": "footwear",
+      "stock": 32,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-184",
+      "category": "footwear",
+      "stock": 39,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-185",
+      "category": "footwear",
+      "stock": 46,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-186",
+      "category": "footwear",
+      "stock": 53,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-187",
+      "category": "footwear",
+      "stock": 60,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-188",
+      "category": "footwear",
+      "stock": 67,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-189",
+      "category": "footwear",
+      "stock": 74,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-190",
+      "category": "footwear",
+      "stock": 81,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-191",
+      "category": "footwear",
+      "stock": 88,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-192",
+      "category": "footwear",
+      "stock": 95,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-193",
+      "category": "footwear",
+      "stock": 12,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-194",
+      "category": "footwear",
+      "stock": 19,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-195",
+      "category": "footwear",
+      "stock": 26,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-196",
+      "category": "footwear",
+      "stock": 33,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-197",
+      "category": "footwear",
+      "stock": 40,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-198",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-199",
+      "category": "footwear",
+      "stock": 54,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-200",
+      "category": "footwear",
+      "stock": 61,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-201",
+      "category": "footwear",
+      "stock": 68,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-202",
+      "category": "footwear",
+      "stock": 75,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-203",
+      "category": "footwear",
+      "stock": 82,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-204",
+      "category": "footwear",
+      "stock": 89,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-205",
+      "category": "footwear",
+      "stock": 96,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-206",
+      "category": "footwear",
+      "stock": 13,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-207",
+      "category": "footwear",
+      "stock": 20,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-208",
+      "category": "footwear",
+      "stock": 27,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-209",
+      "category": "footwear",
+      "stock": 34,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-210",
+      "category": "footwear",
+      "stock": 41,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-211",
+      "category": "footwear",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-212",
+      "category": "footwear",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-213",
+      "category": "footwear",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-214",
+      "category": "footwear",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-215",
+      "category": "footwear",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-216",
+      "category": "footwear",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-217",
+      "category": "footwear",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-218",
+      "category": "footwear",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-219",
+      "category": "footwear",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-220",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-221",
+      "category": "footwear",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-222",
+      "category": "footwear",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-223",
+      "category": "footwear",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-224",
+      "category": "footwear",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-225",
+      "category": "footwear",
+      "stock": 26,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-226",
+      "category": "footwear",
+      "stock": 31,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-227",
+      "category": "footwear",
+      "stock": 36,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-228",
+      "category": "footwear",
+      "stock": 41,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-229",
+      "category": "footwear",
+      "stock": 46,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-230",
+      "category": "footwear",
+      "stock": 5,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-231",
+      "category": "footwear",
+      "stock": 10,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-232",
+      "category": "footwear",
+      "stock": 15,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-233",
+      "category": "footwear",
+      "stock": 20,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-234",
+      "category": "footwear",
+      "stock": 25,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-235",
+      "category": "footwear",
+      "stock": 30,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-236",
+      "category": "footwear",
+      "stock": 35,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-237",
+      "category": "footwear",
+      "stock": 40,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-238",
+      "category": "footwear",
+      "stock": 45,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-239",
+      "category": "footwear",
+      "stock": 50,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-240",
+      "category": "footwear",
+      "stock": 9,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-241",
+      "category": "footwear",
+      "stock": 14,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-242",
+      "category": "footwear",
+      "stock": 19,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-243",
+      "category": "footwear",
+      "stock": 24,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-244",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-245",
+      "category": "footwear",
+      "stock": 34,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-246",
+      "category": "footwear",
+      "stock": 39,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-247",
+      "category": "footwear",
+      "stock": 44,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-248",
+      "category": "footwear",
+      "stock": 49,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-249",
+      "category": "footwear",
+      "stock": 8,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-250",
+      "category": "footwear",
+      "stock": 13,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-251",
+      "category": "footwear",
+      "stock": 18,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-252",
+      "category": "footwear",
+      "stock": 23,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-253",
+      "category": "footwear",
+      "stock": 28,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-254",
+      "category": "footwear",
+      "stock": 33,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-255",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-256",
+      "category": "footwear",
+      "stock": 43,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-257",
+      "category": "footwear",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-258",
+      "category": "footwear",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-259",
+      "category": "footwear",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-260",
+      "category": "footwear",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-261",
+      "category": "footwear",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-262",
+      "category": "footwear",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-263",
+      "category": "footwear",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-264",
+      "category": "footwear",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-265",
+      "category": "footwear",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-266",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-267",
+      "category": "footwear",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-268",
+      "category": "footwear",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-269",
+      "category": "footwear",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-270",
+      "category": "footwear",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "FOOT-271",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-272",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-273",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-274",
+      "category": "footwear",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-275",
+      "category": "footwear",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-276",
+      "category": "footwear",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-277",
+      "category": "footwear",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-278",
+      "category": "footwear",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-279",
+      "category": "footwear",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-280",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-281",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-282",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-283",
+      "category": "footwear",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-284",
+      "category": "footwear",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-285",
+      "category": "footwear",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-286",
+      "category": "footwear",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-287",
+      "category": "footwear",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-288",
+      "category": "footwear",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-289",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-290",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-291",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-292",
+      "category": "footwear",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-293",
+      "category": "footwear",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-294",
+      "category": "footwear",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-295",
+      "category": "footwear",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-296",
+      "category": "footwear",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-297",
+      "category": "footwear",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-298",
+      "category": "footwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-299",
+      "category": "footwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "FOOT-300",
+      "category": "footwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-001",
+      "category": "bags",
+      "stock": 7,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-002",
+      "category": "bags",
+      "stock": 36,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-003",
+      "category": "bags",
+      "stock": 49,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-004",
+      "category": "bags",
+      "stock": 62,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-005",
+      "category": "bags",
+      "stock": 75,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-006",
+      "category": "bags",
+      "stock": 88,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-007",
+      "category": "bags",
+      "stock": 101,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-008",
+      "category": "bags",
+      "stock": 114,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-009",
+      "category": "bags",
+      "stock": 127,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-010",
+      "category": "bags",
+      "stock": 140,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-011",
+      "category": "bags",
+      "stock": 153,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-012",
+      "category": "bags",
+      "stock": 166,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-013",
+      "category": "bags",
+      "stock": 179,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-014",
+      "category": "bags",
+      "stock": 192,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-015",
+      "category": "bags",
+      "stock": 14,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-016",
+      "category": "bags",
+      "stock": 27,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-017",
+      "category": "bags",
+      "stock": 40,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-018",
+      "category": "bags",
+      "stock": 53,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-019",
+      "category": "bags",
+      "stock": 66,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-020",
+      "category": "bags",
+      "stock": 79,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-021",
+      "category": "bags",
+      "stock": 92,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-022",
+      "category": "bags",
+      "stock": 105,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-023",
+      "category": "bags",
+      "stock": 118,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-024",
+      "category": "bags",
+      "stock": 131,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-025",
+      "category": "bags",
+      "stock": 144,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-026",
+      "category": "bags",
+      "stock": 157,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-027",
+      "category": "bags",
+      "stock": 170,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-028",
+      "category": "bags",
+      "stock": 183,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-029",
+      "category": "bags",
+      "stock": 196,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-030",
+      "category": "bags",
+      "stock": 18,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-031",
+      "category": "bags",
+      "stock": 31,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-032",
+      "category": "bags",
+      "stock": 44,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-033",
+      "category": "bags",
+      "stock": 57,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-034",
+      "category": "bags",
+      "stock": 70,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-035",
+      "category": "bags",
+      "stock": 83,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-036",
+      "category": "bags",
+      "stock": 96,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-037",
+      "category": "bags",
+      "stock": 109,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-038",
+      "category": "bags",
+      "stock": 122,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-039",
+      "category": "bags",
+      "stock": 135,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-040",
+      "category": "bags",
+      "stock": 148,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-041",
+      "category": "bags",
+      "stock": 161,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-042",
+      "category": "bags",
+      "stock": 174,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-043",
+      "category": "bags",
+      "stock": 187,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-044",
+      "category": "bags",
+      "stock": 200,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-045",
+      "category": "bags",
+      "stock": 22,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-046",
+      "category": "bags",
+      "stock": 35,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-047",
+      "category": "bags",
+      "stock": 48,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-048",
+      "category": "bags",
+      "stock": 61,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-049",
+      "category": "bags",
+      "stock": 74,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-050",
+      "category": "bags",
+      "stock": 87,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-051",
+      "category": "bags",
+      "stock": 100,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-052",
+      "category": "bags",
+      "stock": 113,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-053",
+      "category": "bags",
+      "stock": 126,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-054",
+      "category": "bags",
+      "stock": 139,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-055",
+      "category": "bags",
+      "stock": 152,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-056",
+      "category": "bags",
+      "stock": 165,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-057",
+      "category": "bags",
+      "stock": 178,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-058",
+      "category": "bags",
+      "stock": 191,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-059",
+      "category": "bags",
+      "stock": 13,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-060",
+      "category": "bags",
+      "stock": 26,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-061",
+      "category": "bags",
+      "stock": 39,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-062",
+      "category": "bags",
+      "stock": 52,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-063",
+      "category": "bags",
+      "stock": 65,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-064",
+      "category": "bags",
+      "stock": 78,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-065",
+      "category": "bags",
+      "stock": 91,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-066",
+      "category": "bags",
+      "stock": 104,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-067",
+      "category": "bags",
+      "stock": 117,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-068",
+      "category": "bags",
+      "stock": 130,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-069",
+      "category": "bags",
+      "stock": 143,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-070",
+      "category": "bags",
+      "stock": 156,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-071",
+      "category": "bags",
+      "stock": 169,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-072",
+      "category": "bags",
+      "stock": 182,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-073",
+      "category": "bags",
+      "stock": 195,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-074",
+      "category": "bags",
+      "stock": 17,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-075",
+      "category": "bags",
+      "stock": 30,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-076",
+      "category": "bags",
+      "stock": 43,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-077",
+      "category": "bags",
+      "stock": 56,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-078",
+      "category": "bags",
+      "stock": 69,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-079",
+      "category": "bags",
+      "stock": 82,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-080",
+      "category": "bags",
+      "stock": 95,
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-081",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-082",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-083",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-084",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-085",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-086",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-087",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-088",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-089",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-090",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-091",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-092",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-093",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-094",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-095",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-096",
+      "category": "bags",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-097",
+      "category": "bags",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-098",
+      "category": "bags",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-099",
+      "category": "bags",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-100",
+      "category": "bags",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-101",
+      "category": "bags",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-102",
+      "category": "bags",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-103",
+      "category": "bags",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-104",
+      "category": "bags",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-105",
+      "category": "bags",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-106",
+      "category": "bags",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-107",
+      "category": "bags",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-108",
+      "category": "bags",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-109",
+      "category": "bags",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-110",
+      "category": "bags",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-111",
+      "category": "bags",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-112",
+      "category": "bags",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-113",
+      "category": "bags",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-114",
+      "category": "bags",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-115",
+      "category": "bags",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-116",
+      "category": "bags",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-117",
+      "category": "bags",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-118",
+      "category": "bags",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-119",
+      "category": "bags",
+      "stock": 34,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-120",
+      "category": "bags",
+      "stock": 41,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-121",
+      "category": "bags",
+      "stock": 48,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-122",
+      "category": "bags",
+      "stock": 55,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-123",
+      "category": "bags",
+      "stock": 62,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-124",
+      "category": "bags",
+      "stock": 69,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-125",
+      "category": "bags",
+      "stock": 76,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-126",
+      "category": "bags",
+      "stock": 83,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-127",
+      "category": "bags",
+      "stock": 90,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-128",
+      "category": "bags",
+      "stock": 97,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-129",
+      "category": "bags",
+      "stock": 14,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-130",
+      "category": "bags",
+      "stock": 21,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-131",
+      "category": "bags",
+      "stock": 28,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-132",
+      "category": "bags",
+      "stock": 35,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-133",
+      "category": "bags",
+      "stock": 42,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-134",
+      "category": "bags",
+      "stock": 49,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-135",
+      "category": "bags",
+      "stock": 56,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-136",
+      "category": "bags",
+      "stock": 63,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-137",
+      "category": "bags",
+      "stock": 70,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-138",
+      "category": "bags",
+      "stock": 77,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-139",
+      "category": "bags",
+      "stock": 84,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-140",
+      "category": "bags",
+      "stock": 91,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "BAGS-141",
+      "category": "bags",
+      "stock": 20,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-142",
+      "category": "bags",
+      "stock": 25,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-143",
+      "category": "bags",
+      "stock": 30,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-144",
+      "category": "bags",
+      "stock": 35,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-145",
+      "category": "bags",
+      "stock": 40,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-146",
+      "category": "bags",
+      "stock": 45,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-147",
+      "category": "bags",
+      "stock": 50,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-148",
+      "category": "bags",
+      "stock": 9,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-149",
+      "category": "bags",
+      "stock": 14,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-150",
+      "category": "bags",
+      "stock": 19,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-151",
+      "category": "bags",
+      "stock": 24,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-152",
+      "category": "bags",
+      "stock": 29,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-153",
+      "category": "bags",
+      "stock": 34,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-154",
+      "category": "bags",
+      "stock": 39,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-155",
+      "category": "bags",
+      "stock": 44,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-156",
+      "category": "bags",
+      "stock": 49,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-157",
+      "category": "bags",
+      "stock": 8,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-158",
+      "category": "bags",
+      "stock": 13,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-159",
+      "category": "bags",
+      "stock": 18,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-160",
+      "category": "bags",
+      "stock": 23,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-161",
+      "category": "bags",
+      "stock": 28,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-162",
+      "category": "bags",
+      "stock": 33,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-163",
+      "category": "bags",
+      "stock": 38,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-164",
+      "category": "bags",
+      "stock": 43,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-165",
+      "category": "bags",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-166",
+      "category": "bags",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-167",
+      "category": "bags",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-168",
+      "category": "bags",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-169",
+      "category": "bags",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-170",
+      "category": "bags",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-171",
+      "category": "bags",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-172",
+      "category": "bags",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-173",
+      "category": "bags",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-174",
+      "category": "bags",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-175",
+      "category": "bags",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-176",
+      "category": "bags",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-177",
+      "category": "bags",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-178",
+      "category": "bags",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-179",
+      "category": "bags",
+      "stock": 26,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-180",
+      "category": "bags",
+      "stock": 31,
+      "data_quality": "poor"
+    },
+    {
+      "id": "BAGS-181",
+      "category": "bags",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-182",
+      "category": "bags",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-183",
+      "category": "bags",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-184",
+      "category": "bags",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-185",
+      "category": "bags",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-186",
+      "category": "bags",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-187",
+      "category": "bags",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-188",
+      "category": "bags",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-189",
+      "category": "bags",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-190",
+      "category": "bags",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-191",
+      "category": "bags",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-192",
+      "category": "bags",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-193",
+      "category": "bags",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-194",
+      "category": "bags",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-195",
+      "category": "bags",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-196",
+      "category": "bags",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-197",
+      "category": "bags",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-198",
+      "category": "bags",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-199",
+      "category": "bags",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "BAGS-200",
+      "category": "bags",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-001",
+      "category": "outerwear",
+      "stock": 23,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-002",
+      "category": "outerwear",
+      "stock": 36,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-003",
+      "category": "outerwear",
+      "stock": 49,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-004",
+      "category": "outerwear",
+      "stock": 62,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-005",
+      "category": "outerwear",
+      "stock": 75,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-006",
+      "category": "outerwear",
+      "stock": 88,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-007",
+      "category": "outerwear",
+      "stock": 101,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-008",
+      "category": "outerwear",
+      "stock": 114,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-009",
+      "category": "outerwear",
+      "stock": 127,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-010",
+      "category": "outerwear",
+      "stock": 140,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-011",
+      "category": "outerwear",
+      "stock": 153,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-012",
+      "category": "outerwear",
+      "stock": 166,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-013",
+      "category": "outerwear",
+      "stock": 179,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-014",
+      "category": "outerwear",
+      "stock": 192,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-015",
+      "category": "outerwear",
+      "stock": 14,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-016",
+      "category": "outerwear",
+      "stock": 27,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-017",
+      "category": "outerwear",
+      "stock": 40,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-018",
+      "category": "outerwear",
+      "stock": 53,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-019",
+      "category": "outerwear",
+      "stock": 66,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-020",
+      "category": "outerwear",
+      "stock": 79,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-021",
+      "category": "outerwear",
+      "stock": 92,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-022",
+      "category": "outerwear",
+      "stock": 105,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-023",
+      "category": "outerwear",
+      "stock": 118,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-024",
+      "category": "outerwear",
+      "stock": 131,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-025",
+      "category": "outerwear",
+      "stock": 144,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-026",
+      "category": "outerwear",
+      "stock": 157,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-027",
+      "category": "outerwear",
+      "stock": 170,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-028",
+      "category": "outerwear",
+      "stock": 183,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-029",
+      "category": "outerwear",
+      "stock": 196,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-030",
+      "category": "outerwear",
+      "stock": 18,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-031",
+      "category": "outerwear",
+      "stock": 31,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-032",
+      "category": "outerwear",
+      "stock": 44,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-033",
+      "category": "outerwear",
+      "stock": 57,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-034",
+      "category": "outerwear",
+      "stock": 70,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-035",
+      "category": "outerwear",
+      "stock": 83,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-036",
+      "category": "outerwear",
+      "stock": 96,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-037",
+      "category": "outerwear",
+      "stock": 109,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-038",
+      "category": "outerwear",
+      "stock": 122,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-039",
+      "category": "outerwear",
+      "stock": 135,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-040",
+      "category": "outerwear",
+      "stock": 148,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-041",
+      "category": "outerwear",
+      "stock": 161,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-042",
+      "category": "outerwear",
+      "stock": 174,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-043",
+      "category": "outerwear",
+      "stock": 187,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-044",
+      "category": "outerwear",
+      "stock": 200,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-045",
+      "category": "outerwear",
+      "stock": 22,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-046",
+      "category": "outerwear",
+      "stock": 35,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-047",
+      "category": "outerwear",
+      "stock": 48,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-048",
+      "category": "outerwear",
+      "stock": 61,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-049",
+      "category": "outerwear",
+      "stock": 74,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-050",
+      "category": "outerwear",
+      "stock": 87,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-051",
+      "category": "outerwear",
+      "stock": 100,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-052",
+      "category": "outerwear",
+      "stock": 113,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-053",
+      "category": "outerwear",
+      "stock": 126,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-054",
+      "category": "outerwear",
+      "stock": 139,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-055",
+      "category": "outerwear",
+      "stock": 152,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-056",
+      "category": "outerwear",
+      "stock": 165,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-057",
+      "category": "outerwear",
+      "stock": 178,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-058",
+      "category": "outerwear",
+      "stock": 191,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-059",
+      "category": "outerwear",
+      "stock": 13,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-060",
+      "category": "outerwear",
+      "stock": 26,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-061",
+      "category": "outerwear",
+      "stock": 39,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-062",
+      "category": "outerwear",
+      "stock": 52,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-063",
+      "category": "outerwear",
+      "stock": 65,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-064",
+      "category": "outerwear",
+      "stock": 78,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-065",
+      "category": "outerwear",
+      "stock": 91,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-066",
+      "category": "outerwear",
+      "stock": 104,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-067",
+      "category": "outerwear",
+      "stock": 117,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-068",
+      "category": "outerwear",
+      "stock": 130,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-069",
+      "category": "outerwear",
+      "stock": 143,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-070",
+      "category": "outerwear",
+      "stock": 156,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-071",
+      "category": "outerwear",
+      "stock": 169,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-072",
+      "category": "outerwear",
+      "stock": 182,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-073",
+      "category": "outerwear",
+      "stock": 195,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-074",
+      "category": "outerwear",
+      "stock": 17,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-075",
+      "category": "outerwear",
+      "stock": 30,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-076",
+      "category": "outerwear",
+      "stock": 43,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-077",
+      "category": "outerwear",
+      "stock": 56,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-078",
+      "category": "outerwear",
+      "stock": 69,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-079",
+      "category": "outerwear",
+      "stock": 82,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-080",
+      "category": "outerwear",
+      "stock": 95,
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-081",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-082",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-083",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-084",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-085",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-086",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-087",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-088",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-089",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-090",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-091",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-092",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-093",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-094",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-095",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-096",
+      "category": "outerwear",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-097",
+      "category": "outerwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-098",
+      "category": "outerwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-099",
+      "category": "outerwear",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-100",
+      "category": "outerwear",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-101",
+      "category": "outerwear",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-102",
+      "category": "outerwear",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-103",
+      "category": "outerwear",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-104",
+      "category": "outerwear",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-105",
+      "category": "outerwear",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-106",
+      "category": "outerwear",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-107",
+      "category": "outerwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-108",
+      "category": "outerwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-109",
+      "category": "outerwear",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-110",
+      "category": "outerwear",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-111",
+      "category": "outerwear",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-112",
+      "category": "outerwear",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-113",
+      "category": "outerwear",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-114",
+      "category": "outerwear",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-115",
+      "category": "outerwear",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-116",
+      "category": "outerwear",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-117",
+      "category": "outerwear",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-118",
+      "category": "outerwear",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-119",
+      "category": "outerwear",
+      "stock": 34,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-120",
+      "category": "outerwear",
+      "stock": 41,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-121",
+      "category": "outerwear",
+      "stock": 48,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-122",
+      "category": "outerwear",
+      "stock": 55,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-123",
+      "category": "outerwear",
+      "stock": 62,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-124",
+      "category": "outerwear",
+      "stock": 69,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-125",
+      "category": "outerwear",
+      "stock": 76,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-126",
+      "category": "outerwear",
+      "stock": 83,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-127",
+      "category": "outerwear",
+      "stock": 90,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-128",
+      "category": "outerwear",
+      "stock": 97,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-129",
+      "category": "outerwear",
+      "stock": 14,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-130",
+      "category": "outerwear",
+      "stock": 21,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-131",
+      "category": "outerwear",
+      "stock": 28,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-132",
+      "category": "outerwear",
+      "stock": 35,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-133",
+      "category": "outerwear",
+      "stock": 42,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-134",
+      "category": "outerwear",
+      "stock": 49,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-135",
+      "category": "outerwear",
+      "stock": 56,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-136",
+      "category": "outerwear",
+      "stock": 63,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-137",
+      "category": "outerwear",
+      "stock": 70,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-138",
+      "category": "outerwear",
+      "stock": 77,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-139",
+      "category": "outerwear",
+      "stock": 84,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-140",
+      "category": "outerwear",
+      "stock": 91,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-141",
+      "category": "outerwear",
+      "stock": 20,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-142",
+      "category": "outerwear",
+      "stock": 25,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-143",
+      "category": "outerwear",
+      "stock": 30,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-144",
+      "category": "outerwear",
+      "stock": 35,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-145",
+      "category": "outerwear",
+      "stock": 40,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-146",
+      "category": "outerwear",
+      "stock": 45,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-147",
+      "category": "outerwear",
+      "stock": 50,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-148",
+      "category": "outerwear",
+      "stock": 9,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-149",
+      "category": "outerwear",
+      "stock": 14,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-150",
+      "category": "outerwear",
+      "stock": 19,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-151",
+      "category": "outerwear",
+      "stock": 24,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-152",
+      "category": "outerwear",
+      "stock": 29,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-153",
+      "category": "outerwear",
+      "stock": 34,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-154",
+      "category": "outerwear",
+      "stock": 39,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-155",
+      "category": "outerwear",
+      "stock": 44,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-156",
+      "category": "outerwear",
+      "stock": 49,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-157",
+      "category": "outerwear",
+      "stock": 8,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-158",
+      "category": "outerwear",
+      "stock": 13,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-159",
+      "category": "outerwear",
+      "stock": 18,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-160",
+      "category": "outerwear",
+      "stock": 23,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-161",
+      "category": "outerwear",
+      "stock": 28,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-162",
+      "category": "outerwear",
+      "stock": 33,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-163",
+      "category": "outerwear",
+      "stock": 38,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-164",
+      "category": "outerwear",
+      "stock": 43,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-165",
+      "category": "outerwear",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-166",
+      "category": "outerwear",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-167",
+      "category": "outerwear",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-168",
+      "category": "outerwear",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-169",
+      "category": "outerwear",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-170",
+      "category": "outerwear",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-171",
+      "category": "outerwear",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-172",
+      "category": "outerwear",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-173",
+      "category": "outerwear",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-174",
+      "category": "outerwear",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-175",
+      "category": "outerwear",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-176",
+      "category": "outerwear",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-177",
+      "category": "outerwear",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-178",
+      "category": "outerwear",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-179",
+      "category": "outerwear",
+      "stock": 26,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-180",
+      "category": "outerwear",
+      "stock": 31,
+      "data_quality": "poor"
+    },
+    {
+      "id": "OUT-181",
+      "category": "outerwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-182",
+      "category": "outerwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-183",
+      "category": "outerwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-184",
+      "category": "outerwear",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-185",
+      "category": "outerwear",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-186",
+      "category": "outerwear",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-187",
+      "category": "outerwear",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-188",
+      "category": "outerwear",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-189",
+      "category": "outerwear",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-190",
+      "category": "outerwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-191",
+      "category": "outerwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-192",
+      "category": "outerwear",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-193",
+      "category": "outerwear",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-194",
+      "category": "outerwear",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-195",
+      "category": "outerwear",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-196",
+      "category": "outerwear",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-197",
+      "category": "outerwear",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-198",
+      "category": "outerwear",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-199",
+      "category": "outerwear",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "OUT-200",
+      "category": "outerwear",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-001",
+      "category": "electronics",
+      "stock": 23,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-002",
+      "category": "electronics",
+      "stock": 36,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-003",
+      "category": "electronics",
+      "stock": 49,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-004",
+      "category": "electronics",
+      "stock": 62,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-005",
+      "category": "electronics",
+      "stock": 75,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-006",
+      "category": "electronics",
+      "stock": 88,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-007",
+      "category": "electronics",
+      "stock": 101,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-008",
+      "category": "electronics",
+      "stock": 114,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-009",
+      "category": "electronics",
+      "stock": 127,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-010",
+      "category": "electronics",
+      "stock": 140,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-011",
+      "category": "electronics",
+      "stock": 153,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-012",
+      "category": "electronics",
+      "stock": 166,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-013",
+      "category": "electronics",
+      "stock": 179,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-014",
+      "category": "electronics",
+      "stock": 192,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-015",
+      "category": "electronics",
+      "stock": 14,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-016",
+      "category": "electronics",
+      "stock": 27,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-017",
+      "category": "electronics",
+      "stock": 40,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-018",
+      "category": "electronics",
+      "stock": 53,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-019",
+      "category": "electronics",
+      "stock": 66,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-020",
+      "category": "electronics",
+      "stock": 79,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-021",
+      "category": "electronics",
+      "stock": 92,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-022",
+      "category": "electronics",
+      "stock": 105,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-023",
+      "category": "electronics",
+      "stock": 118,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-024",
+      "category": "electronics",
+      "stock": 131,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-025",
+      "category": "electronics",
+      "stock": 144,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-026",
+      "category": "electronics",
+      "stock": 157,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-027",
+      "category": "electronics",
+      "stock": 170,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-028",
+      "category": "electronics",
+      "stock": 183,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-029",
+      "category": "electronics",
+      "stock": 196,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-030",
+      "category": "electronics",
+      "stock": 18,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-031",
+      "category": "electronics",
+      "stock": 31,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-032",
+      "category": "electronics",
+      "stock": 44,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-033",
+      "category": "electronics",
+      "stock": 57,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-034",
+      "category": "electronics",
+      "stock": 70,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-035",
+      "category": "electronics",
+      "stock": 83,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-036",
+      "category": "electronics",
+      "stock": 96,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-037",
+      "category": "electronics",
+      "stock": 109,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-038",
+      "category": "electronics",
+      "stock": 122,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-039",
+      "category": "electronics",
+      "stock": 135,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-040",
+      "category": "electronics",
+      "stock": 148,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-041",
+      "category": "electronics",
+      "stock": 161,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-042",
+      "category": "electronics",
+      "stock": 174,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-043",
+      "category": "electronics",
+      "stock": 187,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-044",
+      "category": "electronics",
+      "stock": 200,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-045",
+      "category": "electronics",
+      "stock": 22,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-046",
+      "category": "electronics",
+      "stock": 35,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-047",
+      "category": "electronics",
+      "stock": 48,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-048",
+      "category": "electronics",
+      "stock": 61,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-049",
+      "category": "electronics",
+      "stock": 74,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-050",
+      "category": "electronics",
+      "stock": 87,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-051",
+      "category": "electronics",
+      "stock": 100,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-052",
+      "category": "electronics",
+      "stock": 113,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-053",
+      "category": "electronics",
+      "stock": 126,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-054",
+      "category": "electronics",
+      "stock": 139,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-055",
+      "category": "electronics",
+      "stock": 152,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-056",
+      "category": "electronics",
+      "stock": 165,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-057",
+      "category": "electronics",
+      "stock": 178,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-058",
+      "category": "electronics",
+      "stock": 191,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-059",
+      "category": "electronics",
+      "stock": 13,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-060",
+      "category": "electronics",
+      "stock": 26,
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-061",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-062",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-063",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-064",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-065",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-066",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-067",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-068",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-069",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-070",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-071",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-072",
+      "category": "electronics",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-073",
+      "category": "electronics",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-074",
+      "category": "electronics",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-075",
+      "category": "electronics",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-076",
+      "category": "electronics",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-077",
+      "category": "electronics",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-078",
+      "category": "electronics",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-079",
+      "category": "electronics",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-080",
+      "category": "electronics",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-081",
+      "category": "electronics",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-082",
+      "category": "electronics",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-083",
+      "category": "electronics",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-084",
+      "category": "electronics",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-085",
+      "category": "electronics",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-086",
+      "category": "electronics",
+      "stock": 73,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-087",
+      "category": "electronics",
+      "stock": 80,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-088",
+      "category": "electronics",
+      "stock": 87,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-089",
+      "category": "electronics",
+      "stock": 94,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-090",
+      "category": "electronics",
+      "stock": 11,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-091",
+      "category": "electronics",
+      "stock": 18,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-092",
+      "category": "electronics",
+      "stock": 25,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-093",
+      "category": "electronics",
+      "stock": 32,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-094",
+      "category": "electronics",
+      "stock": 39,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-095",
+      "category": "electronics",
+      "stock": 46,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-096",
+      "category": "electronics",
+      "stock": 53,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-097",
+      "category": "electronics",
+      "stock": 60,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-098",
+      "category": "electronics",
+      "stock": 67,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-099",
+      "category": "electronics",
+      "stock": 74,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-100",
+      "category": "electronics",
+      "stock": 81,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-101",
+      "category": "electronics",
+      "stock": 88,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-102",
+      "category": "electronics",
+      "stock": 95,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-103",
+      "category": "electronics",
+      "stock": 12,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-104",
+      "category": "electronics",
+      "stock": 19,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-105",
+      "category": "electronics",
+      "stock": 26,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-106",
+      "category": "electronics",
+      "stock": 29,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-107",
+      "category": "electronics",
+      "stock": 34,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-108",
+      "category": "electronics",
+      "stock": 39,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-109",
+      "category": "electronics",
+      "stock": 44,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-110",
+      "category": "electronics",
+      "stock": 49,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-111",
+      "category": "electronics",
+      "stock": 8,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-112",
+      "category": "electronics",
+      "stock": 13,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-113",
+      "category": "electronics",
+      "stock": 18,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-114",
+      "category": "electronics",
+      "stock": 23,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-115",
+      "category": "electronics",
+      "stock": 28,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-116",
+      "category": "electronics",
+      "stock": 33,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-117",
+      "category": "electronics",
+      "stock": 38,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-118",
+      "category": "electronics",
+      "stock": 43,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-119",
+      "category": "electronics",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-120",
+      "category": "electronics",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-121",
+      "category": "electronics",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-122",
+      "category": "electronics",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-123",
+      "category": "electronics",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-124",
+      "category": "electronics",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-125",
+      "category": "electronics",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-126",
+      "category": "electronics",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-127",
+      "category": "electronics",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-128",
+      "category": "electronics",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-129",
+      "category": "electronics",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-130",
+      "category": "electronics",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-131",
+      "category": "electronics",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-132",
+      "category": "electronics",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-133",
+      "category": "electronics",
+      "stock": 26,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-134",
+      "category": "electronics",
+      "stock": 31,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-135",
+      "category": "electronics",
+      "stock": 36,
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-136",
+      "category": "electronics",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-137",
+      "category": "electronics",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-138",
+      "category": "electronics",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-139",
+      "category": "electronics",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-140",
+      "category": "electronics",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-141",
+      "category": "electronics",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-142",
+      "category": "electronics",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-143",
+      "category": "electronics",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-144",
+      "category": "electronics",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-145",
+      "category": "electronics",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-146",
+      "category": "electronics",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-147",
+      "category": "electronics",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-148",
+      "category": "electronics",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-149",
+      "category": "electronics",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-150",
+      "category": "electronics",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-001",
+      "category": "camping",
+      "stock": 23,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-002",
+      "category": "camping",
+      "stock": 36,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-003",
+      "category": "camping",
+      "stock": 49,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-004",
+      "category": "camping",
+      "stock": 62,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-005",
+      "category": "camping",
+      "stock": 75,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-006",
+      "category": "camping",
+      "stock": 88,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-007",
+      "category": "camping",
+      "stock": 101,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-008",
+      "category": "camping",
+      "stock": 114,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-009",
+      "category": "camping",
+      "stock": 127,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-010",
+      "category": "camping",
+      "stock": 140,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-011",
+      "category": "camping",
+      "stock": 153,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-012",
+      "category": "camping",
+      "stock": 166,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-013",
+      "category": "camping",
+      "stock": 179,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-014",
+      "category": "camping",
+      "stock": 192,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-015",
+      "category": "camping",
+      "stock": 14,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-016",
+      "category": "camping",
+      "stock": 27,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-017",
+      "category": "camping",
+      "stock": 40,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-018",
+      "category": "camping",
+      "stock": 53,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-019",
+      "category": "camping",
+      "stock": 66,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-020",
+      "category": "camping",
+      "stock": 79,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-021",
+      "category": "camping",
+      "stock": 92,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-022",
+      "category": "camping",
+      "stock": 105,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-023",
+      "category": "camping",
+      "stock": 118,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-024",
+      "category": "camping",
+      "stock": 131,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-025",
+      "category": "camping",
+      "stock": 144,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-026",
+      "category": "camping",
+      "stock": 157,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-027",
+      "category": "camping",
+      "stock": 170,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-028",
+      "category": "camping",
+      "stock": 183,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-029",
+      "category": "camping",
+      "stock": 196,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-030",
+      "category": "camping",
+      "stock": 18,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-031",
+      "category": "camping",
+      "stock": 31,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-032",
+      "category": "camping",
+      "stock": 44,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-033",
+      "category": "camping",
+      "stock": 57,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-034",
+      "category": "camping",
+      "stock": 70,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-035",
+      "category": "camping",
+      "stock": 83,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-036",
+      "category": "camping",
+      "stock": 96,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-037",
+      "category": "camping",
+      "stock": 109,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-038",
+      "category": "camping",
+      "stock": 122,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-039",
+      "category": "camping",
+      "stock": 135,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-040",
+      "category": "camping",
+      "stock": 148,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-041",
+      "category": "camping",
+      "stock": 161,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-042",
+      "category": "camping",
+      "stock": 174,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-043",
+      "category": "camping",
+      "stock": 187,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-044",
+      "category": "camping",
+      "stock": 200,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-045",
+      "category": "camping",
+      "stock": 22,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-046",
+      "category": "camping",
+      "stock": 35,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-047",
+      "category": "camping",
+      "stock": 48,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-048",
+      "category": "camping",
+      "stock": 61,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-049",
+      "category": "camping",
+      "stock": 74,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-050",
+      "category": "camping",
+      "stock": 87,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-051",
+      "category": "camping",
+      "stock": 100,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-052",
+      "category": "camping",
+      "stock": 113,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-053",
+      "category": "camping",
+      "stock": 126,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-054",
+      "category": "camping",
+      "stock": 139,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-055",
+      "category": "camping",
+      "stock": 152,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-056",
+      "category": "camping",
+      "stock": 165,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-057",
+      "category": "camping",
+      "stock": 178,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-058",
+      "category": "camping",
+      "stock": 191,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-059",
+      "category": "camping",
+      "stock": 13,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-060",
+      "category": "camping",
+      "stock": 26,
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-061",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-062",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-063",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-064",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-065",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-066",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-067",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-068",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-069",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-070",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-071",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-072",
+      "category": "camping",
+      "stock": 0,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-073",
+      "category": "camping",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-074",
+      "category": "camping",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-075",
+      "category": "camping",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-076",
+      "category": "camping",
+      "stock": 4,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-077",
+      "category": "camping",
+      "stock": 5,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-078",
+      "category": "camping",
+      "stock": 6,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-079",
+      "category": "camping",
+      "stock": 7,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-080",
+      "category": "camping",
+      "stock": 8,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-081",
+      "category": "camping",
+      "stock": 9,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-082",
+      "category": "camping",
+      "stock": 10,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-083",
+      "category": "camping",
+      "stock": 1,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-084",
+      "category": "camping",
+      "stock": 2,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-085",
+      "category": "camping",
+      "stock": 3,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-086",
+      "category": "camping",
+      "stock": 73,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-087",
+      "category": "camping",
+      "stock": 80,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-088",
+      "category": "camping",
+      "stock": 87,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-089",
+      "category": "camping",
+      "stock": 94,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-090",
+      "category": "camping",
+      "stock": 11,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-091",
+      "category": "camping",
+      "stock": 18,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-092",
+      "category": "camping",
+      "stock": 25,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-093",
+      "category": "camping",
+      "stock": 32,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-094",
+      "category": "camping",
+      "stock": 39,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-095",
+      "category": "camping",
+      "stock": 46,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-096",
+      "category": "camping",
+      "stock": 53,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-097",
+      "category": "camping",
+      "stock": 60,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-098",
+      "category": "camping",
+      "stock": 67,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-099",
+      "category": "camping",
+      "stock": 74,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-100",
+      "category": "camping",
+      "stock": 81,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-101",
+      "category": "camping",
+      "stock": 88,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-102",
+      "category": "camping",
+      "stock": 95,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-103",
+      "category": "camping",
+      "stock": 12,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-104",
+      "category": "camping",
+      "stock": 19,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-105",
+      "category": "camping",
+      "stock": 26,
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-106",
+      "category": "camping",
+      "stock": 29,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-107",
+      "category": "camping",
+      "stock": 34,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-108",
+      "category": "camping",
+      "stock": 39,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-109",
+      "category": "camping",
+      "stock": 44,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-110",
+      "category": "camping",
+      "stock": 49,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-111",
+      "category": "camping",
+      "stock": 8,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-112",
+      "category": "camping",
+      "stock": 13,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-113",
+      "category": "camping",
+      "stock": 18,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-114",
+      "category": "camping",
+      "stock": 23,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-115",
+      "category": "camping",
+      "stock": 28,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-116",
+      "category": "camping",
+      "stock": 33,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-117",
+      "category": "camping",
+      "stock": 38,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-118",
+      "category": "camping",
+      "stock": 43,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-119",
+      "category": "camping",
+      "stock": 48,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-120",
+      "category": "camping",
+      "stock": 7,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-121",
+      "category": "camping",
+      "stock": 12,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-122",
+      "category": "camping",
+      "stock": 17,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-123",
+      "category": "camping",
+      "stock": 22,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-124",
+      "category": "camping",
+      "stock": 27,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-125",
+      "category": "camping",
+      "stock": 32,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-126",
+      "category": "camping",
+      "stock": 37,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-127",
+      "category": "camping",
+      "stock": 42,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-128",
+      "category": "camping",
+      "stock": 47,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-129",
+      "category": "camping",
+      "stock": 6,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-130",
+      "category": "camping",
+      "stock": 11,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-131",
+      "category": "camping",
+      "stock": 16,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-132",
+      "category": "camping",
+      "stock": 21,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-133",
+      "category": "camping",
+      "stock": 26,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-134",
+      "category": "camping",
+      "stock": 31,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-135",
+      "category": "camping",
+      "stock": 36,
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-136",
+      "category": "camping",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-137",
+      "category": "camping",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-138",
+      "category": "camping",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-139",
+      "category": "camping",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-140",
+      "category": "camping",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-141",
+      "category": "camping",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-142",
+      "category": "camping",
+      "stock": 83,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-143",
+      "category": "camping",
+      "stock": 92,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-144",
+      "category": "camping",
+      "stock": 20,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-145",
+      "category": "camping",
+      "stock": 29,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-146",
+      "category": "camping",
+      "stock": 38,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-147",
+      "category": "camping",
+      "stock": 47,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-148",
+      "category": "camping",
+      "stock": 56,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-149",
+      "category": "camping",
+      "stock": 65,
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-150",
+      "category": "camping",
+      "stock": 74,
+      "data_quality": "new_arrival"
+    }
+  ],
+  "oos_products": [
+    "FOOT-121",
+    "FOOT-122",
+    "FOOT-123",
+    "FOOT-124",
+    "FOOT-125",
+    "FOOT-126",
+    "FOOT-127",
+    "FOOT-128",
+    "FOOT-129",
+    "FOOT-130",
+    "FOOT-131",
+    "FOOT-132",
+    "FOOT-133",
+    "FOOT-134",
+    "FOOT-135",
+    "FOOT-136",
+    "FOOT-137",
+    "FOOT-138",
+    "FOOT-139",
+    "FOOT-140",
+    "FOOT-141",
+    "FOOT-142",
+    "FOOT-143",
+    "FOOT-144",
+    "BAGS-081",
+    "BAGS-082",
+    "BAGS-083",
+    "BAGS-084",
+    "BAGS-085",
+    "BAGS-086",
+    "BAGS-087",
+    "BAGS-088",
+    "BAGS-089",
+    "BAGS-090",
+    "BAGS-091",
+    "BAGS-092",
+    "BAGS-093",
+    "BAGS-094",
+    "BAGS-095",
+    "BAGS-096",
+    "OUT-081",
+    "OUT-082",
+    "OUT-083",
+    "OUT-084",
+    "OUT-085",
+    "OUT-086",
+    "OUT-087",
+    "OUT-088",
+    "OUT-089",
+    "OUT-090",
+    "OUT-091",
+    "OUT-092",
+    "OUT-093",
+    "OUT-094",
+    "OUT-095",
+    "OUT-096",
+    "ELEC-061",
+    "ELEC-062",
+    "ELEC-063",
+    "ELEC-064",
+    "ELEC-065",
+    "ELEC-066",
+    "ELEC-067",
+    "ELEC-068",
+    "ELEC-069",
+    "ELEC-070",
+    "ELEC-071",
+    "ELEC-072",
+    "CAMP-061",
+    "CAMP-062",
+    "CAMP-063",
+    "CAMP-064",
+    "CAMP-065",
+    "CAMP-066",
+    "CAMP-067",
+    "CAMP-068",
+    "CAMP-069",
+    "CAMP-070",
+    "CAMP-071",
+    "CAMP-072"
+  ],
+  "low_stock_products": [
+    "FOOT-145",
+    "FOOT-146",
+    "FOOT-147",
+    "FOOT-148",
+    "FOOT-149",
+    "FOOT-150",
+    "FOOT-151",
+    "FOOT-152",
+    "FOOT-153",
+    "FOOT-154",
+    "FOOT-155",
+    "FOOT-156",
+    "FOOT-157",
+    "FOOT-158",
+    "FOOT-159",
+    "FOOT-160",
+    "FOOT-161",
+    "FOOT-162",
+    "FOOT-163",
+    "FOOT-164",
+    "FOOT-165",
+    "FOOT-166",
+    "FOOT-167",
+    "FOOT-168",
+    "FOOT-169",
+    "FOOT-170",
+    "FOOT-171",
+    "FOOT-172",
+    "FOOT-173",
+    "FOOT-174",
+    "FOOT-175",
+    "FOOT-176",
+    "FOOT-212",
+    "FOOT-221",
+    "FOOT-230",
+    "FOOT-231",
+    "FOOT-240",
+    "FOOT-249",
+    "FOOT-258",
+    "FOOT-267",
+    "BAGS-001",
+    "BAGS-097",
+    "BAGS-098",
+    "BAGS-099",
+    "BAGS-100",
+    "BAGS-101",
+    "BAGS-102",
+    "BAGS-103",
+    "BAGS-104",
+    "BAGS-105",
+    "BAGS-106",
+    "BAGS-107",
+    "BAGS-108",
+    "BAGS-109",
+    "BAGS-110",
+    "BAGS-111",
+    "BAGS-112",
+    "BAGS-113",
+    "BAGS-114",
+    "BAGS-115",
+    "BAGS-116",
+    "BAGS-117",
+    "BAGS-118",
+    "BAGS-148",
+    "BAGS-157",
+    "BAGS-166",
+    "BAGS-175",
+    "OUT-097",
+    "OUT-098",
+    "OUT-099",
+    "OUT-100",
+    "OUT-101",
+    "OUT-102",
+    "OUT-103",
+    "OUT-104",
+    "OUT-105",
+    "OUT-106",
+    "OUT-107",
+    "OUT-108",
+    "OUT-109",
+    "OUT-110",
+    "OUT-111",
+    "OUT-112",
+    "OUT-113",
+    "OUT-114",
+    "OUT-115",
+    "OUT-116",
+    "OUT-117",
+    "OUT-118",
+    "OUT-148",
+    "OUT-157",
+    "OUT-166",
+    "OUT-175",
+    "ELEC-073",
+    "ELEC-074",
+    "ELEC-075",
+    "ELEC-076",
+    "ELEC-077",
+    "ELEC-078",
+    "ELEC-079",
+    "ELEC-080",
+    "ELEC-081",
+    "ELEC-082",
+    "ELEC-083",
+    "ELEC-084",
+    "ELEC-085",
+    "ELEC-111",
+    "ELEC-120",
+    "ELEC-129",
+    "CAMP-073",
+    "CAMP-074",
+    "CAMP-075",
+    "CAMP-076",
+    "CAMP-077",
+    "CAMP-078",
+    "CAMP-079",
+    "CAMP-080",
+    "CAMP-081",
+    "CAMP-082",
+    "CAMP-083",
+    "CAMP-084",
+    "CAMP-085",
+    "CAMP-111",
+    "CAMP-120",
+    "CAMP-129"
+  ],
+  "incomplete_products": [
+    "FOOT-121",
+    "FOOT-122",
+    "FOOT-123",
+    "FOOT-124",
+    "FOOT-125",
+    "FOOT-126",
+    "FOOT-127",
+    "FOOT-128",
+    "FOOT-129",
+    "FOOT-130",
+    "FOOT-131",
+    "FOOT-132",
+    "FOOT-133",
+    "FOOT-134",
+    "FOOT-135",
+    "FOOT-136",
+    "FOOT-137",
+    "FOOT-138",
+    "FOOT-139",
+    "FOOT-140",
+    "FOOT-141",
+    "FOOT-142",
+    "FOOT-143",
+    "FOOT-144",
+    "FOOT-145",
+    "FOOT-146",
+    "FOOT-147",
+    "FOOT-148",
+    "FOOT-149",
+    "FOOT-150",
+    "FOOT-151",
+    "FOOT-152",
+    "FOOT-153",
+    "FOOT-154",
+    "FOOT-155",
+    "FOOT-156",
+    "FOOT-157",
+    "FOOT-158",
+    "FOOT-159",
+    "FOOT-160",
+    "FOOT-161",
+    "FOOT-162",
+    "FOOT-163",
+    "FOOT-164",
+    "FOOT-165",
+    "FOOT-166",
+    "FOOT-167",
+    "FOOT-168",
+    "FOOT-169",
+    "FOOT-170",
+    "FOOT-171",
+    "FOOT-172",
+    "FOOT-173",
+    "FOOT-174",
+    "FOOT-175",
+    "FOOT-176",
+    "FOOT-177",
+    "FOOT-178",
+    "FOOT-179",
+    "FOOT-180",
+    "FOOT-181",
+    "FOOT-182",
+    "FOOT-183",
+    "FOOT-184",
+    "FOOT-185",
+    "FOOT-186",
+    "FOOT-187",
+    "FOOT-188",
+    "FOOT-189",
+    "FOOT-190",
+    "FOOT-191",
+    "FOOT-192",
+    "FOOT-193",
+    "FOOT-194",
+    "FOOT-195",
+    "FOOT-196",
+    "FOOT-197",
+    "FOOT-198",
+    "FOOT-199",
+    "FOOT-200",
+    "FOOT-201",
+    "FOOT-202",
+    "FOOT-203",
+    "FOOT-204",
+    "FOOT-205",
+    "FOOT-206",
+    "FOOT-207",
+    "FOOT-208",
+    "FOOT-209",
+    "FOOT-210",
+    "BAGS-081",
+    "BAGS-082",
+    "BAGS-083",
+    "BAGS-084",
+    "BAGS-085",
+    "BAGS-086",
+    "BAGS-087",
+    "BAGS-088",
+    "BAGS-089",
+    "BAGS-090",
+    "BAGS-091",
+    "BAGS-092",
+    "BAGS-093",
+    "BAGS-094",
+    "BAGS-095",
+    "BAGS-096",
+    "BAGS-097",
+    "BAGS-098",
+    "BAGS-099",
+    "BAGS-100",
+    "BAGS-101",
+    "BAGS-102",
+    "BAGS-103",
+    "BAGS-104",
+    "BAGS-105",
+    "BAGS-106",
+    "BAGS-107",
+    "BAGS-108",
+    "BAGS-109",
+    "BAGS-110",
+    "BAGS-111",
+    "BAGS-112",
+    "BAGS-113",
+    "BAGS-114",
+    "BAGS-115",
+    "BAGS-116",
+    "BAGS-117",
+    "BAGS-118",
+    "BAGS-119",
+    "BAGS-120",
+    "BAGS-121",
+    "BAGS-122",
+    "BAGS-123",
+    "BAGS-124",
+    "BAGS-125",
+    "BAGS-126",
+    "BAGS-127",
+    "BAGS-128",
+    "BAGS-129",
+    "BAGS-130",
+    "BAGS-131",
+    "BAGS-132",
+    "BAGS-133",
+    "BAGS-134",
+    "BAGS-135",
+    "BAGS-136",
+    "BAGS-137",
+    "BAGS-138",
+    "BAGS-139",
+    "BAGS-140",
+    "OUT-081",
+    "OUT-082",
+    "OUT-083",
+    "OUT-084",
+    "OUT-085",
+    "OUT-086",
+    "OUT-087",
+    "OUT-088",
+    "OUT-089",
+    "OUT-090",
+    "OUT-091",
+    "OUT-092",
+    "OUT-093",
+    "OUT-094",
+    "OUT-095",
+    "OUT-096",
+    "OUT-097",
+    "OUT-098",
+    "OUT-099",
+    "OUT-100",
+    "OUT-101",
+    "OUT-102",
+    "OUT-103",
+    "OUT-104",
+    "OUT-105",
+    "OUT-106",
+    "OUT-107",
+    "OUT-108",
+    "OUT-109",
+    "OUT-110",
+    "OUT-111",
+    "OUT-112",
+    "OUT-113",
+    "OUT-114",
+    "OUT-115",
+    "OUT-116",
+    "OUT-117",
+    "OUT-118",
+    "OUT-119",
+    "OUT-120",
+    "OUT-121",
+    "OUT-122",
+    "OUT-123",
+    "OUT-124",
+    "OUT-125",
+    "OUT-126",
+    "OUT-127",
+    "OUT-128",
+    "OUT-129",
+    "OUT-130",
+    "OUT-131",
+    "OUT-132",
+    "OUT-133",
+    "OUT-134",
+    "OUT-135",
+    "OUT-136",
+    "OUT-137",
+    "OUT-138",
+    "OUT-139",
+    "OUT-140",
+    "ELEC-061",
+    "ELEC-062",
+    "ELEC-063",
+    "ELEC-064",
+    "ELEC-065",
+    "ELEC-066",
+    "ELEC-067",
+    "ELEC-068",
+    "ELEC-069",
+    "ELEC-070",
+    "ELEC-071",
+    "ELEC-072",
+    "ELEC-073",
+    "ELEC-074",
+    "ELEC-075",
+    "ELEC-076",
+    "ELEC-077",
+    "ELEC-078",
+    "ELEC-079",
+    "ELEC-080",
+    "ELEC-081",
+    "ELEC-082",
+    "ELEC-083",
+    "ELEC-084",
+    "ELEC-085",
+    "ELEC-086",
+    "ELEC-087",
+    "ELEC-088",
+    "ELEC-089",
+    "ELEC-090",
+    "ELEC-091",
+    "ELEC-092",
+    "ELEC-093",
+    "ELEC-094",
+    "ELEC-095",
+    "ELEC-096",
+    "ELEC-097",
+    "ELEC-098",
+    "ELEC-099",
+    "ELEC-100",
+    "ELEC-101",
+    "ELEC-102",
+    "ELEC-103",
+    "ELEC-104",
+    "ELEC-105",
+    "CAMP-061",
+    "CAMP-062",
+    "CAMP-063",
+    "CAMP-064",
+    "CAMP-065",
+    "CAMP-066",
+    "CAMP-067",
+    "CAMP-068",
+    "CAMP-069",
+    "CAMP-070",
+    "CAMP-071",
+    "CAMP-072",
+    "CAMP-073",
+    "CAMP-074",
+    "CAMP-075",
+    "CAMP-076",
+    "CAMP-077",
+    "CAMP-078",
+    "CAMP-079",
+    "CAMP-080",
+    "CAMP-081",
+    "CAMP-082",
+    "CAMP-083",
+    "CAMP-084",
+    "CAMP-085",
+    "CAMP-086",
+    "CAMP-087",
+    "CAMP-088",
+    "CAMP-089",
+    "CAMP-090",
+    "CAMP-091",
+    "CAMP-092",
+    "CAMP-093",
+    "CAMP-094",
+    "CAMP-095",
+    "CAMP-096",
+    "CAMP-097",
+    "CAMP-098",
+    "CAMP-099",
+    "CAMP-100",
+    "CAMP-101",
+    "CAMP-102",
+    "CAMP-103",
+    "CAMP-104",
+    "CAMP-105"
+  ],
+  "poor_products": [
+    "FOOT-211",
+    "FOOT-212",
+    "FOOT-213",
+    "FOOT-214",
+    "FOOT-215",
+    "FOOT-216",
+    "FOOT-217",
+    "FOOT-218",
+    "FOOT-219",
+    "FOOT-220",
+    "FOOT-221",
+    "FOOT-222",
+    "FOOT-223",
+    "FOOT-224",
+    "FOOT-225",
+    "FOOT-226",
+    "FOOT-227",
+    "FOOT-228",
+    "FOOT-229",
+    "FOOT-230",
+    "FOOT-231",
+    "FOOT-232",
+    "FOOT-233",
+    "FOOT-234",
+    "FOOT-235",
+    "FOOT-236",
+    "FOOT-237",
+    "FOOT-238",
+    "FOOT-239",
+    "FOOT-240",
+    "FOOT-241",
+    "FOOT-242",
+    "FOOT-243",
+    "FOOT-244",
+    "FOOT-245",
+    "FOOT-246",
+    "FOOT-247",
+    "FOOT-248",
+    "FOOT-249",
+    "FOOT-250",
+    "FOOT-251",
+    "FOOT-252",
+    "FOOT-253",
+    "FOOT-254",
+    "FOOT-255",
+    "FOOT-256",
+    "FOOT-257",
+    "FOOT-258",
+    "FOOT-259",
+    "FOOT-260",
+    "FOOT-261",
+    "FOOT-262",
+    "FOOT-263",
+    "FOOT-264",
+    "FOOT-265",
+    "FOOT-266",
+    "FOOT-267",
+    "FOOT-268",
+    "FOOT-269",
+    "FOOT-270",
+    "BAGS-141",
+    "BAGS-142",
+    "BAGS-143",
+    "BAGS-144",
+    "BAGS-145",
+    "BAGS-146",
+    "BAGS-147",
+    "BAGS-148",
+    "BAGS-149",
+    "BAGS-150",
+    "BAGS-151",
+    "BAGS-152",
+    "BAGS-153",
+    "BAGS-154",
+    "BAGS-155",
+    "BAGS-156",
+    "BAGS-157",
+    "BAGS-158",
+    "BAGS-159",
+    "BAGS-160",
+    "BAGS-161",
+    "BAGS-162",
+    "BAGS-163",
+    "BAGS-164",
+    "BAGS-165",
+    "BAGS-166",
+    "BAGS-167",
+    "BAGS-168",
+    "BAGS-169",
+    "BAGS-170",
+    "BAGS-171",
+    "BAGS-172",
+    "BAGS-173",
+    "BAGS-174",
+    "BAGS-175",
+    "BAGS-176",
+    "BAGS-177",
+    "BAGS-178",
+    "BAGS-179",
+    "BAGS-180",
+    "OUT-141",
+    "OUT-142",
+    "OUT-143",
+    "OUT-144",
+    "OUT-145",
+    "OUT-146",
+    "OUT-147",
+    "OUT-148",
+    "OUT-149",
+    "OUT-150",
+    "OUT-151",
+    "OUT-152",
+    "OUT-153",
+    "OUT-154",
+    "OUT-155",
+    "OUT-156",
+    "OUT-157",
+    "OUT-158",
+    "OUT-159",
+    "OUT-160",
+    "OUT-161",
+    "OUT-162",
+    "OUT-163",
+    "OUT-164",
+    "OUT-165",
+    "OUT-166",
+    "OUT-167",
+    "OUT-168",
+    "OUT-169",
+    "OUT-170",
+    "OUT-171",
+    "OUT-172",
+    "OUT-173",
+    "OUT-174",
+    "OUT-175",
+    "OUT-176",
+    "OUT-177",
+    "OUT-178",
+    "OUT-179",
+    "OUT-180",
+    "ELEC-106",
+    "ELEC-107",
+    "ELEC-108",
+    "ELEC-109",
+    "ELEC-110",
+    "ELEC-111",
+    "ELEC-112",
+    "ELEC-113",
+    "ELEC-114",
+    "ELEC-115",
+    "ELEC-116",
+    "ELEC-117",
+    "ELEC-118",
+    "ELEC-119",
+    "ELEC-120",
+    "ELEC-121",
+    "ELEC-122",
+    "ELEC-123",
+    "ELEC-124",
+    "ELEC-125",
+    "ELEC-126",
+    "ELEC-127",
+    "ELEC-128",
+    "ELEC-129",
+    "ELEC-130",
+    "ELEC-131",
+    "ELEC-132",
+    "ELEC-133",
+    "ELEC-134",
+    "ELEC-135",
+    "CAMP-106",
+    "CAMP-107",
+    "CAMP-108",
+    "CAMP-109",
+    "CAMP-110",
+    "CAMP-111",
+    "CAMP-112",
+    "CAMP-113",
+    "CAMP-114",
+    "CAMP-115",
+    "CAMP-116",
+    "CAMP-117",
+    "CAMP-118",
+    "CAMP-119",
+    "CAMP-120",
+    "CAMP-121",
+    "CAMP-122",
+    "CAMP-123",
+    "CAMP-124",
+    "CAMP-125",
+    "CAMP-126",
+    "CAMP-127",
+    "CAMP-128",
+    "CAMP-129",
+    "CAMP-130",
+    "CAMP-131",
+    "CAMP-132",
+    "CAMP-133",
+    "CAMP-134",
+    "CAMP-135"
+  ],
+  "new_arrivals": [
+    "FOOT-271",
+    "FOOT-272",
+    "FOOT-273",
+    "FOOT-274",
+    "FOOT-275",
+    "FOOT-276",
+    "FOOT-277",
+    "FOOT-278",
+    "FOOT-279",
+    "FOOT-280",
+    "FOOT-281",
+    "FOOT-282",
+    "FOOT-283",
+    "FOOT-284",
+    "FOOT-285",
+    "FOOT-286",
+    "FOOT-287",
+    "FOOT-288",
+    "FOOT-289",
+    "FOOT-290",
+    "FOOT-291",
+    "FOOT-292",
+    "FOOT-293",
+    "FOOT-294",
+    "FOOT-295",
+    "FOOT-296",
+    "FOOT-297",
+    "FOOT-298",
+    "FOOT-299",
+    "FOOT-300",
+    "BAGS-181",
+    "BAGS-182",
+    "BAGS-183",
+    "BAGS-184",
+    "BAGS-185",
+    "BAGS-186",
+    "BAGS-187",
+    "BAGS-188",
+    "BAGS-189",
+    "BAGS-190",
+    "BAGS-191",
+    "BAGS-192",
+    "BAGS-193",
+    "BAGS-194",
+    "BAGS-195",
+    "BAGS-196",
+    "BAGS-197",
+    "BAGS-198",
+    "BAGS-199",
+    "BAGS-200",
+    "OUT-181",
+    "OUT-182",
+    "OUT-183",
+    "OUT-184",
+    "OUT-185",
+    "OUT-186",
+    "OUT-187",
+    "OUT-188",
+    "OUT-189",
+    "OUT-190",
+    "OUT-191",
+    "OUT-192",
+    "OUT-193",
+    "OUT-194",
+    "OUT-195",
+    "OUT-196",
+    "OUT-197",
+    "OUT-198",
+    "OUT-199",
+    "OUT-200",
+    "ELEC-136",
+    "ELEC-137",
+    "ELEC-138",
+    "ELEC-139",
+    "ELEC-140",
+    "ELEC-141",
+    "ELEC-142",
+    "ELEC-143",
+    "ELEC-144",
+    "ELEC-145",
+    "ELEC-146",
+    "ELEC-147",
+    "ELEC-148",
+    "ELEC-149",
+    "ELEC-150",
+    "CAMP-136",
+    "CAMP-137",
+    "CAMP-138",
+    "CAMP-139",
+    "CAMP-140",
+    "CAMP-141",
+    "CAMP-142",
+    "CAMP-143",
+    "CAMP-144",
+    "CAMP-145",
+    "CAMP-146",
+    "CAMP-147",
+    "CAMP-148",
+    "CAMP-149",
+    "CAMP-150"
+  ]
+}

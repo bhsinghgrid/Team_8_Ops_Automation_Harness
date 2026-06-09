@@ -1,0 +1,52 @@
+version: '3.8'
+
+services:
+  # 1. Stable production build (Primary)
+  master-primary:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: primary
+    ports:
+      - "8080:8080" # Host:Container
+
+  # 2. Duplicate stable production build (For Noise Detection)
+  master-secondary:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: secondary
+    ports:
+      - "8081:8080" # Host:Container
+
+  # 3. New candidate build to test
+  candidate-next:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: candidate
+    ports:
+      - "8082:8080" # Host:Container
+
+  # 4. Diffy Proxy Engine
+  diffy-proxy:
+    image: diffy/diffy:latest # Reverting to the public image
+    ports:
+      - "31900:8880" # Diffy Proxy Port
+      - "31149:8888" # Diffy Web UI Port
+    depends_on:
+      - master-primary
+      - master-secondary
+      - candidate-next
+    command: >
+      --candidate=candidate-next:8080
+      --master.primary=master-primary:8080
+      --master.secondary=master-secondary:8080
+      --service.protocol=http
+      --proxy.port=8880
+      --http.port=8888
+      --rootUrl=http://localhost:31149
+      --allowHttpSideEffects=true

@@ -1,0 +1,7 @@
+global:
+  scrape_interval: 5s # Scrape frequently for real-time shadow testing visibility
+
+scrape_configs:
+  - job_name: 'magellan-temporal-worker'
+    static_configs:
+      - targets: ['host.docker.internal:8001']

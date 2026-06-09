@@ -1,0 +1,203 @@
+{
+  "description": "Catalog changes to simulate for catalog_delta signals",
+  "scenarios": [
+    {
+      "name": "Insert incomplete footwear arrival",
+      "operation": "INSERT",
+      "product_id": "FOOT-271",
+      "source_file": "products/footwear.json"
+    },
+    {
+      "name": "Insert incomplete bag arrival",
+      "operation": "INSERT",
+      "product_id": "BAGS-181",
+      "source_file": "products/bags.json"
+    },
+    {
+      "name": "Insert incomplete outerwear arrival",
+      "operation": "INSERT",
+      "product_id": "OUT-181",
+      "source_file": "products/outerwear.json"
+    },
+    {
+      "name": "Insert incomplete electronics arrival",
+      "operation": "INSERT",
+      "product_id": "ELEC-136",
+      "source_file": "products/electronics.json"
+    },
+    {
+      "name": "Insert incomplete camping arrival",
+      "operation": "INSERT",
+      "product_id": "CAMP-136",
+      "source_file": "products/camping.json"
+    },
+    {
+      "name": "Update footwear title for embedding refresh",
+      "operation": "UPDATE",
+      "product_id": "FOOT-001",
+      "source_file": "products/footwear.json",
+      "changes": {
+        "title": {
+          "before": "Waterproof Trail Runner 001",
+          "after": "Waterproof Trail Runner Pro 001"
+        }
+      }
+    },
+    {
+      "name": "Update bag description for embedding refresh",
+      "operation": "UPDATE",
+      "product_id": "BAGS-001",
+      "source_file": "products/bags.json",
+      "changes": {
+        "description": {
+          "before": "original generated description",
+          "after": "expanded product copy for hybrid commute search"
+        }
+      }
+    },
+    {
+      "name": "Update outerwear title for embedding refresh",
+      "operation": "UPDATE",
+      "product_id": "OUT-001",
+      "source_file": "products/outerwear.json",
+      "changes": {
+        "title": {
+          "before": "Gore-Tex Rain Jacket 001",
+          "after": "Gore-Tex Rain Jacket Storm 001"
+        }
+      }
+    },
+    {
+      "name": "Update electronics description for embedding refresh",
+      "operation": "UPDATE",
+      "product_id": "ELEC-001",
+      "source_file": "products/electronics.json",
+      "changes": {
+        "description": {
+          "before": "original generated description",
+          "after": "updated copy emphasizing GPS battery performance"
+        }
+      }
+    },
+    {
+      "name": "Null footwear waterproof attribute",
+      "operation": "UPDATE",
+      "product_id": "FOOT-002",
+      "source_file": "products/footwear.json",
+      "changes": {
+        "attributes.waterproof": {
+          "before": true,
+          "after": null
+        }
+      }
+    },
+    {
+      "name": "Null footwear terrain attribute",
+      "operation": "UPDATE",
+      "product_id": "FOOT-003",
+      "source_file": "products/footwear.json",
+      "changes": {
+        "attributes.terrain": {
+          "before": "trail",
+          "after": null
+        }
+      }
+    },
+    {
+      "name": "Null outerwear waterproof attribute",
+      "operation": "UPDATE",
+      "product_id": "OUT-002",
+      "source_file": "products/outerwear.json",
+      "changes": {
+        "attributes.waterproof": {
+          "before": true,
+          "after": null
+        }
+      }
+    },
+    {
+      "name": "Null electronics gps attribute",
+      "operation": "UPDATE",
+      "product_id": "ELEC-002",
+      "source_file": "products/electronics.json",
+      "changes": {
+        "attributes.gps": {
+          "before": true,
+          "after": null
+        }
+      }
+    },
+    {
+      "name": "Update footwear sale price",
+      "operation": "UPDATE",
+      "product_id": "FOOT-004",
+      "source_file": "products/footwear.json",
+      "changes": {
+        "price": {
+          "before": 129,
+          "after": 119
+        }
+      }
+    },
+    {
+      "name": "Update bag stock count",
+      "operation": "UPDATE",
+      "product_id": "BAGS-004",
+      "source_file": "products/bags.json",
+      "changes": {
+        "stock": {
+          "before": 88,
+          "after": 64
+        }
+      }
+    },
+    {
+      "name": "Update outerwear markdown price",
+      "operation": "UPDATE",
+      "product_id": "OUT-004",
+      "source_file": "products/outerwear.json",
+      "changes": {
+        "price": {
+          "before": 249,
+          "after": 229
+        }
+      }
+    },
+    {
+      "name": "Update camping stock count",
+      "operation": "UPDATE",
+      "product_id": "CAMP-004",
+      "source_file": "products/camping.json",
+      "changes": {
+        "stock": {
+          "before": 74,
+          "after": 58
+        }
+      }
+    },
+    {
+      "name": "Delete poor quality footwear product",
+      "operation": "DELETE",
+      "product_id": "FOOT-211",
+      "source_file": "products/footwear.json"
+    },
+    {
+      "name": "Delete OOS electronics product",
+      "operation": "DELETE",
+      "product_id": "ELEC-061",
+      "source_file": "products/electronics.json"
+    },
+    {
+      "name": "Delete poor quality camping product",
+      "operation": "DELETE",
+      "product_id": "CAMP-106",
+      "source_file": "products/camping.json"
+    },
+    {
+      "name": "New unique test scenario - Missing attribute for hiking boots",
+      "operation": "INSERT",
+      "product_id": "HIKING-500",
+      "source_file": "products/hiking.json"
+    }
+  ]
+}

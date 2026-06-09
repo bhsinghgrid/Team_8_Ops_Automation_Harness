@@ -1,0 +1,34 @@
+{
+  "event_id": "SR-20260607-yyyyyyyyyyyyyyyy",
+  "event_type": "search_result",
+  "source_capability": "semantic_search",
+  "severity": "warning",
+  "timestamp": "2026-06-07T10:01:00Z",
+  "provider": "ocs",
+  "tenant": "ocs_example",
+  "payload": {
+    "provider": "ocs",
+    "tenant": "ocs_example",
+    "query_id": "Q-ZERO-001",
+    "query_text": "solar powered smartwatch",
+    "limit": 5,
+    "offset": 0,
+    "filters": {},
+    "status_code": 200,
+    "success": true,
+    "latency_ms": 54,
+    "result_count": 0,
+    "top_product_ids": [],
+    "metadata": {},
+    "response_payload": {
+      "slices": [
+        {
+          "label": "main",
+          "matchCount": 0,
+          "hits": []
+        }
+      ]
+    }
+  },
+  "created": true
+}

@@ -1,0 +1,128 @@
+{
+  "agent": "CanaryReleaseController",
+  "incident_id": "INC-20260609-001",
+  "query": "hybrid work backpack",
+  "status": "COMPLETED",
+  "tiers_evaluated": 4,
+  "tiers_promoted": 4,
+  "tier_results": [
+    {
+      "tier_percent": 5,
+      "decision": "PROMOTE",
+      "confidence": 0.577,
+      "reason": "All verification checks passed. Zero-result rate eliminated. Latency within acceptable bounds. Shadow test s2n ratio is strong (6.0 >= 5.0) with 5 candidate diffs and 1 noise diffs.",
+      "metrics": {
+        "zeroResultRate": {
+          "before": 1.0,
+          "after": 0.0,
+          "delta": -1.0
+        },
+        "ctr": {
+          "before": 0.0,
+          "after": "pending_canary",
+          "delta": "n/a"
+        },
+        "latency_p95_ms": {
+          "before": 45.0,
+          "after": 52.0,
+          "delta": 7.0
+        },
+        "relevanceScore": {
+          "before": 0.0,
+          "after": 0.82,
+          "delta": 0.82
+        }
+      },
+      "timestamp": "2026-06-09T12:55:24+05:30"
+    },
+    {
+      "tier_percent": 25,
+      "decision": "PROMOTE",
+      "confidence": 0.577,
+      "reason": "All verification checks passed. Zero-result rate eliminated. Latency within acceptable bounds. Shadow test s2n ratio is strong (6.0 >= 5.0) with 5 candidate diffs and 1 noise diffs.",
+      "metrics": {
+        "zeroResultRate": {
+          "before": 1.0,
+          "after": 0.0,
+          "delta": -1.0
+        },
+        "ctr": {
+          "before": 0.0,
+          "after": "pending_canary",
+          "delta": "n/a"
+        },
+        "latency_p95_ms": {
+          "before": 45.0,
+          "after": 52.0,
+          "delta": 7.0
+        },
+        "relevanceScore": {
+          "before": 0.0,
+          "after": 0.82,
+          "delta": 0.82
+        }
+      },
+      "timestamp": "2026-06-09T12:55:24+05:30"
+    },
+    {
+      "tier_percent": 50,
+      "decision": "PROMOTE",
+      "confidence": 0.577,
+      "reason": "All verification checks passed. Zero-result rate eliminated. Latency within acceptable bounds. Shadow test s2n ratio is strong (6.0 >= 5.0) with 5 candidate diffs and 1 noise diffs.",
+      "metrics": {
+        "zeroResultRate": {
+          "before": 1.0,
+          "after": 0.0,
+          "delta": -1.0
+        },
+        "ctr": {
+          "before": 0.0,
+          "after": "pending_canary",
+          "delta": "n/a"
+        },
+        "latency_p95_ms": {
+          "before": 45.0,
+          "after": 52.0,
+          "delta": 7.0
+        },
+        "relevanceScore": {
+          "before": 0.0,
+          "after": 0.82,
+          "delta": 0.82
+        }
+      },
+      "timestamp": "2026-06-09T12:55:24+05:30"
+    },
+    {
+      "tier_percent": 100,
+      "decision": "PROMOTE",
+      "confidence": 0.577,
+      "reason": "All verification checks passed. Zero-result rate eliminated. Latency within acceptable bounds. Shadow test s2n ratio is strong (6.0 >= 5.0) with 5 candidate diffs and 1 noise diffs.",
+      "metrics": {
+        "zeroResultRate": {
+          "before": 1.0,
+          "after": 0.0,
+          "delta": -1.0
+        },
+        "ctr": {
+          "before": 0.0,
+          "after": "pending_canary",
+          "delta": "n/a"
+        },
+        "latency_p95_ms": {
+          "before": 45.0,
+          "after": 52.0,
+          "delta": 7.0
+        },
+        "relevanceScore": {
+          "before": 0.0,
+          "after": 0.82,
+          "delta": 0.82
+        }
+      },
+      "timestamp": "2026-06-09T12:55:24+05:30"
+    }
+  ],
+  "final_traffic_percent": 100,
+  "timestamp": "2026-06-09T12:55:24+05:30"
+}

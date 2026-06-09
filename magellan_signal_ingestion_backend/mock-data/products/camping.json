@@ -1,0 +1,2406 @@
+{
+  "category": "camping",
+  "description": "Mock camping catalog data for sleeping bags, pads, and weather-ready gear.",
+  "products": [
+    {
+      "id": "CAMP-001",
+      "title": "Down Mummy Sleeping Bag 001",
+      "description": "Down Mummy Sleeping Bag 001 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 76.25,
+      "stock": 23,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-002",
+      "title": "Synthetic Camp Quilt 002",
+      "description": "Synthetic Camp Quilt 002 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 93.5,
+      "stock": 36,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-003",
+      "title": "Waterproof Bivy Sack 003",
+      "description": "Waterproof Bivy Sack 003 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 110.75,
+      "stock": 49,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-004",
+      "title": "Expedition Sleep System 004",
+      "description": "Expedition Sleep System 004 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 127.0,
+      "stock": 62,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-005",
+      "title": "Ultralight Summer Bag 005",
+      "description": "Ultralight Summer Bag 005 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 144.25,
+      "stock": 75,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-006",
+      "title": "Insulated Camp Blanket 006",
+      "description": "Insulated Camp Blanket 006 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 161.5,
+      "stock": 88,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-007",
+      "title": "Down Mummy Sleeping Bag 007",
+      "description": "Down Mummy Sleeping Bag 007 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 178.75,
+      "stock": 101,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-008",
+      "title": "Synthetic Camp Quilt 008",
+      "description": "Synthetic Camp Quilt 008 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 195.0,
+      "stock": 114,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-009",
+      "title": "Waterproof Bivy Sack 009",
+      "description": "Waterproof Bivy Sack 009 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 212.25,
+      "stock": 127,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-010",
+      "title": "Expedition Sleep System 010",
+      "description": "Expedition Sleep System 010 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 229.5,
+      "stock": 140,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-011",
+      "title": "Ultralight Summer Bag 011",
+      "description": "Ultralight Summer Bag 011 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 246.75,
+      "stock": 153,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-012",
+      "title": "Insulated Camp Blanket 012",
+      "description": "Insulated Camp Blanket 012 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 263.0,
+      "stock": 166,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-013",
+      "title": "Down Mummy Sleeping Bag 013",
+      "description": "Down Mummy Sleeping Bag 013 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 280.25,
+      "stock": 179,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-014",
+      "title": "Synthetic Camp Quilt 014",
+      "description": "Synthetic Camp Quilt 014 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 297.5,
+      "stock": 192,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-015",
+      "title": "Waterproof Bivy Sack 015",
+      "description": "Waterproof Bivy Sack 015 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 314.75,
+      "stock": 14,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-016",
+      "title": "Expedition Sleep System 016",
+      "description": "Expedition Sleep System 016 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 331.0,
+      "stock": 27,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-017",
+      "title": "Ultralight Summer Bag 017",
+      "description": "Ultralight Summer Bag 017 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 348.25,
+      "stock": 40,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-018",
+      "title": "Insulated Camp Blanket 018",
+      "description": "Insulated Camp Blanket 018 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 74.5,
+      "stock": 53,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-019",
+      "title": "Down Mummy Sleeping Bag 019",
+      "description": "Down Mummy Sleeping Bag 019 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 91.75,
+      "stock": 66,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-020",
+      "title": "Synthetic Camp Quilt 020",
+      "description": "Synthetic Camp Quilt 020 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 108.0,
+      "stock": 79,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-021",
+      "title": "Waterproof Bivy Sack 021",
+      "description": "Waterproof Bivy Sack 021 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 125.25,
+      "stock": 92,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-022",
+      "title": "Expedition Sleep System 022",
+      "description": "Expedition Sleep System 022 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 142.5,
+      "stock": 105,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-023",
+      "title": "Ultralight Summer Bag 023",
+      "description": "Ultralight Summer Bag 023 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 159.75,
+      "stock": 118,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-024",
+      "title": "Insulated Camp Blanket 024",
+      "description": "Insulated Camp Blanket 024 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 176.0,
+      "stock": 131,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-025",
+      "title": "Down Mummy Sleeping Bag 025",
+      "description": "Down Mummy Sleeping Bag 025 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 193.25,
+      "stock": 144,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-026",
+      "title": "Synthetic Camp Quilt 026",
+      "description": "Synthetic Camp Quilt 026 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 210.5,
+      "stock": 157,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-027",
+      "title": "Waterproof Bivy Sack 027",
+      "description": "Waterproof Bivy Sack 027 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 227.75,
+      "stock": 170,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-028",
+      "title": "Expedition Sleep System 028",
+      "description": "Expedition Sleep System 028 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 244.0,
+      "stock": 183,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-029",
+      "title": "Ultralight Summer Bag 029",
+      "description": "Ultralight Summer Bag 029 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 261.25,
+      "stock": 196,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-030",
+      "title": "Insulated Camp Blanket 030",
+      "description": "Insulated Camp Blanket 030 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 278.5,
+      "stock": 18,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-031",
+      "title": "Down Mummy Sleeping Bag 031",
+      "description": "Down Mummy Sleeping Bag 031 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 295.75,
+      "stock": 31,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-032",
+      "title": "Synthetic Camp Quilt 032",
+      "description": "Synthetic Camp Quilt 032 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 312.0,
+      "stock": 44,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-033",
+      "title": "Waterproof Bivy Sack 033",
+      "description": "Waterproof Bivy Sack 033 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 329.25,
+      "stock": 57,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-034",
+      "title": "Expedition Sleep System 034",
+      "description": "Expedition Sleep System 034 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 346.5,
+      "stock": 70,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-035",
+      "title": "Ultralight Summer Bag 035",
+      "description": "Ultralight Summer Bag 035 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 72.75,
+      "stock": 83,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-036",
+      "title": "Insulated Camp Blanket 036",
+      "description": "Insulated Camp Blanket 036 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 89.0,
+      "stock": 96,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-037",
+      "title": "Down Mummy Sleeping Bag 037",
+      "description": "Down Mummy Sleeping Bag 037 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 106.25,
+      "stock": 109,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-038",
+      "title": "Synthetic Camp Quilt 038",
+      "description": "Synthetic Camp Quilt 038 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 123.5,
+      "stock": 122,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-039",
+      "title": "Waterproof Bivy Sack 039",
+      "description": "Waterproof Bivy Sack 039 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 140.75,
+      "stock": 135,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-040",
+      "title": "Expedition Sleep System 040",
+      "description": "Expedition Sleep System 040 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 157.0,
+      "stock": 148,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-041",
+      "title": "Ultralight Summer Bag 041",
+      "description": "Ultralight Summer Bag 041 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 174.25,
+      "stock": 161,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-042",
+      "title": "Insulated Camp Blanket 042",
+      "description": "Insulated Camp Blanket 042 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 191.5,
+      "stock": 174,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-043",
+      "title": "Down Mummy Sleeping Bag 043",
+      "description": "Down Mummy Sleeping Bag 043 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 208.75,
+      "stock": 187,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-044",
+      "title": "Synthetic Camp Quilt 044",
+      "description": "Synthetic Camp Quilt 044 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 225.0,
+      "stock": 200,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-045",
+      "title": "Waterproof Bivy Sack 045",
+      "description": "Waterproof Bivy Sack 045 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 242.25,
+      "stock": 22,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-046",
+      "title": "Expedition Sleep System 046",
+      "description": "Expedition Sleep System 046 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 259.5,
+      "stock": 35,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-047",
+      "title": "Ultralight Summer Bag 047",
+      "description": "Ultralight Summer Bag 047 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 276.75,
+      "stock": 48,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-048",
+      "title": "Insulated Camp Blanket 048",
+      "description": "Insulated Camp Blanket 048 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 293.0,
+      "stock": 61,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-049",
+      "title": "Down Mummy Sleeping Bag 049",
+      "description": "Down Mummy Sleeping Bag 049 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 310.25,
+      "stock": 74,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-050",
+      "title": "Synthetic Camp Quilt 050",
+      "description": "Synthetic Camp Quilt 050 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 327.5,
+      "stock": 87,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-051",
+      "title": "Waterproof Bivy Sack 051",
+      "description": "Waterproof Bivy Sack 051 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 344.75,
+      "stock": 100,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-052",
+      "title": "Expedition Sleep System 052",
+      "description": "Expedition Sleep System 052 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 70.0,
+      "stock": 113,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-053",
+      "title": "Ultralight Summer Bag 053",
+      "description": "Ultralight Summer Bag 053 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 87.25,
+      "stock": 126,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-054",
+      "title": "Insulated Camp Blanket 054",
+      "description": "Insulated Camp Blanket 054 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 104.5,
+      "stock": 139,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-055",
+      "title": "Down Mummy Sleeping Bag 055",
+      "description": "Down Mummy Sleeping Bag 055 is a efficient sleeping bag for cold nights on trail. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 121.75,
+      "stock": 152,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": 650,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-056",
+      "title": "Synthetic Camp Quilt 056",
+      "description": "Synthetic Camp Quilt 056 is a versatile quilt for damp shoulder-season trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 138.0,
+      "stock": 165,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": 800,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-057",
+      "title": "Waterproof Bivy Sack 057",
+      "description": "Waterproof Bivy Sack 057 is a minimal shelter layer for fast overnight travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 155.25,
+      "stock": 178,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": 950,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-058",
+      "title": "Expedition Sleep System 058",
+      "description": "Expedition Sleep System 058 is a warm sleep system for alpine base camps. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 172.5,
+      "stock": 191,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": 1200,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-059",
+      "title": "Ultralight Summer Bag 059",
+      "description": "Ultralight Summer Bag 059 is a compact bag for warm-weather backpacking. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 189.75,
+      "stock": 13,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": 350,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-060",
+      "title": "Insulated Camp Blanket 060",
+      "description": "Insulated Camp Blanket 060 is a soft insulated blanket for car camping. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 206.0,
+      "stock": 26,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": 500,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "CAMP-061",
+      "title": "Down Mummy Sleeping Bag Lite 061",
+      "description": "Down Mummy Sleeping Bag Lite 061 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 223.25,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-062",
+      "title": "Synthetic Camp Quilt Lite 062",
+      "description": "Synthetic Camp Quilt Lite 062 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 240.5,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-063",
+      "title": "Waterproof Bivy Sack Lite 063",
+      "description": "Waterproof Bivy Sack Lite 063 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 257.75,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-064",
+      "title": "Expedition Sleep System Lite 064",
+      "description": "Expedition Sleep System Lite 064 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 274.0,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-065",
+      "title": "Ultralight Summer Bag Lite 065",
+      "description": "Ultralight Summer Bag Lite 065 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 291.25,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-066",
+      "title": "Insulated Camp Blanket Lite 066",
+      "description": "Insulated Camp Blanket Lite 066 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 308.5,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-067",
+      "title": "Down Mummy Sleeping Bag Lite 067",
+      "description": "Down Mummy Sleeping Bag Lite 067 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 325.75,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-068",
+      "title": "Synthetic Camp Quilt Lite 068",
+      "description": "Synthetic Camp Quilt Lite 068 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 342.0,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-069",
+      "title": "Waterproof Bivy Sack Lite 069",
+      "description": "Waterproof Bivy Sack Lite 069 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 68.25,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-070",
+      "title": "Expedition Sleep System Lite 070",
+      "description": "Expedition Sleep System Lite 070 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 85.5,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-071",
+      "title": "Ultralight Summer Bag Lite 071",
+      "description": "Ultralight Summer Bag Lite 071 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 102.75,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-072",
+      "title": "Insulated Camp Blanket Lite 072",
+      "description": "Insulated Camp Blanket Lite 072 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 119.0,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-073",
+      "title": "Down Mummy Sleeping Bag Lite 073",
+      "description": "Down Mummy Sleeping Bag Lite 073 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 136.25,
+      "stock": 1,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-074",
+      "title": "Synthetic Camp Quilt Lite 074",
+      "description": "Synthetic Camp Quilt Lite 074 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 153.5,
+      "stock": 2,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-075",
+      "title": "Waterproof Bivy Sack Lite 075",
+      "description": "Waterproof Bivy Sack Lite 075 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 170.75,
+      "stock": 3,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-076",
+      "title": "Expedition Sleep System Lite 076",
+      "description": "Expedition Sleep System Lite 076 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 187.0,
+      "stock": 4,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-077",
+      "title": "Ultralight Summer Bag Lite 077",
+      "description": "Ultralight Summer Bag Lite 077 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 204.25,
+      "stock": 5,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-078",
+      "title": "Insulated Camp Blanket Lite 078",
+      "description": "Insulated Camp Blanket Lite 078 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 221.5,
+      "stock": 6,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-079",
+      "title": "Down Mummy Sleeping Bag Lite 079",
+      "description": "Down Mummy Sleeping Bag Lite 079 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 238.75,
+      "stock": 7,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-080",
+      "title": "Synthetic Camp Quilt Lite 080",
+      "description": "Synthetic Camp Quilt Lite 080 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 255.0,
+      "stock": 8,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-081",
+      "title": "Waterproof Bivy Sack Lite 081",
+      "description": "Waterproof Bivy Sack Lite 081 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 272.25,
+      "stock": 9,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-082",
+      "title": "Expedition Sleep System Lite 082",
+      "description": "Expedition Sleep System Lite 082 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 289.5,
+      "stock": 10,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-083",
+      "title": "Ultralight Summer Bag Lite 083",
+      "description": "Ultralight Summer Bag Lite 083 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 306.75,
+      "stock": 1,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-084",
+      "title": "Insulated Camp Blanket Lite 084",
+      "description": "Insulated Camp Blanket Lite 084 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 323.0,
+      "stock": 2,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-085",
+      "title": "Down Mummy Sleeping Bag Lite 085",
+      "description": "Down Mummy Sleeping Bag Lite 085 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 340.25,
+      "stock": 3,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-086",
+      "title": "Synthetic Camp Quilt Lite 086",
+      "description": "Synthetic Camp Quilt Lite 086 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 66.5,
+      "stock": 73,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-087",
+      "title": "Waterproof Bivy Sack Lite 087",
+      "description": "Waterproof Bivy Sack Lite 087 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 83.75,
+      "stock": 80,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-088",
+      "title": "Expedition Sleep System Lite 088",
+      "description": "Expedition Sleep System Lite 088 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 100.0,
+      "stock": 87,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-089",
+      "title": "Ultralight Summer Bag Lite 089",
+      "description": "Ultralight Summer Bag Lite 089 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 117.25,
+      "stock": 94,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-090",
+      "title": "Insulated Camp Blanket Lite 090",
+      "description": "Insulated Camp Blanket Lite 090 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 134.5,
+      "stock": 11,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-091",
+      "title": "Down Mummy Sleeping Bag Lite 091",
+      "description": "Down Mummy Sleeping Bag Lite 091 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 151.75,
+      "stock": 18,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-092",
+      "title": "Synthetic Camp Quilt Lite 092",
+      "description": "Synthetic Camp Quilt Lite 092 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 168.0,
+      "stock": 25,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-093",
+      "title": "Waterproof Bivy Sack Lite 093",
+      "description": "Waterproof Bivy Sack Lite 093 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 185.25,
+      "stock": 32,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-094",
+      "title": "Expedition Sleep System Lite 094",
+      "description": "Expedition Sleep System Lite 094 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 202.5,
+      "stock": 39,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-095",
+      "title": "Ultralight Summer Bag Lite 095",
+      "description": "Ultralight Summer Bag Lite 095 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 219.75,
+      "stock": 46,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-096",
+      "title": "Insulated Camp Blanket Lite 096",
+      "description": "Insulated Camp Blanket Lite 096 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 236.0,
+      "stock": 53,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-097",
+      "title": "Down Mummy Sleeping Bag Lite 097",
+      "description": "Down Mummy Sleeping Bag Lite 097 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 253.25,
+      "stock": 60,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-098",
+      "title": "Synthetic Camp Quilt Lite 098",
+      "description": "Synthetic Camp Quilt Lite 098 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 270.5,
+      "stock": 67,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-099",
+      "title": "Waterproof Bivy Sack Lite 099",
+      "description": "Waterproof Bivy Sack Lite 099 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 287.75,
+      "stock": 74,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-100",
+      "title": "Expedition Sleep System Lite 100",
+      "description": "Expedition Sleep System Lite 100 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 304.0,
+      "stock": 81,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-101",
+      "title": "Ultralight Summer Bag Lite 101",
+      "description": "Ultralight Summer Bag Lite 101 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 321.25,
+      "stock": 88,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-102",
+      "title": "Insulated Camp Blanket Lite 102",
+      "description": "Insulated Camp Blanket Lite 102 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 338.5,
+      "stock": 95,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-103",
+      "title": "Down Mummy Sleeping Bag Lite 103",
+      "description": "Down Mummy Sleeping Bag Lite 103 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 64.75,
+      "stock": 12,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "synthetic",
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-104",
+      "title": "Synthetic Camp Quilt Lite 104",
+      "description": "Synthetic Camp Quilt Lite 104 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 81.0,
+      "stock": 19,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": "down",
+        "waterproof": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-105",
+      "title": "Waterproof Bivy Sack Lite 105",
+      "description": "Waterproof Bivy Sack Lite 105 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 98.25,
+      "stock": 26,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "CAMP-106",
+      "title": "Product CAMP-106",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 115.5,
+      "stock": 29,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-107",
+      "title": "Product CAMP-107",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 132.75,
+      "stock": 34,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-108",
+      "title": "Product CAMP-108",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 149.0,
+      "stock": 39,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-109",
+      "title": "Product CAMP-109",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 166.25,
+      "stock": 44,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-110",
+      "title": "Product CAMP-110",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 183.5,
+      "stock": 49,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-111",
+      "title": "Product CAMP-111",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 200.75,
+      "stock": 8,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-112",
+      "title": "Product CAMP-112",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 217.0,
+      "stock": 13,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-113",
+      "title": "Product CAMP-113",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 234.25,
+      "stock": 18,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-114",
+      "title": "Product CAMP-114",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 251.5,
+      "stock": 23,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-115",
+      "title": "Product CAMP-115",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 268.75,
+      "stock": 28,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-116",
+      "title": "Product CAMP-116",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 285.0,
+      "stock": 33,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-117",
+      "title": "Product CAMP-117",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 302.25,
+      "stock": 38,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-118",
+      "title": "Product CAMP-118",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 319.5,
+      "stock": 43,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-119",
+      "title": "Product CAMP-119",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 336.75,
+      "stock": 48,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-120",
+      "title": "Product CAMP-120",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 62.0,
+      "stock": 7,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-121",
+      "title": "Product CAMP-121",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 79.25,
+      "stock": 12,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-122",
+      "title": "Product CAMP-122",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 96.5,
+      "stock": 17,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-123",
+      "title": "Product CAMP-123",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 113.75,
+      "stock": 22,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-124",
+      "title": "Product CAMP-124",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 130.0,
+      "stock": 27,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-125",
+      "title": "Product CAMP-125",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 147.25,
+      "stock": 32,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-126",
+      "title": "Product CAMP-126",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 164.5,
+      "stock": 37,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-127",
+      "title": "Product CAMP-127",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 181.75,
+      "stock": 42,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-128",
+      "title": "Product CAMP-128",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 198.0,
+      "stock": 47,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-129",
+      "title": "Product CAMP-129",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 215.25,
+      "stock": 6,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-130",
+      "title": "Product CAMP-130",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 232.5,
+      "stock": 11,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-131",
+      "title": "Product CAMP-131",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 249.75,
+      "stock": 16,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-132",
+      "title": "Product CAMP-132",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 266.0,
+      "stock": 21,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-133",
+      "title": "Product CAMP-133",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 283.25,
+      "stock": 26,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-134",
+      "title": "Product CAMP-134",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 300.5,
+      "stock": 31,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-135",
+      "title": "Product CAMP-135",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 317.75,
+      "stock": 36,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-136",
+      "title": "New Expedition Sleep System 136",
+      "description": "New Expedition Sleep System 136 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 334.0,
+      "stock": 29,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-137",
+      "title": "New Ultralight Summer Bag 137",
+      "description": "New Ultralight Summer Bag 137 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 60.25,
+      "stock": 38,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-138",
+      "title": "New Insulated Camp Blanket 138",
+      "description": "New Insulated Camp Blanket 138 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 77.5,
+      "stock": 47,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-139",
+      "title": "New Down Mummy Sleeping Bag 139",
+      "description": "New Down Mummy Sleeping Bag 139 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 94.75,
+      "stock": 56,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-140",
+      "title": "New Synthetic Camp Quilt 140",
+      "description": "New Synthetic Camp Quilt 140 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 111.0,
+      "stock": 65,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-141",
+      "title": "New Waterproof Bivy Sack 141",
+      "description": "New Waterproof Bivy Sack 141 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 128.25,
+      "stock": 74,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-142",
+      "title": "New Expedition Sleep System 142",
+      "description": "New Expedition Sleep System 142 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 145.5,
+      "stock": 83,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-143",
+      "title": "New Ultralight Summer Bag 143",
+      "description": "New Ultralight Summer Bag 143 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 162.75,
+      "stock": 92,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-144",
+      "title": "New Insulated Camp Blanket 144",
+      "description": "New Insulated Camp Blanket 144 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 179.0,
+      "stock": 20,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-145",
+      "title": "New Down Mummy Sleeping Bag 145",
+      "description": "New Down Mummy Sleeping Bag 145 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "EmberRest",
+      "price": 196.25,
+      "stock": 29,
+      "attributes": {
+        "temp_rating_c": -10,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-146",
+      "title": "New Synthetic Camp Quilt 146",
+      "description": "New Synthetic Camp Quilt 146 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "CanyonLite",
+      "price": 213.5,
+      "stock": 38,
+      "attributes": {
+        "temp_rating_c": -5,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-147",
+      "title": "New Waterproof Bivy Sack 147",
+      "description": "New Waterproof Bivy Sack 147 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "WildPitch",
+      "price": 230.75,
+      "stock": 47,
+      "attributes": {
+        "temp_rating_c": 0,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-148",
+      "title": "New Expedition Sleep System 148",
+      "description": "New Expedition Sleep System 148 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "BaseCamp Co",
+      "price": 247.0,
+      "stock": 56,
+      "attributes": {
+        "temp_rating_c": 5,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-149",
+      "title": "New Ultralight Summer Bag 149",
+      "description": "New Ultralight Summer Bag 149 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "SummitNest",
+      "price": 264.25,
+      "stock": 65,
+      "attributes": {
+        "temp_rating_c": 10,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "CAMP-150",
+      "title": "New Insulated Camp Blanket 150",
+      "description": "New Insulated Camp Blanket 150 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "camping",
+      "brand": "TrailHaven",
+      "price": 281.5,
+      "stock": 74,
+      "attributes": {
+        "temp_rating_c": -18,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "new_arrival"
+    }
+  ]
+}

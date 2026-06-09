@@ -1,0 +1,24 @@
+{
+  "product_id": "BAGS-999",
+  "operation": "INSERT",
+  "changed_fields": [],
+  "before": null,
+  "after": {
+    "id": "BAGS-999",
+    "title": "Incomplete Bag",
+    "description": "Missing searchable attributes",
+    "category": "bags",
+    "brand": "TestBrand",
+    "price": 89,
+    "stock": 4,
+    "attributes": {
+      "laptop_size": "15inch"
+    },
+    "data_quality": "new_arrival"
+  },
+  "missing_attributes": [
+    "capacity_liters",
+    "material",
+    "waterproof"
+  ]
+}

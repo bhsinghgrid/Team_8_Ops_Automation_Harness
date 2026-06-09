@@ -1,0 +1,8 @@
+{
+  "query_id": "Q-ZERO-001",
+  "query_text": "solar powered smartwatch",
+  "tenant": "ocs_example",
+  "limit": 5,
+  "offset": 0,
+  "filters": {}
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "id": 1,
+    "cluster_intent": "solar powered smartwatch",
+    "query_examples": [
+      "solar powered smartwatch"
+    ],
+    "hit_count": 1,
+    "first_seen": "2026-06-07T10:01:00Z",
+    "last_seen": "2026-06-07T10:01:00Z",
+    "status": "open",
+    "recommended_runbook": "catalog_qa_agent"
+  }
+]

@@ -1,0 +1,98 @@
+version: '3.8'
+
+services:
+  # --- INFRASTRUCTURE ---
+  
+  # Temporal Server (Simplest setup for development)
+  temporal:
+    image: temporalio/admin-tools:latest
+    ports:
+      - "7233:7233"
+      - "8233:8233" # Web UI
+    environment:
+      - TEMPORAL_CLI_ADDRESS=temporal:7233
+    # Note: In a production setup, you'd use the full temporal-docker-compose
+    # For now, we assume the user might run Temporal separately or we provide a basic link.
+  
+  elasticsearch:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.0
+    environment:
+      - discovery.type=single-node
+      - xpack.security.enabled=false
+    ports:
+      - "9200:9200"
+
+  # --- MAGELLAN SERVICES ---
+
+  # The Signal Ingestion Backend API
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - TEMPORAL_URL=temporal:7233
+    depends_on:
+      - elasticsearch
+      - temporal
+    command: python magellan_signal_ingestion_backend/app/main.py
+
+  # The Temporal Worker (Executes the AI Agents/Activities)
+  worker:
+    build: .
+    environment:
+      - ELASTICSEARCH_URL=http://elasticsearch:9200
+      - TEMPORAL_URL=temporal:7233
+      - DIFFY_PROXY_URL=http://diffy-proxy:8880/search
+      - GOOGLE_API_KEY=${GOOGLE_API_KEY}
+    depends_on:
+      - elasticsearch
+      - temporal
+      - diffy-proxy
+    ports:
+      - "8001:8001" # Prometheus Metrics
+    command: python -m temporal.worker
+
+  # --- SHADOW TESTING (DIFFY) ---
+  
+  primary:
+    build:
+      context: ./infra/diffy
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: primary
+
+  secondary:
+    build:
+      context: ./infra/diffy
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: secondary
+
+  candidate:
+    build:
+      context: ./infra/diffy
+      dockerfile: Dockerfile
+    environment:
+      SERVICE_VARIANT: candidate
+
+  diffy-proxy:
+    image: diffy/diffy:latest
+    ports:
+      - "31900:8880" # Proxy Port
+      - "31149:8888" # Web UI Port
+    command: >
+      --candidate=candidate:8080
+      --master.primary=primary:8080
+      --master.secondary=secondary:8080
+      --service.protocol=http
+      --proxy.port=8880
+      --http.port=8888
+    depends_on:
+      - primary
+      - secondary
+      - candidate
+
+networks:
+  default:
+    name: magellan-network

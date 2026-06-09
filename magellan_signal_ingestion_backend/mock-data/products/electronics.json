@@ -1,0 +1,2406 @@
+{
+  "category": "electronics",
+  "description": "Mock electronics catalog data for wearables, audio, and portable devices.",
+  "products": [
+    {
+      "id": "ELEC-001",
+      "title": "GPS Fitness Smartwatch 001",
+      "description": "GPS Fitness Smartwatch 001 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 96.25,
+      "stock": 23,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-002",
+      "title": "Waterproof Bluetooth Speaker 002",
+      "description": "Waterproof Bluetooth Speaker 002 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 113.5,
+      "stock": 36,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-003",
+      "title": "OLED Action Camera 003",
+      "description": "OLED Action Camera 003 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 130.75,
+      "stock": 49,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-004",
+      "title": "AMOLED Sport Band 004",
+      "description": "AMOLED Sport Band 004 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 147.0,
+      "stock": 62,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-005",
+      "title": "Noise Cancelling Earbuds 005",
+      "description": "Noise Cancelling Earbuds 005 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 164.25,
+      "stock": 75,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-006",
+      "title": "Rugged Handheld GPS 006",
+      "description": "Rugged Handheld GPS 006 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 181.5,
+      "stock": 88,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-007",
+      "title": "GPS Fitness Smartwatch 007",
+      "description": "GPS Fitness Smartwatch 007 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 198.75,
+      "stock": 101,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-008",
+      "title": "Waterproof Bluetooth Speaker 008",
+      "description": "Waterproof Bluetooth Speaker 008 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 215.0,
+      "stock": 114,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-009",
+      "title": "OLED Action Camera 009",
+      "description": "OLED Action Camera 009 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 232.25,
+      "stock": 127,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-010",
+      "title": "AMOLED Sport Band 010",
+      "description": "AMOLED Sport Band 010 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 249.5,
+      "stock": 140,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-011",
+      "title": "Noise Cancelling Earbuds 011",
+      "description": "Noise Cancelling Earbuds 011 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 266.75,
+      "stock": 153,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-012",
+      "title": "Rugged Handheld GPS 012",
+      "description": "Rugged Handheld GPS 012 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 283.0,
+      "stock": 166,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-013",
+      "title": "GPS Fitness Smartwatch 013",
+      "description": "GPS Fitness Smartwatch 013 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 300.25,
+      "stock": 179,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-014",
+      "title": "Waterproof Bluetooth Speaker 014",
+      "description": "Waterproof Bluetooth Speaker 014 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 317.5,
+      "stock": 192,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-015",
+      "title": "OLED Action Camera 015",
+      "description": "OLED Action Camera 015 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 334.75,
+      "stock": 14,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-016",
+      "title": "AMOLED Sport Band 016",
+      "description": "AMOLED Sport Band 016 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 351.0,
+      "stock": 27,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-017",
+      "title": "Noise Cancelling Earbuds 017",
+      "description": "Noise Cancelling Earbuds 017 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 368.25,
+      "stock": 40,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-018",
+      "title": "Rugged Handheld GPS 018",
+      "description": "Rugged Handheld GPS 018 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 385.5,
+      "stock": 53,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-019",
+      "title": "GPS Fitness Smartwatch 019",
+      "description": "GPS Fitness Smartwatch 019 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 402.75,
+      "stock": 66,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-020",
+      "title": "Waterproof Bluetooth Speaker 020",
+      "description": "Waterproof Bluetooth Speaker 020 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 419.0,
+      "stock": 79,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-021",
+      "title": "OLED Action Camera 021",
+      "description": "OLED Action Camera 021 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 436.25,
+      "stock": 92,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-022",
+      "title": "AMOLED Sport Band 022",
+      "description": "AMOLED Sport Band 022 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 453.5,
+      "stock": 105,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-023",
+      "title": "Noise Cancelling Earbuds 023",
+      "description": "Noise Cancelling Earbuds 023 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 470.75,
+      "stock": 118,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-024",
+      "title": "Rugged Handheld GPS 024",
+      "description": "Rugged Handheld GPS 024 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 487.0,
+      "stock": 131,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-025",
+      "title": "GPS Fitness Smartwatch 025",
+      "description": "GPS Fitness Smartwatch 025 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 504.25,
+      "stock": 144,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-026",
+      "title": "Waterproof Bluetooth Speaker 026",
+      "description": "Waterproof Bluetooth Speaker 026 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 521.5,
+      "stock": 157,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-027",
+      "title": "OLED Action Camera 027",
+      "description": "OLED Action Camera 027 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 538.75,
+      "stock": 170,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-028",
+      "title": "AMOLED Sport Band 028",
+      "description": "AMOLED Sport Band 028 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 555.0,
+      "stock": 183,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-029",
+      "title": "Noise Cancelling Earbuds 029",
+      "description": "Noise Cancelling Earbuds 029 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 572.25,
+      "stock": 196,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-030",
+      "title": "Rugged Handheld GPS 030",
+      "description": "Rugged Handheld GPS 030 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 589.5,
+      "stock": 18,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-031",
+      "title": "GPS Fitness Smartwatch 031",
+      "description": "GPS Fitness Smartwatch 031 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 85.75,
+      "stock": 31,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-032",
+      "title": "Waterproof Bluetooth Speaker 032",
+      "description": "Waterproof Bluetooth Speaker 032 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 102.0,
+      "stock": 44,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-033",
+      "title": "OLED Action Camera 033",
+      "description": "OLED Action Camera 033 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 119.25,
+      "stock": 57,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-034",
+      "title": "AMOLED Sport Band 034",
+      "description": "AMOLED Sport Band 034 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 136.5,
+      "stock": 70,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-035",
+      "title": "Noise Cancelling Earbuds 035",
+      "description": "Noise Cancelling Earbuds 035 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 153.75,
+      "stock": 83,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-036",
+      "title": "Rugged Handheld GPS 036",
+      "description": "Rugged Handheld GPS 036 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 170.0,
+      "stock": 96,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-037",
+      "title": "GPS Fitness Smartwatch 037",
+      "description": "GPS Fitness Smartwatch 037 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 187.25,
+      "stock": 109,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-038",
+      "title": "Waterproof Bluetooth Speaker 038",
+      "description": "Waterproof Bluetooth Speaker 038 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 204.5,
+      "stock": 122,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-039",
+      "title": "OLED Action Camera 039",
+      "description": "OLED Action Camera 039 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 221.75,
+      "stock": 135,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-040",
+      "title": "AMOLED Sport Band 040",
+      "description": "AMOLED Sport Band 040 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 238.0,
+      "stock": 148,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-041",
+      "title": "Noise Cancelling Earbuds 041",
+      "description": "Noise Cancelling Earbuds 041 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 255.25,
+      "stock": 161,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-042",
+      "title": "Rugged Handheld GPS 042",
+      "description": "Rugged Handheld GPS 042 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 272.5,
+      "stock": 174,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-043",
+      "title": "GPS Fitness Smartwatch 043",
+      "description": "GPS Fitness Smartwatch 043 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 289.75,
+      "stock": 187,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-044",
+      "title": "Waterproof Bluetooth Speaker 044",
+      "description": "Waterproof Bluetooth Speaker 044 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 306.0,
+      "stock": 200,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-045",
+      "title": "OLED Action Camera 045",
+      "description": "OLED Action Camera 045 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 323.25,
+      "stock": 22,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-046",
+      "title": "AMOLED Sport Band 046",
+      "description": "AMOLED Sport Band 046 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 340.5,
+      "stock": 35,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-047",
+      "title": "Noise Cancelling Earbuds 047",
+      "description": "Noise Cancelling Earbuds 047 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 357.75,
+      "stock": 48,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-048",
+      "title": "Rugged Handheld GPS 048",
+      "description": "Rugged Handheld GPS 048 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 374.0,
+      "stock": 61,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-049",
+      "title": "GPS Fitness Smartwatch 049",
+      "description": "GPS Fitness Smartwatch 049 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 391.25,
+      "stock": 74,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-050",
+      "title": "Waterproof Bluetooth Speaker 050",
+      "description": "Waterproof Bluetooth Speaker 050 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 408.5,
+      "stock": 87,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-051",
+      "title": "OLED Action Camera 051",
+      "description": "OLED Action Camera 051 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 425.75,
+      "stock": 100,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-052",
+      "title": "AMOLED Sport Band 052",
+      "description": "AMOLED Sport Band 052 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 442.0,
+      "stock": 113,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-053",
+      "title": "Noise Cancelling Earbuds 053",
+      "description": "Noise Cancelling Earbuds 053 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 459.25,
+      "stock": 126,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-054",
+      "title": "Rugged Handheld GPS 054",
+      "description": "Rugged Handheld GPS 054 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 476.5,
+      "stock": 139,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-055",
+      "title": "GPS Fitness Smartwatch 055",
+      "description": "GPS Fitness Smartwatch 055 is a wearable tracker with route logging and health metrics. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 493.75,
+      "stock": 152,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-056",
+      "title": "Waterproof Bluetooth Speaker 056",
+      "description": "Waterproof Bluetooth Speaker 056 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 510.0,
+      "stock": 165,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": false,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-057",
+      "title": "OLED Action Camera 057",
+      "description": "OLED Action Camera 057 is a compact camera for travel and trail footage. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 527.25,
+      "stock": 178,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": true,
+        "display": "OLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-058",
+      "title": "AMOLED Sport Band 058",
+      "description": "AMOLED Sport Band 058 is a slim fitness band with a bright display. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 544.5,
+      "stock": 191,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": false,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-059",
+      "title": "Noise Cancelling Earbuds 059",
+      "description": "Noise Cancelling Earbuds 059 is a wireless earbuds with long battery life. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 561.75,
+      "stock": 13,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": true,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-060",
+      "title": "Rugged Handheld GPS 060",
+      "description": "Rugged Handheld GPS 060 is a navigation device for hiking and remote trips. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 578.0,
+      "stock": 26,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": false,
+        "display": "OLED",
+        "gps": false
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-061",
+      "title": "GPS Fitness Smartwatch Lite 061",
+      "description": "GPS Fitness Smartwatch Lite 061 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 595.25,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-062",
+      "title": "Waterproof Bluetooth Speaker Lite 062",
+      "description": "Waterproof Bluetooth Speaker Lite 062 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 91.5,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-063",
+      "title": "OLED Action Camera Lite 063",
+      "description": "OLED Action Camera Lite 063 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 108.75,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-064",
+      "title": "AMOLED Sport Band Lite 064",
+      "description": "AMOLED Sport Band Lite 064 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 125.0,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-065",
+      "title": "Noise Cancelling Earbuds Lite 065",
+      "description": "Noise Cancelling Earbuds Lite 065 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 142.25,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-066",
+      "title": "Rugged Handheld GPS Lite 066",
+      "description": "Rugged Handheld GPS Lite 066 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 159.5,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-067",
+      "title": "GPS Fitness Smartwatch Lite 067",
+      "description": "GPS Fitness Smartwatch Lite 067 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 176.75,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-068",
+      "title": "Waterproof Bluetooth Speaker Lite 068",
+      "description": "Waterproof Bluetooth Speaker Lite 068 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 193.0,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-069",
+      "title": "OLED Action Camera Lite 069",
+      "description": "OLED Action Camera Lite 069 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 210.25,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-070",
+      "title": "AMOLED Sport Band Lite 070",
+      "description": "AMOLED Sport Band Lite 070 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 227.5,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-071",
+      "title": "Noise Cancelling Earbuds Lite 071",
+      "description": "Noise Cancelling Earbuds Lite 071 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 244.75,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-072",
+      "title": "Rugged Handheld GPS Lite 072",
+      "description": "Rugged Handheld GPS Lite 072 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 261.0,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-073",
+      "title": "GPS Fitness Smartwatch Lite 073",
+      "description": "GPS Fitness Smartwatch Lite 073 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 278.25,
+      "stock": 1,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-074",
+      "title": "Waterproof Bluetooth Speaker Lite 074",
+      "description": "Waterproof Bluetooth Speaker Lite 074 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 295.5,
+      "stock": 2,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-075",
+      "title": "OLED Action Camera Lite 075",
+      "description": "OLED Action Camera Lite 075 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 312.75,
+      "stock": 3,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-076",
+      "title": "AMOLED Sport Band Lite 076",
+      "description": "AMOLED Sport Band Lite 076 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 329.0,
+      "stock": 4,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-077",
+      "title": "Noise Cancelling Earbuds Lite 077",
+      "description": "Noise Cancelling Earbuds Lite 077 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 346.25,
+      "stock": 5,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-078",
+      "title": "Rugged Handheld GPS Lite 078",
+      "description": "Rugged Handheld GPS Lite 078 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 363.5,
+      "stock": 6,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-079",
+      "title": "GPS Fitness Smartwatch Lite 079",
+      "description": "GPS Fitness Smartwatch Lite 079 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 380.75,
+      "stock": 7,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-080",
+      "title": "Waterproof Bluetooth Speaker Lite 080",
+      "description": "Waterproof Bluetooth Speaker Lite 080 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 397.0,
+      "stock": 8,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-081",
+      "title": "OLED Action Camera Lite 081",
+      "description": "OLED Action Camera Lite 081 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 414.25,
+      "stock": 9,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-082",
+      "title": "AMOLED Sport Band Lite 082",
+      "description": "AMOLED Sport Band Lite 082 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 431.5,
+      "stock": 10,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-083",
+      "title": "Noise Cancelling Earbuds Lite 083",
+      "description": "Noise Cancelling Earbuds Lite 083 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 448.75,
+      "stock": 1,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-084",
+      "title": "Rugged Handheld GPS Lite 084",
+      "description": "Rugged Handheld GPS Lite 084 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 465.0,
+      "stock": 2,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-085",
+      "title": "GPS Fitness Smartwatch Lite 085",
+      "description": "GPS Fitness Smartwatch Lite 085 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 482.25,
+      "stock": 3,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-086",
+      "title": "Waterproof Bluetooth Speaker Lite 086",
+      "description": "Waterproof Bluetooth Speaker Lite 086 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 499.5,
+      "stock": 73,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-087",
+      "title": "OLED Action Camera Lite 087",
+      "description": "OLED Action Camera Lite 087 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 516.75,
+      "stock": 80,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-088",
+      "title": "AMOLED Sport Band Lite 088",
+      "description": "AMOLED Sport Band Lite 088 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 533.0,
+      "stock": 87,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-089",
+      "title": "Noise Cancelling Earbuds Lite 089",
+      "description": "Noise Cancelling Earbuds Lite 089 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 550.25,
+      "stock": 94,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-090",
+      "title": "Rugged Handheld GPS Lite 090",
+      "description": "Rugged Handheld GPS Lite 090 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 567.5,
+      "stock": 11,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-091",
+      "title": "GPS Fitness Smartwatch Lite 091",
+      "description": "GPS Fitness Smartwatch Lite 091 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 584.75,
+      "stock": 18,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-092",
+      "title": "Waterproof Bluetooth Speaker Lite 092",
+      "description": "Waterproof Bluetooth Speaker Lite 092 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 80.0,
+      "stock": 25,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-093",
+      "title": "OLED Action Camera Lite 093",
+      "description": "OLED Action Camera Lite 093 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 97.25,
+      "stock": 32,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-094",
+      "title": "AMOLED Sport Band Lite 094",
+      "description": "AMOLED Sport Band Lite 094 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 114.5,
+      "stock": 39,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-095",
+      "title": "Noise Cancelling Earbuds Lite 095",
+      "description": "Noise Cancelling Earbuds Lite 095 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 131.75,
+      "stock": 46,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-096",
+      "title": "Rugged Handheld GPS Lite 096",
+      "description": "Rugged Handheld GPS Lite 096 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 148.0,
+      "stock": 53,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-097",
+      "title": "GPS Fitness Smartwatch Lite 097",
+      "description": "GPS Fitness Smartwatch Lite 097 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 165.25,
+      "stock": 60,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-098",
+      "title": "Waterproof Bluetooth Speaker Lite 098",
+      "description": "Waterproof Bluetooth Speaker Lite 098 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 182.5,
+      "stock": 67,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-099",
+      "title": "OLED Action Camera Lite 099",
+      "description": "OLED Action Camera Lite 099 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 199.75,
+      "stock": 74,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-100",
+      "title": "AMOLED Sport Band Lite 100",
+      "description": "AMOLED Sport Band Lite 100 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 216.0,
+      "stock": 81,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-101",
+      "title": "Noise Cancelling Earbuds Lite 101",
+      "description": "Noise Cancelling Earbuds Lite 101 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 233.25,
+      "stock": 88,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-102",
+      "title": "Rugged Handheld GPS Lite 102",
+      "description": "Rugged Handheld GPS Lite 102 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 250.5,
+      "stock": 95,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-103",
+      "title": "GPS Fitness Smartwatch Lite 103",
+      "description": "GPS Fitness Smartwatch Lite 103 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 267.75,
+      "stock": 12,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-104",
+      "title": "Waterproof Bluetooth Speaker Lite 104",
+      "description": "Waterproof Bluetooth Speaker Lite 104 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 284.0,
+      "stock": 19,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-105",
+      "title": "OLED Action Camera Lite 105",
+      "description": "OLED Action Camera Lite 105 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 301.25,
+      "stock": 26,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-106",
+      "title": "Product ELEC-106",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 318.5,
+      "stock": 29,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-107",
+      "title": "Product ELEC-107",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 335.75,
+      "stock": 34,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-108",
+      "title": "Product ELEC-108",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 352.0,
+      "stock": 39,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-109",
+      "title": "Product ELEC-109",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 369.25,
+      "stock": 44,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-110",
+      "title": "Product ELEC-110",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 386.5,
+      "stock": 49,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-111",
+      "title": "Product ELEC-111",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 403.75,
+      "stock": 8,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-112",
+      "title": "Product ELEC-112",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 420.0,
+      "stock": 13,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-113",
+      "title": "Product ELEC-113",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 437.25,
+      "stock": 18,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-114",
+      "title": "Product ELEC-114",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 454.5,
+      "stock": 23,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-115",
+      "title": "Product ELEC-115",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 471.75,
+      "stock": 28,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-116",
+      "title": "Product ELEC-116",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 488.0,
+      "stock": 33,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-117",
+      "title": "Product ELEC-117",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 505.25,
+      "stock": 38,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-118",
+      "title": "Product ELEC-118",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 522.5,
+      "stock": 43,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-119",
+      "title": "Product ELEC-119",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 539.75,
+      "stock": 48,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-120",
+      "title": "Product ELEC-120",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 556.0,
+      "stock": 7,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-121",
+      "title": "Product ELEC-121",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 573.25,
+      "stock": 12,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-122",
+      "title": "Product ELEC-122",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 590.5,
+      "stock": 17,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-123",
+      "title": "Product ELEC-123",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 86.75,
+      "stock": 22,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-124",
+      "title": "Product ELEC-124",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 103.0,
+      "stock": 27,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-125",
+      "title": "Product ELEC-125",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 120.25,
+      "stock": 32,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-126",
+      "title": "Product ELEC-126",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 137.5,
+      "stock": 37,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-127",
+      "title": "Product ELEC-127",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 154.75,
+      "stock": 42,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-128",
+      "title": "Product ELEC-128",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 171.0,
+      "stock": 47,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-129",
+      "title": "Product ELEC-129",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 188.25,
+      "stock": 6,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-130",
+      "title": "Product ELEC-130",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 205.5,
+      "stock": 11,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-131",
+      "title": "Product ELEC-131",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 222.75,
+      "stock": 16,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-132",
+      "title": "Product ELEC-132",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 239.0,
+      "stock": 21,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-133",
+      "title": "Product ELEC-133",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 256.25,
+      "stock": 26,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-134",
+      "title": "Product ELEC-134",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 273.5,
+      "stock": 31,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-135",
+      "title": "Product ELEC-135",
+      "description": "Electronics item",
+      "category": "electronics",
+      "brand": null,
+      "price": 290.75,
+      "stock": 36,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "ELEC-136",
+      "title": "New AMOLED Sport Band 136",
+      "description": "New AMOLED Sport Band 136 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 307.0,
+      "stock": 29,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-137",
+      "title": "New Noise Cancelling Earbuds 137",
+      "description": "New Noise Cancelling Earbuds 137 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 324.25,
+      "stock": 38,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-138",
+      "title": "New Rugged Handheld GPS 138",
+      "description": "New Rugged Handheld GPS 138 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 341.5,
+      "stock": 47,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-139",
+      "title": "New GPS Fitness Smartwatch 139",
+      "description": "New GPS Fitness Smartwatch 139 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 358.75,
+      "stock": 56,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-140",
+      "title": "New Waterproof Bluetooth Speaker 140",
+      "description": "New Waterproof Bluetooth Speaker 140 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 375.0,
+      "stock": 65,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-141",
+      "title": "New OLED Action Camera 141",
+      "description": "New OLED Action Camera 141 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 392.25,
+      "stock": 74,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-142",
+      "title": "New AMOLED Sport Band 142",
+      "description": "New AMOLED Sport Band 142 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 409.5,
+      "stock": 83,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-143",
+      "title": "New Noise Cancelling Earbuds 143",
+      "description": "New Noise Cancelling Earbuds 143 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 426.75,
+      "stock": 92,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-144",
+      "title": "New Rugged Handheld GPS 144",
+      "description": "New Rugged Handheld GPS 144 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 443.0,
+      "stock": 20,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-145",
+      "title": "New GPS Fitness Smartwatch 145",
+      "description": "New GPS Fitness Smartwatch 145 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 460.25,
+      "stock": 29,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-146",
+      "title": "New Waterproof Bluetooth Speaker 146",
+      "description": "New Waterproof Bluetooth Speaker 146 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "SignalPeak",
+      "price": 477.5,
+      "stock": 38,
+      "attributes": {
+        "battery_hours": 18,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-147",
+      "title": "New OLED Action Camera 147",
+      "description": "New OLED Action Camera 147 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "NimbleTech",
+      "price": 494.75,
+      "stock": 47,
+      "attributes": {
+        "battery_hours": 24,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-148",
+      "title": "New AMOLED Sport Band 148",
+      "description": "New AMOLED Sport Band 148 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 511.0,
+      "stock": 56,
+      "attributes": {
+        "battery_hours": 36,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-149",
+      "title": "New Noise Cancelling Earbuds 149",
+      "description": "New Noise Cancelling Earbuds 149 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 528.25,
+      "stock": 65,
+      "attributes": {
+        "battery_hours": 72,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    },
+    {
+      "id": "ELEC-150",
+      "title": "New Rugged Handheld GPS 150",
+      "description": "New Rugged Handheld GPS 150 is a fresh catalog arrival awaiting full attribute enrichment.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 545.5,
+      "stock": 74,
+      "attributes": {
+        "battery_hours": 8,
+        "waterproof": null,
+        "display": null,
+        "gps": null
+      },
+      "data_quality": "new_arrival"
+    }
+  ]
+}

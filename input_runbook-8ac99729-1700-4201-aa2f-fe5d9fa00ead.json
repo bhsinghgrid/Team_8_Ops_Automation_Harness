@@ -1,0 +1,608 @@
+{
+  "agent": "FixPlanAgent",
+  "status": "ok",
+  "query": "hybrid work backpack",
+  "result": {
+    "query": "hybrid work backpack",
+    "issueProfile": {
+      "gapType": "query_vocabulary_gap",
+      "gapReason": "Both baseline and candidate stay at zero hits even though the catalog has documents, which points to vocabulary, synonym, or coverage gaps.",
+      "gapConfidence": "high",
+      "signalTypes": [
+        "autocomplete_miss",
+        "catalog_delta",
+        "failed_query",
+        "merchandising_rule_conflict",
+        "stale_embedding"
+      ],
+      "currentSearchableFields": [
+        "title"
+      ],
+      "proposedSearchableFields": [
+        "description",
+        "tags",
+        "terrain",
+        "waterproof"
+      ]
+    },
+    "issuesIdentified": 4,
+    "fixOrder": [
+      "Enable synonyms",
+      "Refresh stale embeddings",
+      "Add searchable fields",
+      "Update merchandising rules",
+      "Validate and monitor"
+    ],
+    "catalogPatch": {
+      "description": "Align searchable fields with the catalog content that is actually present in this incident.",
+      "searchableFields": {
+        "current": [
+          "title"
+        ],
+        "add": [
+          "description",
+          "tags",
+          "terrain",
+          "waterproof"
+        ],
+        "rationale": "Expose the observed catalog fields that are not currently searchable."
+      },
+      "fields": [
+        {
+          "name": "description",
+          "type": "text",
+          "searchable": true,
+          "weight": 0.75
+        },
+        {
+          "name": "tags",
+          "type": "array",
+          "searchable": true,
+          "weight": 0.85
+        },
+        {
+          "name": "terrain",
+          "type": "text",
+          "searchable": true,
+          "weight": 0.65
+        },
+        {
+          "name": "waterproof",
+          "type": "text",
+          "searchable": true,
+          "weight": 0.65
+        }
+      ],
+      "catalogSize": 3
+    },
+    "embeddingPatch": {
+      "description": "Refresh stale embeddings and rebuild the semantic index when the incident points to semantic drift.",
+      "refreshEmbeddings": true,
+      "rebuildSemanticIndex": true,
+      "semanticGapDetected": false,
+      "affectedProductIds": [
+        "sku-backpack-1"
+      ],
+      "affectedCount": 1,
+      "verification": "Affected products are re-embedded and search recall improves",
+      "actions": [
+        "Re-embed affected catalog items after the latest catalog update",
+        "Upsert refreshed vectors into the semantic index",
+        "Verify embedding timestamps are aligned with catalog timestamps"
+      ]
+    },
+    "autocompletePatch": {
+      "description": "Generate synonym and query-expansion candidates from catalog and query-log evidence.",
+      "enableSynonyms": true,
+      "synonymMappings": [
+        {
+          "term": "hybrid",
+          "synonyms": [
+            "professional",
+            "bag",
+            "laptop",
+            "office"
+          ],
+          "confidence": 0.9,
+          "sourceSummary": {
+            "catalog": 4,
+            "queryLog": 0,
+            "subword": 0
+          },
+          "evidence": [
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "tags",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "description",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "title",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "tags",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "title",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "tags",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            }
+          ]
+        },
+        {
+          "term": "work",
+          "synonyms": [
+            "professional",
+            "bag",
+            "laptop",
+            "office"
+          ],
+          "confidence": 0.9,
+          "sourceSummary": {
+            "catalog": 4,
+            "queryLog": 0,
+            "subword": 0
+          },
+          "evidence": [
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "tags",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "description",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "title",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "tags",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "title",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "tags",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            }
+          ]
+        },
+        {
+          "term": "backpack",
+          "synonyms": [
+            "laptop",
+            "professional",
+            "bag",
+            "travel"
+          ],
+          "confidence": 0.9,
+          "sourceSummary": {
+            "catalog": 4,
+            "queryLog": 0,
+            "subword": 0
+          },
+          "evidence": [
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "title",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "laptop",
+              "source": "catalog",
+              "productId": "backpack-002",
+              "field": "tags",
+              "productTitle": "Laptop Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "tags",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "professional",
+              "source": "catalog",
+              "productId": "backpack-001",
+              "field": "description",
+              "productTitle": "Hybrid Work Backpack",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "title",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            },
+            {
+              "synonym": "bag",
+              "source": "catalog",
+              "productId": "bag-001",
+              "field": "tags",
+              "productTitle": "Work Bag",
+              "reason": "co-occurs with the incident query inside a relevant catalog record"
+            }
+          ]
+        }
+      ],
+      "sourceSummary": {
+        "gapType": "query_vocabulary_gap",
+        "catalogProducts": 3,
+        "queryLogs": 1,
+        "proposedTerms": 3
+      }
+    },
+    "merchandisingPatch": {
+      "description": "Adjust merchandising rules to protect relevance and in-stock substitutes.",
+      "rules": [
+        {
+          "id": "rule-promote-in-stock",
+          "name": "Promote in-stock items",
+          "condition": "stock > 5",
+          "boost": 1.5,
+          "priority": "high"
+        },
+        {
+          "id": "rule-boost-relevant",
+          "name": "Boost relevant matches",
+          "condition": "relevance_score > 0.7",
+          "boost": 2.0,
+          "priority": "critical"
+        },
+        {
+          "id": "rule-conflict-guard",
+          "name": "Suppress conflicting campaign boosts",
+          "condition": "conflicting_merchandising_rule_detected = true",
+          "affectedRuleIds": [
+            "mxp-rule-campaign-boost"
+          ],
+          "priority": "critical"
+        }
+      ],
+      "sourceSummary": {
+        "inventoryCount": 2,
+        "conversionCount": 2,
+        "conflictRuleIds": 1
+      }
+    },
+    "implementation": {
+      "timeline": "same-day remediation + monitoring",
+      "phases": [
+        {
+          "phase": 1,
+          "duration": "30 min",
+          "action": "Enable synonyms",
+          "verification": "Query starts matching broader vocabulary"
+        },
+        {
+          "phase": 2,
+          "duration": "20 min",
+          "action": "Refresh stale embeddings",
+          "verification": "Embedding timestamps align with the catalog"
+        },
+        {
+          "phase": 3,
+          "duration": "15 min",
+          "action": "Add searchable fields",
+          "verification": "Reindexing exposes the observed catalog fields"
+        },
+        {
+          "phase": 4,
+          "duration": "30 min",
+          "action": "Update merchandising rules",
+          "verification": "Relevance ranking no longer boosts the conflicting rules"
+        },
+        {
+          "phase": 5,
+          "duration": "1 day",
+          "action": "Validate and monitor",
+          "verification": "Metrics improve and regressions stay contained"
+        }
+      ]
+    },
+    "expectedOutcome": {
+      "searchResults": {
+        "before": 0,
+        "after": "positive results",
+        "improvement": "coverage restored"
+      },
+      "metrics": {
+        "ctr": "expected lift",
+        "latency": "stable after the change",
+        "relevance": "improves with broader field and synonym coverage",
+        "semanticRecall": "stale -> refreshed"
+      }
+    },
+    "verification": {
+      "status": "ok",
+      "checks": [
+        {
+          "name": "fix_order_defined",
+          "passed": true,
+          "details": "5 steps defined"
+        },
+        {
+          "name": "catalog_patch_structured",
+          "passed": true,
+          "details": "4 searchable field additions planned"
+        },
+        {
+          "name": "autocomplete_patch_structured",
+          "passed": true,
+          "details": "3 synonym mappings prepared"
+        },
+        {
+          "name": "embedding_patch_structured",
+          "passed": true,
+          "details": "1 products queued for embedding refresh"
+        },
+        {
+          "name": "merchandising_patch_structured",
+          "passed": true,
+          "details": "3 merchandising rules prepared"
+        }
+      ]
+    },
+    "rlmSynthesis": {
+      "agent": "RMLSynthesisAgent",
+      "status": "ok",
+      "query": "hybrid work backpack",
+      "result": {
+        "summaryText": "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context, preserving the affected capability, the Diffy-style candidate-vs-primary comparison, the primary-vs-secondary noise baseline, the catalog or rule gap, the metric impact, and the owner handoff path.",
+        "incidentBrief": "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context, preserving the affected capability, the Diffy-style candidate-vs-primary comparison, the primary-vs-secondary noise baseline, the catalog or rule gap, the metric impact, and the owner handoff path.",
+        "rlmResultText": "Processed: Ops incident query: hybrid work backpack\nEvidence ... Processed: preserving the affected capability, Processed: the Diffy-style candidate-vs-primary comparison, Processed: the primary-vs-secondary noise baseline, Processed: the catalog or rule gap, Processed: the metric impact, Processed: and the owner handoff path.",
+        "confidence": 0.5773535967578521,
+        "decomposedTasks": [
+          "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context,",
+          "preserving the affected capability,",
+          "the Diffy-style candidate-vs-primary comparison,",
+          "the primary-vs-secondary noise baseline,",
+          "the catalog or rule gap,",
+          "the metric impact,",
+          "and the owner handoff path."
+        ],
+        "taskResults": [
+          {
+            "text": "Processed: Ops incident query: hybrid work backpack\nEvidence ...",
+            "confidence": 0.6468085106382979
+          },
+          {
+            "text": "Processed: preserving the affected capability,",
+            "confidence": 0.6400000000000001
+          },
+          {
+            "text": "Processed: the Diffy-style candidate-vs-primary comparison,",
+            "confidence": 0.9
+          },
+          {
+            "text": "Processed: the primary-vs-secondary noise baseline,",
+            "confidence": 0.7400000000000001
+          },
+          {
+            "text": "Processed: the catalog or rule gap,",
+            "confidence": 0.32000000000000006
+          },
+          {
+            "text": "Processed: the metric impact,",
+            "confidence": 0.4266666666666667
+          },
+          {
+            "text": "Processed: and the owner handoff path.",
+            "confidence": 0.368
+          }
+        ],
+        "intermediateSteps": [
+          "Cache miss",
+          "Complexity analysis: decompose=True",
+          "Decomposed into 7 subtasks",
+          "Composed 7 results with confidence 0.58",
+          "Result cached"
+        ],
+        "sourceSummary": {
+          "historyCount": 5,
+          "stages": [
+            "CapabilityImpactAgent",
+            "MetricImpactAgent",
+            "DataGapRuleDiffAgent",
+            "OwnerPathAgent",
+            "IncidentWorkAIAgent"
+          ],
+          "stageSnapshots": [
+            {
+              "agent": "CapabilityImpactAgent",
+              "status": "ok",
+              "summary": {
+                "topCapability": "merchandising_governance",
+                "rankedCapabilities": 5
+              }
+            },
+            {
+              "agent": "MetricImpactAgent",
+              "status": "failed",
+              "summary": {
+                "checks": 3,
+                "failedChecks": 2
+              }
+            },
+            {
+              "agent": "DataGapRuleDiffAgent",
+              "status": "ok",
+              "summary": {
+                "gapType": "query_vocabulary_gap",
+                "confidence": "high"
+              }
+            },
+            {
+              "agent": "OwnerPathAgent",
+              "status": "ok",
+              "summary": {
+                "primaryOwner": "Application owner",
+                "routes": 5
+              }
+            },
+            {
+              "agent": "IncidentWorkAIAgent",
+              "status": "ok",
+              "summary": {
+                "keys": [
+                  "executionMode",
+                  "incidentBrief",
+                  "evidenceWindows",
+                  "executionTrace",
+                  "sourceSummary"
+                ]
+              }
+            }
+          ]
+        },
+        "stateSummary": {
+          "inputLength": 624,
+          "decomposedTaskCount": 7,
+          "taskCount": 7,
+          "cacheHits": 0,
+          "intermediateStepCount": 5
+        },
+        "workAiBrief": "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context, preserving the affected capability, the Diffy-style candidate-vs-primary comparison, the primary-vs-secondary noise baseline, the catalog or rule gap, the metric impact, and the owner handoff path.",
+        "workAiWindows": {
+          "capability": {
+            "stageIndex": 1,
+            "agent": "CapabilityImpactAgent",
+            "status": "ok",
+            "summary": {
+              "topCapability": "merchandising_governance",
+              "impactScore": 5000,
+              "signalCount": 1,
+              "rankedCapabilities": 5
+            },
+            "outputPath": "/Users/bhsingh/Documents/Capstone_Final/Agents/agent-runs/sequential-20260603_120153/01_capability_impact/output.json"
+          },
+          "metric": {
+            "stageIndex": 2,
+            "agent": "MetricImpactAgent",
+            "status": "failed",
+            "summary": {
+              "checks": 3,
+              "failedChecks": 2,
+              "status": "failed"
+            },
+            "outputPath": "/Users/bhsingh/Documents/Capstone_Final/Agents/agent-runs/sequential-20260603_120153/02_metric_impact/output.json"
+          },
+          "data_gap": {
+            "stageIndex": 3,
+            "agent": "DataGapRuleDiffAgent",
+            "status": "ok",
+            "summary": {
+              "gapType": "query_vocabulary_gap",
+              "confidence": "high"
+            },
+            "outputPath": "/Users/bhsingh/Documents/Capstone_Final/Agents/agent-runs/sequential-20260603_120153/03_data_gap_rule_diff/output.json"
+          },
+          "owner_path": {
+            "stageIndex": 4,
+            "agent": "OwnerPathAgent",
+            "status": "ok",
+            "summary": {
+              "primaryOwner": "Application owner",
+              "routes": 5
+            },
+            "outputPath": "/Users/bhsingh/Documents/Capstone_Final/Agents/agent-runs/sequential-20260603_120153/04_owner_path/output.json"
+          },
+          "shadow_test": {
+            "stageIndex": 3,
+            "agent": "ShadowTestAgent",
+            "status": "ok",
+            "summary": {
+              "framework": "Diffy",
+              "gapType": "query_vocabulary_gap",
+              "state": "warn",
+              "settingsChanged": false,
+              "settingDiffCount": 0,
+              "candidateRawResponseDiffCount": 6,
+              "candidateResponseDiffCount": 5,
+              "noiseResponseDiffCount": 1,
+              "signalToNoiseRatio": 6.0
+            },
+            "executionMode": "supplemental"
+          }
+        },
+        "workAiExecutionMode": "history-foldback"
+      }
+    },
+    "synthesisSummary": "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context, preserving the affected capability, the Diffy-style candidate-vs-primary comparison, the primary-vs-secondary noise baseline, the catalog or rule gap, the metric impact, and the owner handoff path.",
+    "incidentBrief": "Ops incident query: hybrid work backpack\nEvidence windows:\n- capability: top=merchandising_governance score=5000 signals=1\n- metric: checks=3 failed=2\n- shadow test: gapType=query_vocabulary_gap state=warn rawDiffs=6 candidateDiffs=5 noiseDiffs=1 s2n=6.0\n- data gap: gapType=query_vocabulary_gap confidence=high\n- owner path: primaryOwner=Application owner routes=5\nTask: fold the evidence back into a parent incident context, preserving the affected capability, the Diffy-style candidate-vs-primary comparison, the primary-vs-secondary noise baseline, the catalog or rule gap, the metric impact, and the owner handoff path.",
+    "applyResult": {
+      "applied": true,
+      "dryRun": false,
+      "timestamp": "2026-06-09T12:55:24.290349",
+      "artifacts": [
+        "patch_runbook-8ac99729-1700-4201-aa2f-fe5d9fa00ead.json"
+      ]
+    }
+  }
+}

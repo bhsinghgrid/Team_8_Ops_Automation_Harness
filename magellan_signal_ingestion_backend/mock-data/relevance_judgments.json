@@ -1,0 +1,35 @@
+{
+  "description": "Magellan Golden Dataset - Search Relevance Judgments (Relevance: 3=Ideal, 2=Good, 1=Acceptable, 0=Irrelevant)",
+  "judgments": {
+    "waterproof trail shoes": {
+      "FOOT-001": 3,
+      "FOOT-006": 2,
+      "FOOT-012": 3,
+      "FOOT-045": 1,
+      "FOOT-002": 0
+    },
+    "smartwatch with gps": {
+      "ELEC-001": 3,
+      "ELEC-003": 2,
+      "ELEC-015": 3,
+      "ELEC-002": 0
+    },
+    "waterproof laptop backpack": {
+      "BAGS-001": 3,
+      "BAGS-012": 2,
+      "BAGS-045": 3,
+      "BAGS-005": 0
+    },
+    "gore-tex rain jacket": {
+      "OUT-001": 3,
+      "OUT-008": 3,
+      "OUT-015": 2,
+      "OUT-002": 0
+    },
+    "Smart Watches": {
+      "watch_pro_1": 3,
+      "watch_lite_2": 2,
+      "fitness_band_x": 1
+    }
+  }
+}

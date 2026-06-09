@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+meilisearch
+httpx
+python-dotenv
+pytest
+deepdiff
+filelock
