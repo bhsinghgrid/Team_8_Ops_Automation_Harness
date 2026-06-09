@@ -4,9 +4,9 @@ import json
 import asyncio
 from typing import Dict, Any
 import httpx # For asynchronous HTTP requests
-from shared.schemas import OpsSignal, RootCauseReport, EvalReport
-from orchestration import RLMClient # Import RLMClient from package namespace
-from shadow_testing.shadow_test_agent import run_agent as run_shadow_test
+from Runbook_System_Final.shared.schemas import OpsSignal, RootCauseReport, EvalReport
+from Runbook_System_Final.orchestration.rlm_client import RLMClient
+from Runbook_System_Final.shadow_testing.shadow_test_agent import run_agent as run_shadow_test
 
 class EvalAgent:
     """

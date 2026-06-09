@@ -98,7 +98,20 @@ class CanaryMonitorResult(BaseModel):
     Structured result from the monitor_canary_activity, providing detailed metrics for feedback.
     """
     status: str = Field(..., description="Overall status of the canary monitoring (e.g., SUCCESS, FAILURE_METRIC_DROP).")
-    stable_baseline_metrics: Dict[str, Any] = Field(..., description="Metrics from the stable baseline application.")
-    canary_observed_metrics: Dict[str, Any] = Field(..., description="Metrics observed during the canary rollout.")
-    failed_checks: int = Field(..., description="Number of metric checks that failed thresholds.")
-    analysis_details: List[str] = Field(..., description="Details for each failed check, if any.")
+    metrics: Optional[Dict[str, Any]] = None
+
+class SuggestTuningReport(BaseModel):
+    """
+    Output from the SuggestTuningAgent.
+    Clusters failed prefixes and generates suggestion packs.
+    """
+    signal_id: str
+    failed_prefix_clusters: List[Dict[str, Any]] = Field(..., description="Grouped prefixes that failed to return completions.")
+    suggest_pack: List[Dict[str, Any]] = Field(..., description="Generated candidate suggestion and synonym pairs.")
+    estimated_ctr_lift: float = Field(..., description="Predicted improvement in CTR after tuning.")
+    business_impact_summary: str = Field(..., description="Summary of why this tuning is necessary.")
+    # Extra fields for feedback loop
+    stable_baseline_metrics: Optional[Dict[str, Any]] = None
+    canary_observed_metrics: Optional[Dict[str, Any]] = None
+    failed_checks: Optional[int] = 0
+    analysis_details: Optional[List[str]] = None

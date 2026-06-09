@@ -50,21 +50,18 @@ async def main():
         with open(input_file, 'r') as f:
             scenarios_data = json.load(f)
         
-        # Take the first scenario and format it to match the expected 'signal_data' structure
-        if "scenarios" not in scenarios_data or not scenarios_data["scenarios"]:
-            print(f"❌ Error: No scenarios found in {input_file}")
-            return
-
-        first_scenario = scenarios_data["scenarios"][0]
+        # Take the last scenario (the new one we just added) and format it to match the expected 'signal_data' structure
+        # ...existing code...
+        last_scenario = scenarios_data["scenarios"][-1]
         
         # Construct a synthetic signal_data that orchestrator expects
         synthetic_signal_data = {
             "signals": [
                 {
-                    "id": f"scenario-{first_scenario.get('product_id', 'unknown')}-{uuid.uuid4().hex[:8]}", # Generate a unique ID
-                    "type": f"catalog_{first_scenario.get('operation', 'unknown').lower()}",
-                    "summary": first_scenario.get('name', 'No summary provided'),
-                    "raw_data": first_scenario # Pass the entire scenario as raw_data
+                    "id": f"scenario-{last_scenario.get('product_id', 'unknown')}-{uuid.uuid4().hex[:8]}", # Generate a unique ID
+                    "type": f"catalog_{last_scenario.get('operation', 'unknown').lower()}",
+                    "summary": last_scenario.get('name', 'No summary provided'),
+                    "raw_data": last_scenario # Pass the entire scenario as raw_data
                 }
             ]
         }

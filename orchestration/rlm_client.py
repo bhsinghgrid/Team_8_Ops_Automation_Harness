@@ -9,9 +9,8 @@ import json
 import asyncio
 from pathlib import Path
 from typing import Dict, Any, Optional
+from dotenv import load_dotenv, find_dotenv # Import for .env management
 from google import genai
-from google.generativeai import types
-from google.generativeai.generative_models import GenerativeModel
 
 # NOTE: This client currently directly uses Google GenAI. 
 # For full RLM functionality (decomposition, composition, self-critique, cache),
@@ -25,29 +24,16 @@ class RLMClient:
         if not self.api_key:
             print("⚠️ [RLMClient WARNING]: GEMINI_API_KEY not found in .env. RLM will return fallback data.")
         # Use genai.GenerativeModel for Gemini 2.5 Flash
-        self.client = GenerativeModel(model_name='gemini-2.5-flash') if self.api_key else None
-        # Configure the client for JSON output and low temperature
-        if self.client:
-            self.generation_config = types.GenerationConfig(
-                # response_mime_type="application/json",
-                temperature=0.1,
-            )
-        else:
-            self.generation_config = None # No config if no client
+        self.client = genai.Client(api_key=self.api_key) if self.api_key else None
+        # Configuration is now passed directly in generate_content or via types
+        self.generation_config = {"response_mime_type": "application/json", "temperature": 0.1} if self.client else None
 
 
     def _load_env_file(self):
         """Loads environment variables from the .env file in the project root."""
-        # Adjust path to find .env in the root of the Agents folder
-        env_path = Path(__file__).resolve().parents[3] / ".env" # Go up 3 levels to '/Users/bhsingh/Documents/Capstone_Final/Agents/.env'
-        if env_path.exists():
-            for line in env_path.read_text().splitlines():
-                line = line.strip()
-                if line and not line.startswith("#") and "=" in line:
-                    key, val = line.split("=", 1)
-                    os.environ[key.strip()] = val.strip().strip("'").strip('"')
-        else:
-            print(f"⚠️ [RLMClient WARNING]: .env file not found at {env_path}")
+        # Use python-dotenv to load environment variables from the .env file
+        load_dotenv(find_dotenv(str(Path(__file__).resolve().parents[3] / ".env")))
+        # The API key will now be available via os.getenv()
 
 
     async def process(self, user_prompt: str, system_instruction: str = "You are a helpful AI assistant. Respond in JSON format.", preset: str = "medium") -> Dict[str, Any]:
@@ -66,19 +52,20 @@ class RLMClient:
             }
 
         try:
-            response = None # Initialize response to None
+            response = None # Initialize response to None to avoid unbound error
             # Simulate asynchronous call to the GenAI model
             # For actual LangGraph integration, you'd call rlm_langgraph.py's process here.
             # Use a dummy system instruction for the direct GenAI call if not provided
             effective_system_instruction = system_instruction if system_instruction else "You are a helpful AI assistant."
 
-            response = await asyncio.to_thread(self.client.generate_content,
-                contents=[effective_system_instruction, user_prompt], # Pass system instruction as part of contents
-                generation_config=self.generation_config,
+            response = await asyncio.to_thread(self.client.models.generate_content,
+                model='gemini-2.5-flash',
+                contents=f"{effective_system_instruction}\n\n{user_prompt}",
             )
-
-            # Parse the JSON string back into a Python dictionary
-            # The model often wraps its JSON in markdown code blocks, try to extract it.
+            
+            if not response or not response.text:
+                raise Exception("Empty response from GenAI")
+                
             response_text = response.text.strip()
             if response_text.startswith("```json") and response_text.endswith("```"):
                 json_string = response_text[7:-3].strip()
