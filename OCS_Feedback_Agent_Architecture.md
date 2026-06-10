@@ -1,55 +1,63 @@
 # OCS Feedback Agent — Architecture & Workflow
 
-> Architecture and workflow diagrams for the **Feedback Agent** in the Magellan OCSS Ops Harness pipeline, adapted for [Open Commerce Search Stack](https://github.com/CommerceExperts/open-commerce-search).
+> Architecture and workflow diagrams for the **Feedback Agent** and the **Canary Release Controller** in the Magellan OCSS Ops Harness pipeline, adapted for [Open Commerce Search Stack](https://github.com/CommerceExperts/open-commerce-search).
 
 ---
 
-## 1. System Context — Where the Feedback Agent Fits
+## 1. System Context — Where the Canary and Feedback Agent Fit
 
-The Feedback Agent sits at the **end of the sequential pipeline**, after the FixPlanAgent has applied its changes to the OCS stack. It closes the loop by verifying, measuring, deciding, and learning.
+The **Canary Release Controller** orchestrates the rollout phase of search configuration changes, executing progressive traffic weight steps ($5\% \rightarrow 25\% \rightarrow 50\% \rightarrow 100\%$). At each step, it triggers the **Feedback Agent** to verify, measure, and evaluate the candidate configuration, automatically promoting the tier, rolling back all modifications on regressions, or pausing for human review.
 
 ```mermaid
-graph LR
-    subgraph Upstream Pipeline
+graph TD
+    subgraph Upstream & Diagnosis
         A["User / Channel<br/><i>query: hybrid work backpack</i>"] --> B["Search API / Gateway"]
         B --> C["OCS Search Engine<br/><i>Elasticsearch + Querqy</i>"]
-        C --> D["Observability Layer<br/><i>query logs, metrics</i>"]
+        C --> D["Observability Layer<br/><i>telemetry metrics</i>"]
         D --> E["Signal Detection<br/><i>zero-result, drift</i>"]
-        E --> F["Diagnosis<br/><i>CapabilityImpact,<br/>MetricImpact,<br/>DataGapRuleDiff</i>"]
-        F --> G["Runbook / Fix Plan<br/><i>FixPlanAgent</i>"]
+        E --> F["Diagnosis Agent<br/><i>runbook selection</i>"]
+        F --> G["Fix Plan Agent<br/><i>Produces input.json</i>"]
     end
 
-    subgraph Release Phase
-        G --> H["Human Approval<br/><i>optional gate</i>"]
-        H --> I["Apply Fix<br/><i>applyResult: ok</i>"]
+    subgraph Governed Release Ops (Phase 4)
+        G --> H["Canary Release Controller<br/><i>canary/controller.py</i>"]
+        H -->|1. Route Traffic| I["OCS Config Service<br/><i>traffic_router.py (5%, 25%, 50%, 100%)</i>"]
+        I -->|2. Invoke Pipeline| J["🔄 Feedback Agent Pipeline<br/><i>main.py</i>"]
+        J -->|3. Evaluate Decision| K{"Feedback Decision?"}
+        K -->|PROMOTE| L{"All Tiers Completed?"}
+        L -->|No| H
+        L -->|Yes| M["Release Finalized<br/><i>COMPLETED (100% Traffic)</i>"]
+        
+        K -->|ROLLBACK| N["Revert Config & Reset Traffic<br/><i>rollback.py (0% Traffic)</i>"]
+        N --> O["Mark status: ROLLED_BACK"]
+        
+        K -->|HOLD| P["Pause Progression<br/><i>Max holds check / Human review</i>"]
+        P --> Q["Mark status: HELD"]
     end
 
-    subgraph Feedback Loop
-        I --> J["🔄 FEEDBACK AGENT<br/><i>verify → measure → decide</i>"]
-        J -->|PROMOTE| K["Search Config Update<br/><i>OCS Config Service</i>"]
-        J -->|ROLLBACK| L["Release Controller<br/><i>revert patches</i>"]
-        J -->|threshold updates| M["PostgreSQL / Audit<br/><i>watchlists, thresholds</i>"]
-        M -.->|"learning loop"| E
-        K --> N["Canary Workflow<br/><i>5% → 25% → 100%</i>"]
+    subgraph Database & Learning (Phase 3)
+        J -->|4. Threshold Updates| R["PostgreSQL / SQLite<br/><i>watchlists, runbooks, sensitivities</i>"]
+        R -.->|"learning loop"| E
     end
 
-    style J fill:#7A2E1E,color:#F2EDE1,stroke:#D4A017,stroke-width:3px
-    style M fill:#265D6B,color:#F2EDE1
-    style K fill:#3D4A2E,color:#F2EDE1
-    style L fill:#B8860B,color:#0F0E0C
+    style H fill:#7A2E1E,color:#F2EDE1,stroke:#D4A017,stroke-width:2px
+    style J fill:#265D6B,color:#F2EDE1,stroke:#D4A017,stroke-width:2px
+    style R fill:#3D4A2E,color:#F2EDE1
+    style N fill:#B8860B,color:#0F0E0C
 ```
 
 ---
 
+
 ## 2. Feedback Agent — Internal Architecture
 
-The agent is composed of **5 sub-agents**, each responsible for a phase of the feedback loop.
+The Feedback Agent is composed of **5 sub-agents** orchestrated sequentially to analyze the applied configuration at the current canary traffic tier:
 
 ```mermaid
 graph TB
-    INPUT["📥 input.json<br/><i>FixPlanAgent output</i>"] --> FA
-
-    subgraph FA["Feedback Agent"]
+    CANARY["Canary Release Controller<br/><i>canary/controller.py</i>"] -->|input.json| FA
+ 
+    subgraph FA["Feedback Agent Pipeline"]
         direction TB
 
         FV["1️⃣ FixVerificationAgent<br/>─────────────<br/>• Parse applyResult<br/>• Re-execute query vs OCS Search API<br/>• Verify catalog patch in Config Service<br/>• Verify synonyms active in Querqy<br/>• Verify embedding refresh in Indexer<br/>• Verify merchandising rules applied"]
@@ -66,6 +74,7 @@ graph TB
     end
 
     AT --> OUTPUT["📤 feedback_result.json"]
+    OUTPUT --> CANARY
 
     style FA fill:#1B1A18,color:#F2EDE1,stroke:#7A2E1E,stroke-width:2px
     style FV fill:#7A2E1E,color:#F2EDE1
@@ -138,112 +147,128 @@ flowchart TD
 
 ---
 
-## 4. Sequence Diagram — Sub-Agent ↔ OCS Component Interactions
+## 4. Sequence Diagram — Canary Orchestrated Release Flow
+
+The following diagram illustrates the complete execution trace, showing how the outer Canary Controller manages traffic tiers and triggers the internal Feedback Agent sub-agents at each step.
 
 ```mermaid
 sequenceDiagram
-    participant IN as input.json
-    participant FV as FixVerificationAgent
-    participant MC as MetricComparisonAgent
-    participant CE as CanaryEvaluationAgent
-    participant TU as ThresholdUpdateAgent
-    participant AT as AuditTrailAgent
-    participant OCS as OCS Search API
-    participant IDX as Indexer Service
-    participant SUG as Suggest Service
-    participant CFG as Config Service
-    participant ES as Elasticsearch
-    participant PG as PostgreSQL/Audit
+    participant CLI as run_canary.py
+    participant CC as CanaryReleaseController
+    participant TR as traffic_router.py
+    participant FA as FeedbackAgent (main.py)
+    participant RB as rollback.py
+    participant OCS as OCS Component APIs
+    participant DB as Database (PostgreSQL/SQLite)
 
-    Note over IN,AT: Phase 1 — Fix Verification (~5 min)
-    IN->>FV: applyResult, patches, fixOrder
-    FV->>OCS: POST /search-api/v1/search {q: "hybrid work backpack"}
-    OCS-->>FV: results[] (expect > 0)
-    FV->>CFG: GET /config/searchable-fields
-    CFG-->>FV: fields[] (expect description, tags, terrain, waterproof)
-    FV->>OCS: POST /search {q: "professional backpack"} (synonym test)
-    OCS-->>FV: results[] (expect matches via synonym)
-    FV->>IDX: GET /indexer/status/{sku-backpack-1}
-    IDX-->>FV: embedding timestamp (expect aligned)
-    FV->>OCS: GET /search-api/v1/rules/active
-    OCS-->>FV: rules[] (expect 3 merchandising rules)
-
-    Note over FV,MC: Phase 2 — Metric Comparison (~10 min)
-    FV->>MC: verification_report (all_passed: true/false)
-    MC->>OCS: POST /search (incident query request)
-    OCS-->>MC: query results, scores, X-Search-Time header
-    MC->>MC: compute deltas & dynamic relevance score vs expectedOutcome.metrics
-
-    Note over MC,CE: Phase 3 — Canary Evaluation (~15 min)
-    MC->>CE: metric_deltas, live_metrics
-    CE->>CE: Review shadow_test (s2n=6.0, candidateDiffs=5, noiseDiffs=1)
-    CE->>CE: Apply business guardrails
-    CE->>CE: Generate decision: PROMOTE | ROLLBACK | HOLD
-
-    Note over CE,TU: Phase 4 — Threshold Update (~5 min)
-    CE->>TU: decision, evidence_chain
-    TU->>CFG: PATCH /config/watchlists
-    CFG-->>TU: updated
-    TU->>PG: UPDATE thresholds SET autocomplete_miss=adjusted
-    PG-->>TU: ok
-    TU->>PG: INSERT runbook_template_patch
-    PG-->>TU: ok
-
-    Note over TU,AT: Phase 5 — Audit Trail (~2 min)
-    TU->>AT: all outputs
-    AT->>PG: INSERT audit_record (incident_id, query, gap_type, fix_order, metric_deltas, decision, confidence, evidence_artifacts)
-    PG-->>AT: record_id
-    AT->>IN: feedback_result.json
+    CLI->>CC: Initialize(input.json, output_dir)
+    CC->>DB: Insert canary record (status='IN_PROGRESS')
+    
+    loop For each tier (5%, 25%, 50%, 100%)
+        CC->>TR: set_traffic_weight(tier_percent, query)
+        TR->>OCS: PUT /config-service/v1/traffic-routing (weight payload)
+        OCS-->>TR: Response (200 OK)
+        Note over CC: Soak (CANARY_SOAK_TIME_SECONDS)
+        CC->>FA: run_feedback_pipeline(input.json, feedback_tier_X.json)
+        
+        Note over FA: Executes 5 sub-agents sequentially:
+        FA->>OCS: Verification checks (VerificationAgent)
+        FA->>OCS: Latency/Relevance checks (MetricComparisonAgent)
+        FA->>FA: s2n & guardrail check (CanaryEvaluationAgent)
+        FA->>DB: Update watchlist & runbook templates (ThresholdUpdateAgent)
+        FA->>DB: Insert immutable audit log (AuditTrailAgent)
+        FA-->>CC: Return feedback_result.json (action=PROMOTE|ROLLBACK|HOLD)
+        
+        alt decision.action == 'PROMOTE'
+            CC->>DB: Update current_tier & tiers_completed in DB
+            Note over CC: Continue to next tier
+        else decision.action == 'ROLLBACK'
+            CC->>RB: execute_rollback(query, incident_id, db, reason)
+            RB->>TR: reset_traffic_to_baseline(query)
+            TR->>OCS: PUT weight = 0%
+            RB->>OCS: POST /config-service/v1/revert
+            RB->>DB: UPDATE canary_releases (status='ROLLED_BACK')
+            RB->>DB: UPDATE watchlist (status='REGRESSED')
+            Note over CC: Break out of rollout loop
+        else decision.action == 'HOLD'
+            alt hold_count >= max_holds
+                CC->>DB: UPDATE canary_releases (status='HELD')
+            else
+                CC->>DB: UPDATE canary_releases (status='HELD') (Pause progression)
+            end
+            Note over CC: Break out of rollout loop
+        end
+    end
+    CC->>DB: UPDATE canary_releases (status=final_status)
+    CC->>CLI: Return final canary status summary
 ```
 
 ---
 
-## 5. State Machine — Feedback Loop Lifecycle
+## 5. State Machine Lifecycles
+
+### 5.1 Canary Release Orchestrator State Machine
+
+The **CanaryReleaseController** drives progressive weight advancement. It transitions between states based on feedback decisions at each evaluation tier.
 
 ```mermaid
 stateDiagram-v2
-    [*] --> FixApplied: applyResult.applied = true
+    [*] --> PENDING: Canary release created
 
-    FixApplied --> Verifying: Start verification checks
+    PENDING --> IN_PROGRESS: Initialize tier 5%
+    
+    state IN_PROGRESS {
+        [*] --> SetWeight: set_traffic_weight()
+        SetWeight --> SoakTelemetry: Wait for telemetry soak
+        SoakTelemetry --> RunFeedback: Execute run_feedback_pipeline()
+        RunFeedback --> EvaluateResult: Read decision.action
+    }
+
+    EvaluateResult --> PROMOTE: action == PROMOTE
+    EvaluateResult --> ROLLBACK: action == ROLLBACK
+    EvaluateResult --> HOLD: action == HOLD
+
+    PROMOTE --> IN_PROGRESS: Advance tier (25%, 50%, 100%)
+    PROMOTE --> COMPLETED: tier == 100% completed
+    
+    HOLD --> IN_PROGRESS: hold_count < max_holds (retry same tier)
+    HOLD --> HELD: hold_count >= max_holds (Escalate)
+
+    ROLLBACK --> ROLLED_BACK: execute_rollback()
+
+    ROLLED_BACK --> [*]: Traffic reset to 0%
+    HELD --> [*]: Operator investigation required
+    COMPLETED --> [*]: Rollout finalized at 100%
+```
+
+### 5.2 Feedback Loop Pipeline State Machine
+
+Within the `RunFeedback` state, the Feedback Agent executes its five sequential sub-agents to compute verification and metric states.
+
+```mermaid
+stateDiagram-v2
+    [*] --> Verifying: Start verification checks
     Verifying --> VerificationFailed: Any check fails
     Verifying --> Verified: All 5 checks pass
 
-    VerificationFailed --> RolledBack: Immediate rollback
+    VerificationFailed --> RolledBackDecision: Immediate rollback recommended
 
     Verified --> Measuring: Collect live metrics
-    Measuring --> Measured: Deltas computed
+    Measuring --> Measured: Deltas & overlap relevance computed
 
-    Measured --> Deciding: Apply guardrails
+    Measured --> Deciding: Apply guardrails (S2N & Latency)
 
-    Deciding --> Promoted: All metrics positive + significant
-    Deciding --> RolledBack: Critical metric degraded
-    Deciding --> Held: Inconclusive / needs human review
+    Deciding --> PromotedDecision: Metrics positive + S2N >= 5.0
+    Deciding --> RolledBackDecision: Latency degraded or S2N < 2.0
+    Deciding --> HeldDecision: Inconclusive / 2.0 <= S2N < 5.0
 
-    Promoted --> Learning: Update thresholds
-    RolledBack --> Learning: Record failure pattern
-    Held --> HumanReview: Await operator decision
-    HumanReview --> Promoted: Operator approves
-    HumanReview --> RolledBack: Operator rejects
+    PromotedDecision --> Learning: Update thresholds & resolve query
+    RolledBackDecision --> Learning: Record failure pattern & regress query
+    HeldDecision --> Learning: Extend monitoring window
 
-    Learning --> Auditing: Write audit record
-    Auditing --> Closed: Cycle complete
-
+    Learning --> Auditing: Write audit record to DB
+    Auditing --> Closed: Pipeline complete
     Closed --> [*]
-
-    note right of Promoted
-        Advance canary traffic
-        5% → 25% → 50% → 100%
-    end note
-
-    note right of Learning
-        Update watchlists, thresholds,
-        runbook templates, routing
-    end note
-
-    note right of RolledBack
-        Revert all patches via
-        OCS Config Service
-    end note
 ```
 
 ---
@@ -322,7 +347,11 @@ How the Feedback Agent replaces Magellan's proprietary AI search engine with Ope
 
 ---
 
-## 8. Output Schema — `feedback_result.json`
+## 8. Output Schemas
+
+### 8.1 Feedback Result Schema — `feedback_result.json`
+
+Produced by the **Feedback Agent pipeline** at each evaluation tier:
 
 ```json
 {
@@ -368,6 +397,38 @@ How the Feedback Agent replaces Magellan's proprietary AI search engine with Ope
     "ownerPath": "Application owner",
     "rollbackAvailable": true
   }
+}
+```
+
+### 8.2 Canary Release Result Schema — `canary_release_result.json`
+
+Produced by the **CanaryReleaseController** summarizing the complete lifecycle of the progressive rollout:
+
+```json
+{
+  "agent": "CanaryReleaseController",
+  "incident_id": "INC-20260603-001",
+  "query": "hybrid work backpack",
+  "status": "COMPLETED",
+  "tiers_evaluated": 4,
+  "tiers_promoted": 4,
+  "tier_results": [
+    {
+      "tier_percent": 5,
+      "decision": "PROMOTE",
+      "confidence": 0.577,
+      "reason": "All verification checks passed...",
+      "metrics": {
+        "zeroResultRate": {"before": 1.0, "after": 0.0, "delta": -1.0},
+        "ctr": {"before": 0.0, "after": "pending_canary", "delta": "n/a"},
+        "latency_p95_ms": {"before": 45.0, "after": 52.0, "delta": 7.0},
+        "relevanceScore": {"before": 0.0, "after": 0.82, "delta": 0.82}
+      },
+      "timestamp": "2026-06-05T12:00:00+05:30"
+    }
+  ],
+  "final_traffic_percent": 100,
+  "timestamp": "2026-06-05T12:15:05+05:30"
 }
 ```
 
