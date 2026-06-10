@@ -162,6 +162,14 @@ export const BackendDetails: React.FC = () => {
               <strong>{snapshot?.temporal.action_workflow_type ?? 'not configured'}</strong>
             </div>
             <div className="backend-kv-row">
+              <span>Approval Signal</span>
+              <strong>{snapshot?.temporal.approval_signal_name ?? 'not configured'}</strong>
+            </div>
+            <div className="backend-kv-row">
+              <span>Approval Stage</span>
+              <strong>{snapshot?.temporal.approval_stage ?? 'not configured'}</strong>
+            </div>
+            <div className="backend-kv-row">
               <span>Temporal Web URL</span>
               <strong>{temporalUrl}</strong>
             </div>
@@ -268,6 +276,13 @@ export const BackendDetails: React.FC = () => {
               <div key={runbook.id} className="backend-record">
                 <strong>{runbook.id} · {runbook.title}</strong>
                 <span>{runbook.agent.name} · {runbook.status} · {runbook.temporal.workflowId}</span>
+                <span>Root cause: {runbook.rootCause}</span>
+                <span>Business impact: {runbook.businessImpactSummary}</span>
+                <span>Problem being fixed: {runbook.problemStatement}</span>
+                <span>Fix summary: {runbook.fixSummary}</span>
+                <span>
+                  Fix plan steps: {runbook.fixPlanSteps.length > 0 ? runbook.fixPlanSteps.join(' | ') : 'not provided'}
+                </span>
               </div>
             ))}
           </div>

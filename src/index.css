@@ -1135,6 +1135,56 @@ button, input, select, textarea {
   transition: width 0.4s ease-out;
 }
 
+.evidence-detail-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.65rem;
+}
+
+.evidence-detail-card {
+  min-height: 118px;
+  padding: 0.85rem;
+  border: 1px solid rgba(31, 107, 119, 0.18);
+  border-radius: 16px;
+  background:
+    linear-gradient(145deg, rgba(255,255,255,0.92), rgba(247,241,228,0.74)),
+    radial-gradient(circle at 18% 8%, rgba(31,107,119,0.12), transparent 38%);
+  box-shadow: var(--bevel-highlight), 0 18px 28px rgba(30,41,59,0.06);
+}
+
+.evidence-detail-card span {
+  display: block;
+  margin-bottom: 0.45rem;
+  color: var(--primary);
+  font-family: var(--mono);
+  font-size: 0.64rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.evidence-detail-card p {
+  margin: 0;
+  color: var(--text-dark);
+  font-size: 0.8rem;
+  line-height: 1.5;
+}
+
+.fix-plan-list {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0.15rem 0 0;
+  padding-left: 1.2rem;
+  color: var(--text-muted);
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.fix-plan-list li::marker {
+  color: var(--primary);
+  font-weight: 800;
+}
+
 .runbook-glance-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1722,6 +1772,11 @@ button, input, select, textarea {
   margin-bottom: 0.25rem;
 }
 
+.backend-record span {
+  display: block;
+  margin-top: 0.18rem;
+}
+
 .backend-table-wrap {
   overflow-x: auto;
 }
@@ -1741,6 +1796,7 @@ button, input, select, textarea {
 @media (max-width: 640px) {
   .backend-summary-grid,
   .backend-grid,
+  .evidence-detail-grid,
   .backend-kv-row {
     grid-template-columns: 1fr;
   }

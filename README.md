@@ -48,6 +48,8 @@ TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
 TEMPORAL_TASK_QUEUE=
 TEMPORAL_ACTION_WORKFLOW_TYPE=
+TEMPORAL_APPROVAL_SIGNAL_NAME=record_approval
+TEMPORAL_APPROVAL_STAGE=post_fix_plan_pre_apply
 TEMPORAL_TLS_ENABLED=false
 TEMPORAL_CONNECTION_TIMEOUT_SECONDS=5
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
@@ -83,6 +85,13 @@ TEMPORAL_TASK_QUEUE=your-task-queue
 TEMPORAL_ACTION_WORKFLOW_TYPE=YourWorkflowType
 ```
 
+Human approval is handled after the fixing agents generate the runbook/fix plan. The UI sends approval through FastAPI, then FastAPI signals the running Temporal workflow:
+
+```bash
+TEMPORAL_APPROVAL_SIGNAL_NAME=record_approval
+TEMPORAL_APPROVAL_STAGE=post_fix_plan_pre_apply
+```
+
 For real pipeline data, set these URLs in `.env`:
 
 ```bash
@@ -92,7 +101,31 @@ QUERY_CLUSTERS_API_URL=http://your-pipeline-host/api/query-clusters
 RUNBOOK_ACTION_API_URL=http://your-pipeline-host/api/runbooks/{runbook_id}/actions/{action}
 ```
 
-If these URLs are blank, FastAPI returns empty lists. It does not return mock runbook data.
+If `RUNBOOKS_API_URL` or `AUDIT_API_URL` are blank, FastAPI derives those rows from live Temporal workflow metadata. That is not mock data, but Temporal workflow listing does not include activity outputs like exact root cause, business impact narrative, or generated fix plan.
+
+To show exact pipeline details in the UI, the runbooks API should return equivalent fields like these:
+
+```json
+{
+  "id": "runbook-pipeline-for-es-signal-123",
+  "title": "Fix zero result search cluster",
+  "root_cause": {
+    "root_cause": "Catalog enrichment missed waterproof hiking boot attributes."
+  },
+  "impact": {
+    "business_impact": "High exit rate on outdoor footwear searches is reducing conversion."
+  },
+  "problem_statement": "Customers searching for waterproof hiking boots are seeing irrelevant results.",
+  "fix_summary": "Enrich missing product attributes and rebuild the semantic index.",
+  "immediate_fix_plan": [
+    "Backfill waterproof and hiking attributes.",
+    "Re-index affected catalog items.",
+    "Run offline evaluation before canary."
+  ]
+}
+```
+
+The FastAPI normalizer also accepts camelCase names such as `rootCause`, `businessImpactSummary`, `problemStatement`, `fixSummary`, and `fixPlanSteps`.
 
 ## Start Backend
 
@@ -118,6 +151,23 @@ http://127.0.0.1:8000/docs
 http://127.0.0.1:8000/api/runbooks
 ```
 
+## Backend Code Layout
+
+`fastapi_app.py` is now only a compatibility wrapper, so existing commands like `uvicorn fastapi_app:app` still work.
+
+Main backend files:
+
+```bash
+backend_app/app.py              # FastAPI app, CORS, and HTTP routes
+backend_app/config.py           # .env loading and environment settings
+backend_app/schemas.py          # Pydantic response/request models
+backend_app/data_sources.py     # External RUNBOOKS_API_URL/AUDIT_API_URL fetch helpers
+backend_app/normalizers.py      # Converts pipeline payloads into frontend-ready records
+backend_app/temporal_service.py # Temporal SDK connection, workflow listing, approvals
+backend_app/runbook_service.py  # Runbook/audit loading and runbook action forwarding
+backend_app/state.py            # In-memory approval records
+```
+
 ## Start Frontend
 
 Run this in terminal 2:
@@ -138,7 +188,7 @@ Before sharing or deploying, run:
 
 ```bash
 npm run build
-python3 -m py_compile fastapi_app.py run_fastapi.py
+python3 -m py_compile fastapi_app.py run_fastapi.py backend_app/*.py
 ```
 
 ## Troubleshooting

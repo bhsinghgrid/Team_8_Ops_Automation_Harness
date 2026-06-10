@@ -52,6 +52,11 @@ export interface Runbook {
   status: 'Eval Ready' | 'Shadow Test' | 'Canary 5%' | 'Canary 25%' | 'Canary 100%' | 'Owner Review' | 'Rollback Candidate' | 'Released' | 'Rolled Back';
   offlineEvalCoverage: number;
   businessImpact: number;
+  rootCause: string;
+  businessImpactSummary: string;
+  problemStatement: string;
+  fixSummary: string;
+  fixPlanSteps: string[];
   approvalPolicy: string;
   evidenceNotes: string;
   agent: AgentProfile;

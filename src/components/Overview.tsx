@@ -106,6 +106,12 @@ export const Overview: React.FC<OverviewProps> = ({
   const latencyHealthPoints = buildSvgPoints(trendRows.map((row) => Math.max(0, 180 - row.p95Latency)));
   const highestRiskRow = [...trendRows].sort((a, b) => b.currentExitRate - a.currentExitRate)[0];
   const hasTrendRows = trendRows.length > 0;
+  const isTemporalBackendData = runbooks.some((runbook) => runbook.tags.includes('temporal-backend'));
+  const healthLabel = isTemporalBackendData ? 'Workflow Health' : 'Average NDCG';
+  const riskLabel = isTemporalBackendData ? 'Workflow Risk Rate' : 'Zero-Result Rate';
+  const runtimeLabel = isTemporalBackendData ? 'Runtime Signal' : 'P95 Search Latency';
+  const closedLabel = isTemporalBackendData ? 'Closed Workflows' : 'Closed Runbooks';
+  const runtimeUnit = isTemporalBackendData ? 's' : 'ms';
 
   const recentEvents = [
     { type: 'success', time: '09:22:14', text: 'Scoped re-index refresh job complete for catalog-enrichment-qa.' },
@@ -168,46 +174,46 @@ export const Overview: React.FC<OverviewProps> = ({
       <div className="metrics-grid">
         <div className="metric-card">
           <div className="metric-label">
-            <span>Average NDCG</span>
+            <span>{healthLabel}</span>
             <TrendingUp size={16} style={{ color: '#2e7d32' }} />
           </div>
           <div>
             <div className="metric-value">{metrics.ndcg.toFixed(2)}</div>
             <div className="metric-change up">
-              <span>+3.2% vs baseline</span>
+              <span>{isTemporalBackendData ? 'Derived from workflow status' : '+3.2% vs baseline'}</span>
             </div>
           </div>
         </div>
 
         <div className="metric-card">
           <div className="metric-label">
-            <span>Zero-Result Rate</span>
+            <span>{riskLabel}</span>
             <TrendingDown size={16} style={{ color: '#2e7d32' }} />
           </div>
           <div>
             <div className="metric-value">{metrics.zeroResultRate.toFixed(1)}%</div>
             <div className="metric-change up">
-              <span>-12.4% today</span>
+              <span>{isTemporalBackendData ? 'Failed/running workflow risk' : '-12.4% today'}</span>
             </div>
           </div>
         </div>
 
         <div className="metric-card">
           <div className="metric-label">
-            <span>P95 Search Latency</span>
+            <span>{runtimeLabel}</span>
             <Clock size={16} style={{ color: 'var(--text-muted)' }} />
           </div>
           <div>
-            <div className="metric-value">{metrics.latency}ms</div>
+            <div className="metric-value">{metrics.latency}{runtimeUnit}</div>
             <div className="metric-change down">
-              <span>-4.5ms vs yesterday</span>
+              <span>{isTemporalBackendData ? 'Runtime derived from Temporal timestamps' : '-4.5ms vs yesterday'}</span>
             </div>
           </div>
         </div>
 
         <div className="metric-card">
           <div className="metric-label">
-            <span>Closed Runbooks</span>
+            <span>{closedLabel}</span>
             <CheckCircle size={16} style={{ color: '#2e7d32' }} />
           </div>
           <div>
@@ -227,12 +233,14 @@ export const Overview: React.FC<OverviewProps> = ({
             <h3>System Relevance &amp; Latency Trends</h3>
           </div>
           <p className="policy-description" style={{ marginBottom: '1rem' }}>
-            Data-backed diagram generated from active runbook query volume, NDCG, exit-rate, and P95 latency values.
+            {isTemporalBackendData
+              ? 'Data-backed diagram generated from live Temporal workflow status, runtime, task queue, and completion state.'
+              : 'Data-backed diagram generated from active runbook query volume, NDCG, exit-rate, and P95 latency values.'}
           </p>
           <div className="chart-legend">
-            <span><i className="legend-dot relevance" /> Relevance NDCG</span>
-            <span><i className="legend-dot exits" /> Exit health</span>
-            <span><i className="legend-dot latency" /> Latency health</span>
+            <span><i className="legend-dot relevance" /> {isTemporalBackendData ? 'Workflow health' : 'Relevance NDCG'}</span>
+            <span><i className="legend-dot exits" /> {isTemporalBackendData ? 'Risk health' : 'Exit health'}</span>
+            <span><i className="legend-dot latency" /> {isTemporalBackendData ? 'Runtime health' : 'Latency health'}</span>
           </div>
           <div className="chart-wrapper">
             {hasTrendRows ? (
@@ -288,7 +296,11 @@ export const Overview: React.FC<OverviewProps> = ({
                 <div key={row.id} className="trend-data-card">
                   <strong>{row.code}</strong>
                   <span>{row.status}</span>
-                  <small>NDCG {row.currentNdcg.toFixed(2)} · Exits {row.currentExitRate.toFixed(1)}% · P95 {row.p95Latency}ms</small>
+                  <small>
+                    {isTemporalBackendData
+                      ? `Health ${row.currentNdcg.toFixed(2)} · Risk ${row.currentExitRate.toFixed(1)}% · Runtime ${row.p95Latency}${runtimeUnit}`
+                      : `NDCG ${row.currentNdcg.toFixed(2)} · Exits ${row.currentExitRate.toFixed(1)}% · P95 ${row.p95Latency}${runtimeUnit}`}
+                  </small>
                 </div>
               ))}
           </div>

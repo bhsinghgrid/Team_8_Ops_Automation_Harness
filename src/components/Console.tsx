@@ -133,9 +133,22 @@ export const Console: React.FC<ConsoleProps> = ({
     }
   };
 
+  const runbookMatchesSearch = (runbook: Runbook) => {
+    const searchableText = [
+      runbook.title,
+      runbook.description,
+      runbook.rootCause,
+      runbook.businessImpactSummary,
+      runbook.problemStatement,
+      runbook.fixSummary,
+      runbook.fixPlanSteps.join(' '),
+    ].join(' ').toLowerCase();
+
+    return searchableText.includes(searchQuery.toLowerCase());
+  };
+
   const filteredRunbooks = runbooks.filter(r => {
-    const matchesSearch = r.title.toLowerCase().includes(searchQuery.toLowerCase()) || 
-                          r.description.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = runbookMatchesSearch(r);
     const matchesCapability = selectedCapabilities.includes(r.capability);
     const matchesSignalType = selectedSignalTypes.includes(r.signalType);
 
@@ -149,11 +162,7 @@ export const Console: React.FC<ConsoleProps> = ({
   });
 
   const disabledSkillMatches = runbooks.filter(r => {
-    const matchesSearch = searchQuery.trim().length > 0 &&
-      (
-        r.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-        r.description.toLowerCase().includes(searchQuery.toLowerCase())
-      );
+    const matchesSearch = searchQuery.trim().length > 0 && runbookMatchesSearch(r);
 
     if (!matchesSearch) return false;
     if (r.id === 'ops-4f72' && !skills.catalogEnrichment) return true;
@@ -170,29 +179,54 @@ export const Console: React.FC<ConsoleProps> = ({
     return 'No matching runbooks found for this query.';
   })();
 
-  const recordHumanApproval = () => {
+  const recordHumanApproval = async () => {
     if (selectedRunbook.humanApproval.mode !== 'required' || selectedRunbook.humanApproval.status === 'Approved') return;
 
     const now = new Date().toLocaleTimeString();
+    setIsSimulating(true);
     setConsoleTab('logs');
     setLogs(prev => [
       ...prev,
       `[${now}] [APPROVAL] Human sign-off captured from ${selectedRunbook.humanApproval.owner}.`,
-      `[${now}] [RECORD] Approval evidence retained for ${selectedRunbook.temporal.workflowId}.`,
+      `[${now}] [TEMPORAL] Sending approval signal for ${selectedRunbook.temporal.workflowId}.`,
     ]);
-    setRunbooks(prev => prev.map(r => (
-      r.id === selectedRunbookId
-        ? {
-            ...r,
-            humanApproval: {
-              ...r.humanApproval,
-              status: 'Approved',
-              record: `Signed approval captured from ${r.humanApproval.owner} at ${now}.`,
-            },
-          }
-        : r
-    )));
-    onActionTriggered('human_approval_recorded');
+
+    try {
+      const response = await api.approveRunbook(
+        selectedRunbook.id,
+        selectedRunbook.humanApproval.owner,
+        'Approved after fixing agents completed runbook generation.'
+      );
+      const completedAt = new Date().toLocaleTimeString();
+      setLogs(prev => [
+        ...prev,
+        `[${completedAt}] [TEMPORAL] Approval result: ${response.status}${response.approval_signal_name ? ` via ${response.approval_signal_name}` : ''}.`,
+        `[${completedAt}] [RECORD] ${response.message}`,
+      ]);
+      setRunbooks(prev => prev.map(r => (
+        r.id === selectedRunbookId
+          ? {
+              ...r,
+              humanApproval: {
+                ...r.humanApproval,
+                status: 'Approved',
+                record: `Signed approval captured from ${r.humanApproval.owner} at ${completedAt}. Temporal status: ${response.status}.`,
+              },
+            }
+          : r
+      )));
+      onActionTriggered('human_approval_recorded');
+    } catch (error) {
+      const failedAt = new Date().toLocaleTimeString();
+      const message = error instanceof Error ? error.message : 'unknown approval error';
+      setLogs(prev => [
+        ...prev,
+        `[${failedAt}] [WARNING] Human approval could not be sent to Temporal: ${message}`,
+        `[${failedAt}] [RECORD] Approval was not applied. Temporal should remain paused at the approval gate.`,
+      ]);
+    } finally {
+      setIsSimulating(false);
+    }
   };
 
   const runSimulationFlow = async (type: RunbookAction) => {
@@ -573,6 +607,38 @@ export const Console: React.FC<ConsoleProps> = ({
               <span>{selectedRunbook.businessImpact}% exit rate reduction</span>
             </div>
 
+            <div className="evidence-detail-grid">
+              <div className="evidence-detail-card">
+                <span>Root cause</span>
+                <p>{selectedRunbook.rootCause}</p>
+              </div>
+              <div className="evidence-detail-card">
+                <span>Business impact</span>
+                <p>{selectedRunbook.businessImpactSummary}</p>
+              </div>
+              <div className="evidence-detail-card">
+                <span>Problem being fixed</span>
+                <p>{selectedRunbook.problemStatement}</p>
+              </div>
+              <div className="evidence-detail-card">
+                <span>Fix summary</span>
+                <p>{selectedRunbook.fixSummary}</p>
+              </div>
+            </div>
+
+            <div className="inspector-row">
+              <strong>Fix Plan Steps</strong>
+              {selectedRunbook.fixPlanSteps.length > 0 ? (
+                <ol className="fix-plan-list">
+                  {selectedRunbook.fixPlanSteps.map((step, index) => (
+                    <li key={`${step}-${index}`}>{step}</li>
+                  ))}
+                </ol>
+              ) : (
+                <span>No fix plan steps were provided by the backend payload.</span>
+              )}
+            </div>
+
             <div className="inspector-row">
               <strong>Approval Policy</strong>
               <span>{selectedRunbook.approvalPolicy}</span>
@@ -649,6 +715,14 @@ export const Console: React.FC<ConsoleProps> = ({
                 <div>
                   <span>Action workflow</span>
                   <strong>{temporalDetails?.action_workflow_type ?? 'not configured'}</strong>
+                </div>
+                <div>
+                  <span>Approval signal</span>
+                  <strong>{temporalDetails?.approval_signal_name ?? 'record_approval'}</strong>
+                </div>
+                <div>
+                  <span>Approval stage</span>
+                  <strong>{temporalDetails?.approval_stage ?? 'post_fix_plan_pre_apply'}</strong>
                 </div>
                 <div>
                   <span>FastAPI redirect</span>
@@ -803,7 +877,7 @@ export const Console: React.FC<ConsoleProps> = ({
                 let cl = 'sim-line';
                 if (log.includes('[SUCCESS]')) cl += ' success';
                 if (log.includes('[WARNING]') || log.includes('[CAUTION]')) cl += ' warn';
-                if (log.includes('[INFO]') || log.includes('[RECORD]') || log.includes('[MONITOR]') || log.includes('[APPROVAL]')) cl += ' info';
+                if (log.includes('[INFO]') || log.includes('[RECORD]') || log.includes('[MONITOR]') || log.includes('[APPROVAL]') || log.includes('[TEMPORAL]')) cl += ' info';
                 return (
                   <div key={index} className={cl}>
                     {log}
@@ -842,7 +916,7 @@ export const Console: React.FC<ConsoleProps> = ({
               onClick={recordHumanApproval}
             >
               <UserCheck size={14} />
-              <span>{selectedRunbook.humanApproval.status === 'Approved' ? 'Human Approval Recorded' : 'Record Human Approval'}</span>
+              <span>{selectedRunbook.humanApproval.status === 'Approved' ? 'Approval Sent To Temporal' : 'Approve & Continue Temporal'}</span>
             </button>
           )}
           

@@ -26,6 +26,8 @@ TEMPORAL_NAMESPACE=default
 TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
 TEMPORAL_TASK_QUEUE=
 TEMPORAL_ACTION_WORKFLOW_TYPE=
+TEMPORAL_APPROVAL_SIGNAL_NAME=record_approval
+TEMPORAL_APPROVAL_STAGE=post_fix_plan_pre_apply
 TEMPORAL_TLS_ENABLED=false
 TEMPORAL_CONNECTION_TIMEOUT_SECONDS=5
 FRONTEND_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
@@ -58,6 +60,12 @@ TEMPORAL_WORKFLOWS_URL=http://localhost:8233/namespaces/default/workflows
 
 Set `TEMPORAL_TASK_QUEUE` and `TEMPORAL_ACTION_WORKFLOW_TYPE` only when you have a worker registered for action workflows.
 
+Human approval should happen after fixing agents create the runbook/fix plan. The frontend button calls FastAPI, then FastAPI signals Temporal with:
+
+```bash
+TEMPORAL_APPROVAL_SIGNAL_NAME=record_approval
+```
+
 ## 3. Install Backend
 
 ```bash
@@ -79,6 +87,16 @@ Backend URL:
 
 ```bash
 http://127.0.0.1:8000
+```
+
+Backend code is split under `backend_app/`:
+
+```bash
+app.py              FastAPI routes
+config.py           .env settings
+normalizers.py      Payload mapping for the UI
+temporal_service.py Temporal connection, workflow list, approvals
+runbook_service.py  Runbook/audit loading and action forwarding
 ```
 
 ## 5. Start Frontend

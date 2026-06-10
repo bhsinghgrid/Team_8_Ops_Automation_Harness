@@ -46,6 +46,8 @@ export interface TemporalDetails {
   backend_error: string | null;
   task_queue: string;
   action_workflow_type: string;
+  approval_signal_name: string;
+  approval_stage: string;
   workflows_url: string;
   redirect_endpoint: string;
   cors_origins: string[];
@@ -60,6 +62,14 @@ export interface RunbookActionResponse {
   status: string;
   temporal_workflows_url: string;
   temporal_workflow_id?: string | null;
+  message: string;
+}
+
+export interface HumanApprovalResponse {
+  runbook_id: string;
+  status: string;
+  approval_signal_name: string | null;
+  temporal_workflows_url: string;
   message: string;
 }
 
@@ -116,6 +126,16 @@ export const api = {
   getTemporalLink: () => request<TemporalLink>('/api/temporal'),
   getTemporalDetails: () => request<TemporalDetails>('/api/temporal/details'),
   getTemporalLiveWorkflows: () => request<TemporalLiveWorkflow[]>('/api/temporal/live-workflows'),
+  approveRunbook: (runbookId: string, approver: string, notes = '') =>
+    request<HumanApprovalResponse>(`/api/runbooks/${runbookId}/approval`, {
+      method: 'POST',
+      body: JSON.stringify({
+        approver,
+        approved: true,
+        notes,
+        stage: 'post_fix_plan_pre_apply',
+      }),
+    }),
   runRunbookAction: (runbookId: string, action: RunbookAction) =>
     request<RunbookActionResponse>(`/api/runbooks/${runbookId}/actions/${action}`, {
       method: 'POST',
