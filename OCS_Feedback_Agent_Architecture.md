@@ -8,45 +8,7 @@
 
 The **Canary Release Controller** orchestrates the rollout phase of search configuration changes, executing progressive traffic weight steps ($5\% \rightarrow 25\% \rightarrow 50\% \rightarrow 100\%$). At each step, it triggers the **Feedback Agent** to verify, measure, and evaluate the candidate configuration, automatically promoting the tier, rolling back all modifications on regressions, or pausing for human review.
 
-```mermaid
-graph TD
-    subgraph Upstream & Diagnosis
-        A["User / Channel<br/><i>query: hybrid work backpack</i>"] --> B["Search API / Gateway"]
-        B --> C["OCS Search Engine<br/><i>Elasticsearch + Querqy</i>"]
-        C --> D["Observability Layer<br/><i>telemetry metrics</i>"]
-        D --> E["Signal Detection<br/><i>zero-result, drift</i>"]
-        E --> F["Diagnosis Agent<br/><i>runbook selection</i>"]
-        F --> G["Fix Plan Agent<br/><i>Produces input.json</i>"]
-    end
 
-    subgraph Governed Release Ops (Phase 4)
-        G --> H["Canary Release Controller<br/><i>canary/controller.py</i>"]
-        H -->|1. Route Traffic| I["OCS Config Service<br/><i>traffic_router.py (5%, 25%, 50%, 100%)</i>"]
-        I -->|2. Invoke Pipeline| J["🔄 Feedback Agent Pipeline<br/><i>main.py</i>"]
-        J -->|3. Evaluate Decision| K{"Feedback Decision?"}
-        K -->|PROMOTE| L{"All Tiers Completed?"}
-        L -->|No| H
-        L -->|Yes| M["Release Finalized<br/><i>COMPLETED (100% Traffic)</i>"]
-        
-        K -->|ROLLBACK| N["Revert Config & Reset Traffic<br/><i>rollback.py (0% Traffic)</i>"]
-        N --> O["Mark status: ROLLED_BACK"]
-        
-        K -->|HOLD| P["Pause Progression<br/><i>Max holds check / Human review</i>"]
-        P --> Q["Mark status: HELD"]
-    end
-
-    subgraph Database & Learning (Phase 3)
-        J -->|4. Threshold Updates| R["PostgreSQL / SQLite<br/><i>watchlists, runbooks, sensitivities</i>"]
-        R -.->|"learning loop"| E
-    end
-
-    style H fill:#7A2E1E,color:#F2EDE1,stroke:#D4A017,stroke-width:2px
-    style J fill:#265D6B,color:#F2EDE1,stroke:#D4A017,stroke-width:2px
-    style R fill:#3D4A2E,color:#F2EDE1
-    style N fill:#B8860B,color:#0F0E0C
-```
-
----
 
 
 ## 2. Feedback Agent — Internal Architecture
