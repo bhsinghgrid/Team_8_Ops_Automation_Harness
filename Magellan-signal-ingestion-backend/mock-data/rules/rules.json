@@ -1,6 +1,6 @@
 {
-  "version": 18,
-  "last_updated": "2026-06-06T19:26:38.046543Z",
+  "version": 1,
+  "last_updated": "2026-06-06T00:00:00Z",
   "rules": [
     {
       "rule_id": "MXP-001",
@@ -9,7 +9,7 @@
         "FOOT-121",
         "ELEC-061"
       ],
-      "boost_factor": 2.6,
+      "boost_factor": 1.33,
       "campaign": "Summer Trail Sale",
       "active": true,
       "created_by": "merchandiser_ben",
@@ -34,7 +34,7 @@
         "FOOT-122",
         "BAGS-081"
       ],
-      "boost_factor": 2.2,
+      "boost_factor": 1.46,
       "campaign": "Back To Campus",
       "active": true,
       "created_by": "merchandiser_chandra",
@@ -59,7 +59,7 @@
         "OUT-081",
         "CAMP-061"
       ],
-      "boost_factor": 2.3,
+      "boost_factor": 1.59,
       "campaign": "Storm Ready",
       "active": true,
       "created_by": "merchandiser_diego",
@@ -84,7 +84,7 @@
         "ELEC-062",
         "FOOT-123"
       ],
-      "boost_factor": 2.4,
+      "boost_factor": 1.72,
       "campaign": "Outdoor Tech Week",
       "active": true,
       "created_by": "merchandiser_alice",
@@ -109,7 +109,7 @@
         "BAGS-050",
         "OUT-050"
       ],
-      "boost_factor": 1.5,
+      "boost_factor": 1.85,
       "campaign": "Travel Essentials",
       "active": true,
       "created_by": "merchandiser_ben",
@@ -134,7 +134,7 @@
         "CAMP-050",
         "FOOT-050"
       ],
-      "boost_factor": 1.6,
+      "boost_factor": 1.98,
       "campaign": "Basecamp Bundle",
       "active": true,
       "created_by": "merchandiser_chandra",
@@ -161,7 +161,7 @@
       ],
       "boost_factor": 2.11,
       "campaign": "Wearable Refresh",
-      "active": true,
+      "active": false,
       "created_by": "merchandiser_diego",
       "created_at": "2026-06-06T00:00:00Z",
       "target_product_snapshots": [
@@ -173,6 +173,55 @@
         {
           "id": "OUT-080",
           "stock": 95,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-008",
+      "rule_type": "boost",
+      "target_products": [
+        "BAGS-080",
+        "CAMP-080"
+      ],
+      "boost_factor": 2.24,
+      "campaign": "Weekend Carry Event",
+      "active": false,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "BAGS-080",
+          "stock": 95,
+          "data_quality": "complete"
+        },
+        {
+          "id": "CAMP-080",
+          "stock": 8,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-009",
+      "rule_type": "suppress",
+      "target_products": [
+        "FOOT-100",
+        "BAGS-070"
+      ],
+      "reason": "low margin",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "FOOT-100",
+          "stock": 164,
+          "data_quality": "complete"
+        },
+        {
+          "id": "BAGS-070",
+          "stock": 156,
           "data_quality": "complete"
         }
       ]
@@ -256,7 +305,7 @@
         "BAGS-145"
       ],
       "reason": "image compliance",
-      "active": true,
+      "active": false,
       "created_by": "merchandiser_chandra",
       "created_at": "2026-06-06T00:00:00Z",
       "target_product_snapshots": [
@@ -273,8 +322,7 @@
       "target_products": [],
       "terms": [
         "rain shell",
-        "waterproof jacket",
-        "hard shell"
+        "waterproof jacket"
       ],
       "canonical": "rain jacket",
       "active": true,
@@ -287,8 +335,7 @@
       "target_products": [],
       "terms": [
         "daypack",
-        "rucksack",
-        "commuter pack"
+        "rucksack"
       ],
       "canonical": "backpack",
       "active": true,
@@ -345,75 +392,6 @@
       "canonical": "gore-tex",
       "active": true,
       "created_by": "merchandiser_alice",
-      "created_at": "2026-06-06T00:00:00Z"
-    },
-    {
-      "rule_id": "MXP-021",
-      "rule_type": "boost",
-      "target_products": [
-        "FOOT-121"
-      ],
-      "boost_factor": 2.3,
-      "campaign": "Emergency Trail Promo",
-      "active": true,
-      "created_by": "merchandiser_alice",
-      "created_at": "2026-06-06T00:00:00Z",
-      "target_product_snapshots": [
-        {
-          "id": "FOOT-121",
-          "stock": 0,
-          "data_quality": "incomplete"
-        }
-      ]
-    },
-    {
-      "rule_id": "MXP-022",
-      "rule_type": "boost",
-      "target_products": [
-        "ELEC-061"
-      ],
-      "boost_factor": 2.4,
-      "campaign": "Wearable Doorbuster",
-      "active": true,
-      "created_by": "merchandiser_ben",
-      "created_at": "2026-06-06T00:00:00Z",
-      "target_product_snapshots": [
-        {
-          "id": "ELEC-061",
-          "stock": 0,
-          "data_quality": "incomplete"
-        }
-      ]
-    },
-    {
-      "rule_id": "MXP-023",
-      "rule_type": "suppress",
-      "target_products": [
-        "BAGS-070"
-      ],
-      "reason": "margin protection",
-      "active": true,
-      "created_by": "merchandiser_chandra",
-      "created_at": "2026-06-06T00:00:00Z",
-      "target_product_snapshots": [
-        {
-          "id": "BAGS-070",
-          "stock": 156,
-          "data_quality": "complete"
-        }
-      ]
-    },
-    {
-      "rule_id": "MXP-024",
-      "rule_type": "synonym",
-      "target_products": [],
-      "terms": [
-        "raincoat",
-        "rain wear"
-      ],
-      "canonical": "rain jacket",
-      "active": true,
-      "created_by": "merchandiser_diego",
       "created_at": "2026-06-06T00:00:00Z"
     }
   ]

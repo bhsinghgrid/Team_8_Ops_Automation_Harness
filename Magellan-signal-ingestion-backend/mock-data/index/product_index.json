@@ -1805,7 +1805,7 @@
     {
       "id": "BAGS-001",
       "category": "bags",
-      "stock": 7,
+      "stock": 23,
       "data_quality": "complete"
     },
     {
@@ -6126,7 +6126,6 @@
     "FOOT-249",
     "FOOT-258",
     "FOOT-267",
-    "BAGS-001",
     "BAGS-097",
     "BAGS-098",
     "BAGS-099",

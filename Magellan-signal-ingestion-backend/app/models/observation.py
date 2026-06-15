@@ -1,6 +1,6 @@
 from datetime import datetime, timezone
 
-from sqlalchemy import Column, DateTime, Integer, String, Text, JSON
+from sqlalchemy import Boolean, Column, DateTime, Float, Integer, String, Text, JSON
 from sqlalchemy.dialects.postgresql import JSONB
 
 from app.db.database import Base
@@ -77,3 +77,111 @@ class ZeroResultCluster(Base):
     status = Column(String, default="open", nullable=False)
 
     recommended_runbook = Column(String)
+
+
+class Product(Base):
+
+    __tablename__ = "products"
+
+    id = Column(String, primary_key=True, index=True)
+
+    category = Column(String, nullable=False, index=True)
+
+    payload = Column(JsonDocument, nullable=False)
+
+    updated_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
+
+
+class MerchandisingRule(Base):
+
+    __tablename__ = "rules"
+
+    rule_id = Column(String, primary_key=True, index=True)
+
+    rule_type = Column(String, nullable=False, index=True)
+
+    active = Column(Boolean, default=True, nullable=False, index=True)
+
+    payload = Column(JsonDocument, nullable=False)
+
+    updated_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
+
+
+class SearchLog(Base):
+
+    __tablename__ = "search_logs"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    request_id = Column(String, unique=True, nullable=False, index=True)
+
+    session_id = Column(String, index=True)
+
+    tenant = Column(String, nullable=False, index=True)
+
+    source = Column(String, nullable=False)
+
+    timestamp = Column(DateTime(timezone=True), nullable=False, index=True)
+
+    query_text = Column(String, nullable=False)
+
+    normalized_query = Column(String)
+
+    status_code = Column(Integer, nullable=False)
+
+    latency_ms = Column(Integer, nullable=False)
+
+    result_count = Column(Integer, nullable=False)
+
+    click_count = Column(Integer, default=0)
+
+    cart_add_count = Column(Integer, default=0)
+
+    has_error = Column(Boolean, default=False)
+
+    payload = Column(JsonDocument, nullable=False)
+
+    ingested_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc))
+
+
+class TenantConfig(Base):
+
+    __tablename__ = "tenant_configs"
+
+    tenant = Column(String, primary_key=True, index=True)
+
+    config_payload = Column(JsonDocument, nullable=False)
+
+    updated_at = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
+
+
+class TenantMetricBaseline(Base):
+
+    __tablename__ = "tenant_metric_baselines"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    tenant = Column(String, index=True, nullable=False)
+
+    metric_name = Column(String, index=True, nullable=False)
+
+    ewma_value = Column(Float, nullable=False, default=0.0)
+
+    ewma_variance = Column(Float, nullable=False, default=0.0)
+
+    sample_count = Column(Integer, nullable=False, default=0)
+
+    last_updated = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)
+
+
+class SnapshotState(Base):
+
+    __tablename__ = "snapshot_states"
+
+    tenant = Column(String, primary_key=True, index=True)
+
+    snapshot_type = Column(String, primary_key=True, index=True)
+
+    payload = Column(JsonDocument, nullable=False)
+
+    last_updated = Column(DateTime(timezone=True), default=lambda: datetime.now(timezone.utc), nullable=False)

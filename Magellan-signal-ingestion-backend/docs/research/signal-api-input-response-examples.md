@@ -11,8 +11,9 @@ Dynamic fields such as `event_id`, `timestamp`, `latency_ms`, and raw OCS metada
 - `SEARCH_PROVIDER` defaults to `ocs`.
 - If a request omits `tenant`, Magellan uses `OCS_TENANT`, currently `ocs_example`.
 - Search requests call OCS; OCS searches the mock catalog after the mock products have been seeded or synced into the OCS Elasticsearch index.
-- Catalog diff requests mutate `mock-data/products/*.json`, recompute `mock-data/index/product_index.json`, sync the mutation to OCS, and flush OCS config.
-- Rule diff requests mutate `mock-data/rules/rules.json`.
+- `mock-data/` contains reproducible seed/demo fixtures. On startup, product and rule fixtures seed the database if the corresponding tables are empty.
+- Catalog diff requests mutate the `products` table, sync the mutation to OCS, and flush OCS config.
+- Rule diff requests mutate the `rules` table.
 - If a request provides the wrong tenant, OCS searches the wrong catalog/index or returns an error.
 
 ## 1. Search Result Signal
@@ -259,17 +260,16 @@ POST /signals/catalog-diff
 Purpose:
 
 ```text
-Record a product catalog change, mutate the local mock product state, sync the change into OCS, and classify operational severity.
+Record a product catalog change, mutate database-backed product state, sync the change into OCS, and classify operational severity.
 ```
 
 Side effects:
 
 ```text
 1. Stores a catalog_delta event in ops_events.
-2. Applies INSERT, UPDATE, or DELETE to mock-data/products/*.json.
-3. Recomputes mock-data/index/product_index.json.
-4. Syncs the same product change to OCS.
-5. Flushes OCS config so search can reflect the update.
+2. Applies INSERT, UPDATE, or DELETE to the products table.
+3. Syncs the same product change to OCS.
+4. Flushes OCS config so search can reflect the update.
 ```
 
 Sample request:
@@ -317,7 +317,7 @@ operation = INSERT, and required/search-sensitive attributes are missing.
 Error responses:
 
 ```text
-409 Conflict      The requested mock-data mutation is invalid, such as UPDATE on a missing product.
+409 Conflict      The requested database mutation is invalid, such as UPDATE on a missing product.
 502 Bad Gateway  The local event/mutation happened but the OCS sync or flush step failed.
 ```
 
@@ -332,15 +332,14 @@ POST /signals/rule-diff
 Purpose:
 
 ```text
-Record a merchandising/MXP rule change, mutate the local mock rule state, and classify whether it creates an operational risk.
+Record a merchandising/MXP rule change, mutate database-backed rule state, and classify whether it creates an operational risk.
 ```
 
 Side effects:
 
 ```text
 1. Stores a rule_diff event in ops_events.
-2. Applies INSERT, UPDATE, or DELETE to mock-data/rules/rules.json.
-3. Bumps the rules version and last_updated timestamp.
+2. Applies INSERT, UPDATE, or DELETE to the rules table.
 ```
 
 Sample request:

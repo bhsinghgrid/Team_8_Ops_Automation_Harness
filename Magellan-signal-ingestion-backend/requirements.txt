@@ -10,3 +10,4 @@ python-dotenv
 pytest
 deepdiff
 filelock
+deepdiff==9.1.0

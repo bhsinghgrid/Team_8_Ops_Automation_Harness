@@ -7,11 +7,13 @@ import argparse
 import json
 import shutil
 from collections import Counter
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Any
 
 
 FIXTURE_TIMESTAMP = "2026-06-06T00:00:00Z"
+LOG_BASE_TIME = datetime(2026, 6, 6, 10, 0, tzinfo=timezone.utc)
 
 CATEGORY_CONFIGS: dict[str, dict[str, Any]] = {
     "footwear": {
@@ -539,6 +541,230 @@ def build_zero_result_queries() -> dict[str, Any]:
     }
 
 
+def category_for_query(query: str) -> str:
+    query_lower = query.lower()
+    if any(term in query_lower for term in ["shoe", "sneaker", "trainer", "boot", "footwear", "runner"]):
+        return "footwear"
+    if any(term in query_lower for term in ["bag", "backpack", "duffel", "messenger", "brief", "pack", "tote"]):
+        return "bags"
+    if any(term in query_lower for term in ["jacket", "shell", "parka", "outerwear", "coat", "blazer", "cape"]):
+        return "outerwear"
+    if any(term in query_lower for term in ["smartwatch", "speaker", "camera", "band", "earbuds", "gps", "electronics", "drone"]):
+        return "electronics"
+    return "camping"
+
+
+def products_for_query(product_files: dict[str, dict[str, Any]], query: str, offset: int, count: int = 6) -> list[dict[str, Any]]:
+    category = category_for_query(query)
+    products = [
+        product
+        for product in product_files[category]["products"]
+        if product["stock"] > 0 and product["data_quality"] in {"complete", "new_arrival"}
+    ]
+    start = (offset * 7) % max(1, len(products))
+    selected = []
+    for index in range(count):
+        selected.append(products[(start + index) % len(products)])
+    return selected
+
+
+def log_timestamp(index: int) -> str:
+    return (LOG_BASE_TIME + timedelta(seconds=index * 10)).isoformat().replace("+00:00", "Z")
+
+
+def build_search_log(
+    *,
+    index: int,
+    query_text: str,
+    tenant: str,
+    selected_products: list[dict[str, Any]],
+    status_code: int,
+    latency_ms: int,
+    result_count: int,
+    scenario: str,
+    is_low_ctr_scenario: bool = False,
+    error_type: str | None = None,
+) -> dict[str, Any]:
+    timestamp = log_timestamp(index)
+    request_id = f"req_20260606_{index:04d}"
+    session_id = f"sess_{(index % 18) + 1:03d}"
+    top_product_ids = [product["id"] for product in selected_products]
+
+    clicked_product_ids = []
+    if status_code == 200 and result_count > 0 and not is_low_ctr_scenario:
+        if index % 3 != 0:
+            clicked_product_ids = top_product_ids[:1]
+    
+    cart_add_product_ids = clicked_product_ids[:1] if clicked_product_ids and index % 5 == 0 else []
+
+    filters = {}
+    if "waterproof" in query_text:
+        filters["waterproof"] = "true"
+    if "laptop" in query_text:
+        filters["laptop_size"] = "15inch"
+    sort = "price" if index % 11 == 0 and status_code == 200 else None
+
+    # Query normalization
+    import re
+    normalized_words = [w for w in re.findall(r"[a-z0-9]+", query_text.lower()) if w not in {"a", "the", "for", "with"}]
+    normalized_text = " ".join(normalized_words) if normalized_words else None
+
+    # Results mapping
+    results = [
+        {
+            "product_id": pid,
+            "rank": rank_idx + 1,
+            "score": round(0.95 - (rank_idx * 0.05) - (index % 5) * 0.01, 2)
+        }
+        for rank_idx, pid in enumerate(top_product_ids)
+    ]
+
+    # Interaction clicks mapping (clicks happen 15s after search)
+    from datetime import datetime, timedelta
+    search_dt = datetime.fromisoformat(timestamp.replace("Z", "+00:00"))
+    clicks = [
+        {
+            "product_id": pid,
+            "rank": top_product_ids.index(pid) + 1,
+            "timestamp": (search_dt + timedelta(seconds=15)).isoformat().replace("+00:00", "Z")
+        }
+        for pid in clicked_product_ids
+        if pid in top_product_ids
+    ]
+
+    # Interaction cart adds mapping (cart adds happen 45s after search)
+    cart_adds = [
+        {
+            "product_id": pid,
+            "rank": top_product_ids.index(pid) + 1,
+            "timestamp": (search_dt + timedelta(seconds=45)).isoformat().replace("+00:00", "Z")
+        }
+        for pid in cart_add_product_ids
+        if pid in top_product_ids
+    ]
+
+    return {
+        "timestamp": timestamp,
+        "source": "gd_ai_search",
+        "tenant": tenant,
+        "request_id": request_id,
+        "session_id": session_id,
+        "user_id_hash": f"usr_{(index % 45) + 1:03d}",
+        "query": {
+            "text": query_text,
+            "normalized_text": normalized_text,
+            "filters": filters,
+            "sort": sort
+        },
+        "response": {
+            "status_code": status_code,
+            "latency_ms": latency_ms,
+            "result_count": result_count,
+            "results": results
+        },
+        "interaction": {
+            "clicks": clicks,
+            "cart_adds": cart_adds
+        },
+        "context": {
+            "device_type": ["desktop", "mobile", "tablet"][index % 3],
+            "channel": "web",
+            "locale": "en-US"
+        },
+        "error": error_type
+    }
+
+
+def build_search_logs(product_files: dict[str, dict[str, Any]]) -> list[dict[str, Any]]:
+    tenant = "retail_tenant_001"
+    benchmark_queries = build_benchmark_queries()["queries"]
+    zero_result_queries = build_zero_result_queries()["queries"]
+    logs: list[dict[str, Any]] = []
+
+    # Generate ~400 successful searches, some with anomalies
+    for i in range(400):
+        query_text = benchmark_queries[i % len(benchmark_queries)]
+        index = len(logs) + 1
+        selected_products = products_for_query(product_files, query_text, index)
+
+        # Inject anomalies
+        latency_ms = 30 + ((index * 17) % 150)
+        # Latency spike for logs 50-70 -> will trigger in a 5-min window
+        is_latency_spike = (50 <= i < 70)
+        if is_latency_spike:
+            latency_ms += 800
+
+        # Low CTR anomaly - logs 100-150 have no clicks
+        is_low_ctr = (100 <= i < 150)
+
+        result_count = 6 + ((index * 19) % 74)
+
+        status_code = 200
+        error_type = None
+
+        logs.append(
+            build_search_log(
+                index=index,
+                query_text=query_text,
+                tenant=tenant,
+                selected_products=selected_products,
+                status_code=status_code,
+                latency_ms=latency_ms,
+                result_count=result_count,
+                scenario="successful_search",
+                is_low_ctr_scenario=is_low_ctr,
+                error_type=error_type,
+            )
+        )
+
+
+    # Generate ~50 zero-result searches
+    for i in range(50):
+        query_text = zero_result_queries[i % len(zero_result_queries)]
+        index = len(logs) + 1
+        logs.append(
+            build_search_log(
+                index=index,
+                query_text=query_text,
+                tenant=tenant,
+                selected_products=[],
+                status_code=200,
+                latency_ms=35 + ((index * 11) % 120),
+                result_count=0,
+                scenario="zero_result_search",
+            )
+        )
+
+
+    # Generate ~50 error searches
+    error_queries = [
+        ("", 400, "client_error", "empty_query"),
+        ("%%%% malformed filter payload", 400, "client_error", "bad_request"),
+        ("waterproof hiking boots", 504, "timeout", "search_timeout"),
+        ("smartwatch with gps", 503, "provider_error", "search_service_unavailable"),
+        ("canvas messenger bag", 500, "provider_error", "search_internal_error"),
+    ]
+    for i in range(50):
+        query_text, status_code, error_type, scenario = error_queries[i % len(error_queries)]
+        index = len(logs) + 1
+        logs.append(
+            build_search_log(
+                index=index,
+                query_text=query_text,
+                tenant=tenant,
+                selected_products=[],
+                status_code=status_code,
+                latency_ms=900 + (index * 23),
+                result_count=0,
+                scenario=scenario,
+                error_type=error_type,
+            )
+        )
+
+    return logs
+
+
+
 def build_catalog_scenarios() -> dict[str, Any]:
     scenarios = []
     for name, operation, product_id, source_file, changes in CATALOG_SCENARIOS:
@@ -728,6 +954,12 @@ def write_json(path: Path, payload: Any) -> None:
     path.write_text(json.dumps(payload, indent=2) + "\n", encoding="utf-8")
 
 
+def write_jsonl(path: Path, rows: list[dict[str, Any]]) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    payload = "\n".join(json.dumps(row, sort_keys=True) for row in rows)
+    path.write_text(payload + "\n", encoding="utf-8")
+
+
 def generate(output: Path) -> None:
     if output.exists():
         for child in output.iterdir():
@@ -746,6 +978,7 @@ def generate(output: Path) -> None:
     write_json(output / "rules" / "rules.json", build_rules(products_by_id))
     write_json(output / "queries" / "benchmark_queries.json", build_benchmark_queries())
     write_json(output / "queries" / "zero_result_queries.json", build_zero_result_queries())
+    write_jsonl(output / "logs" / "search_events.jsonl", build_search_logs(product_files))
     write_json(output / "scenarios" / "catalog_scenarios.json", build_catalog_scenarios())
     write_json(output / "scenarios" / "rule_scenarios.json", build_rule_scenarios(products_by_id))
     write_json(output / "index" / "product_index.json", build_index(product_files))
@@ -866,6 +1099,42 @@ def validate(root: Path) -> dict[str, Any]:
     require(len(benchmark["queries"]) == 50, "benchmark_queries must contain exactly 50 queries")
     require(len(zero_result["queries"]) == 30, "zero_result_queries must contain exactly 30 queries")
 
+    logs_path = root / "logs" / "search_events.jsonl"
+    require(logs_path.exists(), "missing search_events.jsonl")
+    search_logs = [
+        json.loads(line)
+        for line in logs_path.read_text(encoding="utf-8").splitlines()
+        if line.strip()
+    ]
+    require(len(search_logs) == 500, f"expected 500 search logs, found {len(search_logs)}")
+    request_ids = [log["request_id"] for log in search_logs]
+    require(len(set(request_ids)) == len(request_ids), "search log request_ids must be unique")
+    required_log_fields = {
+        "timestamp",
+        "source",
+        "tenant",
+        "request_id",
+        "session_id",
+        "user_id_hash",
+        "query",
+        "response",
+        "interaction",
+        "context",
+        "error"
+    }
+    for log in search_logs:
+        require(required_log_fields.issubset(log), f"search log {log.get('request_id')} missing required fields")
+        require(log["tenant"] == "retail_tenant_001", f"search log {log['request_id']} tenant mismatch")
+        require(isinstance(log["query"], dict), f"search log {log['request_id']} query block is not dict")
+        require(isinstance(log["response"], dict), f"search log {log['request_id']} response block is not dict")
+        require("text" in log["query"], f"search log {log['request_id']} missing query text")
+        require("status_code" in log["response"], f"search log {log['request_id']} missing status_code")
+    require(sum(1 for log in search_logs if log["response"]["result_count"] == 0 and log["response"]["status_code"] == 200) >= 30, "expected at least 30 zero-result logs")
+    require(any(log["response"]["status_code"] >= 500 for log in search_logs), "expected at least one server/provider error log")
+    require(any(log["response"]["status_code"] == 400 for log in search_logs), "expected at least one client error log")
+    require(any(log["interaction"]["clicks"] for log in search_logs), "expected at least one click log")
+    require(any(log["interaction"]["cart_adds"] for log in search_logs), "expected at least one cart-add log")
+
     catalog_scenarios = read_json(root / "scenarios" / "catalog_scenarios.json")["scenarios"]
     require(len(catalog_scenarios) == 20, "catalog_scenarios must contain exactly 20 scenarios")
     require(Counter(scenario["operation"] for scenario in catalog_scenarios) == {"INSERT": 5, "UPDATE": 12, "DELETE": 3}, "catalog scenario operation distribution mismatch")
@@ -895,6 +1164,7 @@ def validate(root: Path) -> dict[str, Any]:
         "low_stock_products": len(actual_low),
         "benchmark_queries": len(benchmark["queries"]),
         "zero_result_queries": len(zero_result["queries"]),
+        "search_logs": len(search_logs),
         "catalog_scenarios": len(catalog_scenarios),
         "rule_scenarios": len(rule_scenarios),
         "boost_rules_with_oos": len(boost_rules_with_oos),

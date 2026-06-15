@@ -126,7 +126,7 @@ http://127.0.0.1:8534/search-api/v1/search/arranged/ocs_example
 
 ## Where OCSS Product Data Is Stored
 
-OCSS product catalog data is stored in Elasticsearch, not in the Magellan mock files.
+OCSS product catalog data is stored in Elasticsearch. In Magellan, product state is stored in the local Postgres `products` table after being seeded from `mock-data/`; OCS/Elasticsearch holds the searchable projection of that product state.
 
 Current alias:
 
@@ -154,7 +154,7 @@ ocs_elasticsearch:/usr/share/elasticsearch/data
 
 ## Current Demo Catalog
 
-The current indexed OCSS dataset contains products like:
+The current indexed OCSS dataset may contain products seeded by the OCS repository itself or products synced from Magellan through the OCS indexer API. OCS repository seed data can include products like:
 
 ```json
 {
@@ -176,7 +176,7 @@ This product appears in the OCS repository test data:
 open-commerce-search/integration-tests/src/test/resources/testdata.jsonl
 ```
 
-After indexing, it is stored in Elasticsearch.
+After indexing, OCS stores searchable documents in Elasticsearch.
 
 ## Important Distinction: Query Data vs Product Data
 
@@ -184,15 +184,17 @@ Magellan has:
 
 ```text
 Magellan-backend/mock-data/queries/benchmark_queries.json
-Magellan-backend/mock-data/products/products.json
+Magellan-backend/mock-data/products/*.json
+Postgres products table
 ```
 
 Current behavior:
 
 ```text
 benchmark_queries.json -> can provide search query text for batch ingestion
-products.json          -> not currently indexed into OCSS
-OCSS Elasticsearch     -> provides actual product search results
+mock-data/products/*.json -> seed fixtures for the products table
+Postgres products table   -> Magellan runtime product state
+OCS Elasticsearch         -> searchable product projection used by OCS search
 ```
 
 So if batch ingestion sends:
@@ -201,7 +203,7 @@ So if batch ingestion sends:
 waterproof running shoes
 ```
 
-that query may come from Magellan's `benchmark_queries.json`, but OCSS searches its own indexed catalog.
+that query may come from Magellan's `benchmark_queries.json`, but OCSS searches its Elasticsearch index.
 
 If OCSS returns:
 
@@ -212,7 +214,7 @@ If OCSS returns:
 }
 ```
 
-it means the OCSS indexed catalog did not contain matching products, even if Magellan's mock `products.json` contains waterproof shoes.
+it means the OCSS indexed catalog did not contain matching products, even if Magellan's database-backed product state contains waterproof shoes.
 
 ## View The OCSS Catalog
 
@@ -360,4 +362,3 @@ SEARCH_API_URL=http://searcher:8534
 ```
 
 Used when frontend runs inside Docker.
-

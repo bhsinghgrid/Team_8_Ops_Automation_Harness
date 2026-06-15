@@ -23,10 +23,13 @@ def get_db():
 
 
 def init_db():
-    from app.models.observation import Observation, OpsEvent, ZeroResultCluster  # noqa: F401
+    from app.db.seed_data import seed_state_from_fixtures
+    from app.models.observation import MerchandisingRule, Observation, OpsEvent, Product, ZeroResultCluster, SearchLog  # noqa: F401
 
     Base.metadata.create_all(bind=engine)
     ensure_ops_events_ingested_at()
+    with SessionLocal() as db:
+        seed_state_from_fixtures(db)
 
 
 def ensure_ops_events_ingested_at():

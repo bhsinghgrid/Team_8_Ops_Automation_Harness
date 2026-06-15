@@ -1,17 +1,6 @@
 version: "3.9"
 
 services:
-  meilisearch:
-    image: getmeili/meilisearch:v1.7
-    container_name: magellan-meilisearch
-    ports:
-      - "7700:7700"
-    environment:
-      MEILI_ENV: development
-      MEILI_NO_ANALYTICS: "true"
-    volumes:
-      - meili_data:/meili_data
-
   postgres:
     image: postgres:16
     container_name: magellan-postgres
@@ -25,5 +14,4 @@ services:
       - postgres_data:/var/lib/postgresql/data
 
 volumes:
-  meili_data:
   postgres_data:

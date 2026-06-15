@@ -1,7 +1,8 @@
 from fastapi import FastAPI, Response
 
-from app.api.observations import router as observation_router
-from app.api.signals import router as signal_router
+from app.api.log_ingestion import router as log_ingestion_router
+from app.api.change_detection import router as change_detection_router
+from app.api.tenant_config import router as tenant_config_router
 from app.db.database import init_db
 
 app = FastAPI()
@@ -23,11 +24,17 @@ async def favicon():
 
 
 app.include_router(
-    observation_router,
-    prefix="/observations"
+    log_ingestion_router,
+    prefix="/logs"
 )
 
 app.include_router(
-    signal_router,
-    prefix="/signals"
+    change_detection_router,
+    prefix="/snapshots"
 )
+
+app.include_router(
+    tenant_config_router,
+    prefix="/config"
+)
+
