@@ -9,6 +9,8 @@ This repository contains the backend services for the Magellan AI Search Ops Har
 4.  [API Endpoint Testing](#4-api-endpoint-testing)
     *   [Log Ingestion Endpoints (`/logs/*`)](#log-ingestion-endpoints-logs)
     *   [Change Detection Endpoints (`/snapshots/*`)](#change-detection-endpoints-snapshots)
+    *   [Dynamic Configuration Endpoints (`/config/*`)](#dynamic-configuration-endpoints-config)
+    *   [Raw Log Payloads Endpoint (`/logs/raw`)](#raw-log-payloads-endpoint-logsraw)
 5.  [Signal to AI Search Capability Mapping](#5-signal-to-ai-search-capability-mapping)
 6.  [How Change Detection Agents Work](#6-how-change-detection-agents-work)
 
@@ -133,7 +135,22 @@ These endpoints are responsible for receiving and processing search logs, detect
     }
     ```
 
-#### 4.4. `POST /logs/ingest` (Ingest Single Log Entry)
+#### 4.4. `GET /logs/raw` (List Raw Log Payloads)
+*   **Description:** Retrieves and lists the full raw JSON payloads of search log entries stored in the database, with optional time and pagination filters. This is useful for detailed inspection or debugging.
+*   **Swagger UI:**
+    1.  Go to `http://127.0.0.1:8000/docs`.
+    2.  Find and expand the `GET /logs/raw` endpoint.
+    3.  Click **"Try it out"**. (You can leave parameters blank or specify `limit`, `offset`, `from_ts`, `to_ts`).
+    4.  Click the blue **"Execute"** button.
+*   **`curl` Command:**
+    ```bash
+    curl -X 'GET' \
+      'http://127.0.0.1:8000/logs/raw' \
+      -H 'accept: application/json' | jq .
+    ```
+*   **Expected Response:** An array of raw JSON search log entries.
+
+#### 4.5. `POST /logs/ingest` (Ingest Single Log Entry)
 *   **Description:** Ingests and processes a single search log entry.
 *   **Swagger UI:**
     1.  Go to `http://127.0.0.1:8000/docs`.
