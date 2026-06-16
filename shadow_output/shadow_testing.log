@@ -1,6 +1,0 @@
-2026-06-16 12:37:17,897 [INFO] feedback_agent.shadow: [Shadow][MOCK] evaluate_mock called — query='hybrid work backpack' incident='INC-20260603-001'
-2026-06-16 12:37:17,897 [INFO] feedback_agent.shadow: [Shadow][MOCK] candidate_diffs=2, noise_diffs=0, S2N=2.0
-2026-06-16 12:37:17,897 [INFO] feedback_agent.shadow: [Shadow][MOCK] Report saved → /Users/hsrivastava/Desktop/feedback_agent/shadow_output/shadow_mock_20260616_123717_INC-20260603-001.json
-2026-06-16 12:37:55,291 [INFO] feedback_agent.shadow: [Shadow][MOCK] evaluate_mock called — query='your query here' incident='INC-XXXXXXXX-001'
-2026-06-16 12:37:55,291 [INFO] feedback_agent.shadow: [Shadow][MOCK] candidate_diffs=2, noise_diffs=0, S2N=2.0
-2026-06-16 12:37:55,292 [INFO] feedback_agent.shadow: [Shadow][MOCK] Report saved → /Users/hsrivastava/Desktop/feedback_agent/shadow_output/shadow_mock_20260616_123755_INC-XXXXXXXX-001.json
