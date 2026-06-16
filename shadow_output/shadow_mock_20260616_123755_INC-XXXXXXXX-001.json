@@ -1,0 +1,26 @@
+{
+  "query": "your query here",
+  "incident_id": "INC-XXXXXXXX-001",
+  "mode": "MOCK",
+  "timestamp": "2026-06-16T12:37:55+05:30",
+  "baseline_a_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003"
+  ],
+  "baseline_b_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003"
+  ],
+  "candidate_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003",
+    "sku-004",
+    "sku-005"
+  ],
+  "candidate_diffs": 2,
+  "noise_diffs": 0,
+  "s2n": 2.0
+}

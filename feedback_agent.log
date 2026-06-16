@@ -1,144 +1,152 @@
-2026-06-05 16:13:27,767 [INFO] feedback_agent.canary.run_canary: Launching Canary Release Controller...
-2026-06-05 16:13:27,769 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
-2026-06-05 16:13:27,771 [INFO] feedback_agent.canary.controller: Starting canary release for incident INC-20260603-001, query 'hybrid work backpack'
-2026-06-05 16:13:27,771 [INFO] feedback_agent.canary.controller: Tiers: [5, 25, 50, 100], Soak time: 0s, Max holds: 3
-2026-06-05 16:13:27,772 [INFO] feedback_agent.canary.controller: --- Canary Tier 1/4: 5% ---
-2026-06-05 16:13:27,772 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 5% for query 'hybrid work backpack'
-2026-06-05 16:13:27,772 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 5%. No live API call made.
-2026-06-05 16:13:27,772 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_5.json
-2026-06-05 16:13:27,772 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
-2026-06-05 16:13:27,772 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
-2026-06-05 16:13:27,772 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
-2026-06-05 16:13:27,772 [INFO] feedback_agent.orchestrator: Executing sub-agent: FixVerificationAgent
-2026-06-05 16:13:27,772 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
-2026-06-05 16:13:27,772 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
-2026-06-05 16:13:27,773 [INFO] feedback_agent.orchestrator: Executing sub-agent: MetricComparisonAgent
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
-2026-06-05 16:13:27,773 [INFO] feedback_agent.orchestrator: Executing sub-agent: CanaryEvaluationAgent
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
-2026-06-05 16:13:27,773 [INFO] feedback_agent.orchestrator: Executing sub-agent: ThresholdUpdateAgent
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
-2026-06-05 16:13:27,773 [INFO] feedback_agent.orchestrator: Executing sub-agent: AuditTrailAgent
-2026-06-05 16:13:27,773 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
-2026-06-05 16:13:27,774 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
-2026-06-05 16:13:27,774 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
-2026-06-05 16:13:27,774 [INFO] feedback_agent.orchestrator: Feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_5.json
-2026-06-05 16:13:27,774 [INFO] feedback_agent.db: Database connection closed.
-2026-06-05 16:13:27,775 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 5%.
-2026-06-05 16:13:27,775 [INFO] feedback_agent.canary.controller: --- Canary Tier 2/4: 25% ---
-2026-06-05 16:13:27,775 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 25% for query 'hybrid work backpack'
-2026-06-05 16:13:27,775 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 25%. No live API call made.
-2026-06-05 16:13:27,775 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_25.json
-2026-06-05 16:13:27,775 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
-2026-06-05 16:13:27,775 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
-2026-06-05 16:13:27,775 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
-2026-06-05 16:13:27,776 [INFO] feedback_agent.orchestrator: Executing sub-agent: FixVerificationAgent
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
-2026-06-05 16:13:27,776 [INFO] feedback_agent.orchestrator: Executing sub-agent: MetricComparisonAgent
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
-2026-06-05 16:13:27,776 [INFO] feedback_agent.orchestrator: Executing sub-agent: CanaryEvaluationAgent
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
-2026-06-05 16:13:27,776 [INFO] feedback_agent.orchestrator: Executing sub-agent: ThresholdUpdateAgent
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
-2026-06-05 16:13:27,776 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
-2026-06-05 16:13:27,777 [INFO] feedback_agent.orchestrator: Executing sub-agent: AuditTrailAgent
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
-2026-06-05 16:13:27,777 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
-2026-06-05 16:13:27,778 [INFO] feedback_agent.orchestrator: Feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_25.json
-2026-06-05 16:13:27,778 [INFO] feedback_agent.db: Database connection closed.
-2026-06-05 16:13:27,778 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 25%.
-2026-06-05 16:13:27,778 [INFO] feedback_agent.canary.controller: --- Canary Tier 3/4: 50% ---
-2026-06-05 16:13:27,778 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 50% for query 'hybrid work backpack'
-2026-06-05 16:13:27,778 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 50%. No live API call made.
-2026-06-05 16:13:27,778 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_50.json
-2026-06-05 16:13:27,778 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
-2026-06-05 16:13:27,778 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
-2026-06-05 16:13:27,778 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
-2026-06-05 16:13:27,779 [INFO] feedback_agent.orchestrator: Executing sub-agent: FixVerificationAgent
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
-2026-06-05 16:13:27,779 [INFO] feedback_agent.orchestrator: Executing sub-agent: MetricComparisonAgent
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
-2026-06-05 16:13:27,779 [INFO] feedback_agent.orchestrator: Executing sub-agent: CanaryEvaluationAgent
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
-2026-06-05 16:13:27,779 [INFO] feedback_agent.orchestrator: Executing sub-agent: ThresholdUpdateAgent
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
-2026-06-05 16:13:27,779 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
-2026-06-05 16:13:27,780 [INFO] feedback_agent.orchestrator: Executing sub-agent: AuditTrailAgent
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
-2026-06-05 16:13:27,780 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
-2026-06-05 16:13:27,780 [INFO] feedback_agent.orchestrator: Feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_50.json
-2026-06-05 16:13:27,781 [INFO] feedback_agent.db: Database connection closed.
-2026-06-05 16:13:27,781 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 50%.
-2026-06-05 16:13:27,781 [INFO] feedback_agent.canary.controller: --- Canary Tier 4/4: 100% ---
-2026-06-05 16:13:27,781 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 100% for query 'hybrid work backpack'
-2026-06-05 16:13:27,781 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 100%. No live API call made.
-2026-06-05 16:13:27,781 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_100.json
-2026-06-05 16:13:27,781 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
-2026-06-05 16:13:27,781 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
-2026-06-05 16:13:27,781 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
-2026-06-05 16:13:27,782 [INFO] feedback_agent.orchestrator: Executing sub-agent: FixVerificationAgent
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
-2026-06-05 16:13:27,782 [INFO] feedback_agent.orchestrator: Executing sub-agent: MetricComparisonAgent
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
-2026-06-05 16:13:27,782 [INFO] feedback_agent.orchestrator: Executing sub-agent: CanaryEvaluationAgent
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
-2026-06-05 16:13:27,782 [INFO] feedback_agent.orchestrator: Executing sub-agent: ThresholdUpdateAgent
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
-2026-06-05 16:13:27,782 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
-2026-06-05 16:13:27,783 [INFO] feedback_agent.orchestrator: Executing sub-agent: AuditTrailAgent
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
-2026-06-05 16:13:27,783 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
-2026-06-05 16:13:27,783 [INFO] feedback_agent.orchestrator: Feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_100.json
-2026-06-05 16:13:27,783 [INFO] feedback_agent.db: Database connection closed.
-2026-06-05 16:13:27,784 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 100%.
-2026-06-05 16:13:27,784 [INFO] feedback_agent.canary.controller: 🎉 Canary release completed — 100% traffic on candidate.
-2026-06-05 16:13:27,784 [INFO] feedback_agent.canary.controller: Canary release result saved to canary_output/canary_release_result.json
-2026-06-05 16:13:27,785 [INFO] feedback_agent.db: Database connection closed.
-2026-06-05 16:13:27,785 [INFO] feedback_agent.canary.run_canary: Canary release finished with status: COMPLETED
+2026-06-16 12:29:52,183 [INFO] feedback_agent.canary.run_canary: Launching Canary Release Controller...
+2026-06-16 12:29:52,184 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.controller: Starting canary release for incident INC-20260603-001, query 'hybrid work backpack'
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.controller: Tiers: [5, 25, 50, 100], Soak time: 0s, Max holds: 3
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.controller: --- Canary Tier 1/4: 5% ---
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 5% for query 'hybrid work backpack'
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 5%. No live API call made.
+2026-06-16 12:29:52,185 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_5.json
+2026-06-16 12:29:52,185 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
+2026-06-16 12:29:52,185 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
+2026-06-16 12:29:52,186 [WARNING] feedback_agent.orchestrator: GEMINI_API_KEY not configured. To enable agentic orchestration using Gemini, set the GEMINI_API_KEY environment variable. Visiting https://aistudio.google.com/app/api-keys can help you configure a key.
+2026-06-16 12:29:52,186 [INFO] feedback_agent.orchestrator.fallback: Executing sequential Python feedback pipeline fallback...
+2026-06-16 12:29:52,186 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
+2026-06-16 12:29:52,186 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: FixVerificationAgent
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
+2026-06-16 12:29:52,186 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: MetricComparisonAgent
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
+2026-06-16 12:29:52,186 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: CanaryEvaluationAgent
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
+2026-06-16 12:29:52,186 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: ThresholdUpdateAgent
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
+2026-06-16 12:29:52,186 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
+2026-06-16 12:29:52,187 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: AuditTrailAgent
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
+2026-06-16 12:29:52,187 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
+2026-06-16 12:29:52,188 [INFO] feedback_agent.orchestrator.fallback: Fallback feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_5.json
+2026-06-16 12:29:52,188 [INFO] feedback_agent.db: Database connection closed.
+2026-06-16 12:29:52,188 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 5%.
+2026-06-16 12:29:52,188 [INFO] feedback_agent.canary.controller: --- Canary Tier 2/4: 25% ---
+2026-06-16 12:29:52,188 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 25% for query 'hybrid work backpack'
+2026-06-16 12:29:52,188 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 25%. No live API call made.
+2026-06-16 12:29:52,188 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_25.json
+2026-06-16 12:29:52,188 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
+2026-06-16 12:29:52,188 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
+2026-06-16 12:29:52,188 [WARNING] feedback_agent.orchestrator: GEMINI_API_KEY not configured. To enable agentic orchestration using Gemini, set the GEMINI_API_KEY environment variable. Visiting https://aistudio.google.com/app/api-keys can help you configure a key.
+2026-06-16 12:29:52,188 [INFO] feedback_agent.orchestrator.fallback: Executing sequential Python feedback pipeline fallback...
+2026-06-16 12:29:52,188 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
+2026-06-16 12:29:52,189 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: FixVerificationAgent
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
+2026-06-16 12:29:52,189 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: MetricComparisonAgent
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
+2026-06-16 12:29:52,189 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: CanaryEvaluationAgent
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
+2026-06-16 12:29:52,189 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: ThresholdUpdateAgent
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
+2026-06-16 12:29:52,189 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
+2026-06-16 12:29:52,190 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: AuditTrailAgent
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
+2026-06-16 12:29:52,190 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
+2026-06-16 12:29:52,190 [INFO] feedback_agent.orchestrator.fallback: Fallback feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_25.json
+2026-06-16 12:29:52,190 [INFO] feedback_agent.db: Database connection closed.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 25%.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.canary.controller: --- Canary Tier 3/4: 50% ---
+2026-06-16 12:29:52,191 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 50% for query 'hybrid work backpack'
+2026-06-16 12:29:52,191 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 50%. No live API call made.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_50.json
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
+2026-06-16 12:29:52,191 [WARNING] feedback_agent.orchestrator: GEMINI_API_KEY not configured. To enable agentic orchestration using Gemini, set the GEMINI_API_KEY environment variable. Visiting https://aistudio.google.com/app/api-keys can help you configure a key.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator.fallback: Executing sequential Python feedback pipeline fallback...
+2026-06-16 12:29:52,191 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: FixVerificationAgent
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: MetricComparisonAgent
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: CanaryEvaluationAgent
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
+2026-06-16 12:29:52,191 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: ThresholdUpdateAgent
+2026-06-16 12:29:52,191 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
+2026-06-16 12:29:52,192 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
+2026-06-16 12:29:52,192 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
+2026-06-16 12:29:52,192 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
+2026-06-16 12:29:52,192 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
+2026-06-16 12:29:52,192 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: AuditTrailAgent
+2026-06-16 12:29:52,192 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
+2026-06-16 12:29:52,193 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
+2026-06-16 12:29:52,193 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
+2026-06-16 12:29:52,193 [INFO] feedback_agent.orchestrator.fallback: Fallback feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_50.json
+2026-06-16 12:29:52,193 [INFO] feedback_agent.db: Database connection closed.
+2026-06-16 12:29:52,193 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 50%.
+2026-06-16 12:29:52,193 [INFO] feedback_agent.canary.controller: --- Canary Tier 4/4: 100% ---
+2026-06-16 12:29:52,193 [INFO] feedback_agent.canary.traffic_router: Setting canary traffic weight to 100% for query 'hybrid work backpack'
+2026-06-16 12:29:52,193 [INFO] feedback_agent.canary.traffic_router: [MOCK] Traffic weight set to 100%. No live API call made.
+2026-06-16 12:29:52,193 [INFO] feedback_agent.canary.controller: Running Feedback Agent pipeline → canary_output/feedback_tier_100.json
+2026-06-16 12:29:52,193 [INFO] feedback_agent.orchestrator: Initializing OCS Feedback Agent Pipeline...
+2026-06-16 12:29:52,193 [INFO] feedback_agent.orchestrator: Execution Mode: MOCK/SIMULATED
+2026-06-16 12:29:52,194 [WARNING] feedback_agent.orchestrator: GEMINI_API_KEY not configured. To enable agentic orchestration using Gemini, set the GEMINI_API_KEY environment variable. Visiting https://aistudio.google.com/app/api-keys can help you configure a key.
+2026-06-16 12:29:52,194 [INFO] feedback_agent.orchestrator.fallback: Executing sequential Python feedback pipeline fallback...
+2026-06-16 12:29:52,194 [INFO] feedback_agent.db: Connected to local SQLite database at /Users/hsrivastava/Desktop/feedback_agent/ocs_feedback.db.
+2026-06-16 12:29:52,194 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: FixVerificationAgent
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Starting fix verification check...
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying results for query: 'hybrid work backpack'
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying searchable fields added: ['description', 'tags', 'terrain', 'waterproof']
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying synonym mappings active: 3 mappings
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying embedding refresh for product IDs: ['sku-backpack-1']
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Verifying merchandising rules active: 3 rules
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.FixVerificationAgent: Fix verification completed. allPassed=True
+2026-06-16 12:29:52,194 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: MetricComparisonAgent
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.MetricComparisonAgent: Starting metric comparison...
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.MetricComparisonAgent: Metric comparison completed.
+2026-06-16 12:29:52,194 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: CanaryEvaluationAgent
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Evaluating canary results...
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.CanaryEvaluationAgent: Canary evaluation complete. Action=PROMOTE, Confidence=0.577
+2026-06-16 12:29:52,194 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: ThresholdUpdateAgent
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updating thresholds and watchlists...
+2026-06-16 12:29:52,194 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Updated watchlist in DB for query 'hybrid work backpack'.
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Logged runbook execution success for gap type 'query_vocabulary_gap' with duration 1535 min.
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Adjusted sensitivity for signals: ['autocomplete_miss', 'stale_embedding']
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.ThresholdUpdateAgent: Threshold updates completed.
+2026-06-16 12:29:52,195 [INFO] feedback_agent.orchestrator.fallback: Executing sub-agent fallback: AuditTrailAgent
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.AuditTrailAgent: Writing audit trail record...
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.AuditTrailAgent: Successfully wrote audit record for INC-20260603-001 in DB.
+2026-06-16 12:29:52,195 [INFO] feedback_agent.agents.AuditTrailAgent: Audit trail completed.
+2026-06-16 12:29:52,195 [INFO] feedback_agent.orchestrator.fallback: Fallback feedback pipeline completed successfully. Output saved to canary_output/feedback_tier_100.json
+2026-06-16 12:29:52,195 [INFO] feedback_agent.db: Database connection closed.
+2026-06-16 12:29:52,196 [INFO] feedback_agent.canary.controller: ✅ PROMOTED at 100%.
+2026-06-16 12:29:52,196 [INFO] feedback_agent.canary.controller: 🎉 Canary release completed — 100% traffic on candidate.
+2026-06-16 12:29:52,196 [INFO] feedback_agent.canary.controller: Canary release result saved to canary_output/canary_release_result.json
+2026-06-16 12:29:52,196 [INFO] feedback_agent.db: Database connection closed.
+2026-06-16 12:29:52,196 [INFO] feedback_agent.canary.run_canary: Canary release finished with status: COMPLETED

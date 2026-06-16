@@ -84,3 +84,60 @@ class CanaryState:
     hold_count: int = 0
     final_decision: str = ""
 
+# --- Pydantic Schemas for Google Antigravity Agent ---
+import pydantic
+
+class VerificationCheckSchema(pydantic.BaseModel):
+    name: str
+    passed: bool
+    details: str
+
+class VerificationReportSchema(pydantic.BaseModel):
+    allPassed: bool
+    checks: list[VerificationCheckSchema]
+
+class MetricDeltaSchema(pydantic.BaseModel):
+    before: float
+    after: Any
+    delta: Any
+
+class MetricsReportSchema(pydantic.BaseModel):
+    zeroResultRate: MetricDeltaSchema
+    ctr: MetricDeltaSchema
+    latency_p95_ms: MetricDeltaSchema
+    relevanceScore: MetricDeltaSchema
+
+class DecisionReportSchema(pydantic.BaseModel):
+    action: str  # PROMOTE | ROLLBACK | HOLD
+    confidence: float
+    reason: str
+    nextTrafficTier: str
+
+class ThresholdUpdatesReportSchema(pydantic.BaseModel):
+    watchlistAdded: Optional[str] = None
+    monitoringWindow: str = "7d"
+    regressionThreshold: str = "zero_result_rate > 0.05"
+    runbookTemplatePatched: bool = False
+    signalSensitivityAdjusted: list[str] = []
+
+class AuditRecordSchema(pydantic.BaseModel):
+    incidentId: str
+    gapType: str
+    fixOrderExecuted: int
+    patchesApplied: int
+    evidenceArtifacts: int
+    ownerPath: str
+    rollbackAvailable: bool
+
+class FeedbackResultSchema(pydantic.BaseModel):
+    agent: str = "FeedbackAgent"
+    status: str = "ok"
+    query: str
+    timestamp: str
+    verification: Optional[VerificationReportSchema] = None
+    metrics: Optional[MetricsReportSchema] = None
+    decision: Optional[DecisionReportSchema] = None
+    thresholdUpdates: Optional[ThresholdUpdatesReportSchema] = None
+    auditRecord: Optional[AuditRecordSchema] = None
+
+

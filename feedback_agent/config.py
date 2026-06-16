@@ -32,3 +32,15 @@ CANARY_MAX_HOLDS = int(os.environ.get("CANARY_MAX_HOLDS", "3"))
 # OCS traffic routing header name used to split canary vs baseline traffic.
 CANARY_ROUTING_HEADER = os.environ.get("CANARY_ROUTING_HEADER", "X-OCS-Canary-Weight")
 
+# --- Shadow Testing Settings ---
+OCS_SHADOW_ROUTING_HEADER = os.environ.get("OCS_SHADOW_ROUTING_HEADER", "X-OCS-Route")
+OCS_SHADOW_BASELINE_A = os.environ.get("OCS_SHADOW_BASELINE_A", "baseline-a")
+OCS_SHADOW_BASELINE_B = os.environ.get("OCS_SHADOW_BASELINE_B", "baseline-b")
+OCS_SHADOW_CANDIDATE = os.environ.get("OCS_SHADOW_CANDIDATE", "candidate")
+
+# Directory where per-evaluation shadow test JSON reports are written.
+# Also determines where shadow_testing.log is placed (one level up from here).
+SHADOW_OUTPUT_DIR = os.environ.get(
+    "SHADOW_OUTPUT_DIR",
+    os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "shadow_output"),
+)
