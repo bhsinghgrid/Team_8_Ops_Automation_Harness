@@ -15,7 +15,7 @@ import json
 import logging
 import os
 import datetime
-from typing import List
+from typing import Dict, List, Optional
 
 from feedback_agent.config import (
     OCS_SEARCH_URL,
@@ -142,17 +142,33 @@ class DiffyShadowEvaluator:
     # ------------------------------------------------------------------
     # Orchestrate + persist
     # ------------------------------------------------------------------
-    def evaluate(self, query: str, incident_id: str = "") -> dict:
+    def evaluate(
+        self,
+        query: str,
+        incident_id: str = "",
+        qrels: Optional[Dict[str, int]] = None,
+        ndcg_k: int = 10,
+    ) -> dict:
         """
         Run the full Diffy-style shadow evaluation for *query*.
+
+        Parameters
+        ----------
+        query:
+            The search query string.
+        incident_id:
+            Used to name the output JSON file.
+        qrels:
+            Optional relevance judgments: ``{product_id: relevance_score}``
+            (0 = not relevant … 3 = highly relevant).  When provided, NDCG@k
+            and MRR are computed via ranx and included in the report under
+            ``ranking_metrics``.
+        ndcg_k:
+            Cutoff for NDCG (default 10).
 
         Results are written to::
 
             shadow_output/shadow_<YYYYMMDD_HHMMSS>_<incident_id>.json
-
-        Returns a dict with keys ``s2n``, ``candidate_diffs``,
-        ``noise_diffs``, ``baseline_a_results``, ``baseline_b_results``,
-        ``candidate_results``, ``timestamp``, and ``output_path``.
         """
         self._log("info", f"[Shadow] Starting evaluation for query='{query}' incident='{incident_id}'")
 
@@ -179,6 +195,25 @@ class DiffyShadowEvaluator:
             f"noise_diffs={noise_diffs}, S2N={s2n}",
         )
 
+        # ── Ranking quality metrics (ranx) ────────────────────────────────
+        ranking_metrics: Optional[dict] = None
+        if qrels:
+            from feedback_agent.shadow.ranking_metrics import compare_systems
+            ranking_metrics = compare_systems(
+                query=query,
+                baseline_results=resp_a,
+                candidate_results=resp_cand,
+                qrels=qrels,
+                k=ndcg_k,
+            )
+            ndcg_delta = ranking_metrics.get(f"ndcg@{ndcg_k}_delta")
+            mrr_delta  = ranking_metrics.get("mrr_delta")
+            self._log(
+                "info",
+                f"[Shadow] Ranking metrics: NDCG@{ndcg_k}_delta={ndcg_delta}, MRR_delta={mrr_delta}, "
+                f"improved={ranking_metrics.get('improved')}, regression={ranking_metrics.get('regression')}",
+            )
+
         timestamp = datetime.datetime.now().astimezone().strftime("%Y%m%d_%H%M%S")
         suffix = f"_{incident_id}" if incident_id else ""
         filename = f"shadow_{timestamp}{suffix}.json"
@@ -193,6 +228,7 @@ class DiffyShadowEvaluator:
             "candidate_diffs": candidate_diffs,
             "noise_diffs": noise_diffs,
             "s2n": s2n,
+            "ranking_metrics": ranking_metrics,
         }
 
         os.makedirs(SHADOW_OUTPUT_DIR, exist_ok=True)
@@ -215,17 +251,26 @@ class DiffyShadowEvaluator:
         baseline_a: list | None = None,
         baseline_b: list | None = None,
         candidate: list | None = None,
+        qrels: Optional[Dict[str, int]] = None,
+        ndcg_k: int = 10,
     ) -> dict:
         """
         Run the Diffy diff algorithm on supplied (or default) product-ID lists
         WITHOUT making any HTTP calls.  Useful for local testing and CI.
 
+        Parameters
+        ----------
+        qrels:
+            Optional relevance judgments for ranx NDCG@k / MRR computation.
+            Same format as ``evaluate()``.  When provided, ``ranking_metrics``
+            is included in the returned report dict and written to the JSON file.
+
         Writes the same shadow_output JSON report and shadow_testing.log entries
         as the live ``evaluate()`` method.
         """
-        resp_a = baseline_a or ["sku-001", "sku-002", "sku-003"]
-        resp_b = baseline_b or ["sku-001", "sku-002", "sku-003"]
-        resp_cand = candidate or ["sku-001", "sku-002", "sku-003", "sku-004", "sku-005"]
+        resp_a    = baseline_a or ["sku-001", "sku-002", "sku-003"]
+        resp_b    = baseline_b or ["sku-001", "sku-002", "sku-003"]
+        resp_cand = candidate  or ["sku-001", "sku-002", "sku-003", "sku-004", "sku-005"]
 
         self._log(
             "info",
@@ -233,7 +278,7 @@ class DiffyShadowEvaluator:
         )
 
         candidate_diffs = self.diff_responses(resp_a, resp_cand)
-        noise_diffs = self.diff_responses(resp_a, resp_b)
+        noise_diffs     = self.diff_responses(resp_a, resp_b)
         s2n = round(float(candidate_diffs) / float(max(1, noise_diffs)), 2)
 
         self._log(
@@ -241,30 +286,47 @@ class DiffyShadowEvaluator:
             f"[Shadow][MOCK] candidate_diffs={candidate_diffs}, noise_diffs={noise_diffs}, S2N={s2n}",
         )
 
-        import datetime
+        # ── Ranking quality metrics (ranx) ────────────────────────────────
+        ranking_metrics: Optional[dict] = None
+        if qrels:
+            from feedback_agent.shadow.ranking_metrics import compare_systems
+            ranking_metrics = compare_systems(
+                query=query,
+                baseline_results=resp_a,
+                candidate_results=resp_cand,
+                qrels=qrels,
+                k=ndcg_k,
+            )
+            self._log(
+                "info",
+                f"[Shadow][MOCK] Ranking: NDCG@{ndcg_k}_delta={ranking_metrics.get(f'ndcg@{ndcg_k}_delta')}, "
+                f"MRR_delta={ranking_metrics.get('mrr_delta')}, "
+                f"improved={ranking_metrics.get('improved')}, regression={ranking_metrics.get('regression')}",
+            )
+
         timestamp = datetime.datetime.now().astimezone().strftime("%Y%m%d_%H%M%S")
         suffix = f"_{incident_id}" if incident_id else ""
         filename = f"shadow_mock_{timestamp}{suffix}.json"
 
         report = {
-            "query": query,
-            "incident_id": incident_id,
-            "mode": "MOCK",
-            "timestamp": datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
+            "query":              query,
+            "incident_id":       incident_id,
+            "mode":              "MOCK",
+            "timestamp":         datetime.datetime.now().astimezone().isoformat(timespec="seconds"),
             "baseline_a_results": resp_a,
             "baseline_b_results": resp_b,
-            "candidate_results": resp_cand,
-            "candidate_diffs": candidate_diffs,
-            "noise_diffs": noise_diffs,
-            "s2n": s2n,
+            "candidate_results":  resp_cand,
+            "candidate_diffs":   candidate_diffs,
+            "noise_diffs":       noise_diffs,
+            "s2n":               s2n,
+            "ranking_metrics":   ranking_metrics,
         }
 
         os.makedirs(SHADOW_OUTPUT_DIR, exist_ok=True)
         output_path = os.path.join(SHADOW_OUTPUT_DIR, filename)
         try:
-            import json as _json
             with open(output_path, "w", encoding="utf-8") as fh:
-                _json.dump(report, fh, indent=2)
+                json.dump(report, fh, indent=2)
             self._log("info", f"[Shadow][MOCK] Report saved → {output_path}")
             report["output_path"] = output_path
         except Exception as exc:

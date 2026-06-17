@@ -10,3 +10,6 @@ google-generativeai>=0.8.0
 # gRPC tools (required by google-generativeai protobuf layer)
 grpcio-tools>=1.67.0
 protobuf>=5.28.0
+
+# IR evaluation metrics: NDCG@k, MRR (used by DiffyShadowEvaluator + ranking_metrics.py)
+ranx>=0.3.20

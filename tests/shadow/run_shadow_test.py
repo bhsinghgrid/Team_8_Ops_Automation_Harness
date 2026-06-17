@@ -101,28 +101,61 @@ def run_scenario(name: str, scenario: dict) -> bool:
         report = evaluator.evaluate(
             query=scenario["query"],
             incident_id=f"TEST-{name.upper()}",
+            qrels=scenario.get("qrels"),   # pass relevance judgments for ranx
         )
 
-    # ── Validate ─────────────────────────────────────────────────────────
+    # ── Validate S2N + decision ──────────────────────────────────────────
     actual_s2n      = report["s2n"]
     actual_decision = s2n_to_decision(actual_s2n)
     expected_s2n    = scenario["expected_s2n"]
     expected_dec    = scenario["expected_decision"]
 
     dec_color = DECISION_COLOR.get(actual_decision, RESET)
-    passed    = (actual_s2n == expected_s2n) and (actual_decision == expected_dec)
-    status    = f"{GREEN}✅ PASS{RESET}" if passed else f"{RED}❌ FAIL{RESET}"
+    s2n_ok    = (actual_s2n == expected_s2n)
+    dec_ok    = (actual_decision == expected_dec)
 
-    print(f"\n  {'Result':10s}: candidate_diffs={report['candidate_diffs']}  "
-          f"noise_diffs={report['noise_diffs']}  "
-          f"S2N={actual_s2n}")
-    print(f"  {'Decision':10s}: {dec_color}{actual_decision}{RESET}")
-    print(f"  {'Report':10s}: {report.get('output_path', 'N/A')}")
+    # ── Validate ranking metrics (ranx) ──────────────────────────────────
+    ranking = report.get("ranking_metrics") or {}
+    # 'ndcg@10' lives inside ranking['baseline'] and ranking['candidate']
+    # The top-level dict has 'ndcg@10_delta' (the delta key)
+    ndcg_key = next(
+        (k for k in ranking.get("baseline", {}) if k.startswith("ndcg@")), None
+    )
+    ndcg_delta     = ranking.get(f"{ndcg_key}_delta") if ndcg_key else None
+    mrr_delta      = ranking.get("mrr_delta")
+    baseline_ndcg  = ranking.get("baseline", {}).get(ndcg_key) if ndcg_key else None
+    cand_ndcg      = ranking.get("candidate", {}).get(ndcg_key) if ndcg_key else None
+    expected_ndcg_improved = scenario.get("expected_ndcg_improved")
+    ndcg_ok = True
+    if expected_ndcg_improved is not None and ndcg_delta is not None:
+        ndcg_ok = (ranking.get("improved") == expected_ndcg_improved)
+
+    passed = s2n_ok and dec_ok and ndcg_ok
+    status = f"{GREEN}✅ PASS{RESET}" if passed else f"{RED}❌ FAIL{RESET}"
+
+    print(f"\n  {'S2N Result':12s}: candidate_diffs={report['candidate_diffs']}  "
+          f"noise_diffs={report['noise_diffs']}  S2N={actual_s2n}")
+    print(f"  {'Decision':12s}: {dec_color}{actual_decision}{RESET}")
+
+    # Ranking metrics block
+    if ndcg_key and ndcg_delta is not None:
+        trend = f"{GREEN}▲ improved{RESET}" if ranking.get('improved') else (
+                f"{RED}▼ regression{RESET}" if ranking.get('regression') else "→ unchanged")
+        print(f"  {'NDCG@10':12s}: baseline={baseline_ndcg}  candidate={cand_ndcg}  "
+              f"delta={ndcg_delta:+.4f}  {trend}")
+        print(f"  {'MRR delta':12s}: {mrr_delta:+.4f}")
+    else:
+        print(f"  {'Ranking':12s}: no qrels provided (skipped)")
+
+    print(f"  {'Report':12s}: {report.get('output_path', 'N/A')}")
     print(f"  {status}")
 
-    if not passed:
-        print(f"  {RED}Expected S2N={expected_s2n}, got {actual_s2n}{RESET}")
-        print(f"  {RED}Expected decision={expected_dec}, got {actual_decision}{RESET}")
+    if not s2n_ok:
+        print(f"  {RED}S2N: expected {expected_s2n}, got {actual_s2n}{RESET}")
+    if not dec_ok:
+        print(f"  {RED}Decision: expected {expected_dec}, got {actual_decision}{RESET}")
+    if not ndcg_ok:
+        print(f"  {RED}NDCG improved: expected {expected_ndcg_improved}, got {ranking.get('improved')}{RESET}")
 
     return passed
 
