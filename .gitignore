@@ -34,3 +34,4 @@ feedback_result.json
 .idea/
 .vscode/
 *.swp
+tests/shadow/output/
