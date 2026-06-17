@@ -1,0 +1,28 @@
+{
+  "query": "hybrid work backpack",
+  "incident_id": "TEST-PROMOTE",
+  "timestamp": "2026-06-16T17:42:01+05:30",
+  "baseline_a_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003"
+  ],
+  "baseline_b_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003"
+  ],
+  "candidate_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003",
+    "sku-004",
+    "sku-005",
+    "sku-006",
+    "sku-007",
+    "sku-008"
+  ],
+  "candidate_diffs": 5,
+  "noise_diffs": 0,
+  "s2n": 5.0
+}

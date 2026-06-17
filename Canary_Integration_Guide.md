@@ -96,6 +96,8 @@ The controller writes its final summary to `canary_output/canary_release_result.
 
 ## 4. Verification & Testing
 
+### Mock Mode Rollout
+
 To verify the integration locally, you can use Mock Mode:
 
 ```bash
@@ -104,3 +106,18 @@ python3 -m feedback_agent.canary.run_canary --input input.json --output-dir cana
 ```
 
 This will run all 4 tiers (`5%`, `25%`, `50%`, `100%`) instantly (soak time is overridden to `0` seconds in mock mode), writing the evaluation records to SQLite and outputs to the `canary_output/` folder.
+
+### Local Shadow Test Suite
+
+The system includes a dedicated test harness for verifying the Diffy shadow evaluation math without needing live OCS Search API endpoints.
+
+```bash
+# Run all pre-calibrated S2N scenarios (PROMOTE, HOLD, ROLLBACK)
+python3 tests/shadow/run_shadow_test.py
+
+# Run a specific scenario
+python3 tests/shadow/run_shadow_test.py --scenario hold
+```
+
+This harness starts a local HTTP server that mimics OCS routing behavior, evaluates the product diffs using the real `DiffyShadowEvaluator`, and validates the `S2N` calculation and guardrail decisions.
+Results for these tests are safely isolated in `tests/shadow/output/` to prevent mixing with real production artifacts.

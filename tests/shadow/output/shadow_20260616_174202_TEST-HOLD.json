@@ -1,0 +1,33 @@
+{
+  "query": "ergonomic laptop stand",
+  "incident_id": "TEST-HOLD",
+  "timestamp": "2026-06-16T17:42:02+05:30",
+  "baseline_a_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003",
+    "sku-004",
+    "sku-005"
+  ],
+  "baseline_b_results": [
+    "sku-001",
+    "sku-003",
+    "sku-002",
+    "sku-004",
+    "sku-005"
+  ],
+  "candidate_results": [
+    "sku-001",
+    "sku-002",
+    "sku-003",
+    "sku-004",
+    "sku-005",
+    "sku-006",
+    "sku-007",
+    "sku-008",
+    "sku-009"
+  ],
+  "candidate_diffs": 4,
+  "noise_diffs": 2,
+  "s2n": 2.0
+}
