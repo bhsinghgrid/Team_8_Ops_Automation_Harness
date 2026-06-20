@@ -1,0 +1,110 @@
+[
+  {
+    "signal_id": "SIG-MXP-001",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "FOOT-121",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-001",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-002",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "ELEC-061",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-001",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-003",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "FOOT-122",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-002",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-004",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "BAGS-081",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-002",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-005",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "OUT-081",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-003",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-006",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "CAMP-061",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-003",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-007",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "ELEC-062",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-004",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-008",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "FOOT-123",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-004",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  },
+  {
+    "signal_id": "SIG-MXP-009",
+    "anomaly_type": "ZERO_STOCK_BOOST",
+    "query_text": "ALL_QUERIES (Rule Level Fault)",
+    "impacted_product_id": "ELEC-061",
+    "current_metric_value": 0.0,
+    "metadata": {
+      "suspected_rule_id": "MXP-007",
+      "detected_stock": 0,
+      "total_impressions": 0
+    }
+  }
+]
