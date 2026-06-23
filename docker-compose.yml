@@ -1,0 +1,74 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: magellan-app
+    ports:
+      - "8000:8000"
+    volumes:
+      # Mount the .env file for configuration
+      - ./.env:/app/.env
+      # Mount the gcloud config directory for authentication.
+      # IMPORTANT: This assumes the user running docker has gcloud configured at ~/.config/gcloud
+      - ~/.config/gcloud:/root/.config/gcloud
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      # This allows the container to connect to the Temporal server running on the host machine.
+      TEMPORAL_ADDRESS: "host.docker.internal:7233"
+      PYTHONPATH: "/app"
+    # This allows the container to resolve host.docker.internal
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile.frontend
+    container_name: magellan-frontend
+    ports:
+      - "5173:80"
+
+  diffy:
+    platform: linux/amd64
+    image: diffy/diffy
+    container_name: diffy
+    ports:
+      - "8888:8888" # API Port
+      - "8880:8880" # UI/Dashboard Port
+      - "8881:8881" # Admin Port
+    depends_on:
+      - mongo
+      - redis
+    environment:
+      - "diffy.master.primary=http://host.docker.internal:8000"
+      - "diffy.master.secondary=http://host.docker.internal:8000"
+      - "diffy.master.candidate=http://host.docker.internal:8000"
+      - "spring.data.mongodb.uri=mongodb://mongo:27017/diffy"
+      - "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration"
+      - "redis.host=redis"
+    volumes:
+      - ./diffy/diffy.properties:/app/diffy.properties
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+
+  mongo:
+    image: mongo:4.4
+    container_name: diffy-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - diffy-mongo-data:/data/db
+
+  redis:
+    image: redis:7
+    container_name: diffy-redis
+    ports:
+      - "6379:6379"
+
+volumes:
+  diffy-mongo-data:

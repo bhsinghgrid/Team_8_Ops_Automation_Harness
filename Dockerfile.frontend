@@ -1,0 +1,31 @@
+# --- Stage 1: Build the React Application ---
+FROM node:20-alpine as builder
+
+WORKDIR /app
+
+# Copy package management files
+COPY MagellanFrontend/package.json MagellanFrontend/package-lock.json* ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of the frontend application source code
+COPY MagellanFrontend/ ./
+
+# Build the static assets for production
+RUN npm run build
+
+# --- Stage 2: Serve the Static Assets with Nginx ---
+FROM nginx:1.25-alpine
+
+# Copy the static files from the builder stage to the Nginx server directory
+COPY --from=builder /app/dist /usr/share/nginx/html
+
+# Copy a custom Nginx configuration file
+# This is important for single-page applications (SPAs) to handle routing correctly.
+COPY nginx.conf /etc/nginx/conf.d/default.conf
+
+# Expose port 80 for the Nginx server
+EXPOSE 80
+
+# The default Nginx command is to start the server, so we don't need a CMD
