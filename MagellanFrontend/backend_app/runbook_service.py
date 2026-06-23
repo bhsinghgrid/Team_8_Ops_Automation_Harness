@@ -1,0 +1,123 @@
+import json
+from urllib.error import HTTPError, URLError
+from urllib.request import Request, urlopen
+
+from fastapi import HTTPException
+
+from .config import (
+    BACKEND_REQUEST_TIMEOUT_SECONDS,
+    DATA_SOURCE_URLS,
+    RUNBOOK_ACTION_API_URL,
+)
+from .data_sources import fetch_remote_list, request_headers
+from .normalizers import (
+    get_runbook_value,
+    normalize_audit_row,
+    normalize_runbook,
+)
+from .schemas import TemporalWorkflowSummary
+from .temporal_service import (
+    build_audit_from_temporal_workflow,
+    build_runbook_from_temporal_workflow,
+    list_temporal_backend_workflows,
+)
+
+
+async def get_runbook_records() -> list[dict]:
+    if DATA_SOURCE_URLS["runbooks"]:
+        return [
+            normalize_runbook(runbook)
+            for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
+        ]
+
+    try:
+        return [
+            build_runbook_from_temporal_workflow(workflow)
+            for workflow in await list_temporal_backend_workflows()
+        ]
+    except Exception:
+        return []
+
+
+async def get_audit_records() -> list[dict]:
+    if DATA_SOURCE_URLS["audit"]:
+        return [
+            normalize_audit_row(row)
+            for row in fetch_remote_list("audit", ["audit", "audit_rows", "items", "data", "results"])
+        ]
+
+    try:
+        return [
+            build_audit_from_temporal_workflow(workflow)
+            for workflow in await list_temporal_backend_workflows()
+        ]
+    except Exception:
+        return []
+
+
+def build_workflow_summary(runbook: dict) -> TemporalWorkflowSummary:
+    runbook_id = str(get_runbook_value(runbook, "id", "runbook_id", default="unknown"))
+    checkpoints = get_runbook_value(
+        runbook,
+        "temporal.checkpoints",
+        "checkpoints",
+        default=[],
+    )
+    if not isinstance(checkpoints, list):
+        checkpoints = [str(checkpoints)] if checkpoints else []
+
+    return TemporalWorkflowSummary(
+        runbook_id=runbook_id,
+        title=str(get_runbook_value(runbook, "title", "name", default=runbook_id)),
+        workflow_id=str(
+            get_runbook_value(
+                runbook,
+                "temporal.workflowId",
+                "workflow_id",
+                "temporalWorkflowId",
+                default=f"workflow/{runbook_id}",
+            )
+        ),
+        status=str(get_runbook_value(runbook, "status", default="unknown")),
+        cadence=str(get_runbook_value(runbook, "temporal.cadence", "cadence", default="not provided")),
+        retry_policy=str(
+            get_runbook_value(runbook, "temporal.retryPolicy", "retry_policy", default="not provided")
+        ),
+        sla=str(get_runbook_value(runbook, "temporal.sla", "sla", default="not provided")),
+        checkpoints=[str(checkpoint) for checkpoint in checkpoints],
+    )
+
+
+def build_action_url(runbook_id: str, action: str) -> str:
+    if not RUNBOOK_ACTION_API_URL:
+        return ""
+    if "{runbook_id}" in RUNBOOK_ACTION_API_URL or "{action}" in RUNBOOK_ACTION_API_URL:
+        return RUNBOOK_ACTION_API_URL.format(runbook_id=runbook_id, action=action)
+    return f"{RUNBOOK_ACTION_API_URL.rstrip('/')}/{runbook_id}/actions/{action}"
+
+
+def forward_runbook_action(runbook_id: str, action: str) -> bool:
+    action_url = build_action_url(runbook_id, action)
+    if not action_url:
+        return False
+
+    body = json.dumps({"runbook_id": runbook_id, "action": action}).encode("utf-8")
+    try:
+        request = Request(
+            action_url,
+            data=body,
+            headers=request_headers("application/json"),
+            method="POST",
+        )
+        with urlopen(request, timeout=BACKEND_REQUEST_TIMEOUT_SECONDS):
+            return True
+    except HTTPError as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"runbook action source returned HTTP {exc.code}: {action_url}",
+        ) from exc
+    except (URLError, TimeoutError) as exc:
+        raise HTTPException(
+            status_code=502,
+            detail=f"runbook action source is not reachable: {action_url}",
+        ) from exc
