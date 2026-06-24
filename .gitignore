@@ -1,49 +1,34 @@
-# Python-generated files
+# ========================
+# General
+# ========================
+.DS_Store
+.env
+.vscode/
+
+# ========================
+# Python
+# ========================
 __pycache__/
 *.py[oc]
 build/
 dist/
 wheels/
 *.egg-info
-.env
+.venv/
 
-# Virtual environments
-.venv
-
-## Files and Folder
-.vscode/
+# ========================
+# Logs & Databases
+# ========================
 logs/
-temporal/agents.py
-temporal/cat_start_workflow.py
-temporal/cat_workflow.py
-temporal/cat_workflow_test.py
-temporal/catalog_workflow.py
-temporal/catalog_workflows.py
-temporal/catalog_activities.py
-
-Merchandising/
-
-adk_test.py
-**.json
-base2_agent.py
-base3_agent.py
-base4_agent.py
-
-inpect_fast_rlm.py
-inspect_rlm_prompt.py
-list_models_debug.py
-list_models.py
-local_agent_base.py
-
-test_api.py
-
-# General Python
 *.log
-feedback_agent.log
+*.jsonl
 *.db
+feedback_agent.log
 mock_catalog_db.db
 
-# Node.js
+# ========================
+# Node.js (for MagellanFrontend)
+# ========================
 MagellanFrontend/node_modules/
 MagellanFrontend/dist/
 MagellanFrontend/.env*
@@ -52,9 +37,47 @@ yarn-debug.log*
 yarn-error.log*
 lerna-debug.log*
 
-# Other
-.DS_Store
-graphify-out/
+# ========================
+# Dependency Management
+# ========================
 uv.lock
-/mock_lancedb/
 
+# ========================
+# Generated & Test Artifacts
+# ========================
+graphify-out/
+/mock_lancedb/
+fast_rlm_inspection.txt
+mlflow.db
+mlruns/
+
+# ========================
+# Temporary & Old Files
+# ========================
+temporal/agents.py
+temporal/cat_start_workflow.py
+temporal/cat_workflow.py
+temporal/cat_workflow_test.py
+temporal/catalog_workflow.py
+temporal/catalog_workflows.py
+temporal/catalog_activities.py
+Merchandising/
+adk_test.py
+base2_agent.py
+base3_agent.py
+base4_agent.py
+inpect_fast_rlm.py
+inspect_rlm_prompt.py
+list_models_debug.py
+list_models.py
+local_agent_base.py
+test_api.py
+test_agent.py
+test_all_agents.py
+test_eval_agent.py
+test_fast_rlm.py
+standalone_test.py
+test_base_fast_rlm.py
+test_catalog_pipeline.py
+test_rca_to_fix_pipeline.py
+test_semantic_rootcause.py
