@@ -1,0 +1,70 @@
+{
+  "description": "Products with updated text but stale embeddings",
+  "error_type": "SEMANTIC_SEARCH",
+  "products": [
+    {
+      "id": "FOOT-001",
+      "title": "Waterproof Trail Runner Pro 001",
+      "description": "Waterproof Trail Runner 001 is a trail shoe built for wet routes and uneven ground. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "TrailForge",
+      "price": 86.25,
+      "stock": 23,
+      "attributes": {
+        "waterproof": false,
+        "terrain": "casual",
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-001",
+      "title": "Commuter Laptop Backpack 001",
+      "description": "expanded product copy for hybrid commute search",
+      "category": "bags",
+      "brand": "Packsmith",
+      "price": 66.25,
+      "stock": 23,
+      "attributes": {
+        "capacity_liters": 22,
+        "laptop_size": "17inch",
+        "material": "leather",
+        "waterproof": true
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-001",
+      "title": "Gore-Tex Rain Jacket Storm 001",
+      "description": "Gore-Tex Rain Jacket 001 is a technical shell for persistent rain and windy commutes. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "StormVale",
+      "price": 106.25,
+      "stock": 23,
+      "attributes": {
+        "waterproof": false,
+        "material": "polyester",
+        "size_range": "XS-3XL",
+        "weight_grams": 780
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-001",
+      "title": "GPS Fitness Smartwatch 001",
+      "description": "updated copy emphasizing GPS battery performance",
+      "category": "electronics",
+      "brand": "PulseBit",
+      "price": 96.25,
+      "stock": 23,
+      "attributes": {
+        "battery_hours": 12,
+        "waterproof": true,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "complete"
+    }
+  ]
+}

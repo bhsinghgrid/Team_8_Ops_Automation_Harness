@@ -1,0 +1,6 @@
+{
+  "queries_file": "mock-data/queries/benchmark_queries.json",
+  "tenant": "ocs_example",
+  "limit": 10,
+  "offset": 0
+}

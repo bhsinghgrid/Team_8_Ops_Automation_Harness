@@ -1,0 +1,398 @@
+{
+  "version": 1,
+  "last_updated": "2026-06-06T00:00:00Z",
+  "rules": [
+    {
+      "rule_id": "MXP-001",
+      "rule_type": "boost",
+      "target_products": [
+        "FOOT-121",
+        "ELEC-061"
+      ],
+      "boost_factor": 1.33,
+      "campaign": "Summer Trail Sale",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "FOOT-121",
+          "stock": 0,
+          "data_quality": "incomplete"
+        },
+        {
+          "id": "ELEC-061",
+          "stock": 0,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-002",
+      "rule_type": "boost",
+      "target_products": [
+        "FOOT-122",
+        "BAGS-081"
+      ],
+      "boost_factor": 1.46,
+      "campaign": "Back To Campus",
+      "active": true,
+      "created_by": "merchandiser_chandra",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "FOOT-122",
+          "stock": 0,
+          "data_quality": "incomplete"
+        },
+        {
+          "id": "BAGS-081",
+          "stock": 0,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-003",
+      "rule_type": "boost",
+      "target_products": [
+        "OUT-081",
+        "CAMP-061"
+      ],
+      "boost_factor": 1.59,
+      "campaign": "Storm Ready",
+      "active": true,
+      "created_by": "merchandiser_diego",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "OUT-081",
+          "stock": 0,
+          "data_quality": "incomplete"
+        },
+        {
+          "id": "CAMP-061",
+          "stock": 0,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-004",
+      "rule_type": "boost",
+      "target_products": [
+        "ELEC-062",
+        "FOOT-123"
+      ],
+      "boost_factor": 1.72,
+      "campaign": "Outdoor Tech Week",
+      "active": true,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "ELEC-062",
+          "stock": 0,
+          "data_quality": "incomplete"
+        },
+        {
+          "id": "FOOT-123",
+          "stock": 0,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-005",
+      "rule_type": "boost",
+      "target_products": [
+        "BAGS-050",
+        "OUT-050"
+      ],
+      "boost_factor": 1.85,
+      "campaign": "Travel Essentials",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "BAGS-050",
+          "stock": 87,
+          "data_quality": "complete"
+        },
+        {
+          "id": "OUT-050",
+          "stock": 87,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-006",
+      "rule_type": "boost",
+      "target_products": [
+        "CAMP-050",
+        "FOOT-050"
+      ],
+      "boost_factor": 1.98,
+      "campaign": "Basecamp Bundle",
+      "active": true,
+      "created_by": "merchandiser_chandra",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "CAMP-050",
+          "stock": 87,
+          "data_quality": "complete"
+        },
+        {
+          "id": "FOOT-050",
+          "stock": 87,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-007",
+      "rule_type": "boost",
+      "target_products": [
+        "ELEC-061",
+        "OUT-080"
+      ],
+      "boost_factor": 2.11,
+      "campaign": "Wearable Refresh",
+      "active": false,
+      "created_by": "merchandiser_diego",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "ELEC-061",
+          "stock": 0,
+          "data_quality": "incomplete"
+        },
+        {
+          "id": "OUT-080",
+          "stock": 95,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-008",
+      "rule_type": "boost",
+      "target_products": [
+        "BAGS-080",
+        "CAMP-080"
+      ],
+      "boost_factor": 2.24,
+      "campaign": "Weekend Carry Event",
+      "active": false,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "BAGS-080",
+          "stock": 95,
+          "data_quality": "complete"
+        },
+        {
+          "id": "CAMP-080",
+          "stock": 8,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-009",
+      "rule_type": "suppress",
+      "target_products": [
+        "FOOT-100",
+        "BAGS-070"
+      ],
+      "reason": "low margin",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "FOOT-100",
+          "stock": 164,
+          "data_quality": "complete"
+        },
+        {
+          "id": "BAGS-070",
+          "stock": 156,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-010",
+      "rule_type": "suppress",
+      "target_products": [
+        "OUT-070"
+      ],
+      "reason": "supplier hold",
+      "active": true,
+      "created_by": "merchandiser_chandra",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "OUT-070",
+          "stock": 156,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-011",
+      "rule_type": "suppress",
+      "target_products": [
+        "ELEC-050"
+      ],
+      "reason": "quality review",
+      "active": true,
+      "created_by": "merchandiser_diego",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "ELEC-050",
+          "stock": 87,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-012",
+      "rule_type": "suppress",
+      "target_products": [
+        "CAMP-050"
+      ],
+      "reason": "seasonal delist",
+      "active": true,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "CAMP-050",
+          "stock": 87,
+          "data_quality": "complete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-013",
+      "rule_type": "suppress",
+      "target_products": [
+        "FOOT-210"
+      ],
+      "reason": "duplicate listing",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "FOOT-210",
+          "stock": 41,
+          "data_quality": "incomplete"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-014",
+      "rule_type": "suppress",
+      "target_products": [
+        "BAGS-145"
+      ],
+      "reason": "image compliance",
+      "active": false,
+      "created_by": "merchandiser_chandra",
+      "created_at": "2026-06-06T00:00:00Z",
+      "target_product_snapshots": [
+        {
+          "id": "BAGS-145",
+          "stock": 40,
+          "data_quality": "poor"
+        }
+      ]
+    },
+    {
+      "rule_id": "MXP-015",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "rain shell",
+        "waterproof jacket"
+      ],
+      "canonical": "rain jacket",
+      "active": true,
+      "created_by": "merchandiser_diego",
+      "created_at": "2026-06-06T00:00:00Z"
+    },
+    {
+      "rule_id": "MXP-016",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "daypack",
+        "rucksack"
+      ],
+      "canonical": "backpack",
+      "active": true,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z"
+    },
+    {
+      "rule_id": "MXP-017",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "trainers",
+        "sneakers"
+      ],
+      "canonical": "shoes",
+      "active": true,
+      "created_by": "merchandiser_ben",
+      "created_at": "2026-06-06T00:00:00Z"
+    },
+    {
+      "rule_id": "MXP-018",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "fitness watch",
+        "activity tracker"
+      ],
+      "canonical": "smartwatch",
+      "active": true,
+      "created_by": "merchandiser_chandra",
+      "created_at": "2026-06-06T00:00:00Z"
+    },
+    {
+      "rule_id": "MXP-019",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "sleeping sack",
+        "camp bag"
+      ],
+      "canonical": "sleeping bag",
+      "active": true,
+      "created_by": "merchandiser_diego",
+      "created_at": "2026-06-06T00:00:00Z"
+    },
+    {
+      "rule_id": "MXP-020",
+      "rule_type": "synonym",
+      "target_products": [],
+      "terms": [
+        "gore tex",
+        "gtx"
+      ],
+      "canonical": "gore-tex",
+      "active": true,
+      "created_by": "merchandiser_alice",
+      "created_at": "2026-06-06T00:00:00Z"
+    }
+  ]
+}

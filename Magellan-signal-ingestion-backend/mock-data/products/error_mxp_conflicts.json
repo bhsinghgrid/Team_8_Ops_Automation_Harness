@@ -1,0 +1,86 @@
+{
+  "description": "Products targeted by MXP rules but have inventory or other conflicts",
+  "error_type": "MXP_RULES",
+  "products": [
+    {
+      "id": "FOOT-121",
+      "title": "Waterproof Trail Runner Lite 121",
+      "description": "Waterproof Trail Runner Lite 121 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 163.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "canvas",
+        "size_range": "5-11"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "FOOT-122",
+      "title": "Road Tempo Sneaker Lite 122",
+      "description": "Road Tempo Sneaker Lite 122 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "footwear",
+      "brand": "Runway Athletics",
+      "price": 180.5,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "OUT-081",
+      "title": "Down Alpine Parka Lite 081",
+      "description": "Down Alpine Parka Lite 081 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "outerwear",
+      "brand": "CairnWear",
+      "price": 222.25,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "material": null,
+        "size_range": null,
+        "weight_grams": 240
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-061",
+      "title": "GPS Fitness Smartwatch Lite 061",
+      "description": "GPS Fitness Smartwatch Lite 061 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "OrbitIQ",
+      "price": 595.25,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "AMOLED",
+        "gps": true
+      },
+      "data_quality": "incomplete"
+    },
+    {
+      "id": "ELEC-062",
+      "title": "Waterproof Bluetooth Speaker Lite 062",
+      "description": "Waterproof Bluetooth Speaker Lite 062 keeps the core catalog copy but intentionally omits several structured attributes for warning-path tests.",
+      "category": "electronics",
+      "brand": "VoltEdge",
+      "price": 91.5,
+      "stock": 0,
+      "attributes": {
+        "battery_hours": null,
+        "waterproof": null,
+        "display": "LCD",
+        "gps": false
+      },
+      "data_quality": "incomplete"
+    }
+  ]
+}

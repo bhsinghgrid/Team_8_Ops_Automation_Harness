@@ -1,0 +1,6 @@
+{
+  "event_id": "CAT-20260607-xxxxxxxx",
+  "severity": "critical",
+  "event_type": "catalog_delta",
+  "message": "Catalog delta ingested and applied for BAGS-999"
+}

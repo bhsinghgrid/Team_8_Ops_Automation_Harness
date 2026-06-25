@@ -1,0 +1,78 @@
+{
+  "description": "Products with missing attributes causing zero results for specific filters",
+  "error_type": "CATALOG_OPTIMIZATION",
+  "products": [
+    {
+      "id": "FOOT-002",
+      "title": "Road Tempo Sneaker 002",
+      "description": "Road Tempo Sneaker 002 is a breathable road trainer with a stable ride. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "StrideLab",
+      "price": 103.5,
+      "stock": 36,
+      "attributes": {
+        "material": "leather",
+        "size_range": "6-12"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "FOOT-003",
+      "title": "Casual Canvas Low Top 003",
+      "description": "Casual Canvas Low Top 003 is a everyday canvas sneaker with clean styling. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "footwear",
+      "brand": "NorthPeak",
+      "price": 120.75,
+      "stock": 49,
+      "attributes": {
+        "material": "mesh",
+        "size_range": "6-13"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "BAGS-053",
+      "title": "Trail Hydration Pack 053",
+      "description": "Trail Hydration Pack 053 is a compact pack shaped for fast outdoor movement. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "bags",
+      "brand": "HarborPack",
+      "price": 146.25,
+      "stock": 126,
+      "attributes": {
+        "capacity_liters": 60,
+        "laptop_size": "13inch",
+        "material": "nylon"
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "OUT-002",
+      "title": "Packable Wind Shell 002",
+      "description": "Packable Wind Shell 002 is a lightweight layer that compresses for travel. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "outerwear",
+      "brand": "Alpine Thread",
+      "price": 123.5,
+      "stock": 36,
+      "attributes": {
+        "material": "down",
+        "size_range": "XS-XL",
+        "weight_grams": 920
+      },
+      "data_quality": "complete"
+    },
+    {
+      "id": "ELEC-002",
+      "title": "Waterproof Bluetooth Speaker 002",
+      "description": "Waterproof Bluetooth Speaker 002 is a portable speaker tuned for outdoor use. It is tuned for realistic Magellan search relevance and merchandising tests.",
+      "category": "electronics",
+      "brand": "Auralink",
+      "price": 113.5,
+      "stock": 36,
+      "attributes": {
+        "battery_hours": 18,
+        "display": "LCD"
+      },
+      "data_quality": "complete"
+    }
+  ]
+}
