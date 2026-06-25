@@ -1,0 +1,8 @@
+{
+  "query_id": "Q-TRAIL-001",
+  "query_text": "waterproof trail shoe",
+  "tenant": "ocs_example",
+  "limit": 5,
+  "offset": 0,
+  "filters": {}
+}

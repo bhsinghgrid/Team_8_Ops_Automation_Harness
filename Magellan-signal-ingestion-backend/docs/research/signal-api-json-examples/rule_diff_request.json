@@ -1,0 +1,23 @@
+{
+  "rule_id": "MXP-001",
+  "rule_type": "boost",
+  "operation": "UPDATE",
+  "changed_fields": [
+    "boost_factor"
+  ],
+  "before_state": {
+    "boost_factor": 1.33
+  },
+  "after_state": {
+    "boost_factor": 2.1
+  },
+  "author": "vip",
+  "oos_conflicts": [
+    {
+      "product_id": "FOOT-121",
+      "title": "Waterproof Trail Runner Lite 121",
+      "stock": 0,
+      "conflict": "rule targets out-of-stock product"
+    }
+  ]
+}

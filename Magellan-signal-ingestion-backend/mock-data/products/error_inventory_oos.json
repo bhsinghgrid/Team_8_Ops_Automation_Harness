@@ -1,0 +1,38 @@
+{
+  "description": "Clean products that are simply out of stock",
+  "error_type": "INVENTORY",
+  "products": [
+    {
+      "id": "FOOT-211",
+      "title": "Product FOOT-211",
+      "description": "Footwear item",
+      "category": "footwear",
+      "brand": null,
+      "price": 183.75,
+      "stock": 0,
+      "attributes": {
+        "waterproof": null,
+        "terrain": null,
+        "material": null,
+        "size_range": null
+      },
+      "data_quality": "poor"
+    },
+    {
+      "id": "CAMP-106",
+      "title": "Product CAMP-106",
+      "description": "Camping item",
+      "category": "camping",
+      "brand": null,
+      "price": 115.5,
+      "stock": 0,
+      "attributes": {
+        "temp_rating_c": null,
+        "fill_weight_g": null,
+        "material": null,
+        "waterproof": null
+      },
+      "data_quality": "poor"
+    }
+  ]
+}

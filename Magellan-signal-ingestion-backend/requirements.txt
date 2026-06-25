@@ -1,0 +1,12 @@
+fastapi
+uvicorn
+sqlalchemy
+psycopg2-binary
+pydantic
+pydantic-settings
+httpx
+python-dotenv
+pytest
+deepdiff
+filelock
+deepdiff==9.1.0

@@ -1,0 +1,49 @@
+{
+  "event_id": "SR-20260607-xxxxxxxxxxxxxxxx",
+  "event_type": "search_result",
+  "source_capability": "semantic_search",
+  "severity": "info",
+  "timestamp": "2026-06-07T10:00:00Z",
+  "provider": "ocs",
+  "tenant": "ocs_example",
+  "payload": {
+    "provider": "ocs",
+    "tenant": "ocs_example",
+    "query_id": "Q-TRAIL-001",
+    "query_text": "waterproof trail shoe",
+    "limit": 5,
+    "offset": 0,
+    "filters": {},
+    "status_code": 200,
+    "success": true,
+    "latency_ms": 32,
+    "result_count": 3,
+    "top_product_ids": [
+      "FOOT-001",
+      "FOOT-007",
+      "FOOT-013"
+    ],
+    "metadata": {},
+    "response_payload": {
+      "slices": [
+        {
+          "label": "main",
+          "matchCount": 3,
+          "hits": [
+            {
+              "document": {
+                "id": "FOOT-001",
+                "data": {
+                  "title": "Waterproof Trail Runner 001",
+                  "category": "footwear",
+                  "stock": 23
+                }
+              }
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "created": true
+}

@@ -1,0 +1,11 @@
+{
+  "total": 50,
+  "succeeded": 50,
+  "failed": 0,
+  "zero_result_count": 8,
+  "event_ids": [
+    "SR-20260607-xxxxxxxxxxxxxxxx",
+    "SR-20260607-yyyyyyyyyyyyyyyy"
+  ],
+  "errors": []
+}
