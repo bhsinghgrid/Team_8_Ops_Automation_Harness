@@ -71,6 +71,23 @@ export interface Runbook {
   beforeQuery: string;
   beforeResults: Array<{ name: string; price: number; stock: number; score?: string; detail?: string }>;
   afterResults: Array<{ name: string; price: number; stock: number; score?: string; detail?: string }>;
+  shadowTest?: ShadowTestResult;
+}
+
+export interface ShadowTestResult {
+  workflowId: string;
+  status: 'completed' | 'running' | 'failed';
+  baselineNdcg: number;
+  proposedNdcg: number;
+  latencyComparison: {
+    baseline: number;
+    proposed: number;
+  };
+  mismatchedQueries: Array<{
+    query: string;
+    baselineResults: any[];
+    proposedResults: any[];
+  }>;
 }
 
 export interface Skills {

@@ -38,10 +38,10 @@ class AutocompleteReleaseAgent(BaseAgent):
         decision = eval_data.get("decision")
         
         if decision == "PROMOTE_TO_CANARY":
-            result = await self.execute_tool("initiate_autocomplete_canary", {"args": {}})
+            result = await self.canary_tool.run({})
             action = "initiate_autocomplete_canary"
         elif decision == "ROLLBACK_FIX":
-            result = await self.execute_tool("execute_autocomplete_rollback", {"args": {}})
+            result = await self.rollback_tool.run({})
             action = "execute_autocomplete_rollback"
         else:
             return {"status": "no_action_needed", "summary": "No clear decision from evaluation."}

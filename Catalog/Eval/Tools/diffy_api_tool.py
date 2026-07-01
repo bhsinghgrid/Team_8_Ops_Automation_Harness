@@ -19,19 +19,18 @@ class DiffyApiTool:
 
     async def run(
         self,
-        diff_id: Optional[str] = None,
-        diffy_report: Optional[Dict[str, Any]] = None,
-        execution_results: Optional[List[Dict[str, Any]]] = None,
+        signal: Dict[str, Any],
     ) -> Dict[str, Any]:
         """
         Fetches a Diffy difference report from the REST API or consumes a
         precomputed shadow payload supplied by the caller.
 
         Args:
-            diff_id (str, optional): The ID of the Diffy report to fetch. Required if no `diffy_report` or `execution_results` are provided.
-            diffy_report (Dict[str, Any], optional): A precomputed Diffy report payload. If provided, the API call will be skipped.
-            execution_results (List[Dict[str, Any]], optional): A list of execution results. If provided, a mock Diffy report will be created.
+            signal (Dict[str, Any]): The input signal containing the diff_id or a precomputed report.
         """
+        diff_id = signal.get("diff_id")
+        diffy_report = signal.get("diffy_report")
+        execution_results = signal.get("execution_results")
 
         if diffy_report is not None and isinstance(diffy_report, dict):
             return {

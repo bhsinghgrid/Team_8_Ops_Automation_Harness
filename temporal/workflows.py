@@ -25,23 +25,33 @@ class UnifiedSearchAiRepairWorkflow:
         if signal_type == "catalog":
             rca_activity = root_cause_activity
             fix_activity = fix_proposal_activity
+            eval_activity_func = eval_activity
         elif signal_type == "autocomplete":
             rca_activity = autocomplete_root_cause_activity
             fix_activity = autocomplete_fix_proposal_activity
+            eval_activity_func = autocomplete_eval_activity
         elif signal_type == "semantic":
             rca_activity = semantic_root_cause_activity
             fix_activity = semantic_fix_proposal_activity
+            eval_activity_func = semantic_eval_activity
         else:
             raise ValueError(f"Unknown signal type: {signal_type}")
 
         rca_result = await workflow.execute_activity(
-            rca_activity, signal, start_to_close_timeout=timedelta(minutes=5)
+            rca_activity, signal, start_to_close_timeout=timedelta(minutes=10)
         )
         fix_result = await workflow.execute_activity(
-            fix_activity, rca_result, start_to_close_timeout=timedelta(minutes=5)
+            fix_activity, rca_result, start_to_close_timeout=timedelta(minutes=10)
         )
+
+        # Create a combined input for the evaluation activity
+        eval_input = {
+            "fix_result": fix_result,
+            "rca_result": rca_result,
+            "original_signal": signal
+        }
         eval_result = await workflow.execute_activity(
-            eval_activity, fix_result, start_to_close_timeout=timedelta(minutes=5)
+            eval_activity_func, eval_input, start_to_close_timeout=timedelta(minutes=5)
         )
         feedback_result = await workflow.execute_activity(
             feedback_activity, eval_result, start_to_close_timeout=timedelta(minutes=2)
@@ -92,10 +102,10 @@ class SemanticAiRepairWorkflow:
         workflow.logger.info("Starting Semantic AI Repair Workflow...")
 
         rca_result = await workflow.execute_activity(
-            semantic_root_cause_activity, signal, start_to_close_timeout=timedelta(minutes=5)
+            semantic_root_cause_activity, signal, start_to_close_timeout=timedelta(minutes=10)
         )
         fix_result = await workflow.execute_activity(
-            semantic_fix_proposal_activity, rca_result, start_to_close_timeout=timedelta(minutes=5)
+            semantic_fix_proposal_activity, rca_result, start_to_close_timeout=timedelta(minutes=10)
         )
         eval_result = await workflow.execute_activity(
             semantic_eval_activity, fix_result, start_to_close_timeout=timedelta(minutes=5)
@@ -104,7 +114,7 @@ class SemanticAiRepairWorkflow:
             feedback_activity, eval_result, start_to_close_timeout=timedelta(minutes=2)
         )
         release_result = await workflow.execute_activity(
-            release_activity, feedback_result, start_to_close_timeout=timedelta(minutes=1)
+            release_activity, approval_status, start_to_close_timeout=timedelta(minutes=1)
         )
         
         workflow.logger.info("Semantic AI Repair Workflow completed successfully.")

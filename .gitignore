@@ -3,6 +3,10 @@
 # ========================
 .DS_Store
 .env
+.env.*
+*.env
+**/.env
+**/.env.*
 .vscode/
 
 # ========================
@@ -81,3 +85,44 @@ test_base_fast_rlm.py
 test_catalog_pipeline.py
 test_rca_to_fix_pipeline.py
 test_semantic_rootcause.py
+
+# ========================
+# IDEs and Local Sandboxes
+# ========================
+.idea/
+.antigravity/
+.vexp/
+_shadow_agent_temp/
+shadow_agent/
+
+# ========================
+# Research PDFs and Docs
+# ========================
+*.pdf
+
+# ========================
+# Custom Test Files and Script Outputs
+# ========================
+test_artifact.txt
+test_diagnostic.txt
+test_fast_rlm_call.py
+test_gemini_direct.py
+test_mlflow_logging.py
+test_vertex_direct.py
+verify_harness.sh
+verify_harness2.sh
+run_catalog_agent.py
+run_shadow_agent_example.py
+base_agent_old.py
+base_agent_adk.py
+workflow.json
+workflow1.json
+mlflow_diagnostic.py
+sort_anomalies.py
+generate_search_events.py
+package-lock.json
+MagellanFrontend/package-lock.json
+MagellanFrontend/src/components/ShadowTestReport2.tsx
+NUL
+fast_rlm_inspection.txt
+

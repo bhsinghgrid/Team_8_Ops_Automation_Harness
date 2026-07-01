@@ -76,7 +76,9 @@ const App: React.FC = () => {
 
   /* ── Runbook state ── */
   const [runbooks, setRunbooks] = useState(initialRunbooks);
-  const [selectedRunbookId, setSelectedRunbookId] = useState('ops-4f72');
+  const [selectedRunbookId, setSelectedRunbookId] = useState('');
+  // @ts-ignore
+  const [activeWorkflow, setActiveWorkflow] = useState<{ workflow_id: string } | null>(null);
 
   /* ── Simulation state ── */
   const [isSimulating, setIsSimulating] = useState(false);
@@ -141,6 +143,7 @@ const App: React.FC = () => {
         ]);
 
         if (cancelled) return;
+        console.log('Fetched runbooks:', backendRunbooks);
 
         setRunbooks(backendRunbooks);
         setSelectedRunbookId((currentId) => {
@@ -311,7 +314,7 @@ const App: React.FC = () => {
       case 'live-test':
         return <LiveTest />;
       case 'shadow-reports':
-        return <ShadowTestReport workflowId={activeWorkflow?.workflow_id || null} />;
+        return <ShadowTestReport />;
       default:
         return null;
     }

@@ -4,17 +4,18 @@ import os
 from dataclasses import dataclass, asdict, field
 from typing import Any, Callable
 import logging
-import io
+# import io
 import subprocess
         
 from dotenv import load_dotenv
-
-load_dotenv()
+# load_dotenv() is called inside BaseAgent.run_agent() instead of at module level
+# to avoid NameError in fast-rlm's Pyodide sandbox execution environment.
 
 import fast_rlm
 from fast_rlm import RLMConfig
 
 from base_agent import BaseAgent
+from temporal.shared import HeartbeatingStream # Consolidated HeartbeatingStream
 from Catalog.RootCause.Tools.common_signals import sample_signal
 from Catalog.RootCause.Tools.catalog_coverage_tool import CatalogCoverageTool
 from Catalog.RootCause.Tools.schema_validation import CatalogSchemaValidationTool
@@ -34,16 +35,16 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(level
 logger = logging.getLogger(__name__)
 
 
-class HeartbeatingStream(io.StringIO):
-    def write(self, s):
-        if s and s.strip():
-            details = s[:3800]  # Truncate to avoid hitting Temporal heartbeat limits
-            try:
-                activity.heartbeat(details)
-                logger.info(f"Heartbeat: {details}")  # Also log to worker console
-            except RuntimeError:  # Thrown when not in an activity context
-                pass
-        super().write(s)
+# # class HeartbeatingStream(io.StringIO):
+# #     def write(self, s):
+# #         if s and s.strip():
+# #             details = s[:3800]  # Truncate to avoid hitting Temporal heartbeat limits
+# #             try:
+# #                 activity.heartbeat(details)
+# #                 logger.info(f"Heartbeat: {details}")  # Also log to worker console
+# #             except RuntimeError:  # Thrown when not in an activity context
+# #                 pass
+# #         super().write(s)
 
 
 # =========================
@@ -75,68 +76,125 @@ class GoogleRootCauseAgent(BaseAgent):
         self.search_repo = SearchIndexRepository()
 
         # -------------------------
-        # NATIVE TOOL IMPLEMENTATIONS
+        # NATIVE TOOL IMPLEMENTATIONS (all tools)
         # -------------------------
-        self.register_tool(name="catalog_coverage", func=CatalogCoverageTool(self.repo).run, description="Checks for missing products or attributes in the catalog.")
-        self.register_tool(name="schema_validation", func=CatalogSchemaValidationTool(self.repo).run, description="Validates the catalog data against a predefined schema.")
-        self.register_tool(name="freshness_check", func=CatalogFreshnessTool(self.repo).run, description="Checks the freshness of catalog data.")
-        self.register_tool(name="historical_intent", func=CatalogHistoricalIntentTool(self.repo).run, description="Analyzes historical search intent data for patterns.")
-        self.register_tool(name="search_quality", func=CatalogSearchQualityTool(self.repo).run, description="Evaluates the quality of search results for specific queries.")
-        self.register_tool(name="capability_mapping", func=CatalogCapabilityMappingTool(self.repo).run, description="Maps identified root causes to affected business capabilities.")
+        self.register_tool(
+            name="catalog_coverage",
+            func=CatalogCoverageTool(self.repo).run,
+            description="Analyzes a batch of search events to find zero-result queries, which indicates missing products in the catalog."
+        )
+        self.register_tool(
+            name="search_quality",
+            func=CatalogSearchQualityTool(self.repo).run,
+            description="Analyzes a batch of search events to evaluate search result quality and relevance, looking for low-scoring results."
+        )
+        self.register_tool(
+            name="schema_validation",
+            func=CatalogSchemaValidationTool(self.repo).run,
+            description="Validates the schema of catalog data against the expected format."
+        )
+        self.register_tool(
+            name="freshness",
+            func=CatalogFreshnessTool(self.repo).run,
+            description="Checks how recently the catalog data has been updated."
+        )
+        self.register_tool(
+            name="historical_intent",
+            func=CatalogHistoricalIntentTool(self.query_repo).run,
+            description="Analyzes historical query data to identify trends or changes in user search behavior."
+        )
+        self.register_tool(
+            name="embedding",
+            func=CatalogEmbeddingTool(self.repo).run,
+            description="Analyzes the vector embeddings of products to find inconsistencies."
+        )
+        self.register_tool(
+            name="vector_sync",
+            func=CatalogVectorSyncTool(self.repo).run,
+            description="Checks if the vector embeddings are synchronized with the latest product data."
+        )
+        self.register_tool(
+            name="query_intent_drift",
+            func=QueryIntentDriftTool(self.query_repo).run,
+            description="Detects any significant changes or 'drift' in the intent behind user queries over time."
+        )
+        self.register_tool(
+            name="search_index_coverage",
+            func=SearchIndexCoverageTool(self.search_repo).run,
+            description="Checks if the search index contains all the products it should."
+        )
+        self.register_tool(
+            name="capability_mapping",
+            func=CatalogCapabilityMappingTool(self.repo).run,
+            description="Takes the findings from other tools and maps them to the specific business capabilities that are affected."
+        )
     
     def get_system_prompt(self) -> str:
-        return """You are an expert Root Cause Analysis agent specializing in e-commerce catalog and search systems.
-Your primary goal is to identify the root cause of issues affecting product catalogs and search quality.
-You have access to a suite of tools to investigate various aspects of the catalog and search index.
-When a signal is provided, methodically use your tools to:
-1. Understand the nature of the problem (e.g., missing products, incorrect data, search relevance issues).
-2. If `raw_data_sample` is present in the signal, first use `self._run_deep_rca_investigation` to analyze it for corruption or issues.
-3. Gather evidence using other appropriate tools (e.g., `schema_validation`, `catalog_coverage`) as needed.
-4. Analyze all evidence to pinpoint the exact root cause.
-5. Identify affected business capabilities (e.g., Product Discovery, Search Relevance, Data Freshness).
-6. Formulate a clear, concise root cause statement.
-7. Provide detailed evidence supporting your conclusion, including findings from `self._run_deep_rca_investigation`.
+        return """You are an RLM Orchestrator in a Python REPL environment.
 
-If `run_deep_rca_investigation` is used and returns a structured output (with `root_cause_finding`, `summary_finding`, `evidence_finding`), incorporate these findings directly into the `AgentOutput`.
+**CORE PROTOCOL: ORCHESTRATE, DON'T SOLVE.**
+Your only role is to generate Python code to orchestrate tool calls. Do not process data or make final decisions. Delegate all work to code.
 
-Always respond with a structured JSON output using the `AgentOutput` format, including:
-- `overall_status`: "SUCCESS" if root cause is found, "FAILED" if not.
-- `root_cause`: A clear and concise statement of the root cause, or derived from `root_cause_finding`.
-- `affected_capabilities`: A list of business capabilities impacted by this root cause.
-- `summary`: A brief summary of your findings, or derived from `summary_finding`, specifically mentioning `raw_data_sample` analysis if performed.
-- `detailed_evidence`: A list of strings, each providing specific evidence supporting the root cause (e.g., tool outputs, data points), including `evidence_finding` if available.
-- `executed_tools`: A list of tools that were executed during the investigation, including `run_deep_rca_investigation` if used.
+**ENVIRONMENT & STATE:**
+- You are in a Python REPL environment `E`.
+- `E['context']` is a string. It contains two blocks: `<JSON_DATA_CONTEXT>...</JSON_DATA_CONTEXT>` for general context and `<JSON_DATA_EVENTS>...</JSON_DATA_EVENTS>` for JSONL event data. You MUST extract and parse both.
+- You MUST manage all findings in a state dictionary: `E['state'] = {}`.
 
-Example of a good chain of thought:
-1. User provides a signal about missing products and a raw data sample.
-2. I should first use `run_deep_rca_investigation` to analyze the raw data sample.
-3. Based on `run_deep_rca_investigation` output, I identify malformed encoding and missing attributes.
-4. I also check catalog coverage and schema validation to see if other issues exist.
-5. Based on all tool outputs, I identify the root cause (e.g., data corruption and missing attributes) and compile the `AgentOutput` using the structured findings from `run_deep_rca_investigation`.
-
-If you encounter an issue that your native tools cannot resolve, use `run_deep_rca_investigation` to perform a more in-depth, recursive analysis, especially for unknown or complex problems requiring script generation or deeper data exploration.
-"""
-
-    # The run_agent method is now inherited from BaseAgent.
-    # The default format_user_message in the base class is sufficient.
-
-
-async def main():
-    agent = GoogleRootCauseAgent()
+**EXECUTION LOOP (CODE ONLY):**
+1.  **Initialize & Parse:**
+    ```python
+    import json
+    import re
     
-    # Using the sample_signal from common_signals.py
-    # You can modify this signal to test different scenarios
-    signal_data = {
-        "signal_id": "unknown-error-999",
-        "description": "System performance degraded, logs show random unstructured errors related to data formats. Need deep analysis of the raw DB string to find what is corrupted."
-   }
-    sample_signal2 = "Catalog/search_events.jsonl"
+    # Initialize E['context_data'] and E['events_jsonl'] to empty defaults
+    E['context_data'] = {}
+    E['events_jsonl'] = []
 
-    print(f"Running agent with signal: {json.dumps(sample_signal2, indent=2)}")
-    result = await agent.run_agent(sample_signal2)
-    print("\nAgent Output:")
-    print(json.dumps(result, indent=2))
+    # Extract context data
+    context_data_match = re.search(r'<JSON_DATA_CONTEXT>(.*)</JSON_DATA_CONTEXT>', E['context'], re.DOTALL)
+    if context_data_match:
+        try:
+            E['context_data'] = json.loads(context_data_match.group(1).strip())
+        except json.JSONDecodeError:
+            pass # Keep as empty dict on error
 
-if __name__ == "__main__":
-    asyncio.run(main())
+    # Extract event data (JSONL)
+    events_data_match = re.search(r'<JSON_DATA_EVENTS>(.*)</JSON_DATA_EVENTS>', E['context'], re.DOTALL)
+    if events_data_match:
+        events_jsonl_str = events_data_match.group(1).strip()
+        parsed_logs = []
+        for line in events_jsonl_str.split('\n'):
+            if line.strip():
+                try:
+                    parsed_logs.append(json.loads(line.strip()))
+                except json.JSONDecodeError:
+                    continue # Skip malformed lines
+        E['events_jsonl'] = parsed_logs
+    
+    # Store the parsed events and total count directly into E for the agent's use
+    E['log_records'] = E['events_jsonl']
+    E['total_records'] = len(E['log_records'])
 
+    # Initialize E['state'] with parsed data
+    E['state'] = {'events': E['log_records'], 'context': E['context_data']}
+    # DO NOT print the state here. Only call tools or print final output.
+    ```
+2.  **Analyze & Act:** Analyze `E['state']` (which now contains `events` and `context`), `E['log_records']` and `E['total_records']` to decide which tool to call first. Generate Python code to call ONE tool. Save its output to `E['state']` as structured JSON.
+3.  **Observe:** After the tool call, `print(json.dumps(E['state']))` so you can see the result before the next turn.
+4.  **Repeat:** Go back to step 2 until the root cause is found.
+5.  **Finalize:** On your final turn, generate code to construct and print the final JSON output from `E['state']` that strictly conforms to the `AgentOutput` schema. DO NOT print anything else.
+
+**FINAL JSON OUTPUT SCHEMA (Strictly Enforced):**
+Your final print MUST be a `print(json.dumps(your_dict))` call. The dictionary MUST conform to this `AgentOutput` schema.
+```json
+{
+  "overall_status": "string",
+  "root_cause": "string",
+  "affected_capabilities": ["string"],
+  "summary": "string",
+  "detailed_evidence": ["string"],
+  "executed_tools": ["string"]
+}
+```
+**CRITICAL**: Do NOT output any text other than the Python code for each turn. Your final turn MUST be only the `print(json.dumps(final_report))` statement.
+"""

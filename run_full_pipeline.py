@@ -7,7 +7,7 @@ from typing import Any
 # Import agents
 from Catalog.RootCause.google_agent import GoogleRootCauseAgent
 from Catalog.Fix_Proposal.fix_agent import GoogleFixProposalAgent
-from Catalog.Eval.eval_agent import EvalAgent
+from Catalog.Eval.eval_agent import GoogleEvalAgent
 from Catalog.Release.release_agent import ReleaseAgent
 from Catalog.RootCause.Tools.common_signals import sample_signal
 
@@ -102,7 +102,7 @@ async def main():
     print("📊 PHASE 3: EVALUATION (SHADOW TESTING)")
     print("==================================================")
     
-    eval_agent = EvalAgent()
+    eval_agent = GoogleEvalAgent()
     eval_input = {
         "diff_id": sample_signal.get("diff_id", ""), # Use diff_id from original signal
         "context": fix_result_dict.get("summary", "") # Pass summary from fix as context

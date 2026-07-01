@@ -1,0 +1,18 @@
+[
+  {
+    "time": "12:34:56",
+    "runbookId": "ops-4f72",
+    "title": "Fix Catalog Defect: Intermittent 500 Error in Checkout",
+    "action": "Offline eval passed → Shadow test queued",
+    "approver": "pending:sme@example.com",
+    "agentName": "Catalog Intelligence Agent",
+    "agentBehavior": "Auto-triage catalog errors",
+    "temporalWorkflowId": "workflow-001",
+    "approvalGate": "Human approval required",
+    "monitoringSummary": "NDCG: 0.92 (ok); Latency: 120ms (ok)",
+    "feedbackRecord": "positive",
+    "recordType": "evaluation",
+    "hash": "sha256:1234abcd",
+    "isRollback": false
+  }
+]

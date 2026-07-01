@@ -1,0 +1,8 @@
+{
+  "product_id": "67890",
+  "name": "Durable Gadget",
+  "description": "A gadget that is very durable.",
+  "price": "39.99",
+  "category": ["electronics", "home"],
+  "in_stock": "yes"
+}

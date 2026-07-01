@@ -5,8 +5,13 @@ fast-rlm
 pydantic
 google-cloud-aiplatform
 lancedb
-numpy
+numpy<2
 pandas
 pyarrow
 ranx
 temporalio
+uvicorn
+mlflow
+redis
+langchain-openai
+langchain-google-genai

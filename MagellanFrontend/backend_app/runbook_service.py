@@ -19,24 +19,36 @@ from .schemas import TemporalWorkflowSummary
 from .temporal_service import (
     build_audit_from_temporal_workflow,
     build_runbook_from_temporal_workflow,
+    get_workflow_result,
     list_temporal_backend_workflows,
 )
 
 
 async def get_runbook_records() -> list[dict]:
     if DATA_SOURCE_URLS["runbooks"]:
-        return [
+        runbooks = [
             normalize_runbook(runbook)
             for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
         ]
+    else:
+        try:
+            runbooks = [
+                build_runbook_from_temporal_workflow(workflow)
+                for workflow in await list_temporal_backend_workflows()
+            ]
+        except Exception:
+            runbooks = []
 
-    try:
-        return [
-            build_runbook_from_temporal_workflow(workflow)
-            for workflow in await list_temporal_backend_workflows()
-        ]
-    except Exception:
-        return []
+    for runbook in runbooks:
+        if runbook.get("temporal", {}).get("workflowId"):
+            try:
+                shadow_test_result = await get_workflow_result(runbook["temporal"]["workflowId"])
+                if shadow_test_result:
+                    runbook["shadowTest"] = shadow_test_result
+            except Exception:
+                pass  # It's okay if a shadow test result doesn't exist
+
+    return runbooks
 
 
 async def get_audit_records() -> list[dict]:
@@ -121,3 +133,21 @@ def forward_runbook_action(runbook_id: str, action: str) -> bool:
             status_code=502,
             detail=f"runbook action source is not reachable: {action_url}",
         ) from exc
+
+async def update_runbook_from_workflow(workflow_id: str, result: dict) -> dict:
+    """
+    Finds a runbook by its workflow_id and updates it with the final
+    results from a completed Temporal workflow run.
+    """
+    # This is a mock implementation. In a real application, you would
+    # be updating a record in a database.
+    runbooks = await get_runbook_records()
+    for runbook in runbooks:
+        if get_runbook_value(runbook, "temporal.workflowId", "workflow_id") == workflow_id:
+            # We found the matching runbook, now update it.
+            runbook["status"] = "Completed"
+            runbook["final_result"] = result
+            # Here you would save the updated runbook to your database.
+            return runbook
+    
+    raise HTTPException(status_code=404, detail=f"Runbook with workflow_id '{workflow_id}' not found.")

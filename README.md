@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Team_8_Ops_Automation_Harness
-hsdhfdsi
-=======
 # Magellan AI Search Ops Automation Harness
 
 This project is a complete, end-to-end automation platform for monitoring, diagnosing, and repairing AI-powered search systems. It uses a sophisticated pipeline of AI agents orchestrated by Temporal to provide a powerful, self-healing solution for search quality and data integrity issues.
@@ -25,43 +21,147 @@ Before you begin, you will need to have the following tools installed on your lo
 2.  **Google Cloud SDK (`gcloud`)**: For authentication with Google Vertex AI.
 3.  **Temporal CLI (`tcld`)**: For running the local Temporal development server.
 
-## 🛠️ One-Time Setup
+## 🛠️ One-Time Setup & Installation
 
 You only need to perform these steps the first time you set up the project.
 
-### 1. Configure Environment Variables
+### 1. Install Dependencies & Set Up Virtual Environment
 
-Create a `.env` file in the root of the project. This file will store your Google Cloud configuration.
+Create a clean Python 3.11+ virtual environment and install the required project dependencies:
 
 ```bash
-# .env
-GCP_PROJECT_ID="your-gcp-project-id"
-GCP_LOCATION="us-central1"
+# Initialize and activate the virtual environment
+python3 -m venv .venv
+source .venv/bin/activate
+
+# Upgrade pip and install package requirements
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
-Replace `"your-gcp-project-id"` with your actual Google Cloud Project ID.
+### 2. Configure Environment Variables
 
-### 2. Authenticate with Google Cloud
+Create a `.env` file in the root of the project. Here is a complete sample configuration:
 
-You need to grant the application permission to use your Google Cloud account for the AI models. Run the following command in your terminal and follow the instructions to log in with your Google account:
+```ini
+# ==============================================================================
+# 🔑 API KEYS (For Google AI Studio Endpoint)
+# ==============================================================================
+GEMINI_API_KEY="your-google-ai-studio-api-key"
+GOOGLE_API_KEY="your-google-ai-studio-api-key"
+
+# ==============================================================================
+# ☁️ GOOGLE CLOUD CONFIGURATION (For Vertex AI Endpoint)
+# ==============================================================================
+# Project & Region IDs
+GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
+GOOGLE_CLOUD_LOCATION="us-central1"
+
+# Endpoint Router Control:
+# - Set to 1 (or True) to route fast-rlm calls to Google Cloud Vertex AI (IAM-auth)
+# - Set to 0 (or False) to route fast-rlm calls to Google AI Studio (API-key-auth)
+RLM_VERTEX_AI=1
+
+# ==============================================================================
+# 📈 EXPERIMENT TRACKING (MLflow Authentication)
+# ==============================================================================
+MLFLOW_TRACKING_USERNAME="admin"
+MLFLOW_TRACKING_PASSWORD="mysecretpassword"
+
+# ==============================================================================
+# 🚀 ORCHESTRATION & RUNTIME
+# ==============================================================================
+TEMPORAL_ADDRESS="localhost:7233"
+FAST_RLM_ALLOW_RUN="True"
+```
+
+Replace `"your-gcp-project-id"` and `"your-google-ai-studio-api-key"` with your actual Google Cloud Project ID and credentials.
+
+### 3. Authenticate with Google Cloud (When RLM_VERTEX_AI=1)
+
+If routing model calls to Vertex AI, grant the application permissions to use your Google Cloud credentials by logging in via `gcloud`:
 
 ```bash
 gcloud auth application-default login
 ```
 
+---
+
 ## ▶️ Running the Application
 
-The entire application can be started with just a few commands.
+You can easily run the platform services and worker pipelines locally.
 
 ### 1. Start the Temporal Server
 
-In a new terminal window, start the local Temporal development server. Leave this terminal running in the background.
+In a new terminal window, start the local Temporal development server. Leave this running in the background:
 
 ```bash
 temporal server start-dev
 ```
 
-### 2. Start the Application with Docker Compose
+### 2. Start the MLflow Server
+
+In a new terminal window, start the MLflow server with basic authentication enabled:
+
+```bash
+# Activate your environment
+source .venv/bin/activate
+
+# Configure basic auth and launch MLflow
+export MLFLOW_AUTH_CONFIG_PATH=$(pwd)/MagellanFrontend/mlflow_users.ini
+export MLFLOW_FLASK_SERVER_SECRET_KEY='super-secret-key-for-csrf'
+mlflow server --host 127.0.0.1 --port 5000 --app-name basic-auth
+```
+
+### 3. Start the Temporal Worker
+
+In a new terminal window, start the Python worker that polls the task queue and executes the repair activities:
+
+```bash
+# Activate your environment
+source .venv/bin/activate
+
+# Configure and run the worker
+export FAST_RLM_ALLOW_RUN="True"
+export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
+export GOOGLE_CLOUD_LOCATION="us-central1"
+export PYTHONUNBUFFERED=1
+python temporal/run_worker.py
+```
+
+### 4. Start the Magellan Frontend & Backend App
+
+In a new terminal window, run the FastAPI backend server:
+
+```bash
+# Activate your environment
+source .venv/bin/activate
+
+# Start backend server on port 8000
+uvicorn MagellanFrontend.backend_app.app:app --host 0.0.0.0 --port 8000
+```
+
+To run the full stack containerized with Docker, simply execute:
+
+```bash
+docker-compose up --build
+```
+
+### 5. Trigger a Repair Workflow
+
+To trigger a new repair run (e.g. `catalog`, `autocomplete`, or `semantic`) from the CLI:
+
+```bash
+# Activate your environment
+source .venv/bin/activate
+
+# Trigger the workflow (available: catalog, autocomplete, semantic)
+python3 temporal/run_unified_workflow.py catalog
+```
+
+This will run the entire orchestration pipeline (RCA -> Fix Proposal -> Diffy Evaluation -> Release). You can monitor progress and view deep traces in the web UI.
+
+---
 
 In the root directory of the project, run the following command. This will build the Docker images for the backend and frontend and start all the necessary services.
 
@@ -97,4 +197,3 @@ Your application exposes several web interfaces:
   - The web interface for the Diffy shadow testing server.
 - **Temporal UI**: `http://localhost:8233`
   - The standard Temporal web UI for inspecting workflows and activities.
->>>>>>> d6803d8 (Final Code)

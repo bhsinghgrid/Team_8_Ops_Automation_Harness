@@ -21,7 +21,7 @@ RUN echo "deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.
 
 # Install the Temporal CLI (tcld)
 RUN curl -sSf https://temporal.download/cli.sh | sh \
-    && mv /root/temporal /usr/local/bin/tcld
+    && mv /root/.temporalio/bin/temporal /usr/local/bin/tcld
 
 # Set the working directory in the container
 WORKDIR /app
@@ -30,6 +30,15 @@ WORKDIR /app
 # This is done in a separate step to leverage Docker layer caching
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
+
+# Install shadow_agent in editable mode from the mounted volume
+# Temporarily change WORKDIR to install shadow_agent
+WORKDIR /app/shadow_agent_repo
+RUN ls -la .
+RUN cat setup.py
+RUN pip install --no-cache-dir -e .
+# Change WORKDIR back to /app for the rest of the application
+WORKDIR /app
 
 # Copy the entire project source code into the container
 COPY . .

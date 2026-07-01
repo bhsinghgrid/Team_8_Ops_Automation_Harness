@@ -1,0 +1,8 @@
+{
+  "product_id": "fghij",
+  "name": "Perfect Product",
+  "description": "This is a perfectly valid product entry.",
+  "price": 99.99,
+  "category": "apparel",
+  "in_stock": true
+}

@@ -9,19 +9,24 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from temporal.workflows import UnifiedSearchAiRepairWorkflow
-from temporal.activities import root_cause_activity, fix_proposal_activity, eval_activity
+from temporal.activities import root_cause_activity, fix_proposal_activity, eval_activity, feedback_activity
 from temporal.activities import autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity
 from temporal.activities import release_activity
 from temporal.activities import semantic_root_cause_activity, semantic_fix_proposal_activity, semantic_eval_activity
+from dotenv import load_dotenv
 
 # Add detailed logging
 logging.basicConfig(level=logging.INFO)
 
 async def main():
+    load_dotenv()  # Load environment variables from .env file
+    # Explicitly set MLflow tracking URI to ensure artifacts are stored correctly
+    os.environ["MLFLOW_TRACKING_URI"] = "http://127.0.0.1:5000"
     try:
         # Connect to the local Temporal server.
-        logging.info("Attempting to connect to Temporal server at localhost:7233...")
-        client = await Client.connect("localhost:7233")
+        temporal_address = os.getenv("TEMPORAL_ADDRESS", "localhost:7233")
+        logging.info(f"Attempting to connect to Temporal server at {temporal_address}...")
+        client = await Client.connect(temporal_address)
         logging.info("Successfully connected to Temporal server.")
 
         # Create a worker that polls for tasks on the 'search-ai-task-queue'
@@ -33,7 +38,8 @@ async def main():
                 root_cause_activity, fix_proposal_activity, eval_activity,
                 autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity,
                 semantic_root_cause_activity, semantic_fix_proposal_activity, semantic_eval_activity,
-                release_activity
+                release_activity,
+                feedback_activity
             ],
         )
         

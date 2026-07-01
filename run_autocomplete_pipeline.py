@@ -8,7 +8,7 @@ logging.basicConfig(
 )
 
 from Autocomplete.RootCause.main_agent import AutocompleteRootCauseAgent
-from Autocomplete.Fix_Proposal.fix_agent import AutocompleteFixAgent
+from Autocomplete.Fix_Proposal.fix_agent import AutocompleteFixProposalAgent
 from Autocomplete.Eval.eval_agent import AutocompleteEvalAgent
 from Autocomplete.Release.release_agent import AutocompleteReleaseAgent
 
@@ -27,7 +27,7 @@ async def main():
 
     rca_agent = AutocompleteRootCauseAgent()
     print("\n🚀 Running Autocomplete Root Cause Agent on incoming signal...")
-    rca_result_dict = await rca_agent.run(sample_signal)
+    rca_result_dict = await rca_agent.run_agent(sample_signal)
 
     print("\n✅ RCA Completed. Diagnosis:")
     print(json.dumps(rca_result_dict, indent=2))
@@ -36,9 +36,9 @@ async def main():
     print("🛠️  PHASE 2: FIX PROPOSAL & EXECUTION")
     print("=" * 55)
 
-    fix_agent = AutocompleteFixAgent()
+    fix_agent = AutocompleteFixProposalAgent()
     print(f"\n🚀 Routing to Fix Agent to remediate '{rca_result_dict.get('root_cause')}'...")
-    fix_result = await fix_agent.run_agent(rca_result_dict, sample_signal)
+    fix_result = await fix_agent.run_agent(rca_result_dict)
 
     print("\n✅ Fix Proposal Completed:")
     print(json.dumps(fix_result, indent=2))
@@ -54,7 +54,7 @@ async def main():
         "rca_result": rca_result_dict,
         "original_signal": sample_signal,
     }
-    eval_result = await eval_agent.run(eval_input)
+    eval_result = await eval_agent.run_agent(eval_input)
 
     print("\n✅ Evaluation Completed:")
     print(json.dumps(eval_result, indent=2))

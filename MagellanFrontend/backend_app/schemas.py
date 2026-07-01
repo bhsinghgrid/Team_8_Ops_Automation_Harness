@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from typing import Optional, List, Dict, Any
 
 from .config import TEMPORAL_APPROVAL_STAGE
 
@@ -91,3 +92,7 @@ class ShadowTestResult(BaseModel):
     candidate_results: list = []
     diff: list[str] = []
     error: str | None = None
+
+class WorkflowCompletionRequest(BaseModel):
+    workflow_id: str
+    result: Dict[str, Any]

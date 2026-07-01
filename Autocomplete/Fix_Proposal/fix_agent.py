@@ -10,11 +10,11 @@ if project_root not in sys.path:
     sys.path.insert(0, project_root)
 
 from base_agent import BaseAgent
-from typing import Any, Dict
+from typing import Any, Dict, Callable # Added Callable
 
-# from .Tools.adjust_prefix_weights_tool import AdjustPrefixWeightsTool
-# from .Tools.boost_popular_entities_tool import BoostPopularEntitiesTool
-# from .Tools.update_typo_dictionary_tool import UpdateTypoDictionaryTool
+from .Tools.adjust_prefix_weights_tool import AdjustPrefixWeightsTool
+from .Tools.boost_popular_entities_tool import BoostPopularEntitiesTool
+from .Tools.update_typo_dictionary_tool import UpdateTypoDictionaryTool
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -25,17 +25,54 @@ class AutocompleteFixProposalAgent(BaseAgent):
     """
     def __init__(self, model_name: str = "gemini-2.5-flash"):
         super().__init__(model_name=model_name, enable_deep_rca=True)
-        # self._register_tools()
+        self._register_tools()
 
     def _register_tools(self):
-        # Placeholder for where you would register the specific tools for this agent
-        pass
+        self.register_tool(
+            name="adjust_prefix_weights", 
+            func=AdjustPrefixWeightsTool().run, 
+            description="Adjusts the weights of prefixes to improve autocomplete relevance."
+        )
+        self.register_tool(
+            name="boost_popular_entities", 
+            func=BoostPopularEntitiesTool().run, 
+            description="Boosts popular entities in autocomplete suggestions."
+        )
+        self.register_tool(
+            name="update_typo_dictionary", 
+            func=UpdateTypoDictionaryTool().run, 
+            description="Updates the typo dictionary to improve typo tolerance in autocomplete."
+        )
 
     def get_system_prompt(self) -> str:
-        return """You are a Fix Proposal agent for e-commerce autocomplete systems.
-Based on the provided root cause analysis, propose and execute a fix.
-Return a summary of the actions taken in a structured JSON format.
-"""
+        return """You are an RLM Fix-Execution Orchestrator in a Python REPL environment.
+
+**CORE PROTOCOL: ORCHESTRATE, DON'T RE-DIAGNOSE.**
+Your only role is to generate Python code to execute the correct fix tool based on the `root_cause` in the context.
+
+**ENVIRONMENT:**
+- You are in a REPL environment `E`.
+- The Root Cause Analysis report is in the `E['context']` variable.
+
+**EXECUTION LOOP:**
+1.  Analyze the `root_cause` from `E['context']`.
+2.  Select the appropriate tool based on the mapping below.
+3.  Generate Python code to call the tool and print a final JSON report.
+
+**ROOT CAUSE TO TOOL MAPPING:**
+*   `missing_typo_synonyms`: Call `update_typo_dictionary`.
+*   `prefix_index_stale`: Call `adjust_prefix_weights`.
+*   `popularity_bias_low`: Call `boost_popular_entities`.
+
+**FINAL JSON OUTPUT SCHEMA:**
+Your final print MUST be a JSON object with this schema:
+{
+    "status": "string",
+    "reason": "string",
+    "action_proposed": "string",
+    "fix_executed": "boolean",
+    "next_steps": "string"
+}"""
 
     def format_user_message(self, signal_data: Dict[str, Any]) -> str:
         # Assuming signal_data contains RCA output

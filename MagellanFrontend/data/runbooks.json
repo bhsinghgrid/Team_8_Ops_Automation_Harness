@@ -1,0 +1,37 @@
+[
+  {
+    "id": "ops-4f72",
+    "title": "Fix Catalog Defect: Intermittent 500 Error in Checkout",
+    "status": "Shadow Test",
+    "agent": {
+      "name": "Catalog Intelligence Agent",
+      "behaviors": ["Auto-triage catalog errors", "Root-cause analysis", "Propose fix"]
+    },
+    "temporal": {
+      "workflowId": "workflow-001",
+      "cadence": "On-demand",
+      "retryPolicy": "Exponential backoff",
+      "sla": "5 minutes",
+      "checkpoints": ["A", "B", "C"]
+    },
+    "liveMetrics": {
+      "queryVolume": 1200,
+      "baselineNdcg": 0.85,
+      "proposedNdcg": 0.92,
+      "exitRate": 0.1,
+      "p95Latency": 150
+    },
+    "businessImpact": 25,
+    "humanApproval": {
+      "record": "pending",
+      "mode": "required",
+      "owner": "sme@example.com",
+      "reason": "High-impact change"
+    },
+    "monitoringSignals": [
+      { "label": "NDCG", "value": "0.92", "status": "ok" },
+      { "label": "Latency", "value": "120ms", "status": "ok" }
+    ],
+    "feedbackLoop": "positive"
+  }
+]

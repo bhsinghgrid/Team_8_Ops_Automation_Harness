@@ -12,7 +12,7 @@ async def main():
     logging.basicConfig(level=logging.INFO)
     client = await Client.connect("localhost:8233")
     
-    worker o Worker(
+    worker = Worker(
 
         client,
         task_queue="search-ops-task-queue",

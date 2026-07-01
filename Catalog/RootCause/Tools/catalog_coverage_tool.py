@@ -35,8 +35,12 @@ from .catalog_models import CatalogProduct
 STALE_THRESHOLD_HOURS: int = 24
 
 REQUIRED_ATTRIBUTES: List[str] = [
-    "waterproof_flag",
-    "terrain_type",
+    "product_id",
+    "name",
+    "description",
+    "price",
+    "category",
+    "in_stock",
 ]
 
 
@@ -72,41 +76,115 @@ class CatalogCoverageTool:
             repository if repository is not None else CatalogRepository()
         )
 
-    async def run(self, signal_data: dict[str, 'Any']) -> 'CatalogCoverageResult':
+    # async def run(self, signal_data: dict[str, 'Any']) -> 'CatalogCoverageResult':
+    #     """
+    #     Execute coverage analysis for the catalog entity in signal_data.
+    #     """
+    #     products = []
+    #     last_update = None
+    #     evidence: List[str] = []
+    #     missing_attributes: Set[str] = set()
+    #     root_cause_candidate = "none"
+
+    #     if 'events' in signal_data:
+    #         events = signal_data['events']
+    #         for event in events:
+    #             if event.get('response', {}).get('result_count', 0) == 0:
+    #                 evidence.append(f"Found zero-result query: {event.get('query', {}).get('text')}")
+
+    #         if evidence:
+    #             root_cause_candidate = "catalog_coverage_issue"
+
+    #     if 'catalog_data' in signal_data:
+    #         try:
+    #             # Use a single product from the catalog_data for analysis
+    #             product_data = json.loads(signal_data['catalog_data'])
+    #             products = [CatalogProduct(**product_data)]
+    #         except (json.JSONDecodeError, TypeError):
+    #             return CatalogCoverageResult(
+    #                 status="degraded",
+    #                 coverage_score=0.0,
+    #                 total_products=0,
+    #                 active_products=0,
+    #                 affected_products=0,
+    #                 missing_attributes=[],
+    #                 db_stale=False,
+    #                 last_update=None,
+    #                 root_cause_candidate="malformed_json",
+    #                 evidence=["Input data is not valid JSON."],
+    #             )
+    #     else:
+    #         catalog_entity = signal_data.get("catalog_entity", {})
+    #         brand = str(catalog_entity.get("brand", "")).strip()
+    #         category = str(catalog_entity.get("category", "")).strip()
+    #         products = await self._repository.get_products(brand=brand, category=category)
+    #         last_update = await self._repository.get_last_update_time(brand=brand, category=category)
+
+    #     if not products:
+    #         return CatalogCoverageResult(
+    #             status="degraded",
+    #             coverage_score=0.0,
+    #             total_products=0,
+    #             active_products=0,
+    #             affected_products=0,
+    #             missing_attributes=[],
+    #             db_stale=False,
+    #             last_update=None,
+    #             root_cause_candidate="catalog_coverage_gap",
+    #             evidence=["No catalog products found."],
+    #         )
+
+    #     total_products = len(products)
+    #     active_products = sum(1 for product in products if product.in_stock)
+
+    #     total_products = len(products)
+    #     active_products = sum(1 for product in products if product.status == "active")
+    #     affected_products = 0
+    #     for product in products:
+    #         product_missing = self._get_missing_attributes(product)
+    #         if product_missing:
+    #             affected_products += 1
+    #             missing_attributes.update(product_missing)
+
+    #     sorted_missing = sorted(missing_attributes)
+    #     coverage_score = round(((total_products - affected_products) / total_products) * 100, 2)
+    #     db_stale = self._is_catalog_stale(last_update)
+
+    #     if db_stale:
+    #         root_cause_candidate = "stale_catalog_data"
+    #     if affected_products > 0 and root_cause_candidate == "none":
+    #         root_cause_candidate = "catalog_attribute_gap"
+        
+    #     if db_stale:
+    #         evidence.append("Catalog data is stale")
+    #     if affected_products > 0:
+    #         noun = "product" if affected_products == 1 else "products"
+    #         evidence.append(f"{affected_products} {noun} missing required attributes")
+    #     for attribute in sorted_missing:
+    #         evidence.append(f"Missing attribute: {attribute}")
+
+    #     status = self._resolve_status(affected_products=affected_products, db_stale=db_stale)
+
+    #     return CatalogCoverageResult(
+    #         status=status,
+    #         coverage_score=coverage_score,
+    #         total_products=total_products,
+    #         active_products=active_products,
+    #         affected_products=affected_products,
+    #         missing_attributes=sorted_missing,
+    #         db_stale=db_stale,
+    #         last_update=last_update,
+    #         root_cause_candidate=root_cause_candidate,
+    #         evidence=evidence,
+    #     )
+
+    async def run(self, signal_data: dict[str, Any]) -> CatalogCoverageResult:
         """
-        Execute coverage analysis for the catalog entity in signal_data.
-
-        Expected input shape:
-            {
-              "catalog_entity": {
-                "category": "Footwear",
-                "brand": "Trailhead XT"
-              }
-            }
+        Execute coverage analysis on a batch of search events.
         """
-
-        catalog_entity = signal_data.get("catalog_entity", {})
-        brand = str(catalog_entity.get("brand", "")).strip()
-        category = str(catalog_entity.get("category", "")).strip()
-
-        # Step 1: Query catalog via repository abstraction.
-        products = await self._repository.get_products(
-            brand=brand,
-            category=category,
-        )
-        last_update = await self._repository.get_last_update_time(
-            brand=brand,
-            category=category,
-        )
-
-        evidence: List[str] = []
-        missing_attributes: Set[str] = set()
-        root_cause_candidate = "none"
-
-        # Step 2: Verify products exist.
-        if not products:
+        if 'events' not in signal_data or not isinstance(signal_data['events'], list):
             return CatalogCoverageResult(
-                status="degraded",
+                status="failed",
                 coverage_score=0.0,
                 total_products=0,
                 active_products=0,
@@ -114,71 +192,34 @@ class CatalogCoverageTool:
                 missing_attributes=[],
                 db_stale=False,
                 last_update=None,
-                root_cause_candidate="catalog_coverage_gap",
-                evidence=[
-                    f"No catalog products found for brand '{brand}' "
-                    f"and category '{category}'"
-                ],
+                root_cause_candidate="missing_event_data",
+                evidence=["Could not find the 'events' JSON object in the context."],
             )
 
-        # Step 3: Count total and active products.
-        total_products = len(products)
-        active_products = sum(
-            1 for product in products if product.status == "active"
-        )
+        events = signal_data['events']
+        total_events = len(events)
+        zero_result_searches = 0
+        evidence = []
+        
+        for event in events:
+            if event.get('response', {}).get('result_count', -1) == 0:
+                zero_result_searches += 1
+                query_text = event.get('query', {}).get('text', 'N/A')
+                evidence.append(f"Zero-result search for query: '{query_text}'")
 
-        # Steps 4-5: Detect and collect missing required attributes.
-        affected_products = 0
-        for product in products:
-            product_missing = self._get_missing_attributes(product)
-            if product_missing:
-                affected_products += 1
-                missing_attributes.update(product_missing)
-
-        sorted_missing = sorted(missing_attributes)
-
-        # Step 6: Calculate coverage score across the full product slice.
-        coverage_score = round(
-            ((total_products - affected_products) / total_products) * 100,
-            2,
-        )
-
-        # Step 7: Check catalog freshness against the latest updated_at.
-        db_stale = self._is_catalog_stale(last_update)
-        if db_stale:
-            root_cause_candidate = "stale_catalog_data"
-
-        # Attribute gaps take second priority when data is fresh.
-        if affected_products > 0 and root_cause_candidate == "none":
-            root_cause_candidate = "catalog_attribute_gap"
-
-        # Step 8: Build human-readable evidence for the Root Cause Agent.
-        if db_stale:
-            evidence.append("Catalog data is stale")
-
-        if affected_products > 0:
-            noun = "product" if affected_products == 1 else "products"
-            evidence.append(
-                f"{affected_products} {noun} missing required attributes"
-            )
-
-        for attribute in sorted_missing:
-            evidence.append(f"Missing attribute: {attribute}")
-
-        status = self._resolve_status(
-            affected_products=affected_products,
-            db_stale=db_stale,
-        )
+        coverage_score = ((total_events - zero_result_searches) / total_events) * 100 if total_events > 0 else 100.0
+        status = "degraded" if zero_result_searches > 0 else "healthy"
+        root_cause_candidate = "catalog_coverage_issue" if zero_result_searches > 0 else "none"
 
         return CatalogCoverageResult(
             status=status,
-            coverage_score=coverage_score,
-            total_products=total_products,
-            active_products=active_products,
-            affected_products=affected_products,
-            missing_attributes=sorted_missing,
-            db_stale=db_stale,
-            last_update=last_update,
+            coverage_score=round(coverage_score, 2),
+            total_products=total_events,  # Using total events as a proxy for total products
+            active_products=total_events - zero_result_searches,
+            affected_products=zero_result_searches,
+            missing_attributes=[],
+            db_stale=False,
+            last_update=None,
             root_cause_candidate=root_cause_candidate,
             evidence=evidence,
         )

@@ -1,0 +1,8 @@
+{
+  "product_id": "abcde",
+  "name": "Faulty Gizmo",
+  "description": "This JSON is intentionally broken.",
+  "price": 9.99,
+  "category": "home"
+  "in_stock": true,
+}

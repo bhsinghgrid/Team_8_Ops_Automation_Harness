@@ -3,7 +3,7 @@ import json
 import logging
 import os
 import sys
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Callable
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../../")))
 from base_agent import BaseAgent
@@ -19,6 +19,21 @@ class AutocompleteRootCauseAgent(BaseAgent):
     
     def __init__(self):
         super().__init__(model_name="gemini-2.5-flash", enable_deep_rca=True)
+        
+        # Explicitly get GCP project and location for this agent
+        project = os.getenv("GOOGLE_CLOUD_PROJECT", "")
+        location = os.getenv("GOOGLE_CLOUD_LOCATION", "us-central1")
+
+        if project and location:
+            self._rlm_vertex_base_url = (
+                f"https://{location}-aiplatform.googleapis.com/v1/"
+                f"projects/{project}/locations/{location}/endpoints/openapi"
+            )
+            os.environ["RLM_MODEL_BASE_URL"] = self._rlm_vertex_base_url
+            logger.info(f"AutocompleteRootCauseAgent using RLM_MODEL_BASE_URL: {self._rlm_vertex_base_url}")
+        else:
+            logger.warning("GOOGLE_CLOUD_PROJECT or GOOGLE_CLOUD_LOCATION not set for AutocompleteRootCauseAgent. Relying on global config.")
+
         self.prefix_agent = PrefixMatchingAgent()
         self.popularity_agent = PopularityBiasAgent()
         self.typo_agent = TypoToleranceAgent()
@@ -28,33 +43,69 @@ class AutocompleteRootCauseAgent(BaseAgent):
         self.register_tool(name="run_typo_tolerance_analysis", func=self.typo_agent.run, description="Analyzes typo tolerance issues.")
 
     def get_system_prompt(self) -> str:
-        return """You are a Root Cause Analysis agent for an autocomplete system. Your goal is to identify the root cause of issues affecting autocomplete suggestions.
+        return """You are an RLM Orchestrator in a Python REPL environment.
 
-When a signal is provided, methodically use your tools to:
-1. Understand the nature of the problem (e.g., no results for a common misspelling).
-2. Gather evidence using the appropriate tools.
-3. Analyze the evidence to pinpoint the exact root cause.
-4. Formulate a clear, concise root cause statement.
+**CORE PROTOCOL: ORCHESTRATE, DON'T SOLVE.**
+Your only role is to generate Python code to orchestrate tool calls. Do not process data or make final decisions. Delegate all work to code.
 
-If the issue is complex or not covered by the standard tools, use `run_deep_rca_investigation` to perform a deeper analysis.
+**ENVIRONMENT & STATE:**
+- You are in a Python REPL environment `E`.
+- `E['context']` is a string. It contains two blocks: `<JSON_DATA_CONTEXT>...</JSON_DATA_CONTEXT>` for general context and `<JSON_DATA_EVENTS>...</JSON_DATA_EVENTS>` for JSONL event data. You MUST extract and parse both.
+- You MUST manage all findings in a state dictionary: `E['state'] = {}`.
 
-Always respond with a structured JSON output, including:
-- `root_cause`: A clear and concise statement of the root cause.
-- `summary`: A brief summary of your findings.
-- `detailed_evidence`: A list of strings, each providing specific evidence supporting the root cause.
-- `executed_tools`: A list of tools that were executed during the investigation.
+**EXECUTION LOOP (CODE ONLY):**
+1.  **Initialize & Parse:**
+    ```python
+    import json
+    import re
+    
+    # Initialize E['context_data'] and E['events_jsonl'] to empty defaults
+    E['context_data'] = {}
+    E['events_jsonl'] = []
+
+    # Extract context data
+    context_data_match = re.search(r'<JSON_DATA_CONTEXT>(.*)</JSON_DATA_CONTEXT>', E['context'], re.DOTALL)
+    if context_data_match:
+        try:
+            E['context_data'] = json.loads(context_data_match.group(1).strip())
+        except json.JSONDecodeError:
+            pass # Keep as empty dict on error
+
+    # Extract event data (JSONL)
+    events_data_match = re.search(r'<JSON_DATA_EVENTS>(.*)</JSON_DATA_EVENTS>', E['context'], re.DOTALL)
+    if events_data_match:
+        events_jsonl_str = events_data_match.group(1).strip()
+        parsed_logs = []
+        for line in events_jsonl_str.split('\n'):
+            if line.strip():
+                try:
+                    parsed_logs.append(json.loads(line.strip()))
+                except json.JSONDecodeError:
+                    continue # Skip malformed lines
+        E['events_jsonl'] = parsed_logs
+    
+    # Store the parsed events and total count directly into E for the agent's use
+    E['log_records'] = E['events_jsonl']
+    E['total_records'] = len(E['log_records'])
+
+    # Initialize E['state'] with parsed data
+    E['state'] = {'events': E['log_records'], 'context': E['context_data']}
+    # DO NOT print the state here. Only call tools or print final output.
+    ```
+2.  **Analyze & Act:** Analyze `E['state']` (which now contains `events` and `context`), `E['log_records']` and `E['total_records']` to decide which tool to call first. Generate Python code to call ONE tool. Save its output to `E['state']` as structured JSON.
+3.  **Observe:** After the tool call, `print(json.dumps(E['state']))` so you can see the result before the next turn.
+4.  **Repeat:** Go back to step 2 until the root cause is found.
+5.  **Finalize:** On your final turn, generate code to construct and print the final JSON output from `E['state']` that strictly conforms to the `AgentOutput` schema. DO NOT print anything else.
+
+**FINAL JSON OUTPUT SCHEMA (Strictly Enforced):**
+Your final print MUST be a `print(json.dumps(your_dict))` call. The dictionary MUST conform to this `AgentOutput` schema.
+```json
+{
+  "root_cause": "string",
+  "summary": "string",
+  "detailed_evidence": ["string"],
+  "executed_tools": ["string"]
+}
+```
+**CRITICAL**: Do NOT output any text other than the Python code for each turn. Your final turn MUST be only the `print(json.dumps(final_report))` statement.
 """
-
-    async def run(self, signal_data: dict):
-        """Runs the root cause analysis pipeline."""
-        return await self.run_agent(signal_data)
-
-
-async def main():
-    agent = AutocompleteRootCauseAgent()
-    signal = {"search_input": "shos", "issue": "Autocomplete shows no results for typo"}
-    result = await agent.run(signal)
-    print(json.dumps(result, indent=2))
-
-if __name__ == "__main__":
-    asyncio.run(main())

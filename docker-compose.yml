@@ -5,6 +5,8 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        - CACHE_BUSTER
     container_name: magellan-app
     ports:
       - "8000:8000"
@@ -14,13 +16,20 @@ services:
       # Mount the gcloud config directory for authentication.
       # IMPORTANT: This assumes the user running docker has gcloud configured at ~/.config/gcloud
       - ~/.config/gcloud:/root/.config/gcloud
+      # Mount the shadow_agent project for editable installation
+      - /Users/bhsingh/Documents/Magellan_Harness/shadow_agent:/app/shadow_agent_repo
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
     depends_on:
       - mongo
       - redis
     environment:
       # This allows the container to connect to the Temporal server running on the host machine.
       TEMPORAL_ADDRESS: "host.docker.internal:7233"
-      PYTHONPATH: "/app"
+      PYTHONPATH: "/app/shadow_agent_repo/src/shadow_agent_framework:/app"
     # This allows the container to resolve host.docker.internal
     extra_hosts:
       - "host.docker.internal:host-gateway"
@@ -42,19 +51,22 @@ services:
       - "8880:8880" # UI/Dashboard Port
       - "8881:8881" # Admin Port
     depends_on:
-      - mongo
-      - redis
+      app:
+        condition: service_healthy
+      mongo:
+        condition: service_started
+      redis:
+        condition: service_started
     environment:
-      - "diffy.master.primary=http://host.docker.internal:8000"
-      - "diffy.master.secondary=http://host.docker.internal:8000"
-      - "diffy.master.candidate=http://host.docker.internal:8000"
+      - "diffy.master.primary=http://app:8000"
+      - "diffy.master.secondary=http://app:8000"
+      - "diffy.master.candidate=http://app:8000"
       - "spring.data.mongodb.uri=mongodb://mongo:27017/diffy"
       - "spring.autoconfigure.exclude=org.springframework.boot.autoconfigure.mongo.embedded.EmbeddedMongoAutoConfiguration"
       - "redis.host=redis"
+      - OTEL_SDK_DISABLED=true
     volumes:
       - ./diffy/diffy.properties:/app/diffy.properties
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
 
   mongo:
     image: mongo:4.4

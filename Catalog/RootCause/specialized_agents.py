@@ -1,8 +1,14 @@
 import asyncio
 import json
-from dataclasses import asdict
+from dataclasses import dataclass, asdict
 
-from base_agent import BaseGoogleADKAgent
+@dataclass
+class AgentOutput:
+    status: str
+    analysis: str
+    details: str = ""
+
+from base_agent import BaseAgent as BaseGoogleADKAgent
 from .Tools.catalog_coverage_tool import CatalogCoverageTool
 from .Tools.schema_validation import CatalogSchemaValidationTool
 from .Tools.freshness import CatalogFreshnessTool
@@ -55,6 +61,16 @@ class RootCauseAgent(BaseGoogleADKAgent):
         2. Return ONLY a valid JSON string matching the output schema.
         """
 
+    async def run(self, signal_data: dict[str, 'Any']) -> 'AgentOutput':
+        result = await super().run(signal_data)
+        if isinstance(result, dict):
+            return AgentOutput(
+                status=result.get("overall_status", result.get("status", "unknown")),
+                analysis=result.get("root_cause", result.get("analysis", "")),
+                details=json.dumps(result.get("detailed_evidence", result.get("evidence", [])), default=str),
+            )
+        return AgentOutput(status="unknown", analysis="unexpected_result", details=str(result))
+
 class CatalogHealthAgent(BaseGoogleADKAgent):
     """
     A lightweight, specialized agent that only checks coverage and freshness.
@@ -75,19 +91,29 @@ class CatalogHealthAgent(BaseGoogleADKAgent):
         Synthesize their results into the final required JSON schema.
         """
 
+    async def run(self, signal_data: dict[str, 'Any']) -> 'AgentOutput':
+        result = await super().run(signal_data)
+        if isinstance(result, dict):
+            return AgentOutput(
+                status=result.get("overall_status", result.get("status", "unknown")),
+                analysis=result.get("root_cause", result.get("analysis", "")),
+                details=json.dumps(result.get("detailed_evidence", result.get("evidence", [])), default=str),
+            )
+        return AgentOutput(status="unknown", analysis="unexpected_result", details=str(result))
+
 # Example execution
 async def main():
     print("\n🚀 Running Specialized CatalogHealthAgent...")
     health_agent = CatalogHealthAgent()
-    result = await health_agent.run_agent(sample_signal)
+    result = await health_agent.run(sample_signal)
     print("\n📦 Health Agent Output:")
-    print(json.dumps(asdict(result), indent=2))
+    print(result) # No longer calling asdict
     
     print("\n\n🚀 Running Full RootCauseAgent...")
     rca_agent = RootCauseAgent()
-    result2 = await rca_agent.run_agent(sample_signal)
+    result2 = await rca_agent.run(sample_signal)
     print("\n📦 Root Cause Agent Output:")
-    print(json.dumps(asdict(result2), indent=2))
+    print(result2) # No longer calling asdict
 
 if __name__ == "__main__":
     asyncio.run(main())

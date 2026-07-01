@@ -7,6 +7,7 @@ import os
 
 from google import genai
 from google.genai import types
+from dotenv import load_dotenv
 
 # Ensure we can import from the Catalog root
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../../..')))
@@ -21,7 +22,12 @@ class SemanticIntentMappingTool:
     query expansion mapping for the search engine.
     """
     def __init__(self, model_name: str = "gemini-1.5-flash"):
-        self.client = genai.Client()
+        load_dotenv()
+        api_key = os.getenv("GOOGLE_API_KEY")
+        if not api_key:
+            raise ValueError("GOOGLE_API_KEY not found in environment variables")
+        
+        self.client = genai.Client(api_key=api_key)
         self.model_name = model_name
         self.repository = CatalogRepository()
 

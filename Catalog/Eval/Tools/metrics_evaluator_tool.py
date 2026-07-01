@@ -1,52 +1,87 @@
 import math
 from typing import Any, Optional, List, Dict
 import logging
-import numpy as np # Using numpy for percentile calculation
+import numpy as np
+import mlflow
 
 try:
     import ranx
-except Exception:  # pragma: no cover - optional dependency path
+except Exception:
     ranx = None
 
 logger = logging.getLogger(__name__)
 
 class MetricsEvaluatorTool:
-    """Calculates relevance and performance metrics from a Diffy report."""
+    """Calculates relevance and performance metrics from a Diffy report and logs to MLflow."""
+
+    def __init__(self):
+        # Only set local sqlite if no external/authenticated tracking URI is already configured
+        current_uri = mlflow.get_tracking_uri()
+        if not current_uri or current_uri.startswith("file:") or "127.0.0.1" in current_uri:
+            # Let it fall through to whatever active tracking URI is configured unless empty
+            if not current_uri:
+                mlflow.set_tracking_uri("sqlite:///mlflow.db")
 
     async def run(self, signal: dict[str, Any]) -> dict[str, Any]:
         logger.info("MetricsEvaluatorTool: Received signal to evaluate metrics.")
-        diffy_report = signal.get("report", {})
-        execution_results = diffy_report.get("execution_results", [])
-        latency_results = diffy_report.get("latency_results", {})
         
-        if not execution_results:
-            logger.warning("MetricsEvaluatorTool: No execution results found in the report.")
-            return {"status": "failed", "message": "No execution results found in the Diffy report."}
-
-        logger.info("MetricsEvaluatorTool: Calculating metrics from Diffy report...")
-
-        relevance_metrics = self._calculate_relevance(execution_results)
-        performance_metrics = self._calculate_performance(latency_results)
-
-        # Combine the results and make a final decision
-        # (This logic can be expanded based on business rules)
-        ndcg_improvement = relevance_metrics.get("absolute_ndcg_improvement", 0.0)
-        latency_increase = performance_metrics.get("p995_latency_increase_ms", 0.0)
+        diffy_report = signal.get("diffy_report", {})
+        diff_id = signal.get("diff_id", "unknown_diff")
         
-        decision = "PROMOTE_TO_CANARY"
-        if ndcg_improvement < 0 or latency_increase > 50: # Example rule: rollback if NDCG drops or latency increases by >50ms
-            decision = "ROLLBACK_FIX"
+        mlflow.set_experiment("Shadow Test Evaluations")
+        
+        is_nested = mlflow.active_run() is not None
+        if not is_nested:
+            try:
+                while mlflow.active_run():
+                    mlflow.end_run()
+            except Exception:
+                pass
+        
+        is_nested = mlflow.active_run() is not None
+        with mlflow.start_run(nested=is_nested) as run:
+            run_id = run.info.run_id
+            logger.info(f"MLflow Run ID: {run_id}")
+            mlflow.log_param("diffy_id", diff_id)
 
-        return {
-            "tool_name": "MetricsEvaluatorTool",
-            "status": "success",
-            "metrics": {
-                "relevance": relevance_metrics,
-                "performance": performance_metrics
-            },
-            "decision": decision,
-            "summary": f"Evaluation complete. NDCG change: {ndcg_improvement:+.2f}%. P995 latency change: {latency_increase:+.2f}ms. Decision: {decision}"
-        }
+            execution_results = diffy_report.get("execution_results", [])
+            latency_results = diffy_report.get("latency_results", {})
+            
+            if not execution_results:
+                logger.warning("MetricsEvaluatorTool: No execution results found in the report.")
+                mlflow.log_param("status", "failed")
+                return {"status": "failed", "message": "No execution results found in the Diffy report."}
+
+            logger.info("MetricsEvaluatorTool: Calculating metrics from Diffy report...")
+
+            relevance_metrics = self._calculate_relevance(execution_results)
+            performance_metrics = self._calculate_performance(latency_results)
+
+            # Log metrics to MLflow
+            mlflow.log_metric("baseline_ndcg_at_10", relevance_metrics["baseline"]["ndcg@10"])
+            mlflow.log_metric("candidate_ndcg_at_10", relevance_metrics["shadow"]["ndcg@10"])
+            mlflow.log_metric("ndcg_improvement", relevance_metrics["absolute_ndcg_improvement"])
+            mlflow.log_metric("p995_latency_increase_ms", performance_metrics["p995_latency_increase_ms"])
+
+            ndcg_improvement = relevance_metrics.get("absolute_ndcg_improvement", 0.0)
+            latency_increase = performance_metrics.get("p995_latency_increase_ms", 0.0)
+            
+            decision = "PROMOTE_TO_CANARY"
+            if ndcg_improvement < 0 or latency_increase > 50:
+                decision = "ROLLBACK_FIX"
+
+            mlflow.log_param("decision", decision)
+
+            return {
+                "tool_name": "MetricsEvaluatorTool",
+                "status": "success",
+                "metrics": {
+                    "relevance": relevance_metrics,
+                    "performance": performance_metrics
+                },
+                "decision": decision,
+                "summary": f"Evaluation complete. NDCG change: {ndcg_improvement:+.2f}%. P995 latency change: {latency_increase:+.2f}ms. Decision: {decision}"
+            }
 
     def _calculate_relevance(self, execution_results: list) -> dict:
         if ranx is not None:

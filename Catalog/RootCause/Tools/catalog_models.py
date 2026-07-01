@@ -5,15 +5,17 @@ from typing import Optional
 class CatalogProduct:
     """
     Canonical catalog product record shared across all repository implementations.
-
-    Keeping a single schema here ensures mock and production repositories
-    return the same shape to CatalogCoverageTool.
     """
-
-    sku: str
-    brand: str
-    category: str
-    waterproof_flag: Optional[bool]
-    terrain_type: Optional[str]
-    status: str
-    updated_at: str  # ISO-8601 UTC, e.g. "2026-06-05T10:00:00Z"
+    product_id: Optional[str] = None
+    name: Optional[str] = None
+    description: Optional[str] = None
+    price: Optional[float] = None
+    category: Optional[str] = None
+    in_stock: Optional[bool] = None
+    # Add the fields from the original model with defaults to avoid breaking other tools
+    sku: Optional[str] = None
+    brand: Optional[str] = None
+    waterproof_flag: Optional[bool] = None
+    terrain_type: Optional[str] = None
+    status: Optional[str] = None
+    updated_at: Optional[str] = None

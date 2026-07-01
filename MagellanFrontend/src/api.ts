@@ -1,13 +1,8 @@
-import type { AuditRow, QueryClusterRow, Runbook, TriggerWorkflowResponse } from './types';
+import type { AuditRow, QueryClusterRow, Runbook } from './types';
 
-const getDefaultApiBaseUrl = () => {
-  if (typeof window === 'undefined') return 'http://localhost:8000';
-
-  const { protocol, hostname } = window.location;
-  return `${protocol}//${hostname}:8000`;
-};
-
-export const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || getDefaultApiBaseUrl();
+// This is the backend API URL.
+// It's hard-coded for this specific development environment.
+export const API_BASE_URL = 'http://localhost:8001';
 
 export type RunbookAction = 'evaluate' | 'release' | 'rollback';
 
@@ -127,6 +122,7 @@ export const api = {
   getTemporalLink: () => request<TemporalLink>('/api/temporal'),
   getTemporalDetails: () => request<TemporalDetails>('/api/temporal/details'),
   getTemporalLiveWorkflows: () => request<TemporalLiveWorkflow[]>('/api/temporal/live-workflows'),
+  getShadowTestReports: () => request<any[]>(`/api/shadow-reports`),
   triggerWorkflow: (signalData: object) =>
     request<{ workflow_id: string }>('/api/temporal/trigger-workflow', {
       method: 'POST',

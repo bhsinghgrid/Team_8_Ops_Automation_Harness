@@ -1,18 +1,21 @@
+import json
+from pathlib import Path
 from typing import Literal
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import RedirectResponse
+from pydantic import BaseModel
 
 from .config import (
     FRONTEND_ORIGIN_REGEX,
     FRONTEND_ORIGINS,
     PUBLIC_BACKEND_URL,
     TEMPORAL_ADDRESS,
-    TEMPORAL_APPROVAL_SIGNAL_NAME,
-    TEMPORAL_APPROVAL_STAGE,
     TEMPORAL_NAMESPACE,
     TEMPORAL_WORKFLOWS_URL,
+    TEMPORAL_APPROVAL_SIGNAL_NAME,
+    TEMPORAL_APPROVAL_STAGE,
 )
 from .data_sources import data_source_status, fetch_remote_list
 from .normalizers import normalize_query_cluster
@@ -21,6 +24,7 @@ from .runbook_service import (
     forward_runbook_action,
     get_audit_records,
     get_runbook_records,
+    update_runbook_from_workflow,
 )
 from .schemas import (
     HumanApprovalRequest,
@@ -32,6 +36,7 @@ from .schemas import (
     TriggerWorkflowRequest,
     TriggerWorkflowResponse,
     ShadowTestResult,
+    WorkflowCompletionRequest,
 )
 from .state import APPROVAL_RECORDS
 from .temporal_service import (
@@ -83,15 +88,51 @@ def root() -> dict:
             "temporal_workflows_redirect": "/api/temporal/workflows",
             "human_approval": "/api/runbooks/{runbook_id}/approval",
             "runbook_action": "/api/runbooks/{runbook_id}/actions/{action}",
+            "runbook_complete": "/api/runbooks/complete-run",
         },
     }
 
+@app.get("/api/shadow-reports")
+async def get_all_shadow_reports() -> list[dict]:
+    """
+    Scans the evaluation output directory, reads all shadow test report
+    JSON files, and returns them as a single aggregated list.
+    """
+    reports = []
+    # Assumes the backend is run from the `MagellanFrontend` directory
+    output_dir = Path(__file__).parent.parent.parent / "evaluation/output"
+    if not output_dir.exists():
+        return []
+
+    for report_file in sorted(output_dir.glob("eval_*.json"), reverse=True):
+        try:
+            with open(report_file, "r") as f:
+                report_data = json.load(f)
+                # Ensure the report has a workflow_id for the frontend key
+                if 'workflow_id' not in report_data:
+                    report_data['workflow_id'] = report_file.stem.replace('eval_', '')
+                reports.append(report_data)
+        except (json.JSONDecodeError, IOError):
+            # Ignore files that are corrupted or cannot be read
+            pass
+    
+    return reports
 
 @app.post("/api/temporal/trigger-workflow", response_model=TriggerWorkflowResponse)
 async def trigger_new_workflow(request: TriggerWorkflowRequest) -> TriggerWorkflowResponse:
     try:
         workflow_id = await trigger_workflow(request.signal_data)
         return TriggerWorkflowResponse(workflow_id=workflow_id)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/api/runbooks/complete-run")
+async def complete_runbook_run(request: WorkflowCompletionRequest) -> dict:
+    try:
+        updated_runbook = await update_runbook_from_workflow(request.workflow_id, request.result)
+        return {"status": "success", "updated_runbook": updated_runbook}
+    except HTTPException as e:
+        raise e
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
@@ -142,8 +183,8 @@ async def get_temporal_details() -> TemporalDetails:
         backend_error=temporal_backend["error"],
         task_queue=temporal_backend["task_queue"],
         action_workflow_type=temporal_backend["action_workflow_type"],
-        approval_signal_name=temporal_backend["approval_signal_name"],
-        approval_stage=temporal_backend["approval_stage"],
+        approval_signal_name=TEMPORAL_APPROVAL_SIGNAL_NAME,
+        approval_stage=TEMPORAL_APPROVAL_STAGE,
         workflows_url=TEMPORAL_WORKFLOWS_URL,
         redirect_endpoint="/api/temporal/workflows",
         cors_origins=FRONTEND_ORIGINS,
@@ -178,6 +219,47 @@ async def get_temporal_live_workflows() -> list[dict[str, str]]:
             status_code=502,
             detail=f"Temporal backend workflow list failed: {exc}",
         ) from exc
+
+
+@app.post("/api/v1/workflows/trigger", response_model=TriggerWorkflowResponse)
+async def trigger_agent_workflow(req: TriggerWorkflowRequest):
+    """
+    Triggers a new agent workflow.
+    """
+    try:
+        workflow_id = await trigger_workflow(req.workflow_name, req.workflow_input)
+        return TriggerWorkflowResponse(
+            status="success",
+            workflow_id=workflow_id,
+            message=f"Workflow '{req.workflow_name}' started successfully.",
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.get("/api/v1/workflows", response_model=list[TemporalDetails])
+async def list_agent_workflows():
+    """
+    Lists all workflows.
+    """
+    try:
+        return await list_temporal_backend_workflows()
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+
+@app.post("/api/v1/workflows/approval", response_model=HumanApprovalResponse)
+async def human_approval_signal(req: HumanApprovalRequest):
+    """
+    Sends a human approval signal to a workflow.
+    """
+    try:
+        await signal_temporal_human_approval(req.workflow_id, req.approval_status)
+        return HumanApprovalResponse(
+            status="success", message="Approval signal sent successfully."
+        )
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 
 @app.get("/api/data-sources")

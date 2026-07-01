@@ -98,8 +98,12 @@ export const Overview: React.FC<OverviewProps> = ({
       currentNdcg,
       currentExitRate,
       p95Latency: runbook.liveMetrics.p95Latency,
+      rootCause: runbook.rootCause,
+      shadowTest: runbook.shadowTest,
     };
   });
+
+  const [selectedShadowTest, setSelectedShadowTest] = React.useState<Runbook['shadowTest'] | null>(null);
 
   const relevancePoints = buildSvgPoints(trendRows.map((row) => row.currentNdcg * 100));
   const exitHealthPoints = buildSvgPoints(trendRows.map((row) => 100 - row.currentExitRate));
@@ -122,6 +126,12 @@ export const Overview: React.FC<OverviewProps> = ({
 
   return (
     <>
+      {selectedShadowTest && (
+        <ShadowTestReport
+          report={selectedShadowTest}
+          onClose={() => setSelectedShadowTest(null)}
+        />
+      )}
       {/* Alert Banner for pending tasks */}
       <div className="alert-banner">
         <div className="alert-banner-text" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
@@ -196,6 +206,47 @@ export const Overview: React.FC<OverviewProps> = ({
               <span>{isTemporalBackendData ? 'Failed/running workflow risk' : '-12.4% today'}</span>
             </div>
           </div>
+        </div>
+
+        <div className="runbook-table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Status</th>
+                <th>Title</th>
+                <th>Root Cause</th>
+                <th>Shadow Test</th>
+                <th>Query Volume</th>
+                <th>Current NDCG</th>
+                <th>Current Exit Rate</th>
+                <th>P95 Latency</th>
+              </tr>
+            </thead>
+            <tbody>
+              {trendRows.map((row) => (
+                <tr key={row.id}>
+                  <td>{row.code}</td>
+                  <td>{row.status}</td>
+                  <td>{row.title}</td>
+                  <td>{row.rootCause}</td>
+                  <td>
+                    {row.shadowTest ? (
+                      <button onClick={() => setSelectedShadowTest(row.shadowTest)}>
+                        View Report
+                      </button>
+                    ) : (
+                      'N/A'
+                    )}
+                  </td>
+                  <td>{row.queryVolume}</td>
+                  <td>{row.currentNdcg.toFixed(2)}</td>
+                  <td>{row.currentExitRate.toFixed(1)}%</td>
+                  <td>{row.p95Latency}{runtimeUnit}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
 
         <div className="metric-card">

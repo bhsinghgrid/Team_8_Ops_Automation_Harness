@@ -7,7 +7,9 @@ import logging
 from copy import deepcopy
 
 from dotenv import load_dotenv
-load_dotenv()
+load_dotenv() # Load environment variables at module level
+# load_dotenv() is called inside BaseAgent.run_agent() instead of at module level
+# to avoid NameError in fast-rlm's Pyodide sandbox execution environment.
 
 import fast_rlm
 from base_agent import BaseAgent
@@ -119,21 +121,33 @@ class GoogleFixProposalAgent(BaseAgent):
 
     def get_system_prompt(self) -> str:
         """Provides the specific system prompt for the Fix Proposal Agent."""
-        return """You are a Fix Execution Agent. Your primary goal is to remediate issues identified by a Root Cause Analysis.
+        return """You are an RLM Fix-Execution Orchestrator in a Python REPL environment.
 
-Given the RCA input, you MUST determine and execute the appropriate remediation tools to fix the issue.
+**CORE PROTOCOL: ORCHESTRATE, DON'T RE-DIAGNOSE.**
+Your only role is to generate Python code to execute the correct fix tool based on the `root_cause` in the context.
 
-Prioritize the `run_deep_rca_investigation` tool if the RCA indicates data quality issues, malformed data, or complex data cleanup is required. For other issues, choose from the available tools.
+**ENVIRONMENT:**
+- You are in a REPL environment `E`.
+- The Root Cause Analysis report is in the `E['context']` variable.
 
-After executing the tools, provide a concise summary of the fixes applied.
+**EXECUTION LOOP:**
+1.  Analyze the `root_cause` from `E['context']`.
+2.  Select the appropriate tool based on the mapping below.
+3.  Generate Python code to call the tool and print a final JSON report.
 
-Return the final output ONLY as a JSON string matching this exact schema:
+**ROOT CAUSE TO TOOL MAPPING:**
+*   `catalog_coverage_gap`: Call `llm_inference`, then `apply_patch`.
+*   `low_search_relevance`: Call `map_semantic_intent`, then `apply_synonyms`.
+*   `stale_catalog_data`: Call `vector_refresh`, then `trigger_reindex`.
+*   `complex_data_corruption`: Call `run_deep_rca_investigation`.
+
+**FINAL JSON OUTPUT SCHEMA:**
+Your final print MUST be a JSON object with this schema:
 {
-  "overall_status": "success | partial | failed",
-  "actions_taken": ["tool_name_1", "tool_name_2"],
-  "summary": "A brief summary of what was done."
-}
-"""
+  "overall_status": "string",
+  "actions_taken": ["string"],
+  "summary": "string"
+}"""
     
     def format_user_message(self, signal_data: dict) -> str:
         """Overrides base method to format RCA data for the fix agent."""

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "cluster-001",
+    "query": "500 error",
+    "count": 120,
+    "normalizedRevenueImpact": 5000,
+    "themes": ["checkout", "payment", "error"],
+    "negativeSignals": ["500", "error", "failed"]
+  }
+]
