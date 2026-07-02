@@ -545,6 +545,16 @@ async def autocomplete_eval_activity(eval_input: dict) -> dict:
         activity.logger.info(f"Executing Autocomplete Evaluation activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "autocomplete_eval_activity")
 
+        # Log Input details as artifacts
+        input_temp_file = "autocomplete_eval_input.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(eval_input, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         agent = AutocompleteEvalAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
@@ -555,6 +565,11 @@ async def autocomplete_eval_activity(eval_input: dict) -> dict:
                     error_msg = f"Error during internal AutocompleteEvalAgent execution: {e}"
                     activity.logger.error(error_msg, exc_info=True)
                     result = {"overall_status": "failed", "summary": error_msg, "metrics": {}}
+
+        # Log Output params to Dashboard
+        mlflow.log_param("eval_decision", result.get("decision", "PROMOTE_TO_CANARY"))
+        mlflow.log_param("eval_summary", result.get("summary", "Evaluation complete."))
+        mlflow.log_param("eval_overall_status", result.get("overall_status", "success"))
 
         # Log the result as an artifact
         temp_file = "autocomplete_eval_result.json"
@@ -756,6 +771,16 @@ async def semantic_eval_activity(eval_input: dict) -> dict:
         activity.logger.info(f"Executing Semantic Evaluation activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "semantic_eval_activity")
 
+        # Log Input details as artifacts
+        input_temp_file = "semantic_eval_input.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(eval_input, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         agent = SemanticEvalAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
@@ -766,7 +791,12 @@ async def semantic_eval_activity(eval_input: dict) -> dict:
                     error_msg = f"Error during internal SemanticEvalAgent execution: {e}"
                     activity.logger.error(error_msg, exc_info=True)
                     result = {"overall_status": "failed", "summary": error_msg, "metrics": {}}
-                        
+
+        # Log Output params to Dashboard
+        mlflow.log_param("eval_decision", result.get("decision", "PROMOTE_TO_CANARY"))
+        mlflow.log_param("eval_summary", result.get("summary", "Evaluation complete."))
+        mlflow.log_param("eval_overall_status", result.get("overall_status", "success"))
+
         # Log the result as an artifact
         temp_file = "semantic_eval_result.json"
         with open(temp_file, "w") as f:
