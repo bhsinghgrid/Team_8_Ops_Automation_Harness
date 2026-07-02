@@ -176,6 +176,28 @@ async def {name}(*args, **kwargs):
         pass
     ```
 
+### 4. Duplicate Activity Definition Cleanup
+*   *Implementation*: Discovered and eliminated redundant, legacy activity duplicates (specifically `feedback_activity`) inside `temporal/activities.py` to ensure only the fully MLflow-instrumented and thread-safe version is imported and executed by Temporal workers.
+
+---
+
+## 🔬 Gating & Verification: Evaluation, Shadow Testing & Feedback Layers
+
+The **Evaluation (Shadow Testing) Layer** and **Feedback Layer** form the guardrails of the entire self-healing loop. They are engineered to execute **directly on the host process** (not sandboxed) to guarantee full, unrestricted access to the following local systems:
+1.  **MLflow Tracking Server**: For logging experiment metrics (NDCG, Recall, P99 latency gains).
+2.  **LanceDB Vector Database**: For querying and validating real-time semantic query relevance.
+3.  **Local Filesystem**: For reading mock catalog/search databases.
+
+### 📊 Evaluation Layer (`GoogleEvalAgent` & `MetricsEvaluatorTool`)
+*   **Orchestration**: The `eval_activity` triggers `GoogleEvalAgent.run_agent(eval_input)`.
+*   **Traffic Mirroring & Shadowing**: The agent simulates running shadow queries against the newly patched Challenger model alongside the original Champion model, measuring NDCG ranking differences and execution latencies.
+*   **Metrics Engine**: Leverages the `ranx` information retrieval evaluation framework to compute core search metrics (NDCG@10, MRR@10, Recall@5) and latencies (P95, P99, P99.5 percentiles) from the shadow test.
+*   **Automated Gating Decisions**: If relevance degrades or latency overhead grows beyond strict SLA parameters, it automatically decides `ROLLBACK_FIX`. If metrics improve with safe latency thresholds, it decides `PROMOTE_TO_CANARY`.
+
+### 🛡️ Feedback Layer (`FeedbackAgent`)
+*   **Orchestration**: The `feedback_activity` triggers `FeedbackAgent.run_agent(eval_output)`.
+*   **Guardrails**: Acts as the automated safety supervisor. It reviews the generated shadow test report. If the shadow test decision is `PROMOTE_TO_CANARY`, it flags the status as `APPROVED`. If the decision is `ROLLBACK_FIX`, it flags the status as `REJECTED`, preventing faulty code from reaching production.
+
 ---
 ## 📈 System Architecture Diagram
 

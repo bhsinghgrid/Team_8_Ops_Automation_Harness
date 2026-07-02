@@ -1,0 +1,11 @@
+{
+  "workflow_id": "report_b150d01e17954f8dbd6c38b3aa7ae0a4",
+  "decision": "PROMOTE_TO_CANARY",
+  "summary": "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY",
+  "metrics": {
+    "ctr_change_percentage": 20.92,
+    "baseline_ctr": 0.7908093246130715,
+    "shadow_ctr": 1.0,
+    "regressions_found": 0
+  }
+}

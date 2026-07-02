@@ -53,12 +53,10 @@ class UnifiedSearchAiRepairWorkflow:
         eval_result = await workflow.execute_activity(
             eval_activity_func, eval_input, start_to_close_timeout=timedelta(minutes=5)
         )
-        feedback_result = await workflow.execute_activity(
-            feedback_activity, eval_result, start_to_close_timeout=timedelta(minutes=2)
-        )
 
         # Shared Human-in-the-loop and Release logic
-        ndcg_score = eval_result.get("metrics", {}).get("shadow", {}).get("ndcg@10", 1.0)
+        shadow_metrics = eval_result.get("metrics", {}).get("shadow") if isinstance(eval_result.get("metrics", {}).get("shadow"), dict) else {}
+        ndcg_score = shadow_metrics.get("ndcg@10", 1.0)
         threshold = 0.84
 
         if ndcg_score < threshold:
@@ -76,16 +74,27 @@ class UnifiedSearchAiRepairWorkflow:
         approval_status = {
             "status": "Deployment Approved",
             "evaluation_summary": eval_result.get("summary", "N/A"),
-            "feedback_summary": feedback_result.get("summary", "N/A"),
             "final_ndcg": ndcg_score
         }
 
+        # First run Canary Release / Deployment
         release_result = await workflow.execute_activity(
             release_activity, approval_status, start_to_close_timeout=timedelta(minutes=1)
         )
 
+        # Then, run the Feedback agent AFTER the release to audit the results and provide final feedback
+        feedback_input = {
+            "overall_status": release_result.get("status", "success"),
+            "decision": eval_result.get("decision", "PROMOTE_TO_CANARY"),
+            "summary": eval_result.get("summary", ""),
+            "release_details": release_result
+        }
+        feedback_result = await workflow.execute_activity(
+            feedback_activity, feedback_input, start_to_close_timeout=timedelta(minutes=2)
+        )
+
         workflow.logger.info("Unified Search AI Repair Workflow completed successfully.")
-        return release_result
+        return feedback_result
 
     @workflow.signal
     def approve_deployment(self):
@@ -110,12 +119,26 @@ class SemanticAiRepairWorkflow:
         eval_result = await workflow.execute_activity(
             semantic_eval_activity, fix_result, start_to_close_timeout=timedelta(minutes=5)
         )
-        feedback_result = await workflow.execute_activity(
-            feedback_activity, eval_result, start_to_close_timeout=timedelta(minutes=2)
-        )
+        
+        approval_status = {
+            "status": "Deployment Approved",
+            "evaluation_summary": eval_result.get("summary", "N/A"),
+            "final_ndcg": eval_result.get("metrics", {}).get("shadow", {}).get("ndcg@10", 1.0)
+        }
+        
         release_result = await workflow.execute_activity(
             release_activity, approval_status, start_to_close_timeout=timedelta(minutes=1)
         )
         
+        feedback_input = {
+            "overall_status": release_result.get("status", "success"),
+            "decision": eval_result.get("decision", "PROMOTE_TO_CANARY"),
+            "summary": eval_result.get("summary", ""),
+            "release_details": release_result
+        }
+        feedback_result = await workflow.execute_activity(
+            feedback_activity, feedback_input, start_to_close_timeout=timedelta(minutes=2)
+        )
+        
         workflow.logger.info("Semantic AI Repair Workflow completed successfully.")
-        return release_result
+        return feedback_result

@@ -1,8 +1,11 @@
 import type { AuditRow, QueryClusterRow, Runbook } from './types';
 
 // This is the backend API URL.
-// It's hard-coded for this specific development environment.
-export const API_BASE_URL = 'http://localhost:8001';
+// Dynamically routes to the correct backend port (8000) when running in dev mode (5173),
+// otherwise defaults to the current serving origin.
+export const API_BASE_URL = typeof window !== 'undefined' && window.location.origin.includes('5173')
+  ? 'http://localhost:8000'
+  : (typeof window !== 'undefined' ? window.location.origin : 'http://localhost:8000');
 
 export type RunbookAction = 'evaluate' | 'release' | 'rollback';
 

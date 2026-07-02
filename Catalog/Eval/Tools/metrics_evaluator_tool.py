@@ -115,12 +115,33 @@ class MetricsEvaluatorTool:
         qrels = {}
         baseline_run = {}
         shadow_run = {}
+        query_breakdown = []
 
         for i, res in enumerate(execution_results):
             query_id = f"q_{i+1}"
+            query_text = res.get("query_text", f"query_{i+1}")
             expected_skus = res.get("expected_skus", [])
             baseline_top_k = res.get("baseline_top_k", [])
             shadow_top_k = res.get("shadow_top_k", [])
+
+            qrels_single = {query_id: {sku: 1 for sku in expected_skus}}
+            baseline_single = {query_id: {sku: 1 / (rank + 1) for rank, sku in enumerate(baseline_top_k)}}
+            shadow_single = {query_id: {sku: 1 / (rank + 1) for rank, sku in enumerate(shadow_top_k)}}
+            
+            single_metrics = ["mrr@10", "recall@5", "ndcg@10"]
+            b_rep = ranx.evaluate(ranx.Qrels(qrels_single), ranx.Run(baseline_single), single_metrics)
+            s_rep = ranx.evaluate(ranx.Qrels(qrels_single), ranx.Run(shadow_single), single_metrics)
+            
+            query_breakdown.append({
+                "query_id": query_id,
+                "query_text": query_text,
+                "expected_skus": expected_skus,
+                "baseline_top_k": baseline_top_k,
+                "shadow_top_k": shadow_top_k,
+                "baseline": b_rep,
+                "shadow": s_rep,
+                "ndcg_improvement": round((s_rep["ndcg@10"] - b_rep["ndcg@10"]) * 100, 2)
+            })
 
             qrels[query_id] = {sku: 1 for sku in expected_skus}
             baseline_run[query_id] = {sku: 1 / (rank + 1) for rank, sku in enumerate(baseline_top_k)}
@@ -134,7 +155,8 @@ class MetricsEvaluatorTool:
         return {
             "baseline": baseline_report,
             "shadow": shadow_report,
-            "absolute_ndcg_improvement": round(improvement, 2)
+            "absolute_ndcg_improvement": round(improvement, 2),
+            "query_wise_breakdown": query_breakdown
         }
 
     def _evaluate_relevance_with_fallback(self, execution_results: list[dict[str, Any]]) -> dict[str, Any]:
@@ -142,10 +164,39 @@ class MetricsEvaluatorTool:
         shadow_report = self._aggregate_metrics(execution_results, "shadow_top_k")
         improvement = (shadow_report["ndcg@10"] - baseline_report["ndcg@10"]) * 100
 
+        query_breakdown = []
+        for i, res in enumerate(execution_results):
+            expected_skus = res.get("expected_skus", [])
+            baseline_top_k = res.get("baseline_top_k", [])
+            shadow_top_k = res.get("shadow_top_k", [])
+            
+            b_ndcg = self._ndcg_at_k(baseline_top_k, expected_skus, 10)
+            s_ndcg = self._ndcg_at_k(shadow_top_k, expected_skus, 10)
+            
+            query_breakdown.append({
+                "query_id": f"q_{i+1}",
+                "query_text": res.get("query_text", f"query_{i+1}"),
+                "expected_skus": expected_skus,
+                "baseline_top_k": baseline_top_k,
+                "shadow_top_k": shadow_top_k,
+                "baseline": {
+                    "mrr@10": self._mrr_at_k(baseline_top_k, expected_skus, 10),
+                    "recall@5": self._recall_at_k(baseline_top_k, expected_skus, 5),
+                    "ndcg@10": b_ndcg
+                },
+                "shadow": {
+                    "mrr@10": self._mrr_at_k(shadow_top_k, expected_skus, 10),
+                    "recall@5": self._recall_at_k(shadow_top_k, expected_skus, 5),
+                    "ndcg@10": s_ndcg
+                },
+                "ndcg_improvement": round((s_ndcg - b_ndcg) * 100, 2)
+            })
+
         return {
             "baseline": baseline_report,
             "shadow": shadow_report,
-            "absolute_ndcg_improvement": round(improvement, 2)
+            "absolute_ndcg_improvement": round(improvement, 2),
+            "query_wise_breakdown": query_breakdown
         }
 
     def _aggregate_metrics(

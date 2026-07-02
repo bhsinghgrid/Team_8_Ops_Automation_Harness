@@ -208,47 +208,6 @@ export const Overview: React.FC<OverviewProps> = ({
           </div>
         </div>
 
-        <div className="runbook-table-container">
-          <table>
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Status</th>
-                <th>Title</th>
-                <th>Root Cause</th>
-                <th>Shadow Test</th>
-                <th>Query Volume</th>
-                <th>Current NDCG</th>
-                <th>Current Exit Rate</th>
-                <th>P95 Latency</th>
-              </tr>
-            </thead>
-            <tbody>
-              {trendRows.map((row) => (
-                <tr key={row.id}>
-                  <td>{row.code}</td>
-                  <td>{row.status}</td>
-                  <td>{row.title}</td>
-                  <td>{row.rootCause}</td>
-                  <td>
-                    {row.shadowTest ? (
-                      <button onClick={() => setSelectedShadowTest(row.shadowTest)}>
-                        View Report
-                      </button>
-                    ) : (
-                      'N/A'
-                    )}
-                  </td>
-                  <td>{row.queryVolume}</td>
-                  <td>{row.currentNdcg.toFixed(2)}</td>
-                  <td>{row.currentExitRate.toFixed(1)}%</td>
-                  <td>{row.p95Latency}{runtimeUnit}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-
         <div className="metric-card">
           <div className="metric-label">
             <span>{runtimeLabel}</span>

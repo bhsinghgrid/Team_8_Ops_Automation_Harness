@@ -1,0 +1,334 @@
+<svg width="960" height="500" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" baseProfile="full" viewBox="0 0 960 500">
+<rect width="960" height="500" x="0" y="0" fill="none"></rect>
+<path d="M500 40Q501.8 46 503.1 52.1" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.979,0.205,-0.205,-0.979,525.6716,57.5435)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 120Q501.8 126 503.1 132.1" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.979,0.205,-0.205,-0.979,525.6716,107.5435)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 200Q461.8 237.9 414.8 259.3" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.413,-0.911,0.911,-0.413,470.4743,187.0355)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M350 280Q311.6 314.2 265.7 332.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.37,-0.929,0.929,-0.37,377.3236,232.8318)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M350 280Q315.6 360.6 253.5 418.1" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.679,-0.734,0.734,-0.679,369.7097,286.2951)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M350 280Q400.9 287.4 444.4 310.9" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.474,0.88,-0.88,-0.474,488.9989,219.2834)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M350 280Q535.9 201 732.7 220.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.099,0.995,-0.995,-0.099,669.1675,162.807)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M200 350Q165.8 376.9 126.5 390.8" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.335,-0.942,0.942,-0.335,290.3196,269.2809)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M60 405Q67.1 428.8 68.4 452.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.999,0.052,-0.052,-0.999,253.9781,307.8228)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M200 460Q156.6 456.4 118.4 439.9" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.7 10L0 7.5L-6.7 10L0 0Z" transform="matrix(0.396,-0.918,0.918,0.396,285.2236,299.9408)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 350Q506.4 371.2 507.8 392.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.998,0.068,-0.068,-0.998,528.6378,270.282)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 460Q506.4 481.2 507.8 502.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.998,0.068,-0.068,-0.998,528.6378,339.032)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 570Q506.4 591.2 507.8 612.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.998,0.068,-0.068,-0.998,528.6378,407.782)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M60 520Q102.5 522.2 140.5 537" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.364,0.932,-0.932,-0.364,299.0789,360.6451)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M500 200Q638.5 224.1 748 306.2" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.6667 10L0 7.5L-6.6667 10L0 0Z" transform="matrix(-0.6,0.8,-0.8,-0.6,678.7446,216.3703)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M800 350Q792.1 323.7 791.1 297.4" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.7 10L0 7.5L-6.7 10L0 0Z" transform="matrix(0.999,-0.037,0.037,0.999,705.711,210.8875)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M800 230Q793.6 208.8 792.2 187.5" transform="matrix(0.625,0,0,0.625,211.25,25)" fill="transparent" stroke="#9ca3af" stroke-width="4" stroke-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="zr4-cls-69"></path>
+<path d="M0 0L6.7 10L0 7.5L-6.7 10L0 0Z" transform="matrix(0.998,-0.068,0.068,0.998,706.3622,142.218)" fill="#9ca3af" fill-opacity="0.85" ecmeta_series_index="0" ecmeta_data_index="16" ecmeta_ssr_type="chart" class="zr4-cls-70"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,50)" fill="#5470c6" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="chart" class="zr4-cls-71 zr4-cls-72"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,100)" fill="#5470c6" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="chart" class="zr4-cls-73 zr4-cls-72"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,150)" fill="#5470c6" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="chart" class="zr4-cls-74 zr4-cls-72"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,430,200)" fill="#5470c6" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="chart" class="zr4-cls-75 zr4-cls-72"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,336.25,243.75)" fill="#91cc75" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="chart" class="zr4-cls-76 zr4-cls-77"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,336.25,312.5)" fill="#91cc75" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="5" ecmeta_ssr_type="chart" class="zr4-cls-78 zr4-cls-77"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,248.75,278.125)" fill="#91cc75" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="6" ecmeta_ssr_type="chart" class="zr4-cls-79 zr4-cls-77"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,248.75,350)" fill="#91cc75" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="7" ecmeta_ssr_type="chart" class="zr4-cls-80 zr4-cls-77"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,243.75)" fill="#fac858" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="8" ecmeta_ssr_type="chart" class="zr4-cls-81 zr4-cls-82"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,312.5)" fill="#fac858" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="9" ecmeta_ssr_type="chart" class="zr4-cls-83 zr4-cls-82"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,381.25)" fill="#fac858" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="10" ecmeta_ssr_type="chart" class="zr4-cls-84 zr4-cls-82"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,711.25,243.75)" fill="#ee6666" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="11" ecmeta_ssr_type="chart" class="zr4-cls-85 zr4-cls-86"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,711.25,168.75)" fill="#ee6666" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="12" ecmeta_ssr_type="chart" class="zr4-cls-87 zr4-cls-86"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,523.75,450)" fill="#73c0de" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="13" ecmeta_ssr_type="chart" class="zr4-cls-88 zr4-cls-89"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,336.25,381.25)" fill="#73c0de" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="14" ecmeta_ssr_type="chart" class="zr4-cls-90 zr4-cls-89"></path>
+<path d="M1 0A1 1 0 1 1 1 -0.01" transform="matrix(42.5,0,0,42.5,711.25,100)" fill="#73c0de" stroke="#1f2937" stroke-width="0.03529411764705882" ecmeta_series_index="0" ecmeta_data_index="15" ecmeta_ssr_type="chart" class="zr4-cls-91 zr4-cls-89"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(523.75 50)" fill="#eee" stroke="#5470c6" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Anomalies Ingestion</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(523.75 100)" fill="#eee" stroke="#5470c6" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">Temporal Server</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(523.75 150)" fill="#eee" stroke="#5470c6" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">workflows.py</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(430 200)" fill="#eee" stroke="#5470c6" stroke-width="2" paint-order="stroke" stroke-miterlimit="2">activities.py</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(336.25 243.75)" fill="#333">GoogleRootCauseAgent</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(336.25 312.5)" fill="#333">GoogleFixProposalAgent</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(248.75 278.125)" fill="#333">Fast-RLM Deno Engine</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(248.75 350)" fill="#333">Pyodide WASM REPL</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(523.75 243.75)" fill="#333">GoogleEvalAgent</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(523.75 312.5)" fill="#333">ShadowTestEngine</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(523.75 381.25)" fill="#333">MetricsEvaluatorTool</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(711.25 243.75)" fill="#333">ReleaseAgent</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" transform="translate(711.25 168.75)" fill="#333">FeedbackAgent</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(523.75 450)" fill="#333">MLflow Telemetry</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(336.25 381.25)" fill="#333">LanceDB Vector DB</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" transform="translate(711.25 100)" fill="#333">Magellan Dashboard</text>
+<path d="M-5 -5l875.4 0l0 26l-875.4 0Z" transform="translate(47.28 469)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr4-cls-92"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(48.28 470)" fill="#5470c6" stroke="#1f2937" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(48.28 470)" fill="#333">Orchestration &amp; Ingestion</text>
+<path d="M-1 -1l167 0l0 16l-167 0Z" transform="translate(48.28 470)" fill="transparent" ecmeta_series_index="0" ecmeta_data_index="0" ecmeta_ssr_type="legend" class="zr4-cls-93"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(225.24 470)" fill="#91cc75" stroke="#1f2937" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(225.24 470)" fill="#333">Sandboxed Agent REPL</text>
+<path d="M-1 -1l161.8 0l0 16l-161.8 0Z" transform="translate(225.24 470)" fill="transparent" ecmeta_series_index="0" ecmeta_data_index="1" ecmeta_ssr_type="legend" class="zr4-cls-93"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(397.04 470)" fill="#fac858" stroke="#1f2937" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(397.04 470)" fill="#333">Host Gating &amp; Shadow Testing</text>
+<path d="M-1 -1l195.8 0l0 16l-195.8 0Z" transform="translate(397.04 470)" fill="transparent" ecmeta_series_index="0" ecmeta_data_index="2" ecmeta_ssr_type="legend" class="zr4-cls-93"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(602.8 470)" fill="#ee6666" stroke="#1f2937" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(602.8 470)" fill="#333">Canary Release &amp; Audit</text>
+<path d="M-1 -1l159.5 0l0 16l-159.5 0Z" transform="translate(602.8 470)" fill="transparent" ecmeta_series_index="0" ecmeta_data_index="3" ecmeta_ssr_type="legend" class="zr4-cls-93"></path>
+<path d="M3.5 0L21.5 0A3.5 3.5 0 0 1 25 3.5L25 10.5A3.5 3.5 0 0 1 21.5 14L3.5 14A3.5 3.5 0 0 1 0 10.5L0 3.5A3.5 3.5 0 0 1 3.5 0" transform="translate(772.32 470)" fill="#73c0de" stroke="#1f2937" stroke-width="2" stroke-linecap="butt" stroke-miterlimit="10" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="legend" ecmeta_silent="true" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="start" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" x="30" y="7" transform="translate(772.32 470)" fill="#333">Telemetry &amp; Storage</text>
+<path d="M-1 -1l141.4 0l0 16l-141.4 0Z" transform="translate(772.32 470)" fill="transparent" ecmeta_series_index="0" ecmeta_data_index="4" ecmeta_ssr_type="legend" class="zr4-cls-93"></path>
+<path d="M-255.4 -5l510.8 0l0 52l-510.8 0Z" transform="translate(480 5)" fill="rgb(0,0,0)" fill-opacity="0" stroke="#ccc" stroke-width="0" class="zr4-cls-92"></path>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:20px;font-family:sans-serif;font-weight:bold;" xml:space="preserve" y="10" transform="translate(480 5)" fill="#111827">Magellan AI Search Ops — Deep Technical Architecture</text>
+<text dominant-baseline="central" text-anchor="middle" style="font-size:12px;font-family:sans-serif;" xml:space="preserve" y="36" transform="translate(480 5)" fill="#6E7079">In-Depth Deep Technical Blueprint of Magellan AI Search Ops Pipelines &amp; Sandboxing</text>
+<style ><![CDATA[
+.zr4-cls-69:hover {
+cursor:pointer;
+}
+.zr4-cls-70:hover {
+cursor:pointer;
+fill:rgba(171,179,192,1);
+}
+.zr4-cls-71 {
+animation:zr4-ani-0 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-72:hover {
+cursor:pointer;
+fill:rgba(92,123,217,1);
+}
+.zr4-cls-73 {
+animation:zr4-ani-1 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-74 {
+animation:zr4-ani-2 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-75 {
+animation:zr4-ani-3 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-76 {
+animation:zr4-ani-4 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-77:hover {
+cursor:pointer;
+fill:rgba(159,224,128,1);
+}
+.zr4-cls-78 {
+animation:zr4-ani-5 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-79 {
+animation:zr4-ani-6 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-80 {
+animation:zr4-ani-7 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-81 {
+animation:zr4-ani-8 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-82:hover {
+cursor:pointer;
+fill:rgba(255,220,96,1);
+}
+.zr4-cls-83 {
+animation:zr4-ani-9 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-84 {
+animation:zr4-ani-10 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-85 {
+animation:zr4-ani-11 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-86:hover {
+cursor:pointer;
+fill:rgba(255,112,112,1);
+}
+.zr4-cls-87 {
+animation:zr4-ani-12 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-88 {
+animation:zr4-ani-13 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-89:hover {
+cursor:pointer;
+fill:rgba(126,211,244,1);
+}
+.zr4-cls-90 {
+animation:zr4-ani-14 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-91 {
+animation:zr4-ani-15 1s cubic-bezier(0.65,0,0.35,1) both;
+}
+.zr4-cls-92:hover {
+pointer-events:none;
+}
+.zr4-cls-93:hover {
+cursor:pointer;
+fill:rgba(0,0,0,0);
+}
+@keyframes zr4-ani-0 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-1 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-2 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-3 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-4 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-5 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-6 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-7 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-8 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-9 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-10 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-11 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-12 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-13 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-14 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+@keyframes zr4-ani-15 {
+0% {
+transform:scale(0,0);
+opacity:0;
+}
+100% {
+transform:scale(42.5,42.5);
+opacity:1;
+}
+}
+]]>
+
+</style>
+</svg>
