@@ -153,13 +153,15 @@ async def root_cause_activity(signal: dict) -> dict:
         signal_type = signal.get("type", "catalog")
 
         # Check known issues cache
-        cached = _lookup_cache(signal_type, primary_error)
+        use_cache = signal.get("use_cache", True)
+        cached = _lookup_cache(signal_type, primary_error) if use_cache else None
         if cached and "rca" in cached:
             print(f"--- RCA ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous diagnostic layer. ---")
             result = cached["rca"].copy()
             result["cached_hit"] = True
             result["primary_error"] = primary_error
             result["signal_type"] = signal_type
+            result["use_cache"] = use_cache
             return result
 
         print(f"--- RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
@@ -184,6 +186,7 @@ async def root_cause_activity(signal: dict) -> dict:
         result["cached_hit"] = False
         result["primary_error"] = primary_error
         result["signal_type"] = signal_type
+        result["use_cache"] = use_cache
 
         print("--- RCA ACTIVITY: END ---")
         return result
@@ -200,8 +203,9 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
 
         signal_type = rca_output.get("signal_type", "catalog")
         primary_error = rca_output.get("primary_error", "unknown_issue")
+        use_cache = rca_output.get("use_cache", True)
 
-        if rca_output.get("cached_hit"):
+        if rca_output.get("cached_hit") and use_cache:
             cached = _lookup_cache(signal_type, primary_error)
             if cached and "fix" in cached:
                 print(f"--- FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
@@ -307,15 +311,17 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         signal = _normalize_signal_to_dict(signal, "AUTOCOMPLETE RCA ACTIVITY")
         primary_error = _get_primary_error(signal)
         signal_type = "autocomplete"
+        use_cache = signal.get("use_cache", True)
 
         # Check known issues cache
-        cached = _lookup_cache(signal_type, primary_error)
+        cached = _lookup_cache(signal_type, primary_error) if use_cache else None
         if cached and "rca" in cached:
             print(f"--- AUTOCOMPLETE RCA ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous diagnostic layer. ---")
             result = cached["rca"].copy()
             result["cached_hit"] = True
             result["primary_error"] = primary_error
             result["signal_type"] = signal_type
+            result["use_cache"] = use_cache
             return result
 
         print(f"--- AUTOCOMPLETE RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
@@ -334,6 +340,7 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         result["cached_hit"] = False
         result["primary_error"] = primary_error
         result["signal_type"] = signal_type
+        result["use_cache"] = use_cache
 
         # Log the result as an artifact
         temp_file = "autocomplete_root_cause_result.json"
@@ -355,8 +362,9 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
 
         signal_type = "autocomplete"
         primary_error = rca_output.get("primary_error", "unknown_issue")
+        use_cache = rca_output.get("use_cache", True)
 
-        if rca_output.get("cached_hit"):
+        if rca_output.get("cached_hit") and use_cache:
             cached = _lookup_cache(signal_type, primary_error)
             if cached and "fix" in cached:
                 print(f"--- AUTOCOMPLETE FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
