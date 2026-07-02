@@ -1,0 +1,65 @@
+{
+    "catalog:product_not_found": {
+        "rca": {
+            "status": "success",
+            "overall_status": "success",
+            "root_cause": "Missing product metadata or SKU mapping failure in the catalog database.",
+            "summary": "HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.",
+            "detailed_evidence": [
+                "SKU lookup failed in catalog database"
+            ],
+            "executed_tools": [
+                "run_deep_rca_investigation"
+            ]
+        },
+        "fix": {
+            "status": "Success",
+            "reason": "Index re-indexed and refreshed successfully.",
+            "action_proposed": "vector_refresh",
+            "fix_executed": true,
+            "next_steps": "Verify search availability"
+        }
+    },
+    "autocomplete:autocomplete_miss": {
+        "rca": {
+            "status": "success",
+            "overall_status": "success",
+            "root_cause": "Stale prefix index or low popularity weights in the autocomplete trie.",
+            "summary": "Autocomplete suggestions are empty for high-frequency search prefixes.",
+            "detailed_evidence": [
+                "Trie match failed for high frequency prefix"
+            ],
+            "executed_tools": [
+                "run_prefix_matching_analysis"
+            ]
+        },
+        "fix": {
+            "status": "Success",
+            "reason": "Trie weights adjusted successfully.",
+            "action_proposed": "adjust_prefix_weights",
+            "fix_executed": true,
+            "next_steps": "Verify prefix suggestion relevance"
+        }
+    },
+    "semantic:empty_query": {
+        "rca": {
+            "status": "success",
+            "overall_status": "success",
+            "root_cause": "Embedding drift detected for 'running shoes' category.",
+            "summary": "Detected 1,332 events with primary issue of embedding drift after embedding retraining.",
+            "detailed_evidence": [
+                "Proximity mismatch on search vectors"
+            ],
+            "executed_tools": [
+                "run_deep_rca_investigation"
+            ]
+        },
+        "fix": {
+            "status": "Success",
+            "reason": "Vector embeddings refreshed and synchronized.",
+            "action_proposed": "vector_refresh",
+            "fix_executed": true,
+            "next_steps": "Verify cosine similarity thresholds"
+        }
+    }
+}

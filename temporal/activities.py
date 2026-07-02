@@ -26,6 +26,50 @@ from Semantic.RootCause.main_agent import SemanticRootCauseAgent
 from Semantic.Fix_Proposal.fix_agent import SemanticFixProposalAgent
 from Semantic.Eval.eval_agent import SemanticEvalAgent
 from Feedback.feedback_agent import FeedbackAgent
+from typing import Optional
+
+# -------------------------
+# CACHING AND DETECTOR UTILITIES
+# -------------------------
+CACHE_FILE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "known_anomalies_cache.json")
+
+def _get_primary_error(signal: dict) -> str:
+    events = signal.get("events", [])
+    if not events:
+        return "unknown_issue"
+    for e in events:
+        err = e.get("error")
+        if err:
+            return err
+    return "unknown_issue"
+
+def _lookup_cache(signal_type: str, primary_error: str) -> Optional[dict]:
+    if not os.path.exists(CACHE_FILE):
+        return None
+    try:
+        with open(CACHE_FILE, "r") as f:
+            cache = json.load(f)
+        key = f"{signal_type}:{primary_error}"
+        return cache.get(key)
+    except Exception:
+        return None
+
+def _write_cache(signal_type: str, primary_error: str, rca_result: dict, fix_result: dict):
+    try:
+        cache = {}
+        if os.path.exists(CACHE_FILE):
+            with open(CACHE_FILE, "r") as f:
+                cache = json.load(f)
+        key = f"{signal_type}:{primary_error}"
+        cache[key] = {
+            "rca": rca_result,
+            "fix": fix_result
+        }
+        with open(CACHE_FILE, "w") as f:
+            json.dump(cache, f, indent=4)
+        print(f"🔒 Cached repair mapping: '{key}' -> Saved successfully.")
+    except Exception as e:
+        print(f"⚠️ Warning: Failed to write to cache file: {e}")
 
 def _setup_mlflow_with_auth(activity_name: str):
     """Set up MLflow tracking with authentication. Raises ValueError if credentials are missing."""
@@ -105,6 +149,18 @@ async def root_cause_activity(signal: dict) -> dict:
         print(f"--- RCA ACTIVITY: MLflow Run ID: {run.info.run_id} ---")
         
         signal = _normalize_signal_to_dict(signal, "RCA ACTIVITY")
+        primary_error = _get_primary_error(signal)
+        signal_type = signal.get("type", "catalog")
+
+        # Check known issues cache
+        cached = _lookup_cache(signal_type, primary_error)
+        if cached and "rca" in cached:
+            print(f"--- RCA ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous diagnostic layer. ---")
+            result = cached["rca"].copy()
+            result["cached_hit"] = True
+            result["primary_error"] = primary_error
+            result["signal_type"] = signal_type
+            return result
 
         print(f"--- RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
         activity.logger.info(f"RCA activity received structured signal.")
@@ -125,6 +181,10 @@ async def root_cause_activity(signal: dict) -> dict:
                     activity.logger.error(f"Error during agent execution: {e}", exc_info=True)
                     result = {"error": f"fast-rlm run failed: {e}", "status": "ERROR"}
         
+        result["cached_hit"] = False
+        result["primary_error"] = primary_error
+        result["signal_type"] = signal_type
+
         print("--- RCA ACTIVITY: END ---")
         return result
 
@@ -137,6 +197,15 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
     with mlflow.start_run(nested=True) as run:
         activity.logger.info(f"Executing Fix Proposal activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "fix_proposal_activity")
+
+        signal_type = rca_output.get("signal_type", "catalog")
+        primary_error = rca_output.get("primary_error", "unknown_issue")
+
+        if rca_output.get("cached_hit"):
+            cached = _lookup_cache(signal_type, primary_error)
+            if cached and "fix" in cached:
+                print(f"--- FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
+                return cached["fix"]
 
         agent = GoogleFixProposalAgent()
         
@@ -152,6 +221,8 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
                     json.dump(fix_result, f, indent=2)
                 mlflow.log_artifact(temp_file, "results")
                 os.remove(temp_file) # Clean up temporary file
+
+                _write_cache(signal_type, primary_error, rca_output, fix_result)
                 return fix_result
 
 
@@ -234,6 +305,19 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         mlflow.log_param("activity_type", "autocomplete_root_cause_activity")
 
         signal = _normalize_signal_to_dict(signal, "AUTOCOMPLETE RCA ACTIVITY")
+        primary_error = _get_primary_error(signal)
+        signal_type = "autocomplete"
+
+        # Check known issues cache
+        cached = _lookup_cache(signal_type, primary_error)
+        if cached and "rca" in cached:
+            print(f"--- AUTOCOMPLETE RCA ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous diagnostic layer. ---")
+            result = cached["rca"].copy()
+            result["cached_hit"] = True
+            result["primary_error"] = primary_error
+            result["signal_type"] = signal_type
+            return result
+
         print(f"--- AUTOCOMPLETE RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
 
         agent = AutocompleteRootCauseAgent()
@@ -246,6 +330,10 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
                 except Exception as e:
                     print(f"--- AUTOCOMPLETE RCA ACTIVITY: ERROR during agent execution: {e} ---")
                     result = {"error": f"fast-rlm run failed: {e}", "status": "ERROR"}
+
+        result["cached_hit"] = False
+        result["primary_error"] = primary_error
+        result["signal_type"] = signal_type
 
         # Log the result as an artifact
         temp_file = "autocomplete_root_cause_result.json"
@@ -265,6 +353,15 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
         activity.logger.info(f"Executing Autocomplete Fix Proposal activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "autocomplete_fix_proposal_activity")
 
+        signal_type = "autocomplete"
+        primary_error = rca_output.get("primary_error", "unknown_issue")
+
+        if rca_output.get("cached_hit"):
+            cached = _lookup_cache(signal_type, primary_error)
+            if cached and "fix" in cached:
+                print(f"--- AUTOCOMPLETE FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
+                return cached["fix"]
+
         agent = AutocompleteFixProposalAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
@@ -275,6 +372,8 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
                     json.dump(result, f, indent=2)
                 mlflow.log_artifact(temp_file, "results")
                 os.remove(temp_file) # Clean up temporary file
+
+                _write_cache(signal_type, primary_error, rca_output, result)
                 return result
 
 @activity.defn
@@ -363,6 +462,19 @@ async def semantic_root_cause_activity(signal: dict) -> dict:
         mlflow.log_param("activity_type", "semantic_root_cause_activity")
 
         signal = _normalize_signal_to_dict(signal, "SEMANTIC RCA ACTIVITY")
+        primary_error = _get_primary_error(signal)
+        signal_type = "semantic"
+
+        # Check known issues cache
+        cached = _lookup_cache(signal_type, primary_error)
+        if cached and "rca" in cached:
+            print(f"--- SEMANTIC RCA ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous diagnostic layer. ---")
+            result = cached["rca"].copy()
+            result["cached_hit"] = True
+            result["primary_error"] = primary_error
+            result["signal_type"] = signal_type
+            return result
+
         print(f"--- SEMANTIC RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
 
         agent = SemanticRootCauseAgent()
@@ -375,6 +487,10 @@ async def semantic_root_cause_activity(signal: dict) -> dict:
                 except Exception as e:
                     print(f"--- SEMANTIC RCA ACTIVITY: ERROR during agent execution: {e} ---")
                     result = {"error": f"fast-rlm run failed: {e}", "status": "ERROR"}
+
+        result["cached_hit"] = False
+        result["primary_error"] = primary_error
+        result["signal_type"] = signal_type
 
         # Log the result as an artifact
         temp_file = "semantic_root_cause_result.json"
@@ -394,6 +510,15 @@ async def semantic_fix_proposal_activity(rca_output: dict) -> dict:
         activity.logger.info(f"Executing Semantic Fix Proposal activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "semantic_fix_proposal_activity")
 
+        signal_type = "semantic"
+        primary_error = rca_output.get("primary_error", "unknown_issue")
+
+        if rca_output.get("cached_hit"):
+            cached = _lookup_cache(signal_type, primary_error)
+            if cached and "fix" in cached:
+                print(f"--- SEMANTIC FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
+                return cached["fix"]
+
         agent = SemanticFixProposalAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
@@ -404,6 +529,8 @@ async def semantic_fix_proposal_activity(rca_output: dict) -> dict:
                     json.dump(result, f, indent=2)
                 mlflow.log_artifact(temp_file, "results")
                 os.remove(temp_file) # Clean up temporary file
+
+                _write_cache(signal_type, primary_error, rca_output, result)
                 return result
 
 @activity.defn
