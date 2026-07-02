@@ -10,14 +10,16 @@ if project_root not in sys.path:
 
 
 
+from base_agent import BaseTool
+
 logger = logging.getLogger(__name__)
 
-class SemanticSimilarityTool:
+class SemanticSimilarityTool(BaseTool):
     """
     A tool to simulate the evaluation of semantic search relevance by
     analyzing cosine similarity metrics from a comparison report.
     """
-    def run(self, diff_id: str, context: str = "") -> Dict[str, Any]:
+    async def run(self, diff_id: str, context: str = "") -> Dict[str, Any]:
         """
         Simulates fetching and analyzing a semantic search shadow test report.
 

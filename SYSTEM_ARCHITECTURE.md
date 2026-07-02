@@ -113,6 +113,10 @@ sequenceDiagram
     *   To prevent `asyncio.queues.QueueFull` exceptions during heavy console logging, heartbeats are dynamically throttled on the host to trigger at most once every **2.0 seconds**.
 
 ### 2. Execution Isolation Sandbox (`fast-rlm` REPL)
+*   **Sandbox Topology Blueprint**: Below is the detailed architectural map of Fast-RLM sandboxing, bridging python host runners, Deno subprocesses, the WASM Pyodide sandbox, and external APIs:
+
+![Fast-RLM Sandbox Internals](./agent_diagrams/rendered/fast_rlm_sandbox.svg)
+
 *   **Sandboxing via Deno**: Spawns a lightweight Deno subprocess using `--allow-read`, `--allow-env`, `--allow-net`, and `--allow-sys` flags. This isolates the Python environment and restricts it from writing arbitrary system files.
 *   **Pyodide WASM Runtime**: Inside Deno, a Python 3.11 environment is loaded into memory as WebAssembly. Standard pure-python HTTP libraries (`requests`, `httpx`) are automatically patched (`pyodide_http.patch_all()`) to route requests through the Deno host's safe network stack.
 *   **Dynamic Source Stashing**:

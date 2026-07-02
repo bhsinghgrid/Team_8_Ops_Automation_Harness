@@ -152,6 +152,21 @@ async def root_cause_activity(signal: dict) -> dict:
         primary_error = _get_primary_error(signal)
         signal_type = signal.get("type", "catalog")
 
+        # Log complete JSON Input as MLflow param and tag
+        mlflow.log_param("input_signal_type", signal_type)
+        mlflow.log_param("input_primary_error", primary_error)
+        mlflow.set_tag("input_events_count", str(len(signal.get("events", []))))
+        
+        # Save complete Input Signal dict as an artifact
+        input_temp_file = "rca_input_signal.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(signal, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         # Check known issues cache
         use_cache = signal.get("use_cache", True)
         cached = _lookup_cache(signal_type, primary_error) if use_cache else None
@@ -162,6 +177,21 @@ async def root_cause_activity(signal: dict) -> dict:
             result["primary_error"] = primary_error
             result["signal_type"] = signal_type
             result["use_cache"] = use_cache
+            
+            # Log Output as Parameter
+            mlflow.log_param("rca_root_cause_output", result.get("root_cause", "unknown"))
+            mlflow.log_param("rca_status", result.get("status", "success"))
+            
+            # Save complete JSON Output as an artifact on cache hit
+            output_temp_file = "rca_output_result.json"
+            with open(output_temp_file, "w") as f:
+                json.dump(result, f, indent=2)
+            mlflow.log_artifact(output_temp_file, "results")
+            try:
+                os.remove(output_temp_file)
+            except Exception:
+                pass
+                
             return result
 
         print(f"--- RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
@@ -188,6 +218,20 @@ async def root_cause_activity(signal: dict) -> dict:
         result["signal_type"] = signal_type
         result["use_cache"] = use_cache
 
+        # Log Output as Parameters
+        mlflow.log_param("rca_root_cause_output", result.get("root_cause", "unknown"))
+        mlflow.log_param("rca_status", result.get("status", "success"))
+        
+        # Save complete JSON Output as an artifact
+        output_temp_file = "rca_output_result.json"
+        with open(output_temp_file, "w") as f:
+            json.dump(result, f, indent=2)
+        mlflow.log_artifact(output_temp_file, "results")
+        try:
+            os.remove(output_temp_file)
+        except Exception:
+            pass
+
         print("--- RCA ACTIVITY: END ---")
         return result
 
@@ -201,6 +245,17 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
         activity.logger.info(f"Executing Fix Proposal activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "fix_proposal_activity")
 
+        # Log complete JSON Input as MLflow param and save as artifact
+        mlflow.log_param("input_rca_root_cause", rca_output.get("root_cause", "unknown"))
+        input_temp_file = "fix_input_rca.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(rca_output, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         signal_type = rca_output.get("signal_type", "catalog")
         primary_error = rca_output.get("primary_error", "unknown_issue")
         use_cache = rca_output.get("use_cache", True)
@@ -209,6 +264,21 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
             cached = _lookup_cache(signal_type, primary_error)
             if cached and "fix" in cached:
                 print(f"--- FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
+                
+                # Log cached output result to MLflow
+                mlflow.log_param("fix_proposed_action", cached["fix"].get("action_proposed", "unknown"))
+                mlflow.log_param("fix_status", cached["fix"].get("status", "success"))
+                
+                # Save complete JSON Output as an artifact on cache hit
+                temp_file = "fix_proposal_result.json"
+                with open(temp_file, "w") as f:
+                    json.dump(cached["fix"], f, indent=2)
+                mlflow.log_artifact(temp_file, "results")
+                try:
+                    os.remove(temp_file)
+                except Exception:
+                    pass
+                    
                 return cached["fix"]
 
         agent = GoogleFixProposalAgent()
@@ -219,6 +289,10 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
                 fix_result = await agent.run_agent(rca_output)
                 activity.logger.info("Fix Proposal completed by AI agent.")
                 
+                # Log Output as Parameters
+                mlflow.log_param("fix_proposed_action", fix_result.get("action_proposed", "unknown"))
+                mlflow.log_param("fix_status", fix_result.get("status", "success"))
+
                 # Log the result as an artifact
                 temp_file = "fix_proposal_result.json"
                 with open(temp_file, "w") as f:
@@ -313,6 +387,20 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         signal_type = "autocomplete"
         use_cache = signal.get("use_cache", True)
 
+        # Log complete JSON Input as MLflow param and save as artifact
+        mlflow.log_param("input_signal_type", signal_type)
+        mlflow.log_param("input_primary_error", primary_error)
+        mlflow.set_tag("input_events_count", str(len(signal.get("events", []))))
+        
+        input_temp_file = "autocomplete_rca_input_signal.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(signal, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         # Check known issues cache
         cached = _lookup_cache(signal_type, primary_error) if use_cache else None
         if cached and "rca" in cached:
@@ -322,6 +410,21 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
             result["primary_error"] = primary_error
             result["signal_type"] = signal_type
             result["use_cache"] = use_cache
+
+            # Log Output as Parameters
+            mlflow.log_param("rca_root_cause_output", result.get("root_cause", "unknown"))
+            mlflow.log_param("rca_status", result.get("status", "success"))
+
+            # Save complete JSON Output as an artifact on cache hit
+            output_temp_file = "autocomplete_rca_output_result.json"
+            with open(output_temp_file, "w") as f:
+                json.dump(result, f, indent=2)
+            mlflow.log_artifact(output_temp_file, "results")
+            try:
+                os.remove(output_temp_file)
+            except Exception:
+                pass
+
             return result
 
         print(f"--- AUTOCOMPLETE RCA ACTIVITY: Received structured signal with {len(signal.get('events', []))} events ---")
@@ -342,6 +445,10 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         result["signal_type"] = signal_type
         result["use_cache"] = use_cache
 
+        # Log Output as Parameters
+        mlflow.log_param("rca_root_cause_output", result.get("root_cause", "unknown"))
+        mlflow.log_param("rca_status", result.get("status", "success"))
+
         # Log the result as an artifact
         temp_file = "autocomplete_root_cause_result.json"
         with open(temp_file, "w") as f:
@@ -360,6 +467,17 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
         activity.logger.info(f"Executing Autocomplete Fix Proposal activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "autocomplete_fix_proposal_activity")
 
+        # Log complete JSON Input as MLflow param and save as artifact
+        mlflow.log_param("input_rca_root_cause", rca_output.get("root_cause", "unknown"))
+        input_temp_file = "autocomplete_fix_input_rca.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(rca_output, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         signal_type = "autocomplete"
         primary_error = rca_output.get("primary_error", "unknown_issue")
         use_cache = rca_output.get("use_cache", True)
@@ -368,12 +486,32 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
             cached = _lookup_cache(signal_type, primary_error)
             if cached and "fix" in cached:
                 print(f"--- AUTOCOMPLETE FIX PROPOSAL ACTIVITY: CACHE HIT [Type: {signal_type}, Error: {primary_error}]. Bypassing slow autonomous fix generation. ---")
+                
+                # Log cached output result to MLflow
+                mlflow.log_param("fix_proposed_action", cached["fix"].get("action_proposed", "unknown"))
+                mlflow.log_param("fix_status", cached["fix"].get("status", "success"))
+
+                # Save complete JSON Output as an artifact on cache hit
+                temp_file = "autocomplete_fix_proposal_result.json"
+                with open(temp_file, "w") as f:
+                    json.dump(cached["fix"], f, indent=2)
+                mlflow.log_artifact(temp_file, "results")
+                try:
+                    os.remove(temp_file)
+                except Exception:
+                    pass
+
                 return cached["fix"]
 
         agent = AutocompleteFixProposalAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
                 result = await agent.run_agent(rca_output)
+                
+                # Log Output as Parameters
+                mlflow.log_param("fix_proposed_action", result.get("action_proposed", "unknown"))
+                mlflow.log_param("fix_status", result.get("status", "success"))
+
                 # Log the result as an artifact
                 temp_file = "autocomplete_fix_proposal_result.json"
                 with open(temp_file, "w") as f:

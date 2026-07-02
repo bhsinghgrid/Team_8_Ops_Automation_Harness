@@ -73,18 +73,18 @@ Your only role is to generate Python code to orchestrate tool calls for semantic
     E['context_data'] = {}
     E['events_jsonl'] = []
 
-    # Extract context data
-    context_data_match = re.search(r'<JSON_DATA_CONTEXT>(.*)</JSON_DATA_CONTEXT>', E['context'], re.DOTALL)
-    if context_data_match:
+    # Extract context data - use findall and take the last match [-1] to avoid matching prompt instructions
+    context_matches = re.findall(r'<JSON_DATA_CONTEXT>(.*?)</JSON_DATA_CONTEXT>', E['context'], re.DOTALL)
+    if context_matches:
         try:
-            E['context_data'] = json.loads(context_data_match.group(1).strip())
+            E['context_data'] = json.loads(context_matches[-1].strip())
         except json.JSONDecodeError:
             pass # Keep as empty dict on error
 
-    # Extract event data (JSONL)
-    events_data_match = re.search(r'<JSON_DATA_EVENTS>(.*)</JSON_DATA_EVENTS>', E['context'], re.DOTALL)
-    if events_data_match:
-        events_jsonl_str = events_data_match.group(1).strip()
+    # Extract event data (JSONL) - use findall and take the last match [-1] to avoid matching prompt instructions
+    events_matches = re.findall(r'<JSON_DATA_EVENTS>(.*?)</JSON_DATA_EVENTS>', E['context'], re.DOTALL)
+    if events_matches:
+        events_jsonl_str = events_matches[-1].strip()
         parsed_logs = []
         for line in events_jsonl_str.split('\n'):
             if line.strip():

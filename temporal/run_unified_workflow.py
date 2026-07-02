@@ -26,7 +26,13 @@ async def main():
     if len(sys.argv) > 1 and sys.argv[1] in valid_types:
         signal_type = sys.argv[1]
 
-    print(f"Preparing to run a '{signal_type}' workflow.")
+    # Check for optional caching flags via CLI arguments
+    # Usage: python temporal/run_unified_workflow.py <type> --no-cache
+    use_cache = True
+    if "--no-cache" in sys.argv:
+        use_cache = False
+
+    print(f"Preparing to run a '{signal_type}' workflow. Caching Enabled: {use_cache}")
 
     # Create a relevant, focused, and small signal based on the workflow type
     if signal_type == "catalog":
@@ -81,6 +87,7 @@ async def main():
             }
     
     initial_signal["type"] = signal_type
+    initial_signal["use_cache"] = use_cache
 
     workflow_id = f"unified-search-repair-workflow-{int(time.time())}"
 
