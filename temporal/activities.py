@@ -314,6 +314,16 @@ async def eval_activity(eval_input: dict) -> dict:
         activity.logger.info(f"Executing Evaluation activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "eval_activity")
 
+        # Log Input details as artifacts
+        input_temp_file = "eval_input_details.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(eval_input, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         signal_type = eval_input.get("original_signal", {}).get("type")
         if signal_type == "catalog":
             agent = GoogleEvalAgent()
@@ -336,6 +346,11 @@ async def eval_activity(eval_input: dict) -> dict:
                     activity.logger.error(error_msg, exc_info=True)
                     result = {"overall_status": "failed", "summary": error_msg, "metrics": {}}
         
+        # Log Output params to Dashboard
+        mlflow.log_param("eval_decision", result.get("decision", "PROMOTE_TO_CANARY"))
+        mlflow.log_param("eval_summary", result.get("summary", "Evaluation complete."))
+        mlflow.log_param("eval_overall_status", result.get("overall_status", "success"))
+
         # Log the result as an artifact
         temp_file = "eval_result.json"
         with open(temp_file, "w") as f:
@@ -583,11 +598,26 @@ async def release_activity(eval_output: dict) -> dict:
         activity.logger.info(f"Executing Release activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "release_activity")
 
+        # Log Input details as artifacts
+        input_temp_file = "release_input_eval.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(eval_output, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         agent = ReleaseAgent()
         with HeartbeatingStream() as stream:
             with contextlib.redirect_stdout(stream), contextlib.redirect_stderr(stream):
                 # The release agent just needs the final approval status
                 result = await agent.run_agent(eval_output)
+                
+                # Log Output params to Dashboard
+                mlflow.log_param("release_confirmation_status", result.get("status", result.get("confirmation_status", "success")))
+                mlflow.log_param("release_message", result.get("message", "Canary released successfully."))
+
                 # Log the result as an artifact
                 temp_file = "release_result.json"
                 with open(temp_file, "w") as f:
@@ -687,6 +717,18 @@ async def feedback_activity(eval_output: dict) -> dict:
         activity.logger.info(f"Executing Feedback activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "feedback_activity")
 
+        # Log complete JSON Input as MLflow param and save as artifact
+        mlflow.log_param("input_eval_summary", eval_output.get("summary", "unknown"))
+        mlflow.log_param("input_eval_decision", eval_output.get("decision", "unknown"))
+        input_temp_file = "feedback_input_eval.json"
+        with open(input_temp_file, "w") as f:
+            json.dump(eval_output, f, indent=2)
+        mlflow.log_artifact(input_temp_file, "inputs")
+        try:
+            os.remove(input_temp_file)
+        except Exception:
+            pass
+
         agent = FeedbackAgent()
         
         with HeartbeatingStream() as stream:
@@ -694,6 +736,10 @@ async def feedback_activity(eval_output: dict) -> dict:
                 result = await agent.run_agent(eval_output)
                 activity.logger.info("Feedback generation completed by AI agent.")
                 
+                # Log Output as Parameters
+                mlflow.log_param("feedback_status", result.get("status", "success"))
+                mlflow.log_param("feedback_summary", result.get("summary", "Feedback generated."))
+
                 # Log the result as an artifact
                 temp_file = "feedback_result.json"
                 with open(temp_file, "w") as f:
