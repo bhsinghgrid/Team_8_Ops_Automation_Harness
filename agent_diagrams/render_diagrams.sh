@@ -30,3 +30,5 @@ render_chart "$ROOT_DIR/autocomplete_runtime.md" autocomplete_runtime 2400 2200
 render_chart "$ROOT_DIR/merchandising_runtime.md" merchandising_runtime 2400 2200
 render_chart "$ROOT_DIR/semantic_runtime.md" semantic_runtime 2400 2200
 render_chart "$ROOT_DIR/temporal_runtime.md" temporal_runtime 2600 3200
+render_chart "$ROOT_DIR/8_self_healing_closed_loop_sequence.md" 8_self_healing_closed_loop_sequence 2400 2400
+render_chart "$ROOT_DIR/9_system_and_database_blueprint.md" 9_system_and_database_blueprint 2800 3200
