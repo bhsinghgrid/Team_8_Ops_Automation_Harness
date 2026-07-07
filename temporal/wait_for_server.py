@@ -19,7 +19,7 @@ async def wait_for_temporal_server():
     for i in range(max_retries):
         try:
             client = await Client.connect(temporal_address)
-            await client.close()
+            # Connecting successfully is enough proof, no need to call non-existent close()
             logger.info("Successfully connected to Temporal server.")
             return
         except Exception as e:

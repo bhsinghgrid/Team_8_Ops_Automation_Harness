@@ -22,7 +22,7 @@ logging.basicConfig(level=logging.INFO)
 async def main():
     load_dotenv()  # Load environment variables from .env file
     # Explicitly set MLflow tracking URI to ensure artifacts are stored correctly
-    os.environ["MLFLOW_TRACKING_URI"] = "http://127.0.0.1:5000"
+    os.environ["MLFLOW_TRACKING_URI"] = "http://127.0.0.1:5001"
     try:
         # Connect to the local Temporal server.
         temporal_address = os.getenv("TEMPORAL_ADDRESS", "localhost:7233")

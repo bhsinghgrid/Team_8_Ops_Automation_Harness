@@ -1,0 +1,95 @@
+Backend store URI not provided. Using sqlite:///mlflow.db
+Registry store URI not provided. Using backend store URI.
+[MLflow] Security middleware enabled with default settings (localhost-only). To allow connections from other hosts, use --host 0.0.0.0 and configure --allowed-hosts and --cors-allowed-origins.
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+2026/07/07 10:18:28 INFO:     Uvicorn running on http://127.0.0.1:5001 (Press CTRL+C to quit)
+2026/07/07 10:18:28 INFO:     Started parent process [65464]
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/.venv/lib/python3.11/site-packages/mlflow/server/fastapi_app.py:17: StarletteDeprecationWarning: starlette.middleware.wsgi is deprecated and will be removed in a future release. Please refer to https://github.com/abersheeran/a2wsgi as a replacement.
+  from starlette.middleware.wsgi import WSGIResponder, build_environ
+2026/07/07 10:18:35 INFO mlflow.server.jobs.utils: Registered online_scoring_scheduler periodic task (runs every 1 minute)
+2026/07/07 10:18:35 INFO mlflow.server.jobs.utils: Registered trace_archival_scheduler periodic task (polls every 1 minute and no-ops when trace archival is disabled or unconfigured)
+2026/07/07 10:18:35 WARNING mlflow.server.auth: This feature is still experimental and may change in a future release without warning
+2026/07/07 10:18:35 INFO:     Started server process [65503]
+2026/07/07 10:18:35 INFO:     Waiting for application startup.
+2026/07/07 10:18:35 INFO:     Application startup complete.
+2026/07/07 10:18:36 WARNING mlflow.server.auth: This feature is still experimental and may change in a future release without warning
+2026/07/07 10:18:36 WARNING mlflow.server.auth: This feature is still experimental and may change in a future release without warning
+2026/07/07 10:18:36 WARNING mlflow.server.auth: This feature is still experimental and may change in a future release without warning
+2026/07/07 10:18:36 INFO:     Started server process [65500]
+2026/07/07 10:18:36 INFO:     Waiting for application startup.
+2026/07/07 10:18:36 INFO:     Started server process [65501]
+2026/07/07 10:18:36 INFO:     Application startup complete.
+2026/07/07 10:18:36 INFO:     Waiting for application startup.
+2026/07/07 10:18:36 INFO:     Application startup complete.
+2026/07/07 10:18:36 INFO:     Started server process [65502]
+2026/07/07 10:18:36 INFO:     Waiting for application startup.
+2026/07/07 10:18:36 INFO:     Application startup complete.
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Unified+Search+AI+Repair+Workflows HTTP/1.1" 200 OK
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/set-tag HTTP/1.1" 200 OK
+2026/07/07 10:19:11 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=ac54cbfdc8aa4a5d9bdf1256d78b3bb7&run_id=ac54cbfdc8aa4a5d9bdf1256d78b3bb7 HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=ac54cbfdc8aa4a5d9bdf1256d78b3bb7&run_id=ac54cbfdc8aa4a5d9bdf1256d78b3bb7 HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Unified+Search+AI+Repair+Workflows HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57539 - "GET /api/3.0/mlflow/server-info HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:12 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=abfb586e6c7d4f81a966215879bd1785&run_id=abfb586e6c7d4f81a966215879bd1785 HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=abfb586e6c7d4f81a966215879bd1785&run_id=abfb586e6c7d4f81a966215879bd1785 HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Unified+Search+AI+Repair+Workflows HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=2ef0c073a9d9499f9a1cb5b59d852066&run_id=2ef0c073a9d9499f9a1cb5b59d852066 HTTP/1.1" 200 OK
+2026/07/07 10:19:13 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Shadow+Test+Evaluations HTTP/1.1" 200 OK
+2026/07/07 10:19:14 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:14 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-metric HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=2e0d854baf5a482f98fc53b69b85b0c6&run_id=2e0d854baf5a482f98fc53b69b85b0c6 HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:16 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=2ef0c073a9d9499f9a1cb5b59d852066&run_id=2ef0c073a9d9499f9a1cb5b59d852066 HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Unified+Search+AI+Repair+Workflows HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:17 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=e76e9e8936d4431897aa1e216cd7d903&run_id=e76e9e8936d4431897aa1e216cd7d903 HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=e76e9e8936d4431897aa1e216cd7d903&run_id=e76e9e8936d4431897aa1e216cd7d903 HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/experiments/get-by-name?experiment_name=Unified+Search+AI+Repair+Workflows HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/create HTTP/1.1" 200 OK
+2026/07/07 10:19:21 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=e3cb6d1f225545fb89104f9263a1d9a7&run_id=e3cb6d1f225545fb89104f9263a1d9a7 HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/log-parameter HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "GET /api/2.0/mlflow/runs/get?run_uuid=e3cb6d1f225545fb89104f9263a1d9a7&run_id=e3cb6d1f225545fb89104f9263a1d9a7 HTTP/1.1" 200 OK
+2026/07/07 10:19:22 INFO:     127.0.0.1:57537 - "POST /api/2.0/mlflow/runs/update HTTP/1.1" 200 OK
+2026/07/07 10:19:24 INFO:     127.0.0.1:57556 - "GET /version HTTP/1.1" 200 OK
+2026/07/07 10:19:24 INFO:     127.0.0.1:57537 - "POST /api/3.0/mlflow/traces HTTP/1.1" 200 OK
+2026/07/07 10:19:24 INFO:     127.0.0.1:57557 - "POST /v1/traces HTTP/1.1" 200 OK
