@@ -15,6 +15,8 @@ from typing import Any, Dict, Callable # Added Callable
 from .Tools.adjust_prefix_weights_tool import AdjustPrefixWeightsTool
 from .Tools.boost_popular_entities_tool import BoostPopularEntitiesTool
 from .Tools.update_typo_dictionary_tool import UpdateTypoDictionaryTool
+from .Tools.dynamic_reranking_tool import DynamicRerankingTool
+from .Tools.data_reingestion_tool import DataReingestionTool
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -25,6 +27,8 @@ class AutocompleteFixProposalAgent(BaseAgent):
     """
     def __init__(self, model_name: str = "gemini-2.5-flash"):
         super().__init__(model_name=model_name, enable_deep_rca=True)
+        self.reranking_tool = DynamicRerankingTool()
+        self.reingestion_tool = DataReingestionTool()
         self._register_tools()
 
     def _register_tools(self):
@@ -42,6 +46,16 @@ class AutocompleteFixProposalAgent(BaseAgent):
             name="update_typo_dictionary", 
             func=UpdateTypoDictionaryTool().run, 
             description="Updates the typo dictionary to improve typo tolerance in autocomplete."
+        )
+        self.register_tool(
+            name="apply_dynamic_reranking", 
+            func=self.reranking_tool.run, 
+            description="Applies dynamic re-ranking rules to autocomplete suggestions."
+        )
+        self.register_tool(
+            name="trigger_data_reingestion", 
+            func=self.reingestion_tool.run, 
+            description="Triggers a re-ingestion process for a specified autocomplete data source."
         )
 
     def get_system_prompt(self) -> str:
@@ -63,6 +77,8 @@ Your only role is to generate Python code to execute the correct fix tool based 
 *   `missing_typo_synonyms`: Call `update_typo_dictionary`.
 *   `prefix_index_stale`: Call `adjust_prefix_weights`.
 *   `popularity_bias_low`: Call `boost_popular_entities`.
+*   `ranking_discrepancy`: Call `apply_dynamic_reranking` with relevant conditions and boost factors.
+*   `stale_autocomplete_data`: Call `trigger_data_reingestion` for the affected data source.
 
 **FINAL JSON OUTPUT SCHEMA:**
 Your final print MUST be a JSON object with this schema:

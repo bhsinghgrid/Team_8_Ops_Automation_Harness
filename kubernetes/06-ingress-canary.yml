@@ -1,0 +1,26 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: magellan-backend-canary-ingress
+  namespace: magellan-search-ops
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    # Enables the NGINX canary steering module
+    nginx.ingress.kubernetes.io/canary: "true"
+    # Integrates K8s ingress directly with the project's header-based traffic router
+    nginx.ingress.kubernetes.io/canary-by-header: "X-OCS-Canary-Weight"
+    # Enable cookie-based sticky routing for mock users / testers (shop_canary=always)
+    nginx.ingress.kubernetes.io/canary-by-cookie: "canary_user"
+    # Allocates precisely 5% of external HTTP traffic to this ingress rule by default
+    nginx.ingress.kubernetes.io/canary-weight: "5"
+spec:
+  rules:
+    - http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: magellan-backend-canary-svc
+                port:
+                  number: 8000

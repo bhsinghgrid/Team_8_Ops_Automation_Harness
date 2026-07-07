@@ -355,15 +355,71 @@ def normalize_audit_row(row: dict) -> dict:
 
 
 def normalize_query_cluster(row: dict) -> dict:
+    # Handle both remote format and local query_clusters.json format
+    query = str(row.get("query") or row.get("cluster") or "unknown")
+    volume = str(row.get("volume") or row.get("monthly_volume") or row.get("count") or "0")
+    
+    # Exits: if exits is not provided, generate a plausible one or default to "15%"
+    exits = str(row.get("exits") or row.get("exit_rate") or "15%")
+    
+    # Loss: handle both remote format and local normalizedRevenueImpact
+    loss_val = row.get("loss") or row.get("revenue_loss")
+    if not loss_val:
+        impact_val = row.get("normalizedRevenueImpact")
+        if impact_val is not None:
+            loss_val = f"${impact_val}"
+        else:
+            loss_val = "$0"
+    loss = str(loss_val)
+    
+    # Impact: handle both remote and calculated
+    impact = row.get("impact") or row.get("impact_rank")
+    if not impact:
+        try:
+            val = float(str(row.get("normalizedRevenueImpact", 0)))
+            if val >= 5000:
+                impact = "High"
+            elif val >= 2000:
+                impact = "Med"
+            else:
+                impact = "Low"
+        except Exception:
+            impact = "Low"
+    impact = allowed_value(impact, {"High", "Med", "Low"}, "Low")
+    
+    # Tag: handle issue_type, themes, etc.
+    tag = row.get("tag") or row.get("issue_type")
+    if not tag:
+        themes = row.get("themes")
+        if isinstance(themes, list) and themes:
+            tag = themes[0].title()
+        else:
+            tag = "Unclassified"
+    tag = str(tag)
+    
+    # Badge class
+    badge_class = row.get("badgeClass") or row.get("badge_class")
+    if not badge_class:
+        themes = [str(t).lower() for t in row.get("themes", [])]
+        if "rules" in themes:
+            badge_class = "rules"
+        elif "typo" in themes:
+            badge_class = "typo"
+        else:
+            badge_class = "waterproof"
+    badge_class = allowed_value(badge_class, {"waterproof", "typo", "rules"}, "rules")
+    
+    status = str(row.get("status") or "not triaged")
+    
     return {
-        "query": str(row.get("query") or row.get("cluster") or "unknown"),
-        "volume": str(row.get("volume") or row.get("monthly_volume") or "0"),
-        "exits": str(row.get("exits") or row.get("exit_rate") or "0%"),
-        "loss": str(row.get("loss") or row.get("revenue_loss") or "$0"),
-        "impact": allowed_value(row.get("impact") or row.get("impact_rank"), {"High", "Med", "Low"}, "Low"),
-        "tag": str(row.get("tag") or row.get("issue_type") or "Unclassified"),
-        "badgeClass": allowed_value(row.get("badgeClass") or row.get("badge_class"), {"waterproof", "typo", "rules"}, "rules"),
-        "status": str(row.get("status") or "not triaged"),
+        "query": query,
+        "volume": volume,
+        "exits": exits,
+        "loss": loss,
+        "impact": impact,
+        "tag": tag,
+        "badgeClass": badge_class,
+        "status": status,
     }
 
 

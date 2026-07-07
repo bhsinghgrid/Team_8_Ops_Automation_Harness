@@ -279,10 +279,16 @@ async def get_audit() -> list[dict]:
 
 @app.get("/api/query-clusters")
 def get_query_clusters() -> list[dict]:
-    return [
-        normalize_query_cluster(row)
-        for row in fetch_remote_list("query_clusters", ["query_clusters", "clusters", "items", "data", "results"])
-    ]
+    results = fetch_remote_list("query_clusters", ["query_clusters", "clusters", "items", "data", "results"])
+    if not results:
+        local_file = Path(__file__).parent.parent / "data" / "query_clusters.json"
+        if local_file.exists():
+            try:
+                with open(local_file, "r") as f:
+                    results = json.load(f)
+            except Exception:
+                pass
+    return [normalize_query_cluster(row) for row in results]
 
 
 @app.post("/api/runbooks/{runbook_id}/approval", response_model=HumanApprovalResponse)

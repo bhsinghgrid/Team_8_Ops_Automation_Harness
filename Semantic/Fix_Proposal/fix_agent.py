@@ -17,6 +17,8 @@ from base_agent import BaseAgent
 from .Tools.vector_refresh_tool import VectorRefreshTool
 from .Tools.reindex_trigger_tool import SemanticReindexTriggerTool
 from .Tools.semantic_rules_tool import SemanticRulesTool
+from .Tools.embedding_fine_tuning_tool import EmbeddingFineTuningTool
+from .Tools.query_expansion_rule_tool import QueryExpansionRuleTool
 
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 logger = logging.getLogger(__name__)
@@ -27,6 +29,8 @@ class SemanticFixProposalAgent(BaseAgent):
     """
     def __init__(self, model_name: str = "gemini-2.5-flash"):
         super().__init__(model_name=model_name, enable_deep_rca=True)
+        self.fine_tuning_tool = EmbeddingFineTuningTool()
+        self.query_expansion_tool = QueryExpansionRuleTool()
         self._register_tools()
 
     def _register_tools(self):
@@ -44,6 +48,16 @@ class SemanticFixProposalAgent(BaseAgent):
             name="semantic_rules",
             func=SemanticRulesTool().run,
             description="Deploys semantic rules to improve search relevance."
+        )
+        self.register_tool(
+            name="fine_tune_embedding_model",
+            func=self.fine_tuning_tool.run,
+            description="Triggers a fine-tuning job for a specified embedding model using new training data."
+        )
+        self.register_tool(
+            name="upsert_query_expansion_rule",
+            func=self.query_expansion_tool.run,
+            description="Adds or updates a query expansion rule for semantic search."
         )
 
     def get_system_prompt(self) -> str:
@@ -65,6 +79,8 @@ Your only role is to generate Python code to execute the correct fix tool based 
 *   `Embedding drift detected`: Call `vector_refresh`.
 *   `Vector DB health issue`: Report the issue; no tool can fix this.
 *   `Semantic coverage gap`: Call `semantic_reindex_trigger`.
+*   `Embedding model outdated`: Call `fine_tune_embedding_model` with updated training data.
+*   `Suboptimal query understanding`: Call `upsert_query_expansion_rule` to refine semantic query interpretation.
 
 **FINAL JSON OUTPUT SCHEMA:**
 Your final print MUST be a JSON object.

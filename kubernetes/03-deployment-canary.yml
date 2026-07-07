@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: magellan-backend-canary
+  namespace: magellan-search-ops
+  labels:
+    app: magellan-backend
+    track: canary
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: magellan-backend
+      track: canary
+  template:
+    metadata:
+      labels:
+        app: magellan-backend
+        track: canary
+    spec:
+      containers:
+        - name: backend
+          # The candidate hotfix image built by our Temporal build pipeline
+          image: gcr.io/magellan-ops/backend:v1.2.5-canary
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 8000
+          env:
+            - name: TEMPORAL_ADDRESS
+              value: "temporal-frontend.temporal.svc.cluster.local:7233"
+            - name: MLFLOW_TRACKING_URI
+              value: "http://mlflow-tracking-service.mlflow.svc.cluster.local:5000"
+            - name: GOOGLE_CLOUD_PROJECT
+              value: "sports-goods-tenant-002"
+            - name: GOOGLE_CLOUD_LOCATION
+              value: "us-central1"
+            # Real OCS & DB Environment Variables (Disabling mock mode for production)
+            - name: OCS_MOCK_MODE
+              value: "False"
+            - name: OCS_SEARCH_URL
+              value: "http://ocs-search-service.magellan-search-ops.svc.cluster.local:8534"
+            - name: OCS_INDEXER_URL
+              value: "http://ocs-indexer-service.magellan-search-ops.svc.cluster.local:8535"
+            - name: OCS_CONFIG_URL
+              value: "http://ocs-config-service.magellan-search-ops.svc.cluster.local:8536"
+            - name: OCS_SUGGEST_URL
+              value: "http://ocs-config-service.magellan-search-ops.svc.cluster.local:8536/suggest"
+            - name: ELASTICSEARCH_URL
+              value: "http://elasticsearch-service.database.svc.cluster.local:9200"
+            - name: DB_CONNECTION_STRING
+              value: "postgresql://postgres:postgres@postgres-service.database.svc.cluster.local:5432/ocs_audit"
+          resources:
+            limits:
+              cpu: "1"
+              memory: 1Gi
+            requests:
+              cpu: 500m
+              memory: 512Mi
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 20

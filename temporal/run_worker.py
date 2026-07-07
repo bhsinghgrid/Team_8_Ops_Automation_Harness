@@ -13,6 +13,7 @@ from temporal.activities import root_cause_activity, fix_proposal_activity, eval
 from temporal.activities import autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity
 from temporal.activities import release_activity
 from temporal.activities import semantic_root_cause_activity, semantic_fix_proposal_activity, semantic_eval_activity
+from temporal.activities import merchandising_root_cause_activity, merchandising_fix_proposal_activity, merchandising_eval_activity
 from dotenv import load_dotenv
 
 # Add detailed logging
@@ -38,6 +39,7 @@ async def main():
                 root_cause_activity, fix_proposal_activity, eval_activity,
                 autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity,
                 semantic_root_cause_activity, semantic_fix_proposal_activity, semantic_eval_activity,
+                merchandising_root_cause_activity, merchandising_fix_proposal_activity, merchandising_eval_activity,
                 release_activity,
                 feedback_activity
             ],

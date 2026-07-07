@@ -11,6 +11,8 @@ from base_agent import BaseAgent
 from .Tools.prefix_matching_agent import PrefixMatchingAgent
 from .Tools.popularity_bias_agent import PopularityBiasAgent
 from .Tools.typo_tolerance_agent import TypoToleranceAgent
+from .Tools.suggestion_ranking_tool import SuggestionRankingTool
+from .Tools.data_freshness_tool import DataFreshnessTool
 
 logger = logging.getLogger(__name__)
 
@@ -37,10 +39,14 @@ class AutocompleteRootCauseAgent(BaseAgent):
         self.prefix_agent = PrefixMatchingAgent()
         self.popularity_agent = PopularityBiasAgent()
         self.typo_agent = TypoToleranceAgent()
+        self.ranking_tool = SuggestionRankingTool()  # New tool
+        self.freshness_tool = DataFreshnessTool()    # New tool
 
         self.register_tool(name="run_prefix_matching_analysis", func=self.prefix_agent.run, description="Analyzes prefix matching issues.")
         self.register_tool(name="run_popularity_bias_analysis", func=self.popularity_agent.run, description="Analyzes popularity bias issues.")
         self.register_tool(name="run_typo_tolerance_analysis", func=self.typo_agent.run, description="Analyzes typo tolerance issues.")
+        self.register_tool(name="analyze_suggestion_ranking", func=self.ranking_tool.run, description="Analyzes the ranking of autocomplete suggestions against expected rankings.") # New tool
+        self.register_tool(name="check_data_freshness", func=self.freshness_tool.run, description="Checks the freshness of data in a specified autocomplete data source.")         # New tool
 
     def get_system_prompt(self) -> str:
         return """You are an RLM Orchestrator in a Python REPL environment.

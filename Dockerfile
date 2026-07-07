@@ -31,12 +31,13 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Install shadow_agent in editable mode from the mounted volume
-# Temporarily change WORKDIR to install shadow_agent
-WORKDIR /app/shadow_agent_repo
-RUN ls -la .
-RUN cat setup.py
+# Copy the shadow agent package files so we can install them
+COPY _shadow_agent_temp/ /app/_shadow_agent_temp/
+
+# Install shadow_agent in editable mode
+WORKDIR /app/_shadow_agent_temp
 RUN pip install --no-cache-dir -e .
+
 # Change WORKDIR back to /app for the rest of the application
 WORKDIR /app
 

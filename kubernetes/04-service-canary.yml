@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: magellan-backend-canary-svc
+  namespace: magellan-search-ops
+  labels:
+    app: magellan-backend
+    track: canary
+spec:
+  ports:
+    - port: 8000
+      targetPort: 8000
+      protocol: TCP
+  selector:
+    app: magellan-backend
+    track: canary

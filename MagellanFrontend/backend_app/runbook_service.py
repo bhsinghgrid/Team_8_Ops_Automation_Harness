@@ -1,4 +1,5 @@
 import json
+from pathlib import Path
 from urllib.error import HTTPError, URLError
 from urllib.request import Request, urlopen
 
@@ -31,16 +32,29 @@ async def get_runbook_records() -> list[dict]:
             for runbook in fetch_remote_list("runbooks", ["runbooks", "items", "data", "results"])
         ]
     else:
+        runbooks = []
+        local_file = Path(__file__).parent.parent / "data" / "runbooks.json"
+        if local_file.exists():
+            try:
+                with open(local_file, "r") as f:
+                    local_data = json.load(f)
+                    if isinstance(local_data, list):
+                        runbooks.extend([normalize_runbook(rb) for rb in local_data])
+            except Exception:
+                pass
+
         try:
-            runbooks = [
+            temporal_runbooks = [
                 build_runbook_from_temporal_workflow(workflow)
                 for workflow in await list_temporal_backend_workflows()
             ]
+            runbooks.extend(temporal_runbooks)
         except Exception:
-            runbooks = []
+            pass
 
     for runbook in runbooks:
-        if runbook.get("temporal", {}).get("workflowId"):
+        # Only query result for completed/released workflows to avoid blocking the API
+        if runbook.get("temporal", {}).get("workflowId") and runbook.get("status") not in ["Shadow Test", "RUNNING", "Pending"]:
             try:
                 shadow_test_result = await get_workflow_result(runbook["temporal"]["workflowId"])
                 if shadow_test_result:
@@ -58,13 +72,27 @@ async def get_audit_records() -> list[dict]:
             for row in fetch_remote_list("audit", ["audit", "audit_rows", "items", "data", "results"])
         ]
 
+    audit_rows = []
+    local_file = Path(__file__).parent.parent / "data" / "audit.json"
+    if local_file.exists():
+        try:
+            with open(local_file, "r") as f:
+                local_data = json.load(f)
+                if isinstance(local_data, list):
+                    audit_rows.extend([normalize_audit_row(row) for row in local_data])
+        except Exception:
+            pass
+
     try:
-        return [
+        temporal_audit = [
             build_audit_from_temporal_workflow(workflow)
             for workflow in await list_temporal_backend_workflows()
         ]
+        audit_rows.extend(temporal_audit)
     except Exception:
-        return []
+        pass
+
+    return audit_rows
 
 
 def build_workflow_summary(runbook: dict) -> TemporalWorkflowSummary:

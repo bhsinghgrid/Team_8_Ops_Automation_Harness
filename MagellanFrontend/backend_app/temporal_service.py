@@ -115,7 +115,7 @@ def approval_state_for_temporal_workflow(workflow: dict[str, str]) -> dict[str, 
             "record": str(saved_approval.get("record") or "Approval signal submitted to Temporal."),
         }
 
-    if workflow_type == "FullPipelineWorkflow" and status == "RUNNING":
+    if workflow_type in ("FullPipelineWorkflow", "UnifiedSearchAiRepairWorkflow") and status == "RUNNING":
         return {
             "mode": "required",
             "owner": "Search lead / Temporal operator",

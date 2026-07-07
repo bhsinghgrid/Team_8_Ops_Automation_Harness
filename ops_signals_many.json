@@ -1,0 +1,1424 @@
+{
+    "signals": [
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "latency_spike",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "P95 latency of 1500ms exceeded threshold of 1000ms",
+            "evidence": {
+                "p95_latency_ms": 1500,
+                "sample_size": 25,
+                "warning_threshold_ms": 500,
+                "critical_threshold_ms": 1000
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "zero_results",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "Zero result rate of 100.0% exceeded threshold of 25.0%",
+            "evidence": {
+                "zero_result_count": 25,
+                "sample_size": 25,
+                "zero_result_rate": 1.0,
+                "warning_threshold_rate": 0.1,
+                "critical_threshold_rate": 0.25
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        },
+        {
+            "signal_type": "low_ctr",
+            "tenant": "retail_tenant_001",
+            "severity": "critical",
+            "summary": "CTR of 0.0% fell below threshold of 2.0%",
+            "evidence": {
+                "clicked_search_count": 0,
+                "sample_size": 25,
+                "ctr": 0.0,
+                "warning_threshold_ctr": 0.05,
+                "critical_threshold_ctr": 0.02
+            },
+            "affected_queries": [
+                "test query"
+            ],
+            "window_start": "2026-07-04T13:20:00Z",
+            "window_end": "2026-07-04T13:25:00Z"
+        }
+    ]
+}

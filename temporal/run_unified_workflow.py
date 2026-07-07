@@ -21,7 +21,7 @@ async def main():
     print("✅ Temporal client connected")
 
     # Determine the workflow type from the command-line argument, defaulting to 'catalog'
-    valid_types = ["catalog", "autocomplete", "semantic"]
+    valid_types = ["catalog", "autocomplete", "semantic", "merchandising"]
     signal_type = "catalog" # Default
     if len(sys.argv) > 1 and sys.argv[1] in valid_types:
         signal_type = sys.argv[1]
@@ -85,6 +85,16 @@ async def main():
                 "description": "Fallback signal for semantic health check.",
                 "events": [{"issue": "semantic_health_check", "severity": "low"}],
             }
+            
+    elif signal_type == "merchandising":
+        print("Loading targeted anomalies for the Merchandising agent.")
+        initial_signal = {
+            "query": "summer dresses",
+            "issue": "Two merchandising rules are conflicting — rule_boost_brandA_summer boosts Brand A, but rule_bury_brandA_clearance buries it on the same category",
+            "conflicting_rule_ids": ["rule_boost_brandA_summer", "rule_bury_brandA_clearance"],
+            "affected_category": "Dresses > Summer",
+            "events": [{"issue": "mxp_rules_conflict", "severity": "high"}]
+        }
     
     initial_signal["type"] = signal_type
     initial_signal["use_cache"] = use_cache

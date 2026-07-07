@@ -5,6 +5,7 @@ with workflow.unsafe.imports_passed_through():
     from temporal.activities import root_cause_activity, fix_proposal_activity, eval_activity, feedback_activity, release_activity
     from temporal.activities import autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity
     from temporal.activities import semantic_root_cause_activity, semantic_fix_proposal_activity, semantic_eval_activity
+    from temporal.activities import merchandising_root_cause_activity, merchandising_fix_proposal_activity, merchandising_eval_activity
 
 
 @workflow.defn
@@ -34,6 +35,10 @@ class UnifiedSearchAiRepairWorkflow:
             rca_activity = semantic_root_cause_activity
             fix_activity = semantic_fix_proposal_activity
             eval_activity_func = semantic_eval_activity
+        elif signal_type == "merchandising":
+            rca_activity = merchandising_root_cause_activity
+            fix_activity = merchandising_fix_proposal_activity
+            eval_activity_func = merchandising_eval_activity
         else:
             raise ValueError(f"Unknown signal type: {signal_type}")
 
@@ -64,7 +69,7 @@ class UnifiedSearchAiRepairWorkflow:
                 f"NDCG score of {ndcg_score} is below the threshold of {threshold}. "
                 f"Workflow is paused pending human approval. To approve, run 'python3 -m temporal.signal_workflow.py'"
             )
-            await workflow.wait_for(lambda: self._is_approved)
+            await workflow.wait_condition(lambda: self._is_approved)
             workflow.logger.info("Deployment has been manually approved. Proceeding.")
         else:
             workflow.logger.info(

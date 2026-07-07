@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magellan Search-Ops Demo Presentation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    pre, code {
+      font-family: 'JetBrains Mono', monospace;
+    }
+    .slide {
+      display: none;
+      transition: opacity 0.5s ease-in-out;
+    }
+    .slide.active {
+      display: flex;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-slate-950 text-white min-h-screen flex flex-col justify-between overflow-hidden">
+
+  <!-- Header -->
+  <header class="p-6 flex justify-between items-center border-b border-slate-800 bg-slate-900/50 backdrop-blur-md">
+    <div class="flex items-center gap-3">
+      <div class="bg-cyan-500 text-slate-950 px-3 py-1.5 rounded-lg font-bold text-sm tracking-wider">MGL</div>
+      <span class="font-semibold text-slate-200">Magellan Control Plane</span>
+    </div>
+    <div class="text-sm text-slate-400 font-medium">
+      Slide <span id="current-slide-num">1</span> of 7
+    </div>
+  </header>
+
+  <!-- Presentation Container -->
+  <main class="flex-grow flex items-center justify-center p-8 relative">
+
+    <!-- Slide 1: Title -->
+    <section class="slide active flex-col max-w-4xl text-center items-center gap-6">
+      <div class="inline-flex items-center gap-2 bg-cyan-500/10 text-cyan-400 px-4 py-2 rounded-full text-xs font-semibold tracking-wider uppercase mb-2">
+        Project Demo & Deliverable
+      </div>
+      <h1 class="text-5xl md:text-6xl font-extrabold tracking-tight bg-gradient-to-r from-white via-slate-100 to-cyan-400 bg-clip-text text-transparent leading-tight">
+        Magellan Search-Ops Control Plane
+      </h1>
+      <p class="text-lg md:text-xl text-slate-400 max-w-2xl font-light">
+        Self-Healing Automation, AI Merchandising Governance, and Gated Releases for Grid Dynamics AI Search.
+      </p>
+      <div class="flex items-center gap-3 mt-4 text-sm text-slate-500">
+        <span>Team 8 Automation Harness</span>
+        <span>•</span>
+        <span>Temporal + Google Gemini 2.5 Flash</span>
+      </div>
+    </section>
+
+    <!-- Slide 2: The Problem -->
+    <section class="slide flex-col max-w-4xl gap-6">
+      <div class="inline-flex bg-red-500/10 text-red-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        Core Problem
+      </div>
+      <h2 class="text-4xl font-bold">The Chaos of Production Search & Merchandising</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <div class="text-red-400 text-xl font-bold mb-2">Competing Rules</div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Merchandisers boost products on synonyms while campaigns suppress them, causing rules to "fight" over search scope.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <div class="text-red-400 text-xl font-bold mb-2">Ghost Boosts</div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Out-of-stock items boosted in active slots, wasting prime screen real estate with empty zero-result slots.
+          </p>
+        </div>
+        <div class="bg-slate-900/60 p-6 rounded-xl border border-slate-800">
+          <div class="text-red-400 text-xl font-bold mb-2">Blind Releases</div>
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Unvalidated catalog ingestions and index updates deployed directly, triggering CTR degradation or silent latency spikes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 3: The Architecture -->
+    <section class="slide flex-col max-w-5xl gap-6">
+      <div class="inline-flex bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        System Architecture
+      </div>
+      <h2 class="text-4xl font-bold">The Closed-Loop Self-Healing Pipeline</h2>
+      <div class="bg-slate-900 p-6 rounded-xl border border-slate-800 mt-2">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-center font-medium text-xs">
+          <div class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-slate-300 w-full md:w-auto">
+            1. Telemetry / Alerts
+            <span class="block text-[10px] text-slate-500">Poor CTR, Latency Spikes</span>
+          </div>
+          <div class="text-slate-500 text-lg">➔</div>
+          <div class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-slate-300 w-full md:w-auto">
+            2. Temporal Orchestrator
+            <span class="block text-[10px] text-slate-500">Workflow & Queue Scheduling</span>
+          </div>
+          <div class="text-slate-500 text-lg">➔</div>
+          <div class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-slate-300 w-full md:w-auto">
+            3. Gemini 2.5 Flash Agent
+            <span class="block text-[10px] text-slate-500">Root Cause & Evidence Packs</span>
+          </div>
+          <div class="text-slate-500 text-lg">➔</div>
+          <div class="bg-slate-800 border border-slate-700 px-4 py-3 rounded-lg text-slate-300 w-full md:w-auto">
+            4. Shadow & Canary Rollout
+            <span class="block text-[10px] text-slate-500">Validation, K8s weight routing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 4: Merchandising Agent -->
+    <section class="slide flex-col max-w-4xl gap-4">
+      <div class="inline-flex bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        New Integration
+      </div>
+      <h2 class="text-4xl font-bold">The Merchandising (MXP) Rules Agent</h2>
+      <p class="text-sm text-slate-400">
+        Leverages Gemini 2.5 Flash to automatically detect rule collisions, timeline anomalies, and inventory imbalances.
+      </p>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-2">
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <div class="text-xs font-semibold text-cyan-400 mb-2 uppercase">Input Signals (Scan Triggers)</div>
+          <ul class="text-xs text-slate-300 space-y-2 list-disc list-inside">
+            <li><strong>Low CTR Detector:</strong> Targets actively promoted products returning 0.0% engagement.</li>
+            <li><strong>Ghost Boost Scanner:</strong> Flags boosted product IDs holding exactly 0 stock units in warehouses.</li>
+          </ul>
+        </div>
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <div class="text-xs font-semibold text-cyan-400 mb-2 uppercase">Structured Schema (Pydantic Output)</div>
+          <pre class="text-[10px] text-emerald-400 bg-slate-950 p-2 rounded border border-slate-800/80 overflow-x-auto max-h-36">
+{
+  "capability": "E-commerce Merchandising (MXP)",
+  "root_cause": "MXP Rule Conflict",
+  "confidence_score": 0.94,
+  "supporting_evidence": {
+    "conflicting_rule_id": "rule_bury_brandA_clearance"
+  }
+}</pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 5: Shadow & MLflow -->
+    <section class="slide flex-col max-w-4xl gap-6">
+      <div class="inline-flex bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        Validation Layer
+      </div>
+      <h2 class="text-4xl font-bold">Shadow Test Engine & MLflow Tracing</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+        <div class="flex flex-col gap-3">
+          <p class="text-sm text-slate-400 leading-relaxed">
+            Every candidate fixproposal runs in a sandboxed shadow environment to compare search metrics before and after the rule change.
+          </p>
+          <div class="bg-emerald-500/10 text-emerald-400 p-4 rounded-xl border border-emerald-500/20 text-sm">
+            📈 <strong>Shadow Test Results:</strong> +20.92% NDCG improvement with zero regressions and -10ms latency!
+          </div>
+        </div>
+        <div class="bg-slate-900 p-4 rounded-xl border border-slate-800">
+          <div class="text-xs font-semibold text-cyan-400 mb-2 uppercase">MLflow GenAI Observability</div>
+          <p class="text-xs text-slate-400 mb-2">
+            Inputs, outputs, parameters, and hierarchical trace spans are logged automatically on every run.
+          </p>
+          <div class="flex gap-2">
+            <span class="bg-slate-800 text-[10px] px-2 py-1 rounded border border-slate-700 text-slate-300">nested_runs = True</span>
+            <span class="bg-slate-800 text-[10px] px-2 py-1 rounded border border-slate-700 text-slate-300">span_type = "AGENT"</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 6: Gated Canary Rollout -->
+    <section class="slide flex-col max-w-4xl gap-6">
+      <div class="inline-flex bg-cyan-500/10 text-cyan-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        Safety Gateways
+      </div>
+      <h2 class="text-4xl font-bold">Gated Human Approvals & Canary Rollouts</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+          <div class="text-sm font-semibold text-yellow-400 mb-2">Human-in-the-Loop Gate</div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">
+            If the shadow test evaluation score does not exceed the production threshold of <strong>0.84</strong>, Temporal automatically pauses execution and blocks deployment.
+          </p>
+          <span class="bg-yellow-500/10 text-yellow-400 text-[10px] font-bold px-2 py-1 rounded border border-yellow-500/20 uppercase">Waiting for Approval Signal</span>
+        </div>
+        <div class="bg-slate-900 p-5 rounded-xl border border-slate-800">
+          <div class="text-sm font-semibold text-emerald-400 mb-2">Progressive Canary Deployment</div>
+          <p class="text-xs text-slate-400 leading-relaxed mb-3">
+            Once approved, Magellan triggers an automated canary rollout to a local Kubernetes cluster desktop plane.
+          </p>
+          <span class="bg-emerald-500/10 text-emerald-400 text-[10px] font-bold px-2 py-1 rounded border border-emerald-500/20 uppercase">ClusterIP Traffic weight: 10%</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Slide 7: Optimization & Impact -->
+    <section class="slide flex-col max-w-4xl gap-6">
+      <div class="inline-flex bg-emerald-500/10 text-emerald-400 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase w-fit">
+        Operational Impact
+      </div>
+      <h2 class="text-4xl font-bold">20,000x Speedup & Full Business Resilience</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-2">
+        <div class="bg-slate-900 p-6 rounded-xl border border-slate-800">
+          <div class="text-3xl font-extrabold text-cyan-400 mb-1">5ms</div>
+          <div class="text-sm font-semibold text-slate-200 mb-2">FastAPI Page Load Latency</div>
+          <p class="text-xs text-slate-400">
+            By avoiding blocking queries on active workflow results, page load times dropped from 95 seconds to under 5ms (a 20,000x speedup!).
+          </p>
+        </div>
+        <div class="bg-slate-900 p-6 rounded-3xl border border-slate-800/80 bg-gradient-to-r from-slate-900 to-cyan-950/20">
+          <div class="text-3xl font-extrabold text-emerald-400 mb-1">100%</div>
+          <div class="text-sm font-semibold text-slate-200 mb-2">Temporal Workflow Success Rate</div>
+          <p class="text-xs text-slate-400">
+            End-to-end execution of all three core pipelines (Catalog, Autocomplete, Semantic) successfully verified inside local worker environments.
+          </p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Navigation Footer -->
+  <footer class="p-6 border-t border-slate-800 bg-slate-900/50 backdrop-blur-md flex justify-between items-center">
+    <div class="text-xs text-slate-500">
+      Use Left/Right arrow keys or click the buttons on the right to navigate.
+    </div>
+    <div class="flex gap-4">
+      <button id="prev-btn" class="bg-slate-800 hover:bg-slate-700 text-white font-semibold py-2 px-4 rounded-lg text-sm border border-slate-700 transition" onclick="prevSlide()">
+        Previous
+      </button>
+      <button id="next-btn" class="bg-cyan-500 hover:bg-cyan-400 text-slate-950 font-semibold py-2 px-4 rounded-lg text-sm transition" onclick="nextSlide()">
+        Next
+      </button>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+      slides[currentSlide].classList.remove('active');
+      currentSlide = (index + totalSlides) % total_slides;
+      // Safety bounds
+      if (currentSlide < 0) currentSlide = 0;
+      if (currentSlide >= totalSlides) currentSlide = totalSlides - 1;
+
+      slides[currentSlide].classList.add('active');
+      document.getElementById('current-slide-num').innerText = currentSlide + 1;
+    }
+
+    function nextSlide() {
+      if (currentSlide < totalSlides - 1) {
+        showSlide(currentSlide + 1);
+      }
+    }
+
+    function prevSlide() {
+      if (currentSlide > 0) {
+        showSlide(currentSlide - 1);
+      }
+    }
+
+    // Keyboard controls
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'ArrowRight' || event.key === ' ') {
+        nextSlide();
+      } else if (event.key === 'ArrowLeft') {
+        prevSlide();
+      }
+    });
+
+    const total_slides = totalSlides;
+  </script>
+</body>
+</html>

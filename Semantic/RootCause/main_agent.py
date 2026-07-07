@@ -15,6 +15,8 @@ from .Tools.vector_db_health import VectorDBHealthTool
 from .Tools.semantic_coverage import SemanticCoverageTool
 from .Tools.semantic_search_quality import SemanticSearchQualityTool
 from .Tools.semantic_capability_mapping import SemanticCapabilityMappingTool
+from .Tools.semantic_drift_detector_tool import SemanticDriftDetectorTool
+from .Tools.unwanted_bias_detector_tool import UnwantedBiasDetectorTool
 from .Tools.vector_db_repository import VectorDBRepository
 
 class SemanticRootCauseAgent(BaseAgent):
@@ -23,6 +25,8 @@ class SemanticRootCauseAgent(BaseAgent):
     def __init__(self, model_name: str = "gemini-2.5-flash"):
         super().__init__(model_name=model_name, enable_deep_rca=True)
         self.vector_repo = VectorDBRepository()
+        self.drift_detector = SemanticDriftDetectorTool()
+        self.bias_detector = UnwantedBiasDetectorTool()
         self._register_tools()
 
     def _register_tools(self):
@@ -50,6 +54,16 @@ class SemanticRootCauseAgent(BaseAgent):
             name="semantic_capability_mapping", 
             func=SemanticCapabilityMappingTool().run, 
             description="Aggregates findings from all semantic tools into a capability impact map."
+        )
+        self.register_tool(
+            name="detect_semantic_drift",
+            func=self.drift_detector.run,
+            description="Detects semantic drift by comparing the embeddings of historical queries against current queries."
+        )
+        self.register_tool(
+            name="detect_unwanted_bias",
+            func=self.bias_detector.run,
+            description="Detects unwanted biases in semantic search results."
         )
 
     def get_system_prompt(self) -> str:

@@ -1,0 +1,15 @@
+.venv/
+node_modules/
+mlruns/
+.git/
+.github/
+.vscode/
+.vexp/
+logs/
+__pycache__/
+*.db
+*.log
+*.sqlite
+dist/
+build/
+.pytest_cache/

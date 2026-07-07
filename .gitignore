@@ -126,3 +126,30 @@ MagellanFrontend/src/components/ShadowTestReport2.tsx
 NUL
 fast_rlm_inspection.txt
 
+# ========================
+# Unused, Redundant, or Non-Working Files
+# ========================
+-rf
+index.pyrm
+inspect_fast_rlm.py
+view_lancedb.py
+Team_8_Ops_Automation_Harness-mxp-rlm-rcaagent/
+
+# ========================
+# Automatically Generated State & Memory
+# ========================
+workspace.json
+workspacememory.md
+
+# ========================
+# Evaluation Outputs & Generated Logs
+# ========================
+evaluation/output/
+worker_log.txt
+
+# ========================
+# Root-Level Test and Run Files (outside temporal)
+# ========================
+/test*
+/run*
+

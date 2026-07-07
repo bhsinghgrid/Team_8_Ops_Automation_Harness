@@ -61,5 +61,69 @@
             "fix_executed": true,
             "next_steps": "Verify cosine similarity thresholds"
         }
+    },
+    "catalog:unknown_issue": {
+        "rca": {
+            "cached_hit": false,
+            "error": "fast-rlm subagent failed: Did not finish the function stack before subagent died",
+            "primary_error": "unknown_issue",
+            "signal_type": "catalog",
+            "use_cache": true
+        },
+        "fix": {
+            "overall_status": "Failed: No specific fix tool found for the identified root cause.",
+            "actions_taken": [],
+            "summary": "The root cause 'N/A\\nSummary: N/A\\nEvidence: N/A' does not map to any known fix tool."
+        }
+    },
+    "semantic:no_matching_products": {
+        "rca": {
+            "analysis": "Detected 1332 events with primary issue 'backend_server_error'.",
+            "cached_hit": false,
+            "detailed_evidence": [
+                "Event #14 (sports_goods_tenant_002): query='search for bags and Columbia with no results' triggered error='no_matching_products'",
+                "Event #15 (electronics_tenant_003): query='search timeout for camping gear' triggered error='gateway_timeout'",
+                "Event #18 (sports_goods_tenant_002): query='empty query submission' triggered error='empty_query'",
+                "Event #19 (electronics_tenant_003): query='search server error for footwear' triggered error='backend_server_error'",
+                "Event #20 (sports_goods_tenant_002): query='zero results for valid query waterproof jacket' triggered error='no_results_found'",
+                "Event #21 (electronics_tenant_003): query='query with special characters outdoor@gear#sale!' triggered error='invalid_characters'",
+                "Event #23 (retail_tenant_001): query='slow query for footwear' triggered error='high_latency'",
+                "Event #24 (electronics_tenant_003): query='slow query for footwear' triggered error='high_latency'",
+                "Event #25 (retail_tenant_001): query='query with special characters outdoor@gear#sale!' triggered error='invalid_characters'",
+                "Event #28 (electronics_tenant_003): query='slow query for bags' triggered error='high_latency'"
+            ],
+            "evidence_finding": [
+                "Event #14 (sports_goods_tenant_002): query='search for bags and Columbia with no results' triggered error='no_matching_products'",
+                "Event #15 (electronics_tenant_003): query='search timeout for camping gear' triggered error='gateway_timeout'",
+                "Event #18 (sports_goods_tenant_002): query='empty query submission' triggered error='empty_query'",
+                "Event #19 (electronics_tenant_003): query='search server error for footwear' triggered error='backend_server_error'",
+                "Event #20 (sports_goods_tenant_002): query='zero results for valid query waterproof jacket' triggered error='no_results_found'"
+            ],
+            "executed_tools": [
+                "run_deep_rca_investigation"
+            ],
+            "overall_status": "success",
+            "primary_error": "no_matching_products",
+            "root_cause": "System anomaly of type 'backend_server_error'.",
+            "root_cause_finding": "System anomaly of type 'backend_server_error'.",
+            "signal_type": "semantic",
+            "status": "success",
+            "summary": "Detected 1332 events with primary issue 'backend_server_error'.",
+            "summary_finding": "Detected 1332 events with primary issue 'backend_server_error'."
+        },
+        "fix": {
+            "status": "success",
+            "root_cause_finding": "System anomaly of type 'unknown_issue'.",
+            "summary_finding": "Detected 1 events with primary issue 'unknown_issue'.",
+            "evidence_finding": [],
+            "overall_status": "success",
+            "root_cause": "System anomaly of type 'unknown_issue'.",
+            "analysis": "Detected 1 events with primary issue 'unknown_issue'.",
+            "summary": "Detected 1 events with primary issue 'unknown_issue'.",
+            "detailed_evidence": [],
+            "executed_tools": [
+                "run_deep_rca_investigation"
+            ]
+        }
     }
 }
