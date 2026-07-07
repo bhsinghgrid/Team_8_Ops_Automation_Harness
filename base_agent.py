@@ -475,6 +475,7 @@ async def {name}(*args, **kwargs):
                     config=self.rlm_config,
                     tools=list(self._tool_functions.values()),
                     verbose=True,
+                    vertex=is_vertex,
                 )
                 import sys
                 sys.stdout.flush()
@@ -570,7 +571,7 @@ async def {name}(*args, **kwargs):
 
         try:
             response = await asyncio.to_thread(
-                fast_rlm.run, query_prompt, config=self.rlm_config, tools=[], verbose=True
+                fast_rlm.run, query_prompt, config=self.rlm_config, tools=[], verbose=True, vertex=is_vertex
             )
             import sys
             sys.stdout.flush()

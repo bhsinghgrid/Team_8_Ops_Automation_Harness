@@ -22,6 +22,7 @@ from .temporal_service import (
     build_runbook_from_temporal_workflow,
     get_workflow_result,
     list_temporal_backend_workflows,
+    get_workflow_input_signal,
 )
 
 
@@ -44,10 +45,21 @@ async def get_runbook_records() -> list[dict]:
                 pass
 
         try:
-            temporal_runbooks = [
-                build_runbook_from_temporal_workflow(workflow)
-                for workflow in await list_temporal_backend_workflows()
-            ]
+            temporal_runbooks = []
+            workflows = await list_temporal_backend_workflows()
+            for workflow in workflows:
+                workflow_id = workflow.get("workflow_id")
+                # Fetch signal and results asynchronously
+                signal = await get_workflow_input_signal(workflow_id)
+                workflow_result = None
+                if workflow.get("status") not in ["Shadow Test", "RUNNING", "Running", "Pending"]:
+                    try:
+                        workflow_result = await get_workflow_result(workflow_id)
+                    except Exception:
+                        pass
+                
+                rb = build_runbook_from_temporal_workflow(workflow, signal=signal, workflow_result=workflow_result)
+                temporal_runbooks.append(rb)
             runbooks.extend(temporal_runbooks)
         except Exception:
             pass

@@ -799,6 +799,116 @@ export const Console: React.FC<ConsoleProps> = ({
               <div className="record-box">{selectedRunbook.humanApproval.record}</div>
             </div>
 
+            {/* 🚀 Visual Canary Deployment Progress & Control Panel */}
+            <div className="governance-card canary-control-card" style={{ background: 'linear-gradient(135deg, rgba(29, 78, 216, 0.08) 0%, rgba(30, 41, 59, 0.4) 100%)', border: '1px solid rgba(59, 130, 246, 0.25)', padding: '1rem', borderRadius: '8px' }}>
+              <div className="governance-heading" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '0.75rem' }}>
+                <strong style={{ color: 'var(--primary)', fontSize: '0.88rem' }}>Canary Deployment & Routing Control</strong>
+                <span className="badge" style={{ background: 'rgba(59, 130, 246, 0.2)', color: 'var(--primary)', border: '1px solid rgba(59, 130, 246, 0.3)', padding: '0.15rem 0.45rem', borderRadius: '4px', fontSize: '0.68rem', fontWeight: 600 }}>
+                  {selectedRunbook.status}
+                </span>
+              </div>
+              
+              <p style={{ fontSize: '0.78rem', color: 'var(--text-muted)', lineHeight: '1.45', marginBottom: '1rem' }}>
+                Manage live Kubernetes traffic routing weights via NGINX ingress controller. Current canary status is synchronized with Temporal workflows.
+              </p>
+
+              {/* Traffic allocation progress bar */}
+              <div className="canary-progress-section" style={{ marginBottom: '1.25rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: '0.75rem', marginBottom: '0.35rem' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Traffic Allocation Progress</span>
+                  <span style={{ color: 'var(--primary)', fontWeight: 600 }}>
+                    {selectedRunbook.status === 'Released' ? '100% Production' : 
+                     selectedRunbook.status === 'Canary 100%' ? '100%' : 
+                     selectedRunbook.status === 'Canary 25%' ? '25%' : 
+                     selectedRunbook.status === 'Canary 5%' ? '5%' : 
+                     selectedRunbook.status === 'Shadow Test' ? '0% (Shadowing)' : '0%'}
+                  </span>
+                </div>
+                <div className="progress-bar-container" style={{ width: '100%', height: '8px', background: 'var(--body-bg)', borderRadius: '4px', overflow: 'hidden', border: '1px solid rgba(255, 255, 255, 0.08)' }}>
+                  <div className="progress-bar-fill" style={{ 
+                    height: '100%', 
+                    width: `${
+                      selectedRunbook.status === 'Released' || selectedRunbook.status === 'Canary 100%' ? '100%' : 
+                      selectedRunbook.status === 'Canary 25%' ? '25%' : 
+                      selectedRunbook.status === 'Canary 5%' ? '5%' : 
+                      selectedRunbook.status === 'Shadow Test' ? '2%' : '0%'
+                    }`, 
+                    background: 'var(--primary)', 
+                    transition: 'width 0.4s ease-in-out',
+                    boxShadow: '0 0 8px var(--primary)'
+                  }} />
+                </div>
+              </div>
+
+              {/* Cohort and Header Rules */}
+              <div className="canary-rules-grid" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '0.75rem', marginBottom: '1rem', fontSize: '0.75rem' }}>
+                <div style={{ background: 'var(--body-bg)', padding: '0.5rem', borderRadius: '6px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                  <span style={{ display: 'block', color: 'var(--text-muted)', fontSize: '0.65rem', textTransform: 'uppercase' }}>Target Cohort</span>
+                  <strong style={{ display: 'block', marginTop: '0.15rem' }}>
+                    {selectedRunbook.status === 'Released' ? 'All Production Users' : 
+                     selectedRunbook.status === 'Canary 100%' ? '10,000 Users' : 
+                     selectedRunbook.status === 'Canary 25%' ? '2,500 Users' : 
+                     selectedRunbook.status === 'Canary 5%' ? '500 Users' : 
+                     selectedRunbook.status === 'Shadow Test' ? 'Shadow Mirror' : 'None'}
+                  </strong>
+                </div>
+                <div style={{ background: 'var(--body-bg)', padding: '0.5rem', borderRadius: '6px', border: '1px solid rgba(255, 255, 255, 0.05)' }}>
+                  <span style={{ display: 'block', color: 'var(--text-muted)', fontSize: '0.65rem', textTransform: 'uppercase' }}>Ingress Key</span>
+                  <code style={{ display: 'block', marginTop: '0.15rem', color: 'var(--primary)', fontFamily: 'var(--mono)', fontSize: '0.68rem' }}>
+                    {selectedRunbook.status === 'Canary 5%' ? 'canary-weight: "5"' : 
+                     selectedRunbook.status === 'Canary 25%' ? 'canary-weight: "25"' : 
+                     selectedRunbook.status === 'Canary 100%' || selectedRunbook.status === 'Released' ? 'canary-weight: "100"' : 'canary-weight: "0"'}
+                  </code>
+                </div>
+              </div>
+
+              {/* NGINX Headers */}
+              <div className="nginx-headers-panel" style={{ background: 'rgba(0, 0, 0, 0.2)', padding: '0.65rem', borderRadius: '6px', border: '1px solid rgba(255, 255, 255, 0.05)', fontSize: '0.72rem', fontFamily: 'var(--mono)', display: 'flex', flexDirection: 'column', gap: '0.35rem', marginBottom: '1rem' }}>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Header Trigger:</span>
+                  <span style={{ color: 'var(--success-light)' }}>X-OCS-Canary-Weight: {
+                    selectedRunbook.status === 'Canary 5%' ? '5' : 
+                    selectedRunbook.status === 'Canary 25%' ? '25' : 
+                    selectedRunbook.status === 'Canary 100%' || selectedRunbook.status === 'Released' ? '100' : '0'
+                  }</span>
+                </div>
+                <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                  <span style={{ color: 'var(--text-muted)' }}>Cookie Bypass:</span>
+                  <span style={{ color: 'var(--success-light)' }}>canary_user=true</span>
+                </div>
+              </div>
+
+              {/* Active Manual Canary Controls */}
+              <div className="manual-traffic-controls" style={{ display: 'flex', gap: '0.5rem' }}>
+                <button 
+                  type="button" 
+                  className="btn btn-secondary" 
+                  style={{ flex: 1, padding: '0.4rem', fontSize: '0.72rem', height: 'auto', background: 'rgba(255,255,255,0.05)' }}
+                  disabled={isSimulating || selectedRunbook.status === 'Released' || selectedRunbook.status === 'Rolled Back'}
+                  onClick={async () => {
+                    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [CONTROL] Scaling canary traffic to 25% manually...`]);
+                    setRunbooks(prev => prev.map(r => r.id === selectedRunbook.id ? { ...r, status: 'Canary 25%' } : r));
+                    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [SUCCESS] Traffic scaled to 25%. Target Cohort: 2,500 users.`]);
+                  }}
+                >
+                  Scale to 25%
+                </button>
+                <button 
+                  type="button" 
+                  className="btn btn-secondary" 
+                  style={{ flex: 1, padding: '0.4rem', fontSize: '0.72rem', height: 'auto', background: 'rgba(255,255,255,0.05)' }}
+                  disabled={isSimulating || selectedRunbook.status === 'Released' || selectedRunbook.status === 'Rolled Back'}
+                  onClick={async () => {
+                    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [CONTROL] Scaling canary traffic to 100% manually...`]);
+                    setRunbooks(prev => prev.map(r => r.id === selectedRunbook.id ? { ...r, status: 'Canary 100%' } : r));
+                    setLogs(prev => [...prev, `[${new Date().toLocaleTimeString()}] [SUCCESS] Traffic scaled to 100%. Promo pending.`]);
+                  }}
+                >
+                  Scale to 100%
+                </button>
+              </div>
+            </div>
+
             <div className="governance-card">
               <div className="governance-heading">
                 <strong>Monitoring and feedback</strong>
