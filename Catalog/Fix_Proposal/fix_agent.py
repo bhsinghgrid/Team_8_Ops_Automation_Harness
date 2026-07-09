@@ -133,12 +133,12 @@ Your only role is to generate Python code to execute the correct fix tool based 
 **EXECUTION LOOP:**
 1.  Analyze the `root_cause` from `E['context']`.
 2.  Select the appropriate tool based on the mapping below.
-3.  Generate Python code to call the tool and print a final JSON report.
+3.  Generate Python code to call the tool and print a final JSON report conforming to the output schema.
 
-**ROOT CAUSE TO TOOL MAPPING:**
-*   `catalog_coverage_gap`: Call `llm_inference`, then `apply_patch`.
-*   `low_search_relevance`: Call `map_semantic_intent`, then `apply_synonyms`.
-*   `stale_catalog_data`: Call `vector_refresh`, then `trigger_reindex`.
+**ROOT CAUSE TO TOOL MAPPING (Match exact terms or semantic meanings):**
+*   `catalog_coverage_gap` or `product_not_found` or `Missing product metadata`: Call `apply_patch`, then `trigger_reindex`.
+*   `stale_catalog_data` or `indexing_issue` or `indexing_lag` or `Segment corruption`: Call `vector_refresh`, then `trigger_reindex`.
+*   `low_search_relevance` or `poor similarity`: Call `map_semantic_intent`, then `apply_semantic_rules`.
 *   `complex_data_corruption`: Call `run_deep_rca_investigation`.
 
 **FINAL JSON OUTPUT SCHEMA:**

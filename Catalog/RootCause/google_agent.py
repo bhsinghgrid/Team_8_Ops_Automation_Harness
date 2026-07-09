@@ -137,7 +137,7 @@ Your only role is to generate Python code to orchestrate tool calls. Do not proc
 
 **ENVIRONMENT & STATE:**
 - You are in a Python REPL environment `E`.
-- `E['context']` is a string. It contains two blocks: `[JSON_DATA_CONTEXT]...[/JSON_DATA_CONTEXT]` for general context and `[JSON_DATA_EVENTS]...[/JSON_DATA_EVENTS]` for JSONL event data. You MUST extract and parse both.
+- `E['context']` is a string. It contains two blocks: `<JSON_DATA_CONTEXT>...</JSON_DATA_CONTEXT>` for general context and `<JSON_DATA_EVENTS>...</JSON_DATA_EVENTS>` for JSONL event data. You MUST extract and parse both.
 - You MUST manage all findings in a state dictionary: `E['state'] = {}`.
 
 **EXECUTION LOOP (CODE ONLY):**

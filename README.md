@@ -98,102 +98,127 @@ In a new terminal window, start the local Temporal development server. Leave thi
 ```bash
 temporal server start-dev
 ```
+---
 
-### 2. Start the MLflow Server
+## ▶️ Running the Application
 
-In a new terminal window, start the MLflow server with basic authentication enabled:
-
-```bash
-# Activate your environment
-source .venv/bin/activate
-
-# Configure basic auth and launch MLflow
-export MLFLOW_AUTH_CONFIG_PATH=$(pwd)/MagellanFrontend/mlflow_users.ini
-export MLFLOW_FLASK_SERVER_SECRET_KEY='super-secret-key-for-csrf'
-mlflow server --host 127.0.0.1 --port 5000 --app-name basic-auth
-```
-
-### 3. Start the Temporal Worker
-
-In a new terminal window, start the Python worker that polls the task queue and executes the repair activities:
-
-```bash
-# Activate your environment
-source .venv/bin/activate
-
-# Configure and run the worker
-export FAST_RLM_ALLOW_RUN="True"
-export GOOGLE_CLOUD_PROJECT="your-gcp-project-id"
-export GOOGLE_CLOUD_LOCATION="us-central1"
-export PYTHONUNBUFFERED=1
-python temporal/run_worker.py
-```
-
-### 4. Start the Magellan Frontend & Backend App
-
-In a new terminal window, run the FastAPI backend server:
-
-```bash
-# Activate your environment
-source .venv/bin/activate
-
-# Start backend server on port 8000
-uvicorn MagellanFrontend.backend_app.app:app --host 0.0.0.0 --port 8000
-```
-
-To run the full stack containerized with Docker, simply execute:
-
-```bash
-docker-compose up --build
-```
-
-### 5. Trigger a Repair Workflow
-
-To trigger a new repair run (e.g. `catalog`, `autocomplete`, or `semantic`) from the CLI:
-
-```bash
-# Activate your environment
-source .venv/bin/activate
-
-# Trigger the workflow (available: catalog, autocomplete, semantic)
-python3 temporal/run_unified_workflow.py catalog
-```
-
-This will run the entire orchestration pipeline (RCA -> Fix Proposal -> Diffy Evaluation -> Release). You can monitor progress and view deep traces in the web UI.
+There are two verified ways to execute and test the Magellan Automation Harness. Choose your preferred running mode:
 
 ---
 
-In the root directory of the project, run the following command. This will build the Docker images for the backend and frontend and start all the necessary services.
+### **Option A: Clean Local Virtual Environment Run (Highly Recommended)**
+This approach runs services natively on your local host using active virtual environments, allowing rapid hot-reloads and live tracking logs.
 
+#### **Step 1: Start Temporal Cluster Server**
+In a new terminal window, start your local Temporal development server and keep it running:
 ```bash
-docker-compose up --build
+temporal server start-dev
 ```
 
-The first time you run this, it may take a few minutes to download and build everything. Subsequent runs will be much faster.
-
-### 3. Trigger a Workflow
-
-Once all the services are running, you can trigger a new workflow. The system is pre-configured to use the `Catalog/search_events.jsonl` file as the input for the `catalog` workflow.
-
-In a new terminal window, run the following command:
-
+#### **Step 2: Start the MLflow Server (Port 5001)**
+In a new terminal window, activate your `.venv` and start MLflow with Basic Auth on port `5001`:
 ```bash
-# Make sure your Python virtual environment is active
+# Load root virtual environment
 source .venv/bin/activate
 
-# Trigger the workflow
-python3 temporal/run_unified_workflow.py catalog
+# Setup authorization config and start server
+export MLFLOW_AUTH_CONFIG_PATH=$(pwd)/MagellanFrontend/mlflow_users.ini
+export MLFLOW_FLASK_SERVER_SECRET_KEY='super-secret-key-for-csrf'
+mlflow server --host 127.0.0.1 --port 5001 --app-name basic-auth
 ```
 
-This will start a new workflow run, which you can monitor in the web UI.
+#### **Step 3: Start the Temporal Worker**
+In a new terminal window, activate your `.venv`, source your `.env`, and start the Python activity worker:
+```bash
+# Activate environment and load variables
+source .venv/bin/activate
+set -a && source .env && set +a
 
-## 🖥️ Accessing the UIs
+# Add current workspace to Python Path
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+export PYTHONUNBUFFERED=1
 
-Your application exposes several web interfaces:
+# Start activity worker loop
+python3 temporal/run_worker.py
+```
 
-- **Magellan Ops UI**: `http://localhost:5173`
-  - This is the main dashboard for monitoring your workflows and viewing results.
-- **Diffy UI**: `http://localhost:8888`
-  - The web interface for the Diffy shadow testing server.
-- **Temporal UI**: `http://localhost:8233`
-  - The standard Temporal web UI for inspecting workflows and activities.
+#### **Step 4: Start the FastAPI Backend (Port 8000)**
+In a new terminal window, start the REST API and ingestion hooks:
+```bash
+source .venv/bin/activate
+export PYTHONPATH=$PYTHONPATH:$(pwd)
+uvicorn MagellanFrontend.backend_app.app:app --host 0.0.0.0 --port 8000 --reload
+```
+
+#### **Step 5: Start the React Vite Frontend (Port 5173)**
+In a new terminal window, navigate to `MagellanFrontend`, load its node virtual environment, and boot Vite:
+```bash
+# Navigate to frontend folder
+cd MagellanFrontend
+
+# Activate node/npm virtual modules environment
+source .venv/bin/activate
+
+# Launch dev dashboard
+npm run dev
+```
+
+---
+
+### **Option B: Full Containerized Stack (Docker Compose)**
+To spin up all services concurrently (FastAPI backend, React frontend, NGINX routes, and database models) inside structured Docker containers, simply run:
+
+```bash
+# Build and compose full containerized stack
+docker-compose up --build
+```
+*Note: Ensure your local `.env` variables (e.g. GEMINI_API_KEY) are fully declared beforehand.*
+
+---
+
+## 🚀 Ingestion & Running Workflows
+
+Once all services are running, you can trigger autonomous search remediation workflows either via our modern React UI or using simple terminal trigger commands.
+
+### **Method 1: Trigger via the Live Operator UI (Recommended)**
+1. Open the Magellan Ops Dashboard: `http://localhost:5173`
+2. Select the **Live Test** tab in the side navigation.
+3. Click on any of our **four pre-configured templates** (Catalog, Autocomplete, Semantic, or Merchandising).
+4. Select whether to enable **Autonomous Caching** or force a **live sandbox REPL execution run**.
+5. Click **Fire Sandbox Signal** and watch real-time console statuses update dynamically!
+
+### **Method 2: Trigger via CLI Workflows Triggers**
+Activate your root `.venv` and fire specific domain signals with caching enabled or bypassed:
+
+```bash
+# 1. Run Catalog Pipeline (Instant cached run or live sandbox run)
+python3 temporal/run_unified_workflow.py catalog
+python3 temporal/run_unified_workflow.py catalog --no-cache
+
+# 2. Run Autocomplete Pipeline
+python3 temporal/run_unified_workflow.py autocomplete
+python3 temporal/run_unified_workflow.py autocomplete --no-cache
+
+# 3. Run Semantic Vector Index Pipeline
+python3 temporal/run_unified_workflow.py semantic
+python3 temporal/run_unified_workflow.py semantic --no-cache
+
+# 4. Run Merchandising Rules Conflict Pipeline
+python3 temporal/run_unified_workflow.py merchandising
+python3 temporal/run_unified_workflow.py merchandising --no-cache
+```
+
+---
+
+## 🖥️ Operational Port Map & UIs
+
+Your application exposes several rich operational web interfaces when fully loaded:
+
+| Web UI Interface | Service URI Link | Purpose / Description |
+| :--- | :--- | :--- |
+| **Magellan Ops UI** | `http://localhost:5173` | Interactive operator dashboard, Canary release sliders, audit trials, and Live Test playpen. |
+| **MLflow Experiments UI** | `http://localhost:5001` | Tracks evaluation runs, stores JSON artifact payloads, and displays LLM GenAI Trace Spans (Traces tab). |
+| **Temporal Cluster UI** | `http://localhost:8233` | Stateful visualization of currently executing or completed agent state machines. |
+| **FastAPI REST API Docs** | `http://localhost:8000/docs` | Live OpenAPI interactives for manual signal ingestion queries. |
+
+---

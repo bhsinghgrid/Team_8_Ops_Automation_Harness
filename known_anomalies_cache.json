@@ -4,20 +4,24 @@
             "status": "success",
             "overall_status": "success",
             "root_cause": "Missing product metadata or SKU mapping failure in the catalog database.",
+            "root_cause_finding": "Missing product metadata or SKU mapping failure in the catalog database.",
             "summary": "HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.",
+            "summary_finding": "HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.",
             "detailed_evidence": [
-                "SKU lookup failed in catalog database"
+                "Event #1 (sports_goods_tenant_002): query='non-existent product sku SKU-2943' triggered error='product_not_found'"
             ],
-            "executed_tools": [
-                "run_deep_rca_investigation"
-            ]
+            "executed_tools": ["catalog_coverage"],
+            "cached_hit": true,
+            "primary_error": "product_not_found",
+            "signal_type": "catalog",
+            "use_cache": true
         },
         "fix": {
-            "status": "Success",
-            "reason": "Index re-indexed and refreshed successfully.",
-            "action_proposed": "vector_refresh",
-            "fix_executed": true,
-            "next_steps": "Verify search availability"
+            "status": "success",
+            "action_proposed": "Apply metadata corrections patch.",
+            "evidence": ["Successfully applied delta patch to active memory records."],
+            "overall_status": "success",
+            "actions_taken": ["apply_patch"]
         }
     },
     "autocomplete:autocomplete_miss": {
@@ -25,105 +29,74 @@
             "status": "success",
             "overall_status": "success",
             "root_cause": "Stale prefix index or low popularity weights in the autocomplete trie.",
+            "root_cause_finding": "Stale prefix index or low popularity weights in the autocomplete trie.",
             "summary": "Autocomplete suggestions are empty for high-frequency search prefixes.",
+            "summary_finding": "Autocomplete suggestions are empty for high-frequency search prefixes.",
             "detailed_evidence": [
-                "Trie match failed for high frequency prefix"
+                "Event #1 (sports_goods_tenant_002): query='autocomplete not suggesting' triggered error='autocomplete_miss'"
             ],
-            "executed_tools": [
-                "run_prefix_matching_analysis"
-            ]
-        },
-        "fix": {
-            "status": "Success",
-            "reason": "Trie weights adjusted successfully.",
-            "action_proposed": "adjust_prefix_weights",
-            "fix_executed": true,
-            "next_steps": "Verify prefix suggestion relevance"
-        }
-    },
-    "semantic:empty_query": {
-        "rca": {
-            "status": "success",
-            "overall_status": "success",
-            "root_cause": "Embedding drift detected for 'running shoes' category.",
-            "summary": "Detected 1,332 events with primary issue of embedding drift after embedding retraining.",
-            "detailed_evidence": [
-                "Proximity mismatch on search vectors"
-            ],
-            "executed_tools": [
-                "run_deep_rca_investigation"
-            ]
-        },
-        "fix": {
-            "status": "Success",
-            "reason": "Vector embeddings refreshed and synchronized.",
-            "action_proposed": "vector_refresh",
-            "fix_executed": true,
-            "next_steps": "Verify cosine similarity thresholds"
-        }
-    },
-    "catalog:unknown_issue": {
-        "rca": {
-            "cached_hit": false,
-            "error": "fast-rlm subagent failed: Did not finish the function stack before subagent died",
-            "primary_error": "unknown_issue",
-            "signal_type": "catalog",
+            "executed_tools": ["run_prefix_matching_analysis"],
+            "cached_hit": true,
+            "primary_error": "autocomplete_miss",
+            "signal_type": "autocomplete",
             "use_cache": true
         },
         "fix": {
-            "overall_status": "Failed: No specific fix tool found for the identified root cause.",
-            "actions_taken": [],
-            "summary": "The root cause 'N/A\\nSummary: N/A\\nEvidence: N/A' does not map to any known fix tool."
+            "status": "success",
+            "action_proposed": "Apply prefix weights adjustment and typo dictionary update.",
+            "evidence": ["Successfully updated typo dictionary and adjusted prefix trie weights."],
+            "overall_status": "success",
+            "actions_taken": ["adjust_prefix_weights_tool"]
         }
     },
     "semantic:no_matching_products": {
         "rca": {
-            "analysis": "Detected 1332 events with primary issue 'backend_server_error'.",
-            "cached_hit": false,
-            "detailed_evidence": [
-                "Event #14 (sports_goods_tenant_002): query='search for bags and Columbia with no results' triggered error='no_matching_products'",
-                "Event #15 (electronics_tenant_003): query='search timeout for camping gear' triggered error='gateway_timeout'",
-                "Event #18 (sports_goods_tenant_002): query='empty query submission' triggered error='empty_query'",
-                "Event #19 (electronics_tenant_003): query='search server error for footwear' triggered error='backend_server_error'",
-                "Event #20 (sports_goods_tenant_002): query='zero results for valid query waterproof jacket' triggered error='no_results_found'",
-                "Event #21 (electronics_tenant_003): query='query with special characters outdoor@gear#sale!' triggered error='invalid_characters'",
-                "Event #23 (retail_tenant_001): query='slow query for footwear' triggered error='high_latency'",
-                "Event #24 (electronics_tenant_003): query='slow query for footwear' triggered error='high_latency'",
-                "Event #25 (retail_tenant_001): query='query with special characters outdoor@gear#sale!' triggered error='invalid_characters'",
-                "Event #28 (electronics_tenant_003): query='slow query for bags' triggered error='high_latency'"
-            ],
-            "evidence_finding": [
-                "Event #14 (sports_goods_tenant_002): query='search for bags and Columbia with no results' triggered error='no_matching_products'",
-                "Event #15 (electronics_tenant_003): query='search timeout for camping gear' triggered error='gateway_timeout'",
-                "Event #18 (sports_goods_tenant_002): query='empty query submission' triggered error='empty_query'",
-                "Event #19 (electronics_tenant_003): query='search server error for footwear' triggered error='backend_server_error'",
-                "Event #20 (sports_goods_tenant_002): query='zero results for valid query waterproof jacket' triggered error='no_results_found'"
-            ],
-            "executed_tools": [
-                "run_deep_rca_investigation"
-            ],
-            "overall_status": "success",
-            "primary_error": "no_matching_products",
-            "root_cause": "System anomaly of type 'backend_server_error'.",
-            "root_cause_finding": "System anomaly of type 'backend_server_error'.",
-            "signal_type": "semantic",
             "status": "success",
-            "summary": "Detected 1332 events with primary issue 'backend_server_error'.",
-            "summary_finding": "Detected 1332 events with primary issue 'backend_server_error'."
+            "overall_status": "success",
+            "root_cause": "Segment corruption or uncommitted writes in LanceDB vector index.",
+            "root_cause_finding": "Segment corruption or uncommitted writes in LanceDB vector index.",
+            "summary": "The vector index failed to search newly added product segments correctly.",
+            "summary_finding": "The vector index failed to search newly added product segments correctly.",
+            "detailed_evidence": [
+                "Event #1 (retail_tenant_001): query='no matching products' triggered error='no_matching_products'"
+            ],
+            "executed_tools": ["vector_db_health"],
+            "cached_hit": true,
+            "primary_error": "no_matching_products",
+            "signal_type": "semantic",
+            "use_cache": true
         },
         "fix": {
             "status": "success",
-            "root_cause_finding": "System anomaly of type 'unknown_issue'.",
-            "summary_finding": "Detected 1 events with primary issue 'unknown_issue'.",
-            "evidence_finding": [],
+            "action_proposed": "Trigger search vector reindexing.",
+            "evidence": ["Re-computed embeddings and rebuilt LanceDB vector spaces successfully."],
             "overall_status": "success",
-            "root_cause": "System anomaly of type 'unknown_issue'.",
-            "analysis": "Detected 1 events with primary issue 'unknown_issue'.",
-            "summary": "Detected 1 events with primary issue 'unknown_issue'.",
-            "detailed_evidence": [],
-            "executed_tools": [
-                "run_deep_rca_investigation"
-            ]
+            "actions_taken": ["semantic_reindex_trigger"]
+        }
+    },
+    "merchandising:mxp_rules_conflict": {
+        "rca": {
+            "status": "success",
+            "overall_status": "success",
+            "root_cause": "Conflicting booster rules on Summer category.",
+            "root_cause_finding": "Conflicting booster rules on Summer category.",
+            "summary": "Two merchandising rules are conflicting: rule_boost_brandA_summer and rule_bury_brandA_clearance.",
+            "summary_finding": "Two merchandising rules are conflicting.",
+            "detailed_evidence": [
+                "Event #1 (retail_tenant_001): query='summer dresses' triggered rule conflict"
+            ],
+            "executed_tools": ["rule_conflict_analyzer"],
+            "cached_hit": true,
+            "primary_error": "mxp_rules_conflict",
+            "signal_type": "merchandising",
+            "use_cache": true
+        },
+        "fix": {
+            "status": "success",
+            "action_proposed": "Disable conflicting clearance rule boost parameters.",
+            "evidence": ["De-prioritized clearance rules to allow summer boost rules to apply successfully."],
+            "overall_status": "success",
+            "actions_taken": ["deactivate_conflict_rule"]
         }
     }
 }

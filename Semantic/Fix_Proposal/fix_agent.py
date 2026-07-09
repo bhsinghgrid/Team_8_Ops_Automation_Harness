@@ -75,16 +75,19 @@ Your only role is to generate Python code to execute the correct fix tool based 
 2.  Select the appropriate tool based on the mapping below.
 3.  Generate Python code to call the tool and print a final JSON report.
 
-**ROOT CAUSE TO TOOL MAPPING:**
-*   `Embedding drift detected`: Call `vector_refresh`.
+**ROOT CAUSE TO TOOL MAPPING (Match exact terms or semantic meanings):**
+*   `Embedding drift detected` or any system anomaly of type `backend_server_error`: Call `vector_refresh`.
 *   `Vector DB health issue`: Report the issue; no tool can fix this.
 *   `Semantic coverage gap`: Call `semantic_reindex_trigger`.
 *   `Embedding model outdated`: Call `fine_tune_embedding_model` with updated training data.
-*   `Suboptimal query understanding`: Call `upsert_query_expansion_rule` to refine semantic query interpretation.
+*   `Suboptimal query understanding` or typo issues: Call `upsert_query_expansion_rule` to refine semantic query interpretation.
+*   For any unknown issues, call `run_deep_rca_investigation`.
+
+**SYNTAX SAFEGUARDS:**
+- ALWAYS use double-quotes (`"`) for outer string literals and single-quotes (`'`) for nested strings to avoid compile-time Python SyntaxErrors. E.g. write `"System anomaly of type 'backend_server_error'."`
 
 **FINAL JSON OUTPUT SCHEMA:**
-Your final print MUST be a JSON object.
-"""
+Your final print MUST be a JSON object."""
 
 async def main():
     agent = SemanticFixProposalAgent()

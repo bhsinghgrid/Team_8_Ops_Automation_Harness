@@ -124,6 +124,8 @@ export const Overview: React.FC<OverviewProps> = ({
     { type: 'success', time: '06:30:00', text: 'Emergency rollback drill executed successfully. Merchandising conflict resolved.' }
   ];
 
+  const pendingApprovalsCount = runbooks.filter(r => r.humanApproval.mode === 'required' && r.humanApproval.status === 'Pending').length;
+
   return (
     <>
       {selectedShadowTest && (
@@ -133,11 +135,25 @@ export const Overview: React.FC<OverviewProps> = ({
         />
       )}
       {/* Alert Banner for pending tasks */}
-      <div className="alert-banner">
+      <div 
+        className="alert-banner" 
+        style={pendingApprovalsCount > 0 ? {
+          background: 'linear-gradient(135deg, #7c2d12 0%, #451a03 100%)',
+          border: '1px solid #ea580c',
+          borderLeft: '4px solid #ea580c',
+          color: '#fffbed',
+          boxShadow: '0 0 16px rgba(234, 88, 12, 0.3)',
+          transition: 'all 0.3s ease'
+        } : undefined}
+      >
         <div className="alert-banner-text" style={{ display: 'flex', alignItems: 'center', gap: '0.65rem' }}>
-          <AlertTriangle size={18} />
+          <AlertTriangle size={18} style={{ color: pendingApprovalsCount > 0 ? '#fdba74' : 'inherit' }} />
           <span>
-            {hasTrendRows ? (
+            {pendingApprovalsCount > 0 ? (
+              <>
+                <strong style={{ color: '#fff', textShadow: '0 0 4px rgba(255,255,255,0.2)' }}>⚠️ Human Approval Required:</strong> There are <strong>{pendingApprovalsCount}</strong> active Temporal runbooks suspended at the post-evaluation safety gate. Signed operator approval is required to deploy.
+              </>
+            ) : hasTrendRows ? (
               <>
                 <strong>Attention:</strong> {trendRows.length} AI Search anomalies are tracked from live runbook data. Highest current exit risk is <strong>{highestRiskRow?.code ?? 'n/a'}</strong> at <strong>{highestRiskRow?.currentExitRate.toFixed(1) ?? '0.0'}%</strong>.
               </>
@@ -148,8 +164,20 @@ export const Overview: React.FC<OverviewProps> = ({
             )}
           </span>
         </div>
-        <button className="alert-btn" type="button" onClick={onNavigateToQueue}>
-          Resolve Now
+        <button 
+          className="alert-btn" 
+          type="button" 
+          onClick={onNavigateToQueue} 
+          style={pendingApprovalsCount > 0 ? {
+            backgroundColor: '#ea580c',
+            color: '#ffffff',
+            fontWeight: 700,
+            border: 'none',
+            boxShadow: '0 0 10px rgba(234, 88, 12, 0.4)',
+            padding: '0.4rem 0.85rem'
+          } : undefined}
+        >
+          {pendingApprovalsCount > 0 ? 'Resolve Approval' : 'Resolve Now'}
         </button>
       </div>
 

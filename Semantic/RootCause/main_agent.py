@@ -117,6 +117,13 @@ Your only role is to generate Python code to orchestrate tool calls for semantic
     # DO NOT print the state here. Only call tools or print final output.
     ```
 2.  **Analyze & Act:** Analyze `E['state']` (which now contains `events` and `context`), `E['log_records']` and `E['total_records']` to decide which tool to call first. Generate Python code to call ONE tool. Save its output to `E['state']` as structured JSON.
+    
+    **TOOL MATCHING DIRECTIVES (Match error to tools):**
+    - If the log events contain "no_matching_products" or "zero_results" errors, call `embedding_drift` first to check for coordinate changes.
+    - If the log events contain "high_latency" or timeout errors, call `vector_db_health` first.
+    - If the log events contain "empty_query" errors, call `semantic_search_quality` first.
+    - ALWAYS call `semantic_capability_mapping` after executing your primary diagnostic tool to compile final affected business vectors!
+    
 3.  **Observe:** After the tool call, `print(json.dumps(E['state']))` so you can see the result before the next turn.
 4.  **Repeat:** Go back to step 2 until the root cause is found.
 5.  **Finalize:** On your final turn, generate code to construct and print the final JSON output from `E['state']` that strictly conforms to the `AgentOutput` schema. DO NOT print anything else.
