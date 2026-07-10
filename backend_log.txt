@@ -532,3 +532,19 @@ WARNING:  WatchFiles detected changes in 'MagellanFrontend/backend_app/__init__.
 INFO:     Started server process [53145]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
+WARNING:  WatchFiles detected changes in 'Autocomplete/Eval/eval_agent.py', 'temporal/wait_for_server.py'. Reloading...
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [53145]
+WARNING:  WatchFiles detected changes in 'temporal/wait_for_server.py'. Reloading...
+INFO:     Started server process [83268]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Shutting down
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
+INFO:     Finished server process [83268]
+INFO:     Started server process [83498]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.

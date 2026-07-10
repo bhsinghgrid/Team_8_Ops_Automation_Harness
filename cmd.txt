@@ -1,3 +1,6 @@
 export PYTHONPATH=$PYTHONPATH:. && python3 -m temporal.worker
 export PYTHONPATH=$PYTHONPATH:. && python3 -m temporal.client
-temporal server start-dev
+emporal server start-dev
+# In your external agent's project folder (e.g., /path/to/my_external_agent)
+source .venv/bin/activate
+pip install -e /Users/bhsingh/Documents/Magellan_Harness/shadow_agent

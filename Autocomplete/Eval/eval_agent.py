@@ -57,9 +57,7 @@ class AutocompleteEvalAgent(BaseAgent):
 
         # --- Analyze Metrics and Make Decision ---
         overall_status = metrics_evaluation_output.get("status", "failed")
-        decision = metrics_evaluation_output.get("decision")
-        if not decision:
-            decision = "PROMOTE_TO_CANARY" if overall_status == "success" else "ROLLBACK_FIX"
+        decision = metrics_evaluation_output.get("decision", "ROLLBACK_FIX")
         regression_risk = "low" # Placeholder for now, could be derived from metrics
         summary = metrics_evaluation_output.get("summary", "Evaluation completed with generic results.")
         metrics = {
