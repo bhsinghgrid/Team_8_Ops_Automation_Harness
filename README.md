@@ -147,7 +147,7 @@ In a new terminal window, start the REST API and ingestion hooks:
 ```bash
 source .venv/bin/activate
 export PYTHONPATH=$PYTHONPATH:$(pwd)
-uvicorn MagellanFrontend.backend_app.app:app --host 0.0.0.0 --port 8000 --reload
+uvicorn fastapi_app:app --host 0.0.0.0 --port 8000 --reload
 ```
 
 #### **Step 5: Start the React Vite Frontend (Port 5173)**

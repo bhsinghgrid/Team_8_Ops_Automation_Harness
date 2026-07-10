@@ -158,14 +158,14 @@ http://127.0.0.1:8000/api/runbooks
 Main backend files:
 
 ```bash
-backend_app/app.py              # FastAPI app, CORS, and HTTP routes
-backend_app/config.py           # .env loading and environment settings
-backend_app/schemas.py          # Pydantic response/request models
-backend_app/data_sources.py     # External RUNBOOKS_API_URL/AUDIT_API_URL fetch helpers
-backend_app/normalizers.py      # Converts pipeline payloads into frontend-ready records
-backend_app/temporal_service.py # Temporal SDK connection, workflow listing, approvals
-backend_app/runbook_service.py  # Runbook/audit loading and runbook action forwarding
-backend_app/state.py            # In-memory approval records
+backend/app.py              # FastAPI app, CORS, and HTTP routes
+backend/config.py           # .env loading and environment settings
+backend/schemas.py          # Pydantic response/request models
+backend/data_sources.py     # External RUNBOOKS_API_URL/AUDIT_API_URL fetch helpers
+backend/normalizers.py      # Converts pipeline payloads into frontend-ready records
+backend/temporal_service.py # Temporal SDK connection, workflow listing, approvals
+backend/runbook_service.py  # Runbook/audit loading and runbook action forwarding
+backend/state.py            # In-memory approval records
 ```
 
 ## Start Frontend
@@ -188,7 +188,7 @@ Before sharing or deploying, run:
 
 ```bash
 npm run build
-python3 -m py_compile fastapi_app.py run_fastapi.py backend_app/*.py
+python3 -m py_compile fastapi_app.py run_fastapi.py backend/*.py
 ```
 
 ## Troubleshooting

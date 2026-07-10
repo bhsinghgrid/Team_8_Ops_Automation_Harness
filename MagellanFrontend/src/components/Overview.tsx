@@ -10,6 +10,7 @@ import {
 } from 'lucide-react';
 import type { Runbook } from '../types';
 import type { TemporalDetails } from '../api';
+import { ShadowTestReport } from './ShadowTestReport2';
 
 interface OverviewProps {
   metrics: {
@@ -103,7 +104,7 @@ export const Overview: React.FC<OverviewProps> = ({
     };
   });
 
-  const [selectedShadowTest, setSelectedShadowTest] = React.useState<Runbook['shadowTest'] | null>(null);
+  const [selectedShadowTest, setSelectedShadowTest] = React.useState<Runbook | null>(null);
 
   const relevancePoints = buildSvgPoints(trendRows.map((row) => row.currentNdcg * 100));
   const exitHealthPoints = buildSvgPoints(trendRows.map((row) => 100 - row.currentExitRate));
@@ -130,7 +131,7 @@ export const Overview: React.FC<OverviewProps> = ({
     <>
       {selectedShadowTest && (
         <ShadowTestReport
-          report={selectedShadowTest}
+          runbook={selectedShadowTest}
           onClose={() => setSelectedShadowTest(null)}
         />
       )}
@@ -330,8 +331,15 @@ export const Overview: React.FC<OverviewProps> = ({
             )}
           </div>
           <div className="trend-data-grid">
-            {trendRows.map((row) => (
-                <div key={row.id} className="trend-data-card">
+            {trendRows.map((row) => {
+              const runbook = runbooks.find((r) => r.id === row.id) || null;
+              return (
+                <div 
+                  key={row.id} 
+                  className="trend-data-card"
+                  onClick={() => runbook && setSelectedShadowTest(runbook)}
+                  style={{ cursor: 'pointer' }}
+                >
                   <strong>{row.code}</strong>
                   <span>{row.status}</span>
                   <small>
@@ -340,7 +348,8 @@ export const Overview: React.FC<OverviewProps> = ({
                       : `NDCG ${row.currentNdcg.toFixed(2)} · Exits ${row.currentExitRate.toFixed(1)}% · P95 ${row.p95Latency}${runtimeUnit}`}
                   </small>
                 </div>
-              ))}
+              );
+            })}
           </div>
         </div>
 

@@ -34,6 +34,28 @@ import os
 
 from .catalog_models import CatalogProduct
 
+# Resolve the project root directory (4 levels up from this file)
+_TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
+_PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(_TOOLS_DIR)))
+
+# Resolve mock database paths, allowing override via environment variables
+MOCK_CATALOG_DB_PATH = os.getenv(
+    "MOCK_CATALOG_DB_PATH",
+    os.path.join(_PROJECT_ROOT, "mock_catalog_db.db")
+)
+MOCK_SEARCH_RULES_DB_PATH = os.getenv(
+    "MOCK_SEARCH_RULES_DB_PATH",
+    os.path.join(_PROJECT_ROOT, "mock_search_rules_db.json")
+)
+MOCK_VECTOR_DB_PATH = os.getenv(
+    "MOCK_VECTOR_DB_PATH",
+    os.path.join(_PROJECT_ROOT, "mock_vector_db.json")
+)
+MOCK_LANCEDB_PATH = os.getenv(
+    "MOCK_LANCEDB_PATH",
+    os.path.join(_PROJECT_ROOT, "mock_lancedb")
+)
+
 
 def _parse_utc_timestamp(timestamp: str) -> datetime:
     """
@@ -47,31 +69,31 @@ def _parse_utc_timestamp(timestamp: str) -> datetime:
 
 
 def _read_products_from_db() -> list['CatalogProduct']:
-    with open("/Users/bhsingh/Documents/Capstone5/mock_catalog_db.db", "r") as f:
+    with open(MOCK_CATALOG_DB_PATH, "r") as f:
         data = json.load(f)
     return [CatalogProduct(**item) for item in data]
 
 
 def _read_rules_from_db() -> dict[str, 'Any']:
     try:
-        with open("/Users/bhsingh/Documents/Capstone5/mock_search_rules_db.json", "r") as f:
+        with open(MOCK_SEARCH_RULES_DB_PATH, "r") as f:
             return json.load(f)
     except FileNotFoundError:
         return {"synonyms": {}, "query_expansions": {}}
 
 def _write_rules_to_db(data: dict[str, 'Any']) -> None:
-    with open("/Users/bhsingh/Documents/Capstone5/mock_search_rules_db.json", "w") as f:
+    with open(MOCK_SEARCH_RULES_DB_PATH, "w") as f:
         json.dump(data, f, indent=4)
 
 def _read_vectors_from_db() -> dict[str, list[float]]:
     try:
-        with open("/Users/bhsingh/Documents/Capstone5/mock_vector_db.json", "r") as f:
+        with open(MOCK_VECTOR_DB_PATH, "r") as f:
             return json.load(f)
     except FileNotFoundError:
         return {}
 
 def _write_vectors_to_db(data: dict[str, list[float]]) -> None:
-    with open("/Users/bhsingh/Documents/Capstone5/mock_vector_db.json", "w") as f:
+    with open(MOCK_VECTOR_DB_PATH, "w") as f:
         json.dump(data, f, indent=4)
 
 @runtime_checkable
@@ -141,7 +163,7 @@ class CatalogRepository(CatalogRepositoryProtocol):
         if not found:
             updated_products.append(updated_product)
 
-        with open("/Users/bhsingh/Documents/Capstone5/mock_catalog_db.db", "w") as f:
+        with open(MOCK_CATALOG_DB_PATH, "w") as f:
             json.dump([product.__dict__ for product in updated_products], f, indent=4)
 
     async def apply_patch(self, skus: list[str], patch_data: dict[str, 'Any']) -> int:
@@ -160,7 +182,7 @@ class CatalogRepository(CatalogRepositoryProtocol):
                 updated_count += 1
                 
         if updated_count > 0:
-            with open("/Users/bhsingh/Documents/Capstone5/mock_catalog_db.db", "w") as f:
+            with open(MOCK_CATALOG_DB_PATH, "w") as f:
                 json.dump([p.__dict__ for p in products], f, indent=4)
                 
         return updated_count
@@ -177,7 +199,7 @@ class CatalogRepository(CatalogRepositoryProtocol):
 
     def _get_lancedb_table(self):
         # Initialize LanceDB connection and return the table
-        db_path = "/Users/bhsingh/Documents/Capstone5/mock_lancedb"
+        db_path = MOCK_LANCEDB_PATH
         os.makedirs(db_path, exist_ok=True)
         db = lancedb.connect(db_path)
         

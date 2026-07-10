@@ -10,7 +10,9 @@
             "detailed_evidence": [
                 "Event #1 (sports_goods_tenant_002): query='non-existent product sku SKU-2943' triggered error='product_not_found'"
             ],
-            "executed_tools": ["catalog_coverage"],
+            "executed_tools": [
+                "catalog_coverage"
+            ],
             "cached_hit": true,
             "primary_error": "product_not_found",
             "signal_type": "catalog",
@@ -19,9 +21,13 @@
         "fix": {
             "status": "success",
             "action_proposed": "Apply metadata corrections patch.",
-            "evidence": ["Successfully applied delta patch to active memory records."],
+            "evidence": [
+                "Successfully applied delta patch to active memory records."
+            ],
             "overall_status": "success",
-            "actions_taken": ["apply_patch"]
+            "actions_taken": [
+                "apply_patch"
+            ]
         }
     },
     "autocomplete:autocomplete_miss": {
@@ -35,7 +41,9 @@
             "detailed_evidence": [
                 "Event #1 (sports_goods_tenant_002): query='autocomplete not suggesting' triggered error='autocomplete_miss'"
             ],
-            "executed_tools": ["run_prefix_matching_analysis"],
+            "executed_tools": [
+                "run_prefix_matching_analysis"
+            ],
             "cached_hit": true,
             "primary_error": "autocomplete_miss",
             "signal_type": "autocomplete",
@@ -44,9 +52,13 @@
         "fix": {
             "status": "success",
             "action_proposed": "Apply prefix weights adjustment and typo dictionary update.",
-            "evidence": ["Successfully updated typo dictionary and adjusted prefix trie weights."],
+            "evidence": [
+                "Successfully updated typo dictionary and adjusted prefix trie weights."
+            ],
             "overall_status": "success",
-            "actions_taken": ["adjust_prefix_weights_tool"]
+            "actions_taken": [
+                "adjust_prefix_weights_tool"
+            ]
         }
     },
     "semantic:no_matching_products": {
@@ -60,7 +72,9 @@
             "detailed_evidence": [
                 "Event #1 (retail_tenant_001): query='no matching products' triggered error='no_matching_products'"
             ],
-            "executed_tools": ["vector_db_health"],
+            "executed_tools": [
+                "vector_db_health"
+            ],
             "cached_hit": true,
             "primary_error": "no_matching_products",
             "signal_type": "semantic",
@@ -69,9 +83,13 @@
         "fix": {
             "status": "success",
             "action_proposed": "Trigger search vector reindexing.",
-            "evidence": ["Re-computed embeddings and rebuilt LanceDB vector spaces successfully."],
+            "evidence": [
+                "Re-computed embeddings and rebuilt LanceDB vector spaces successfully."
+            ],
             "overall_status": "success",
-            "actions_taken": ["semantic_reindex_trigger"]
+            "actions_taken": [
+                "semantic_reindex_trigger"
+            ]
         }
     },
     "merchandising:mxp_rules_conflict": {
@@ -85,7 +103,9 @@
             "detailed_evidence": [
                 "Event #1 (retail_tenant_001): query='summer dresses' triggered rule conflict"
             ],
-            "executed_tools": ["rule_conflict_analyzer"],
+            "executed_tools": [
+                "rule_conflict_analyzer"
+            ],
             "cached_hit": true,
             "primary_error": "mxp_rules_conflict",
             "signal_type": "merchandising",
@@ -94,9 +114,25 @@
         "fix": {
             "status": "success",
             "action_proposed": "Disable conflicting clearance rule boost parameters.",
-            "evidence": ["De-prioritized clearance rules to allow summer boost rules to apply successfully."],
+            "evidence": [
+                "De-prioritized clearance rules to allow summer boost rules to apply successfully."
+            ],
             "overall_status": "success",
-            "actions_taken": ["deactivate_conflict_rule"]
+            "actions_taken": [
+                "deactivate_conflict_rule"
+            ]
+        }
+    },
+    "catalog:unknown_issue": {
+        "rca": {
+            "cached_hit": false,
+            "error": "run() got an unexpected keyword argument 'vertex'",
+            "primary_error": "unknown_issue",
+            "signal_type": "catalog",
+            "use_cache": true
+        },
+        "fix": {
+            "error": "run() got an unexpected keyword argument 'vertex'"
         }
     }
 }

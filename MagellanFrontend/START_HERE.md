@@ -89,7 +89,7 @@ Backend URL:
 http://127.0.0.1:8000
 ```
 
-Backend code is split under `backend_app/`:
+Backend code is split under `backend/`:
 
 ```bash
 app.py              FastAPI routes

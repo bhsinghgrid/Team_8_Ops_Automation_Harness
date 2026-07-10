@@ -17,7 +17,7 @@ services:
       # IMPORTANT: This assumes the user running docker has gcloud configured at ~/.config/gcloud
       - ~/.config/gcloud:/root/.config/gcloud
       # Mount the shadow_agent project for editable installation
-      - /Users/bhsingh/Documents/Magellan_Harness/shadow_agent:/app/shadow_agent_repo
+      - ${SHADOW_AGENT_DIR:-./shadow_agent}:/app/shadow_agent_repo
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
       interval: 10s

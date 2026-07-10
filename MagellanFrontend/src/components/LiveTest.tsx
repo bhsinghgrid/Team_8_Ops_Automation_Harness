@@ -182,6 +182,17 @@ export const LiveTest: React.FC = () => {
       const response = await api.triggerWorkflow(parsedJson);
       
       setWorkflowId(response.workflow_id);
+      // Fetch any recorded activity-level results and display them
+      try {
+        const activities = await api.getActivityResults(response.workflow_id);
+        if (Array.isArray(activities) && activities.length > 0) {
+          for (const a of activities) {
+            await addLog(`🔎 Activity ${a.activity_name || a.activity_id}: ${JSON.stringify(a.result)}`, 200);
+          }
+        }
+      } catch {
+        // Ignore activity fetch errors
+      }
       await addLog(`✅ Temporal workflow started successfully! Instance: ${response.workflow_id}`, 600);
       
       if (parsedJson.use_cache) {

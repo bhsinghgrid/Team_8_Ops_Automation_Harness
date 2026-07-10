@@ -91,7 +91,7 @@ fi
 echo -e "\n--- ⚙️ Starting FastAPI Backend App (Uvicorn) ---"
 if [ -f "./MagellanFrontend/.venv/bin/activate" ]; then
     source ./MagellanFrontend/.venv/bin/activate
-    uvicorn MagellanFrontend.backend_app.app:app --host 0.0.0.0 --port 8000 > backend_log.txt 2>&1 &
+    uvicorn MagellanFrontend.fastapi_app:app --host 0.0.0.0 --port 8000 > backend_log.txt 2>&1 &
     BACKEND_PID=$!
     echo "✅ FastAPI Backend started with PID: $BACKEND_PID (Logs: backend_log.txt)"
     deactivate

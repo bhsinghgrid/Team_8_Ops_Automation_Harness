@@ -126,6 +126,7 @@ export const api = {
   getTemporalDetails: () => request<TemporalDetails>('/api/temporal/details'),
   getTemporalLiveWorkflows: () => request<TemporalLiveWorkflow[]>('/api/temporal/live-workflows'),
   getShadowTestReports: () => request<any[]>(`/api/shadow-reports`),
+  getActivityResults: (workflowId: string) => request<any[]>(`/api/temporal/activities/${workflowId}`),
   triggerWorkflow: (signalData: object) =>
     request<{ workflow_id: string }>('/api/temporal/trigger-workflow', {
       method: 'POST',
