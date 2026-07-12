@@ -1,49 +1,5 @@
---- RCA ACTIVITY: START ---
---- RCA ACTIVITY: MLflow Run ID: f54d7bf03ccc407fa63e20b64f0d358f ---
---- RCA ACTIVITY: Signal is already a structured dict with 392 events ---
---- RCA ACTIVITY: CACHE HIT [Type: catalog, Error: product_not_found]. Bypassing slow autonomous diagnostic layer. ---
-🏃 View run rumbling-auk-931 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/f54d7bf03ccc407fa63e20b64f0d358f
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- FIX PROPOSAL ACTIVITY: CACHE HIT [Type: catalog, Error: product_not_found]. Bypassing slow autonomous fix generation. ---
-🏃 View run unique-donkey-832 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/1c33eec39ab1443bb07a518d099893ee
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- EVAL ACTIVITY: Successfully saved shadow test report to: /Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/evaluation/output/eval_report_9e916105b2c5436294849808ec336afb.json ---
-🏃 View run rumbling-stag-17 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/9e916105b2c5436294849808ec336afb
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run unequaled-bear-543 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/7ef94af7733e44c293004be61119dcb7
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run bold-fox-185 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/d8c5e007fcfb4c68b9ccacde441184d4
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- RCA ACTIVITY: START ---
---- RCA ACTIVITY: MLflow Run ID: 40fa9f4e941c4e3089118421a225c317 ---
---- RCA ACTIVITY: Wrapping plain dict as signal context ---
---- RCA ACTIVITY: Received structured signal with 0 events ---
---- RCA ACTIVITY: Initializing GoogleRootCauseAgent ---
---- RCA ACTIVITY: END ---
-🏃 View run awesome-stoat-679 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/40fa9f4e941c4e3089118421a225c317
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run enthused-kite-298 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/97a6fcdf84dc469da4e7b45e73973b92
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- EVAL ACTIVITY: Successfully saved shadow test report to: /Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/evaluation/output/eval_report_3d4e5c4d90894b0795ffe032cb8afa3a.json ---
-🏃 View run sneaky-calf-419 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/3d4e5c4d90894b0795ffe032cb8afa3a
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run amazing-horse-648 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/1cb05a4d4fcd4ba9afac2d741d13d389
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run victorious-moose-87 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/2171a1bbfb2240c6a57ba610ea0a0df6
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- RCA ACTIVITY: START ---
---- RCA ACTIVITY: MLflow Run ID: 09702a3973a14d1ea400068e265e4c53 ---
---- RCA ACTIVITY: Wrapping plain dict as signal context ---
---- RCA ACTIVITY: CACHE HIT [Type: catalog, Error: unknown_issue]. Bypassing slow autonomous diagnostic layer. ---
-🏃 View run omniscient-yak-622 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/09702a3973a14d1ea400068e265e4c53
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- FIX PROPOSAL ACTIVITY: CACHE HIT [Type: catalog, Error: unknown_issue]. Bypassing slow autonomous fix generation. ---
-🏃 View run nosy-toad-359 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/555916745f1f4095ac6e2aa149a04066
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
---- EVAL ACTIVITY: Successfully saved shadow test report to: /Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/evaluation/output/eval_report_fe0bda5122674e6a9432319437cff09b.json ---
-🏃 View run painted-horse-750 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/fe0bda5122674e6a9432319437cff09b
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run angry-smelt-412 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/e13b88e978394232be0cca4346609b38
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
-🏃 View run trusting-ram-483 at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1/runs/2e3e31fa28424c8c95c20c81b863cd5e
-🧪 View experiment at: http://admin:mysecretpassword@127.0.0.1:5001/#/experiments/1
+Temporal CLI 1.7.2 (Server 1.31.1, UI 2.49.1)
+
+Temporal Server:  localhost:7233
+Temporal UI:      http://localhost:8233
+Temporal Metrics: http://localhost:49809/metrics

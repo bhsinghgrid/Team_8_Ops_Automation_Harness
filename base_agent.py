@@ -90,6 +90,13 @@ class BaseAgent:
         enable_deep_rca: bool = True,
     ):
         load_dotenv()
+        
+        # Override any VS Code Copilot-specific keyfile if it points to a non-existent location
+        if "GOOGLE_APPLICATION_CREDENTIALS" in os.environ:
+            kf = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
+            if "copilot-gemini-key.json" in kf and not os.path.exists(kf):
+                del os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
+
         self.model_name = model_name
         self.enable_deep_rca = enable_deep_rca
         self.current_signal_data: Optional[dict[str, Any]] = None

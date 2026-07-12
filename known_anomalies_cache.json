@@ -1,138 +1,61 @@
 {
     "catalog:product_not_found": {
         "rca": {
-            "status": "success",
-            "overall_status": "success",
-            "root_cause": "Missing product metadata or SKU mapping failure in the catalog database.",
-            "root_cause_finding": "Missing product metadata or SKU mapping failure in the catalog database.",
-            "summary": "HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.",
-            "summary_finding": "HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.",
-            "detailed_evidence": [
-                "Event #1 (sports_goods_tenant_002): query='non-existent product sku SKU-2943' triggered error='product_not_found'"
-            ],
-            "executed_tools": [
-                "catalog_coverage"
-            ],
-            "cached_hit": true,
+            "cached_hit": false,
+            "error": "fast-rlm subagent failed: Failed to get access token from gcloud CLI. Run 'gcloud auth application-default login' first.\nERROR: (gcloud.auth.application-default.print-access-token) There was a problem refreshing your current auth tokens: HTTPSConnectionPool(host='oauth2.googleapis.com', port=443): Max retries exceeded with url: /token (Caused by NameResolutionError(\"HTTPSConnection(host='oauth2.googleapis.com', port=443): Failed to resolve 'oauth2.googleapis.com' ([Errno 8] nodename nor servname provided, or not known)\"))\nPlease run:\n\n  $ gcloud auth login\n\nto obtain new credentials.\n\nIf you have already logged in with a different account, run:\n\n  $ gcloud config set account ACCOUNT\n\nto select an already authenticated account to use.\n",
             "primary_error": "product_not_found",
             "signal_type": "catalog",
-            "use_cache": true
+            "use_cache": false
         },
         "fix": {
-            "status": "success",
-            "action_proposed": "Apply metadata corrections patch.",
-            "evidence": [
-                "Successfully applied delta patch to active memory records."
-            ],
-            "overall_status": "success",
+            "overall_status": "Investigation Initiated",
             "actions_taken": [
-                "apply_patch"
-            ]
+                "run_deep_rca_investigation"
+            ],
+            "summary": "The Root Cause Analysis reported 'N/A' for Problem, Summary, and Evidence, indicating no specific root cause was identified. Initiated a deep RCA investigation to diagnose the underlying issue."
         }
     },
-    "autocomplete:autocomplete_miss": {
+    "semantic:unknown_issue": {
         "rca": {
-            "status": "success",
-            "overall_status": "success",
-            "root_cause": "Stale prefix index or low popularity weights in the autocomplete trie.",
-            "root_cause_finding": "Stale prefix index or low popularity weights in the autocomplete trie.",
-            "summary": "Autocomplete suggestions are empty for high-frequency search prefixes.",
-            "summary_finding": "Autocomplete suggestions are empty for high-frequency search prefixes.",
-            "detailed_evidence": [
-                "Event #1 (sports_goods_tenant_002): query='autocomplete not suggesting' triggered error='autocomplete_miss'"
-            ],
-            "executed_tools": [
-                "run_prefix_matching_analysis"
-            ],
-            "cached_hit": true,
-            "primary_error": "autocomplete_miss",
-            "signal_type": "autocomplete",
+            "cached_hit": false,
+            "error": "fast-rlm subagent failed: No such file or directory (os error 2): readfile '/Users/bhsingh/copilot-gemini-key.json'",
+            "primary_error": "unknown_issue",
+            "signal_type": "semantic",
             "use_cache": true
         },
         "fix": {
-            "status": "success",
-            "action_proposed": "Apply prefix weights adjustment and typo dictionary update.",
-            "evidence": [
-                "Successfully updated typo dictionary and adjusted prefix trie weights."
-            ],
-            "overall_status": "success",
-            "actions_taken": [
-                "adjust_prefix_weights_tool"
-            ]
+            "orchestrator_error": "An unexpected error occurred during tool execution: 'list' object has no attribute 'get'"
         }
     },
     "semantic:no_matching_products": {
         "rca": {
-            "status": "success",
-            "overall_status": "success",
-            "root_cause": "Segment corruption or uncommitted writes in LanceDB vector index.",
-            "root_cause_finding": "Segment corruption or uncommitted writes in LanceDB vector index.",
-            "summary": "The vector index failed to search newly added product segments correctly.",
-            "summary_finding": "The vector index failed to search newly added product segments correctly.",
-            "detailed_evidence": [
-                "Event #1 (retail_tenant_001): query='no matching products' triggered error='no_matching_products'"
-            ],
-            "executed_tools": [
-                "vector_db_health"
-            ],
-            "cached_hit": true,
+            "cached_hit": false,
+            "error": "fast-rlm subagent failed: Did not finish the function stack before subagent died",
             "primary_error": "no_matching_products",
             "signal_type": "semantic",
             "use_cache": true
         },
         "fix": {
-            "status": "success",
-            "action_proposed": "Trigger search vector reindexing.",
-            "evidence": [
-                "Re-computed embeddings and rebuilt LanceDB vector spaces successfully."
-            ],
-            "overall_status": "success",
-            "actions_taken": [
-                "semantic_reindex_trigger"
-            ]
+            "python_code_to_execute": "await semantic_reindex_trigger()",
+            "root_cause": "no_matching_products",
+            "fix_tool_name": "semantic_reindex_trigger"
         }
     },
-    "merchandising:mxp_rules_conflict": {
-        "rca": {
-            "status": "success",
-            "overall_status": "success",
-            "root_cause": "Conflicting booster rules on Summer category.",
-            "root_cause_finding": "Conflicting booster rules on Summer category.",
-            "summary": "Two merchandising rules are conflicting: rule_boost_brandA_summer and rule_bury_brandA_clearance.",
-            "summary_finding": "Two merchandising rules are conflicting.",
-            "detailed_evidence": [
-                "Event #1 (retail_tenant_001): query='summer dresses' triggered rule conflict"
-            ],
-            "executed_tools": [
-                "rule_conflict_analyzer"
-            ],
-            "cached_hit": true,
-            "primary_error": "mxp_rules_conflict",
-            "signal_type": "merchandising",
-            "use_cache": true
-        },
-        "fix": {
-            "status": "success",
-            "action_proposed": "Disable conflicting clearance rule boost parameters.",
-            "evidence": [
-                "De-prioritized clearance rules to allow summer boost rules to apply successfully."
-            ],
-            "overall_status": "success",
-            "actions_taken": [
-                "deactivate_conflict_rule"
-            ]
-        }
-    },
-    "catalog:unknown_issue": {
+    "autocomplete:autocomplete_miss": {
         "rca": {
             "cached_hit": false,
-            "error": "run() got an unexpected keyword argument 'vertex'",
-            "primary_error": "unknown_issue",
-            "signal_type": "catalog",
+            "error": "Failed to parse JSON from agent output.",
+            "primary_error": "autocomplete_miss",
+            "raw_output": "No appropriate tool found or chosen_tool was 'None': None",
+            "signal_type": "autocomplete",
             "use_cache": true
         },
         "fix": {
-            "error": "run() got an unexpected keyword argument 'vertex'"
+            "status": "failed",
+            "reason": "No root_cause was provided in the RCA summary. Cannot determine appropriate fix tool.",
+            "action_proposed": "N/A",
+            "fix_executed": false,
+            "next_steps": "Please provide a valid RCA Summary including a specific root_cause to enable fix execution."
         }
     }
 }

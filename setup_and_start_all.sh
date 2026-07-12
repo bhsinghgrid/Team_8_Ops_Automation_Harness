@@ -74,6 +74,14 @@ export MLFLOW_FLASK_SERVER_SECRET_KEY='super-secret-key-for-csrf'
 MLFLOW_PID=$!
 echo "✅ MLflow Server started on port 5001 with PID: $MLFLOW_PID (Logs: mlflow_log.txt)"
 
+# --- 1. Start MLflow tracking server ---
+echo -e "\n--- ⚙️ Starting MLflow Tracking Server (with Basic-Auth security) ---"
+export MLFLOW_AUTH_CONFIG_PATH=$(pwd)/MagellanFrontend/mlflow_users.ini
+export MLFLOW_FLASK_SERVER_SECRET_KEY='super-secret-key-for-csrf'
+./.venv/bin/python3 -m mlflow.server --host 127.0.0.1 --port 5001 --app-name basic-auth > mlflow_log.txt 2>&1 &
+MLFLOW_PID=$!
+echo "✅ MLflow Server started on port 5001 with PID: $MLFLOW_PID (Logs: mlflow_log.txt)"
+
 # --- 2. Wait for Temporal and Start Worker ---
 echo -e "\n--- ⏳ Waiting for Temporal Server on port 7233 ---"
 if [ -f "./MagellanFrontend/.venv/bin/activate" ]; then

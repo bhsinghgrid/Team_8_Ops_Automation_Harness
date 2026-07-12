@@ -179,56 +179,6 @@ export const Console: React.FC<ConsoleProps> = ({
     return 'No matching runbooks found for this query.';
   })();
 
-  const recordHumanApproval = async () => {
-    if (selectedRunbook.humanApproval.mode !== 'required' || selectedRunbook.humanApproval.status === 'Approved') return;
-
-    const now = new Date().toLocaleTimeString();
-    setIsSimulating(true);
-    setConsoleTab('logs');
-    setLogs(prev => [
-      ...prev,
-      `[${now}] [APPROVAL] Human sign-off captured from ${selectedRunbook.humanApproval.owner}.`,
-      `[${now}] [TEMPORAL] Sending approval signal for ${selectedRunbook.temporal.workflowId}.`,
-    ]);
-
-    try {
-      const response = await api.approveRunbook(
-        selectedRunbook.id,
-        selectedRunbook.humanApproval.owner,
-        'Approved after fixing agents completed runbook generation.'
-      );
-      const completedAt = new Date().toLocaleTimeString();
-      setLogs(prev => [
-        ...prev,
-        `[${completedAt}] [TEMPORAL] Approval result: ${response.status}${response.approval_signal_name ? ` via ${response.approval_signal_name}` : ''}.`,
-        `[${completedAt}] [RECORD] ${response.message}`,
-      ]);
-      setRunbooks(prev => prev.map(r => (
-        r.id === selectedRunbookId
-          ? {
-              ...r,
-              humanApproval: {
-                ...r.humanApproval,
-                status: 'Approved',
-                record: `Signed approval captured from ${r.humanApproval.owner} at ${completedAt}. Temporal status: ${response.status}.`,
-              },
-            }
-          : r
-      )));
-      onActionTriggered('human_approval_recorded');
-    } catch (error) {
-      const failedAt = new Date().toLocaleTimeString();
-      const message = error instanceof Error ? error.message : 'unknown approval error';
-      setLogs(prev => [
-        ...prev,
-        `[${failedAt}] [WARNING] Human approval could not be sent to Temporal: ${message}`,
-        `[${failedAt}] [RECORD] Approval was not applied. Temporal should remain paused at the approval gate.`,
-      ]);
-    } finally {
-      setIsSimulating(false);
-    }
-  };
-
   const runSimulationFlow = async (type: RunbookAction) => {
     if (isSimulating) return;
     if (type === 'release' && needsHumanApproval) {
@@ -1023,7 +973,59 @@ export const Console: React.FC<ConsoleProps> = ({
             <button 
               className="btn btn-secondary"
               disabled={isSimulating || selectedRunbook.humanApproval.status === 'Approved' || selectedRunbook.status === 'Released' || selectedRunbook.status === 'Rolled Back'}
-              onClick={recordHumanApproval}
+              onClick={async () => {
+                const namePrompt = window.prompt("Enter Approver Signature Name:", selectedRunbook.humanApproval.owner || "Search Lead");
+                if (namePrompt === null) return; // Cancelled
+                const notesPrompt = window.prompt("Enter Approval Sign-off Notes:", "Manually approved from Ops Runbook Console.");
+                if (notesPrompt === null) return; // Cancelled
+                
+                const now = new Date().toLocaleTimeString();
+                setIsSimulating(true);
+                setConsoleTab('logs');
+                setLogs(prev => [
+                  ...prev,
+                  `[${now}] [APPROVAL] Human sign-off captured from ${namePrompt}. Notes: ${notesPrompt}`,
+                  `[${now}] [TEMPORAL] Sending approval signal for ${selectedRunbook.temporal.workflowId}.`,
+                ]);
+
+                try {
+                  const response = await api.approveRunbook(
+                    selectedRunbook.id,
+                    namePrompt,
+                    notesPrompt
+                  );
+                  const completedAt = new Date().toLocaleTimeString();
+                  setLogs(prev => [
+                    ...prev,
+                    `[${completedAt}] [TEMPORAL] Approval result: ${response.status}${response.approval_signal_name ? ` via ${response.approval_signal_name}` : ''}.`,
+                    `[${completedAt}] [RECORD] ${response.message}`,
+                  ]);
+                  setRunbooks(prev => prev.map(r => (
+                    r.id === selectedRunbook.id
+                      ? {
+                          ...r,
+                          humanApproval: {
+                            ...r.humanApproval,
+                            status: 'Approved',
+                            owner: namePrompt,
+                            record: `Signed approval captured from ${namePrompt} at ${completedAt}. Notes: ${notesPrompt}. Temporal status: ${response.status}.`,
+                          },
+                        }
+                      : r
+                  )));
+                  onActionTriggered('human_approval_recorded');
+                } catch (error) {
+                  const failedAt = new Date().toLocaleTimeString();
+                  const message = error instanceof Error ? error.message : 'unknown approval error';
+                  setLogs(prev => [
+                    ...prev,
+                    `[${failedAt}] [WARNING] Human approval could not be sent to Temporal: ${message}`,
+                    `[${failedAt}] [RECORD] Approval was not applied. Temporal should remain paused at the approval gate.`,
+                  ]);
+                } finally {
+                  setIsSimulating(false);
+                }
+              }}
             >
               <UserCheck size={14} />
               <span>{selectedRunbook.humanApproval.status === 'Approved' ? 'Approval Sent To Temporal' : 'Approve & Continue Temporal'}</span>

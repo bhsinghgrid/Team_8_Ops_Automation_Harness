@@ -1,0 +1,148 @@
+- generic [ref=f7e3]:
+  - complementary [ref=f7e4]:
+    - generic [ref=f7e5]:
+      - generic [ref=f7e6]: MGL
+      - generic [ref=f7e7]: Magellan Ops
+    - navigation [ref=f7e8]:
+      - list [ref=f7e9]:
+        - listitem [ref=f7e10]:
+          - button "Overview" [ref=f7e11] [cursor=pointer]
+        - listitem [ref=f7e15]:
+          - button "Ops Factory" [ref=f7e16] [cursor=pointer]
+        - listitem [ref=f7e20]:
+          - button "Ops Runbooks 13" [ref=f7e196] [cursor=pointer]:
+            - generic [ref=f7e26]: Ops Runbooks
+            - generic [ref=f7e197]: "13"
+        - listitem [ref=f7e27]:
+          - button "Runbook Registry" [ref=f7e28] [cursor=pointer]
+        - listitem [ref=f7e31]:
+          - button "Query Clusters" [ref=f7e32] [cursor=pointer]
+        - listitem [ref=f7e39]:
+          - button "Audit Trail" [ref=f7e40] [cursor=pointer]
+        - listitem [ref=f7e46]:
+          - button "Live Test" [ref=f7e47] [cursor=pointer]
+        - listitem [ref=f7e51]:
+          - button "Shadow Reports" [active] [ref=f7e52] [cursor=pointer]
+    - generic [ref=f7e59]:
+      - text: "Harness:"
+      - strong [ref=f7e60]: v1.2.4-stable
+  - main [ref=f7e61]:
+    - generic [ref=f7e62]:
+      - generic [ref=f7e63]:
+        - heading "Shadow Test Reports" [level=1] [ref=f7e198]
+        - paragraph [ref=f7e65]: View the results of simulated shadow tests.
+      - generic [ref=f7e66]:
+        - button "Notifications" [ref=f7e67] [cursor=pointer]
+        - button "Settings" [ref=f7e71] [cursor=pointer]
+    - generic [ref=f7e200]:
+      - generic [ref=f7e201]:
+        - generic [ref=f7e202]:
+          - heading "Canary Release & Shadow Test Reports" [level=2] [ref=f7e203]
+          - generic [ref=f7e204]: MLflow Active Trace Engine
+        - paragraph [ref=f7e208]: The following ledger displays completed and running Temporal repair workflow releases and their side-by-side shadowed traffic simulations. Use the search bar to inspect individual query metrics and gating decisions.
+      - generic [ref=f7e209]:
+        - textbox "Search report ID, summary..." [ref=f7e211]
+        - generic [ref=f7e212]:
+          - generic [ref=f7e213]: "Gating Decision:"
+          - combobox [ref=f7e214] [cursor=pointer]:
+            - option "All Gating Statuses" [selected]
+            - option "PROMOTE_TO_CANARY (Pass)"
+            - option "ABORT_ROLLOUT (Fail)"
+      - generic [ref=f7e215]:
+        - generic [ref=f7e216]:
+          - generic [ref=f7e217]: Report / Runbook ID
+          - generic [ref=f7e218]: Gating Decision
+          - generic [ref=f7e219]: Summary Statement
+          - generic [ref=f7e220]: NDCG Change
+          - generic [ref=f7e221]: Shadow nDCG
+          - generic [ref=f7e222]: Action
+        - generic [ref=f7e224] [cursor=pointer]:
+          - generic "report_ff86c8ebde89485fa24203c3ff7b811b" [ref=f7e225]: ff86c8ebde89485fa24203c3ff7b811b
+          - generic [ref=f7e226]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e231]'
+          - generic [ref=f7e232]: +20.92%
+          - generic [ref=f7e233]: "1.000"
+        - generic [ref=f7e238] [cursor=pointer]:
+          - generic "report_fe0bda5122674e6a9432319437cff09b" [ref=f7e239]: fe0bda5122674e6a9432319437cff09b
+          - generic [ref=f7e240]: PROMOTE_TO_CANARY
+          - 'generic "Error during internal EvalAgent execution: No valid search results or clicks found in the baseline signal events for evaluation." [ref=f7e245]'
+          - generic [ref=f7e246]: +31.38%
+          - generic [ref=f7e247]: "1.000"
+        - generic [ref=f7e252] [cursor=pointer]:
+          - generic "report_fc7425c43b9a4d3e9d8435568432a59a" [ref=f7e253]: fc7425c43b9a4d3e9d8435568432a59a
+          - generic [ref=f7e254]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e258]
+          - generic [ref=f7e259]: +0.00%
+          - generic [ref=f7e260]: "0.060"
+        - generic [ref=f7e265] [cursor=pointer]:
+          - generic "report_fb69ade65b214eeea2c21a85087e5e5a" [ref=f7e266]: fb69ade65b214eeea2c21a85087e5e5a
+          - generic [ref=f7e267]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e271]
+          - generic [ref=f7e272]: +0.00%
+          - generic [ref=f7e273]: "0.060"
+        - generic [ref=f7e278] [cursor=pointer]:
+          - generic "report_fb4dd4194a2045bba2ec9e029ac1b1a3" [ref=f7e279]: fb4dd4194a2045bba2ec9e029ac1b1a3
+          - generic [ref=f7e280]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e284]
+          - generic [ref=f7e285]: +0.00%
+          - generic [ref=f7e286]: "0.060"
+        - generic [ref=f7e291] [cursor=pointer]:
+          - generic "report_fb48fc5f3e974affb08534cd2d863d83" [ref=f7e292]: fb48fc5f3e974affb08534cd2d863d83
+          - generic [ref=f7e293]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e298]'
+          - generic [ref=f7e299]: +20.92%
+          - generic [ref=f7e300]: "1.000"
+        - generic [ref=f7e305] [cursor=pointer]:
+          - generic "report_fb07b7f1baeb4268905d8e244e5f428b" [ref=f7e306]: fb07b7f1baeb4268905d8e244e5f428b
+          - generic [ref=f7e307]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e312]'
+          - generic [ref=f7e313]: +20.92%
+          - generic [ref=f7e314]: "1.000"
+        - generic [ref=f7e319] [cursor=pointer]:
+          - generic "report_fa68a4bb95134366b4f0d14aa46a3d5b" [ref=f7e320]: fa68a4bb95134366b4f0d14aa46a3d5b
+          - generic [ref=f7e321]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e325]
+          - generic [ref=f7e326]: +0.00%
+          - generic [ref=f7e327]: "0.060"
+        - generic [ref=f7e332] [cursor=pointer]:
+          - generic "report_fa669913d3084735a11ae8ce1c96f580" [ref=f7e333]: fa669913d3084735a11ae8ce1c96f580
+          - generic [ref=f7e334]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e339]'
+          - generic [ref=f7e340]: +20.92%
+          - generic [ref=f7e341]: "1.000"
+        - generic [ref=f7e346] [cursor=pointer]:
+          - generic "report_fa4dac4f028a46808f6705acb5c3f735" [ref=f7e347]: fa4dac4f028a46808f6705acb5c3f735
+          - generic [ref=f7e348]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e353]'
+          - generic [ref=f7e354]: +20.92%
+          - generic [ref=f7e355]: "1.000"
+        - generic [ref=f7e360] [cursor=pointer]:
+          - generic "report_f725748d026a4b2ab20d8120e0a3d384" [ref=f7e361]: f725748d026a4b2ab20d8120e0a3d384
+          - generic [ref=f7e362]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e367]'
+          - generic [ref=f7e368]: +20.92%
+          - generic [ref=f7e369]: "1.000"
+        - generic [ref=f7e374] [cursor=pointer]:
+          - generic "report_f4bf1b5850274ad2a80d18b19a223c14" [ref=f7e375]: f4bf1b5850274ad2a80d18b19a223c14
+          - generic [ref=f7e376]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e381]'
+          - generic [ref=f7e382]: +20.92%
+          - generic [ref=f7e383]: "1.000"
+        - generic [ref=f7e388] [cursor=pointer]:
+          - generic "report_f371fd32bf384a639d9c47e3f61b51a4" [ref=f7e389]: f371fd32bf384a639d9c47e3f61b51a4
+          - generic [ref=f7e390]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e394]
+          - generic [ref=f7e395]: +0.00%
+          - generic [ref=f7e396]: "0.060"
+        - generic [ref=f7e401] [cursor=pointer]:
+          - generic "report_f32357e9a5c74649a3a2c8c7a446f700" [ref=f7e402]: f32357e9a5c74649a3a2c8c7a446f700
+          - generic [ref=f7e403]: ROLLBACK_FIX
+          - generic "The shadow test showed a significant improvement in suggestion CTR with no new regressions." [ref=f7e407]
+          - generic [ref=f7e408]: +0.00%
+          - generic [ref=f7e409]: "0.060"
+        - generic [ref=f7e414] [cursor=pointer]:
+          - generic "report_f24fa2ee34154fe99a86fd77609eb1b1" [ref=f7e415]: f24fa2ee34154fe99a86fd77609eb1b1
+          - generic [ref=f7e416]: PROMOTE_TO_CANARY
+          - 'generic "Evaluation complete. NDCG change: +20.92%. P995 latency change: -10.00ms. Decision: PROMOTE_TO_CANARY" [ref=f7e421]'
+          - generic [ref=f7e422]: +20.92%
+          - generic [ref=f7e423]: "1.000"

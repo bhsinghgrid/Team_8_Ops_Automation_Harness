@@ -1,0 +1,74 @@
+- generic [ref=f23e6]:
+  - complementary [ref=f23e7]:
+    - generic [ref=f23e8]:
+      - generic [ref=f23e9]:
+        - link "MLflow" [ref=f23e10] [cursor=pointer]:
+          - /url: "#/"
+          - img "MLflow" [ref=f23e11]
+        - generic [ref=f23e21]: 3.14.0
+      - button "Toggle sidebar" [ref=f23e22] [cursor=pointer]
+    - generic [ref=f23e27]:
+      - button "GenAI" [ref=f23e28] [cursor=pointer]
+      - button "Model training" [ref=f23e30] [cursor=pointer]
+    - navigation [ref=f23e32]:
+      - list [ref=f23e33]:
+        - listitem [ref=f23e34]:
+          - link [ref=f23e35] [cursor=pointer]:
+            - /url: "#/experiments"
+        - listitem
+        - listitem [ref=f23e46]:
+          - link "Overview" [ref=f23e47] [cursor=pointer]:
+            - /url: "#/experiments/1/overview/usage"
+        - listitem [ref=f23e52]: Observability
+        - listitem [ref=f23e53]:
+          - link "Traces" [ref=f23e54] [cursor=pointer]:
+            - /url: "#/experiments/1/traces"
+        - listitem [ref=f23e58]:
+          - link "Sessions" [ref=f23e59] [cursor=pointer]:
+            - /url: "#/experiments/1/chat-sessions"
+        - listitem [ref=f23e64]: Evaluation
+        - listitem [ref=f23e65]:
+          - link "Judges" [ref=f23e66] [cursor=pointer]:
+            - /url: "#/experiments/1/judges"
+        - listitem [ref=f23e70]:
+          - link "Review" [ref=f23e71] [cursor=pointer]:
+            - /url: "#/experiments/1/review-queue"
+        - listitem [ref=f23e75]:
+          - link "Datasets" [ref=f23e76] [cursor=pointer]:
+            - /url: "#/experiments/1/datasets"
+        - listitem [ref=f23e80]:
+          - link "Evaluation runs" [ref=f23e81] [cursor=pointer]:
+            - /url: "#/experiments/1/evaluation-runs"
+        - listitem [ref=f23e86]: Prompts & versions
+        - listitem [ref=f23e87]:
+          - link "Playground" [ref=f23e88] [cursor=pointer]:
+            - /url: "#/experiments/1/playground"
+        - listitem [ref=f23e92]:
+          - link "Prompts" [ref=f23e93] [cursor=pointer]:
+            - /url: "#/experiments/1/prompts"
+        - listitem [ref=f23e97]:
+          - link "Agent versions" [ref=f23e98] [cursor=pointer]:
+            - /url: "#/experiments/1/models"
+        - listitem [ref=f23e104]:
+          - link "AI Gateway" [ref=f23e105] [cursor=pointer]:
+            - /url: "#/gateway"
+            - text: AI Gateway
+            - status [ref=f23e110]:
+              - generic [ref=f23e111]: New
+      - generic [ref=f23e113]:
+        - button "Assistant" [ref=f23e114] [cursor=pointer]:
+          - status [ref=f23e121]:
+            - generic [ref=f23e122]: Beta
+        - listitem [ref=f23e124]:
+          - link [ref=f23e125] [cursor=pointer]:
+            - /url: https://www.mlflow.org/docs/latest/genai/
+        - listitem [ref=f23e135]:
+          - link "Settings" [ref=f23e136] [cursor=pointer]:
+            - /url: "#/settings/general?returnTo=%2Fexperiments%2F1%2Ftraces"
+  - main [ref=f23e142]:
+    - generic [ref=f23e144]:
+      - heading [level=3] [ref=f23e145]
+      - list [ref=f23e146]:
+        - listitem [ref=f23e147]
+        - listitem [ref=f23e148]
+        - listitem [ref=f23e149]

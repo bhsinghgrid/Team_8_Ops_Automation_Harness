@@ -1,0 +1,132 @@
+- generic [ref=f14e3]:
+  - complementary [ref=f14e4]:
+    - generic [ref=f14e5]:
+      - generic [ref=f14e6]: MGL
+      - generic [ref=f14e7]: Magellan Ops
+    - navigation [ref=f14e8]:
+      - list [ref=f14e9]:
+        - listitem [ref=f14e10]:
+          - button "Overview" [ref=f14e11] [cursor=pointer]
+        - listitem [ref=f14e15]:
+          - button "Ops Factory" [ref=f14e16] [cursor=pointer]
+        - listitem [ref=f14e20]:
+          - button "Ops Runbooks 5" [ref=f14e21] [cursor=pointer]:
+            - generic [ref=f14e26]: Ops Runbooks
+            - generic [ref=f14e27]: "5"
+        - listitem [ref=f14e28]:
+          - button "Runbook Registry" [ref=f14e29] [cursor=pointer]
+        - listitem [ref=f14e32]:
+          - button "Query Clusters" [ref=f14e33] [cursor=pointer]
+        - listitem [ref=f14e40]:
+          - button "Audit Trail" [ref=f14e41] [cursor=pointer]
+        - listitem [ref=f14e47]:
+          - button "Live Test" [ref=f14e48] [cursor=pointer]
+        - listitem [ref=f14e52]:
+          - button "Shadow Reports" [ref=f14e53] [cursor=pointer]
+    - generic [ref=f14e57]:
+      - generic [ref=f14e60]:
+        - text: "API Source:"
+        - strong [ref=f14e61]: ONLINE
+      - generic [ref=f14e64]:
+        - text: "Temporal:"
+        - strong [ref=f14e65]: CONNECTED
+      - generic [ref=f14e69]:
+        - text: "Harness:"
+        - strong [ref=f14e70]: v1.2.4-stable
+  - main [ref=f14e71]:
+    - generic [ref=f14e72]:
+      - generic [ref=f14e73]:
+        - heading "Operations Overview" [level=1] [ref=f14e74]
+        - paragraph [ref=f14e75]: Real-time health & performance across all AI Search surfaces.
+      - generic [ref=f14e76]:
+        - button "Notifications" [ref=f14e77] [cursor=pointer]
+        - button "Settings" [ref=f14e82] [cursor=pointer]
+    - generic [ref=f14e90]:
+      - generic [ref=f14e94]:
+        - strong [ref=f14e95]: "⚠️ Human Approval Required:"
+        - text: There are
+        - strong [ref=f14e96]: "4"
+        - text: active Temporal runbooks suspended at the post-evaluation safety gate. Signed operator approval is required to deploy.
+      - button "Resolve Approval" [ref=f14e97] [cursor=pointer]
+    - generic [ref=f14e98]:
+      - generic [ref=f14e99]:
+        - generic [ref=f14e104]: Data source
+        - strong [ref=f14e105]: FastAPI backend
+        - generic [ref=f14e106]: http://localhost:8000
+      - generic [ref=f14e107]:
+        - generic [ref=f14e112]: Backend payloads
+        - strong [ref=f14e113]: 5 runbooks · 5 audit · 0 clusters
+        - generic [ref=f14e114]: Visible across Overview, Ops Runbooks, Query Clusters, and Audit Trail
+      - generic [ref=f14e115]:
+        - generic [ref=f14e120]: Temporal namespace
+        - strong [ref=f14e121]: default
+        - generic [ref=f14e122]: localhost:7233 · connected
+      - generic [ref=f14e123]:
+        - generic [ref=f14e128]: Temporal Web URL
+        - strong [ref=f14e129]: http://localhost:8233/namespaces/default/workflows
+        - generic [ref=f14e130]: /api/temporal/workflows
+    - generic [ref=f14e131]:
+      - generic [ref=f14e132]:
+        - generic [ref=f14e133]: Workflow Health
+        - generic [ref=f14e138]:
+          - generic [ref=f14e139]: "0.70"
+          - generic [ref=f14e140]: Derived from workflow status
+      - generic [ref=f14e142]:
+        - generic [ref=f14e143]: Workflow Risk Rate
+        - generic [ref=f14e148]:
+          - generic [ref=f14e149]: 10.4%
+          - generic [ref=f14e150]: Failed/running workflow risk
+      - generic [ref=f14e152]:
+        - generic [ref=f14e153]: Runtime Signal
+        - generic [ref=f14e158]:
+          - generic [ref=f14e159]: 707s
+          - generic [ref=f14e160]: Runtime derived from Temporal timestamps
+      - generic [ref=f14e162]:
+        - generic [ref=f14e163]: Closed Workflows
+        - generic [ref=f14e168]:
+          - generic [ref=f14e169]: "0"
+          - generic [ref=f14e170]: Last 24h timeline
+    - generic [ref=f14e172]:
+      - generic [ref=f14e173]:
+        - heading "System Relevance & Latency Trends" [level=3] [ref=f14e175]
+        - paragraph [ref=f14e176]: Data-backed diagram generated from live Temporal workflow status, runtime, task queue, and completion state.
+        - generic [ref=f14e177]:
+          - generic [ref=f14e178]: Workflow health
+          - generic [ref=f14e180]: Risk health
+          - generic [ref=f14e182]: Runtime health
+        - generic [ref=f14e203]:
+          - generic [ref=f14e204] [cursor=pointer]:
+            - strong [ref=f14e205]: U
+            - generic [ref=f14e206]: Shadow Test
+            - generic [ref=f14e207]: Health 0.70 · Risk 10.4% · Runtime 389s
+          - generic [ref=f14e208] [cursor=pointer]:
+            - strong [ref=f14e209]: U
+            - generic [ref=f14e210]: Shadow Test
+            - generic [ref=f14e211]: Health 0.70 · Risk 10.4% · Runtime 397s
+          - generic [ref=f14e212] [cursor=pointer]:
+            - strong [ref=f14e213]: U
+            - generic [ref=f14e214]: Shadow Test
+            - generic [ref=f14e215]: Health 0.70 · Risk 10.4% · Runtime 861s
+          - generic [ref=f14e216] [cursor=pointer]:
+            - strong [ref=f14e217]: U
+            - generic [ref=f14e218]: Shadow Test
+            - generic [ref=f14e219]: Health 0.70 · Risk 10.4% · Runtime 889s
+          - generic [ref=f14e220] [cursor=pointer]:
+            - strong [ref=f14e221]: U
+            - generic [ref=f14e222]: Shadow Test
+            - generic [ref=f14e223]: Health 0.70 · Risk 10.4% · Runtime 999s
+      - generic [ref=f14e224]:
+        - heading "Recent Activity Feed" [level=3] [ref=f14e226]
+        - generic [ref=f14e227]:
+          - generic [ref=f14e229]:
+            - paragraph [ref=f14e230]: Scoped re-index refresh job complete for catalog-enrichment-qa.
+            - generic [ref=f14e231]: 09:22:14
+          - generic [ref=f14e233]:
+            - paragraph [ref=f14e234]: Autocomplete exits trigger alert on query cluster "trail gear".
+            - generic [ref=f14e235]: 08:14:02
+          - generic [ref=f14e237]:
+            - paragraph [ref=f14e238]: "Temporal workflow runbook_id: ops-4f72 approved by search lead."
+            - generic [ref=f14e239]: 07:45:11
+          - generic [ref=f14e241]:
+            - paragraph [ref=f14e242]: Emergency rollback drill executed successfully. Merchandising conflict resolved.
+            - generic [ref=f14e243]: 06:30:00

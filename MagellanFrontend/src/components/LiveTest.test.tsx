@@ -1,6 +1,5 @@
-import React from 'react'
 import { render, screen, fireEvent, waitFor } from '@testing-library/react'
-import { vi } from 'vitest'
+import { describe, test, expect, vi } from 'vitest'
 import { LiveTest } from './LiveTest'
 import { api } from '../api'
 

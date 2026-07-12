@@ -1,0 +1,105 @@
+- generic [ref=f3e3]:
+  - complementary [ref=f3e4]:
+    - generic [ref=f3e5]:
+      - generic [ref=f3e6]: MGL
+      - generic [ref=f3e7]: Magellan Ops
+    - navigation [ref=f3e8]:
+      - list [ref=f3e9]:
+        - listitem [ref=f3e10]:
+          - button "Overview" [ref=f3e11] [cursor=pointer]
+        - listitem [ref=f3e15]:
+          - button "Ops Factory" [ref=f3e16] [cursor=pointer]
+        - listitem [ref=f3e20]:
+          - button "Ops Runbooks" [ref=f3e21] [cursor=pointer]
+        - listitem [ref=f3e27]:
+          - button "Runbook Registry" [ref=f3e28] [cursor=pointer]
+        - listitem [ref=f3e31]:
+          - button "Query Clusters" [ref=f3e32] [cursor=pointer]
+        - listitem [ref=f3e39]:
+          - button "Audit Trail" [ref=f3e40] [cursor=pointer]
+        - listitem [ref=f3e46]:
+          - button "Live Test" [ref=f3e47] [cursor=pointer]
+        - listitem [ref=f3e51]:
+          - button "Shadow Reports" [ref=f3e52] [cursor=pointer]
+    - generic [ref=f3e59]:
+      - text: "Harness:"
+      - strong [ref=f3e60]: v1.2.4-stable
+  - main [ref=f3e61]:
+    - generic [ref=f3e62]:
+      - generic [ref=f3e63]:
+        - heading "Operations Overview" [level=1] [ref=f3e64]
+        - paragraph [ref=f3e65]: Real-time health & performance across all AI Search surfaces.
+      - generic [ref=f3e66]:
+        - button "Notifications" [ref=f3e67] [cursor=pointer]
+        - button "Settings" [ref=f3e71] [cursor=pointer]
+    - generic [ref=f3e79]:
+      - generic [ref=f3e83]:
+        - strong [ref=f3e84]: No live runbooks loaded.
+        - text: Configure
+        - code [ref=f3e85]: RUNBOOKS_API_URL
+        - text: in
+        - code [ref=f3e86]: .env
+        - text: ", then restart FastAPI."
+      - button "Resolve Now" [ref=f3e87] [cursor=pointer]
+    - generic [ref=f3e88]:
+      - generic [ref=f3e89]:
+        - generic [ref=f3e94]: Data source
+        - strong [ref=f3e95]: Loading backend
+        - generic [ref=f3e96]: http://localhost:8000
+      - generic [ref=f3e97]:
+        - generic [ref=f3e102]: Backend payloads
+        - strong [ref=f3e103]: 0 runbooks · 0 audit · 0 clusters
+        - generic [ref=f3e104]: Visible across Overview, Ops Runbooks, Query Clusters, and Audit Trail
+      - generic [ref=f3e105]:
+        - generic [ref=f3e110]: Temporal namespace
+        - strong [ref=f3e111]: default
+        - generic [ref=f3e112]: localhost:7233 · not connected
+      - generic [ref=f3e113]:
+        - generic [ref=f3e118]: Temporal Web URL
+        - strong [ref=f3e119]: http://localhost:8233/namespaces/default/workflows
+        - generic [ref=f3e120]: /api/temporal/workflows
+    - generic [ref=f3e121]:
+      - generic [ref=f3e122]:
+        - generic [ref=f3e123]: Average NDCG
+        - generic [ref=f3e128]:
+          - generic [ref=f3e129]: "0.00"
+          - generic [ref=f3e130]: +3.2% vs baseline
+      - generic [ref=f3e132]:
+        - generic [ref=f3e133]: Zero-Result Rate
+        - generic [ref=f3e138]:
+          - generic [ref=f3e139]: 0.0%
+          - generic [ref=f3e140]: "-12.4% today"
+      - generic [ref=f3e142]:
+        - generic [ref=f3e143]: P95 Search Latency
+        - generic [ref=f3e148]:
+          - generic [ref=f3e149]: 0ms
+          - generic [ref=f3e150]: "-4.5ms vs yesterday"
+      - generic [ref=f3e152]:
+        - generic [ref=f3e153]: Closed Runbooks
+        - generic [ref=f3e158]:
+          - generic [ref=f3e159]: "0"
+          - generic [ref=f3e160]: Last 24h timeline
+    - generic [ref=f3e162]:
+      - generic [ref=f3e163]:
+        - heading "System Relevance & Latency Trends" [level=3] [ref=f3e165]
+        - paragraph [ref=f3e166]: Data-backed diagram generated from active runbook query volume, NDCG, exit-rate, and P95 latency values.
+        - generic [ref=f3e167]:
+          - generic [ref=f3e168]: Relevance NDCG
+          - generic [ref=f3e170]: Exit health
+          - generic [ref=f3e172]: Latency health
+        - generic [ref=f3e174]: No runbook metrics returned from backend. The chart will render after your real runbook source returns data.
+      - generic [ref=f3e176]:
+        - heading "Recent Activity Feed" [level=3] [ref=f3e178]
+        - generic [ref=f3e179]:
+          - generic [ref=f3e181]:
+            - paragraph [ref=f3e182]: Scoped re-index refresh job complete for catalog-enrichment-qa.
+            - generic [ref=f3e183]: 09:22:14
+          - generic [ref=f3e185]:
+            - paragraph [ref=f3e186]: Autocomplete exits trigger alert on query cluster "trail gear".
+            - generic [ref=f3e187]: 08:14:02
+          - generic [ref=f3e189]:
+            - paragraph [ref=f3e190]: "Temporal workflow runbook_id: ops-4f72 approved by search lead."
+            - generic [ref=f3e191]: 07:45:11
+          - generic [ref=f3e193]:
+            - paragraph [ref=f3e194]: Emergency rollback drill executed successfully. Merchandising conflict resolved.
+            - generic [ref=f3e195]: 06:30:00

@@ -1,0 +1,134 @@
+- generic [ref=f12e3]:
+  - complementary [ref=f12e4]:
+    - generic [ref=f12e5]:
+      - generic [ref=f12e6]: MGL
+      - generic [ref=f12e7]: Magellan Ops
+    - navigation [ref=f12e8]:
+      - list [ref=f12e9]:
+        - listitem [ref=f12e10]:
+          - button "Overview" [ref=f12e11] [cursor=pointer]
+        - listitem [ref=f12e15]:
+          - button "Ops Factory" [active] [ref=f12e16] [cursor=pointer]
+        - listitem [ref=f12e20]:
+          - button "Ops Runbooks 1" [ref=f12e205] [cursor=pointer]:
+            - generic [ref=f12e26]: Ops Runbooks
+            - generic [ref=f12e206]: "1"
+        - listitem [ref=f12e27]:
+          - button "Runbook Registry" [ref=f12e28] [cursor=pointer]
+        - listitem [ref=f12e31]:
+          - button "Query Clusters" [ref=f12e32] [cursor=pointer]
+        - listitem [ref=f12e39]:
+          - button "Audit Trail" [ref=f12e40] [cursor=pointer]
+        - listitem [ref=f12e46]:
+          - button "Live Test" [ref=f12e47] [cursor=pointer]
+        - listitem [ref=f12e51]:
+          - button "Shadow Reports" [ref=f12e52] [cursor=pointer]
+    - generic [ref=f12e56]:
+      - generic [ref=f12e59]:
+        - text: "API Source:"
+        - strong [ref=f12e60]: ONLINE
+      - generic [ref=f12e63]:
+        - text: "Temporal:"
+        - strong [ref=f12e64]: CONNECTED
+      - generic [ref=f12e68]:
+        - text: "Harness:"
+        - strong [ref=f12e69]: v1.2.4-stable
+  - main [ref=f12e70]:
+    - generic [ref=f12e71]:
+      - generic [ref=f12e72]:
+        - heading "Automated Ops Factory" [level=1] [ref=f12e221]
+        - paragraph [ref=f12e74]: Observe dynamic self-healing data flows and automated agent assembly lines in real-time.
+      - generic [ref=f12e75]:
+        - button "Notifications" [ref=f12e76] [cursor=pointer]
+        - button "Settings" [ref=f12e80] [cursor=pointer]
+    - generic [ref=f12e222]:
+      - generic [ref=f12e223]:
+        - generic [ref=f12e224]:
+          - generic [ref=f12e225]: "FastAPI Server: CONNECTED"
+          - generic [ref=f12e234]:
+            - text: "Real Temporal Workflow Running:"
+            - code [ref=f12e235]: unified-search-repair-workflow-2b049129-8c1b-4616-8a6b-f76836e7ab8d
+        - button "Sync Data" [ref=f12e236] [cursor=pointer]
+      - generic [ref=f12e243]:
+        - generic [ref=f12e244]:
+          - text: Select Operational Incident Runbook
+          - generic [ref=f12e245]:
+            - button "Catalog Coverage & Schema Gap" [ref=f12e246] [cursor=pointer]
+            - button "Semantic Vector Sync Drift" [ref=f12e252] [cursor=pointer]
+            - button "Autocomplete Typo Gating" [ref=f12e256] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f12e259] [cursor=pointer]
+        - generic [ref=f12e265]:
+          - generic [ref=f12e266]: critical Severity
+          - generic [ref=f12e267]: "Breach: Zero-Result Query Volume Spike"
+      - generic [ref=f12e268]:
+        - generic [ref=f12e269]:
+          - generic [ref=f12e275]:
+            - generic [ref=f12e276]: "1"
+            - generic [ref=f12e282]: Ingestion Loader
+          - generic [ref=f12e283]:
+            - generic [ref=f12e284]: "2"
+            - generic [ref=f12e289]: RCA Sandbox Assembly
+          - generic [ref=f12e290]:
+            - generic [ref=f12e291]: "3"
+            - generic [ref=f12e298]: Patch Reactor
+          - generic [ref=f12e299]:
+            - generic [ref=f12e300]: "4"
+            - generic [ref=f12e304]: Shadow Lab Evaluator
+          - generic [ref=f12e305]:
+            - generic [ref=f12e306]: "5"
+            - generic [ref=f12e309]: Canary Gate Control
+          - generic [ref=f12e310]:
+            - generic [ref=f12e311]: "6"
+            - generic [ref=f12e316]: Post-Release Auditor
+        - generic [ref=f12e317]:
+          - generic [ref=f12e318]:
+            - generic [ref=f12e319]: Ingested Query
+            - generic [ref=f12e320]: "\"retro leather sneakers\""
+          - generic [ref=f12e321]:
+            - generic [ref=f12e322]: Trigger Source
+            - generic [ref=f12e323]: clickstream-collector-3
+          - generic [ref=f12e324]:
+            - generic [ref=f12e325]: Breach Metric
+            - generic [ref=f12e326]: 42.8%
+          - generic [ref=f12e327]:
+            - generic [ref=f12e328]: Business Leakage
+            - generic [ref=f12e329]: $18,500 estimated revenue leakage
+      - generic [ref=f12e330]:
+        - generic [ref=f12e331]:
+          - generic [ref=f12e332]:
+            - generic [ref=f12e333]: Assembly Control
+            - button "Polling Live" [ref=f12e337] [cursor=pointer]
+          - generic [ref=f12e344]:
+            - generic [ref=f12e345]: Live Temporal Trigger
+            - paragraph [ref=f12e346]: Dispatch a real production-grade telemetry anomaly to the Temporal Orchestration server to run the AI Agents in real-time.
+            - button "Trigger Live Temporal Workflow" [ref=f12e347] [cursor=pointer]
+          - generic [ref=f12e351]:
+            - generic [ref=f12e352]:
+              - generic [ref=f12e353]: Temporal & Agent Process Logs
+              - generic [ref=f12e354]: LIVE STREAM
+            - generic [ref=f12e355]:
+              - generic [ref=f12e356]: "[temporal] 🟢 Live workflow trace detected! Workflow ID: unified-search-repair-workflow-2b049129-8c1b-4616-8a6b-f76836e7ab8d"
+              - generic [ref=f12e357]: "[temporal] Running Root Cause Analysis Agent..."
+              - generic [ref=f12e358]: "[rca] Output root cause identified: \"SCHEMA_MISMATCH\""
+              - generic [ref=f12e359]: "[temporal] 🔄 Polling backend Temporal server for active tasks..."
+        - generic [ref=f12e360]:
+          - generic [ref=f12e361]:
+            - generic [ref=f12e362]:
+              - generic [ref=f12e363]: Active Factory Station 2 of 6
+              - heading "RCA Sandbox Assembly" [level=2] [ref=f12e364]
+            - generic [ref=f12e365]: RCA Loaded
+          - generic [ref=f12e366]:
+            - generic [ref=f12e367]:
+              - generic [ref=f12e368]: Sandbox Pyodide Root Cause Analysis
+              - paragraph [ref=f12e369]: "SCHEMA_MISMATCH: Dynamic catalog field \"variants\" missing from semantic search sync index."
+              - generic [ref=f12e375]:
+                - text: "Executed internal toolchain:"
+                - strong [ref=f12e376]: diagnose_anomaly()
+            - generic [ref=f12e377]:
+              - generic [ref=f12e378]: Secure Sandboxed Execution Tech
+              - paragraph [ref=f12e379]:
+                - text: RCA Agent executing securely inside a locked-down
+                - strong [ref=f12e380]: Deno subprocess
+                - text: running a WebAssembly-compiled
+                - strong [ref=f12e381]: Pyodide Python REPL
+                - text: . Network fetches are securely channeled, and local file access is barred.

@@ -1,0 +1,137 @@
+- generic:
+  - generic:
+    - generic:
+      - generic:
+        - generic:
+          - generic:
+            - complementary:
+              - generic:
+                - generic:
+                  - link:
+                    - /url: "#/"
+                  - generic: 3.14.0
+                - button
+              - generic:
+                - button:
+                  - generic: GenAI
+                - button:
+                  - generic: Model training
+              - navigation:
+                - list:
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments"
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/overview/usage"
+                      - text: Overview
+                  - listitem: Observability
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/traces"
+                      - text: Traces
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/chat-sessions"
+                      - text: Sessions
+                  - listitem: Evaluation
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/judges"
+                      - text: Judges
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/review-queue"
+                      - text: Review
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/datasets"
+                      - text: Datasets
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/evaluation-runs"
+                      - text: Evaluation runs
+                  - listitem: Prompts & versions
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/playground"
+                      - text: Playground
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/prompts"
+                      - text: Prompts
+                  - listitem:
+                    - link:
+                      - /url: "#/experiments/1/models"
+                      - text: Agent versions
+                  - listitem:
+                    - link:
+                      - /url: "#/gateway"
+                      - text: AI Gateway
+                      - status:
+                        - generic: New
+                - generic:
+                  - button:
+                    - generic: Assistant
+                    - status:
+                      - generic: Beta
+                  - listitem:
+                    - link:
+                      - /url: https://www.mlflow.org/docs/latest/genai/
+                      - generic: Docs
+                  - listitem:
+                    - link:
+                      - /url: "#/settings/general?returnTo=%2Fexperiments%2F1%2Ftraces"
+                      - text: Settings
+            - main:
+              - generic:
+                - generic:
+                  - alert:
+                    - generic: "Experiment load error: Failed to execute 'fetch' on 'Window': Request cannot be constructed from a URL that includes credentials: graphql"
+                - generic:
+                  - generic:
+                    - generic:
+                      - generic:
+                        - generic:
+                          - button:
+                            - generic: Last 7 days
+                          - button
+                      - generic:
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - textbox:
+                                    - /placeholder: Search traces by id, request, or response
+                              - button:
+                                - generic: Filters
+                              - button:
+                                - generic: "Sort: Request time"
+                              - button:
+                                - generic:
+                                  - generic:
+                                    - text: Columns
+                                    - status:
+                                      - generic: 4/17
+                              - generic:
+                                - button [disabled]:
+                                  - generic: Actions
+                              - button: Group by session
+                              - generic:
+                                - button:
+                                  - generic: Detect Issues
+                          - generic: 0 of 0
+                        - generic:
+                          - generic:
+                            - generic:
+                              - generic:
+                                - generic:
+                                  - heading [level=3]: Fetching traces failed
+                                  - generic: "Failed to execute 'fetch' on 'Window': Request cannot be constructed from a URL that includes credentials: ajax-api/3.0/mlflow/traces/search"
+  - dialog "Popover content" [ref=f23e150]:
+    - generic [ref=f23e154]:
+      - generic [ref=f23e155]: Detect Issues in Your Traces
+      - button "Close guidance" [active] [ref=f23e156] [cursor=pointer]
+    - generic [ref=f23e160]: Use this button to automatically detect quality issues in your traces using AI. This feature helps you identify problems like correctness, latency, and other quality concerns in your agent.
+    - button "Got it" [ref=f23e161] [cursor=pointer]

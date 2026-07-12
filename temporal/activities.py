@@ -1,9 +1,16 @@
 import asyncio
 import sys
 import contextlib
+import os
 from temporalio import activity
 import mlflow
 import json # Added for json operations
+
+# Clean up VS Code Copilot environment-level credentials overrides before initializing anything
+if "GOOGLE_APPLICATION_CREDENTIALS" in os.environ:
+    kf = os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
+    if "copilot-gemini-key.json" in kf and not os.path.exists(kf):
+        del os.environ["GOOGLE_APPLICATION_CREDENTIALS"]
 
 # Shadow Agent Framework Imports
 from shadow_agent_framework.core.engine import ShadowTestEngine
@@ -138,7 +145,48 @@ def _normalize_signal_to_dict(signal, activity_name: str) -> dict:
         print(f"--- {activity_name}: ERROR: {error_msg} ---")
         raise TypeError(error_msg)
 
+def _report_activity_result(activity_name: str, result: dict):
+    try:
+        import httpx
+        from datetime import datetime
+        info = activity.info()
+        workflow_id = info.workflow_id
+        activity_id = info.activity_id
+        received_at = datetime.utcnow().isoformat() + "Z"
+        
+        # Post to the local FastAPI backend
+        with httpx.Client() as client:
+            response = client.post(
+                "http://localhost:8000/api/temporal/activity-result",
+                json={
+                    "workflow_id": workflow_id,
+                    "activity_id": activity_id,
+                    "activity_name": activity_name,
+                    "result": result
+                },
+                timeout=5
+            )
+            response.raise_for_status()
+            print(f"--- {activity_name}: Successfully reported activity result to backend ---")
+    except Exception as e:
+        print(f"--- {activity_name}: Warning: Failed to report activity result to backend: {e} ---")
+
+def report_activity_decorator(activity_name: str):
+    import functools
+    def decorator(func):
+        @functools.wraps(func)
+        async def wrapper(*args, **kwargs):
+            result = await func(*args, **kwargs)
+            try:
+                _report_activity_result(activity_name, result)
+            except Exception as e:
+                print(f"--- [DECORATOR] {activity_name}: Error in report: {e} ---")
+            return result
+        return wrapper
+    return decorator
+
 @activity.defn
+@report_activity_decorator("Root Cause Analysis")
 async def root_cause_activity(signal: dict) -> dict:
     """Temporal activity to run the Root Cause Analysis agent."""
     print("--- RCA ACTIVITY: START ---")
@@ -236,6 +284,7 @@ async def root_cause_activity(signal: dict) -> dict:
         return result
 
 @activity.defn
+@report_activity_decorator("Fix Proposal")
 async def fix_proposal_activity(rca_output: dict) -> dict:
     """
     Runs the Fix Proposal agent.
@@ -305,6 +354,7 @@ async def fix_proposal_activity(rca_output: dict) -> dict:
 
 
 @activity.defn
+@report_activity_decorator("Evaluation")
 async def eval_activity(eval_input: dict) -> dict:
     """
     Temporal activity to run a live shadow test against the Diffy service.
@@ -387,6 +437,7 @@ async def eval_activity(eval_input: dict) -> dict:
         return result
 
 @activity.defn
+@report_activity_decorator("Autocomplete Root Cause Analysis")
 async def autocomplete_root_cause_activity(signal: dict) -> dict:
     """Temporal activity to run the Autocomplete Root Cause Analysis agent."""
     print("--- AUTOCOMPLETE RCA ACTIVITY: START ---")
@@ -475,6 +526,7 @@ async def autocomplete_root_cause_activity(signal: dict) -> dict:
         return result
 
 @activity.defn
+@report_activity_decorator("Autocomplete Fix Proposal")
 async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
     """Temporal activity to run the Autocomplete Fix Proposal agent."""
     _setup_mlflow_with_auth("AUTOCOMPLETE FIX PROPOSAL ACTIVITY")
@@ -538,6 +590,7 @@ async def autocomplete_fix_proposal_activity(rca_output: dict) -> dict:
                 return result
 
 @activity.defn
+@report_activity_decorator("Autocomplete Evaluation")
 async def autocomplete_eval_activity(eval_input: dict) -> dict:
     """Temporal activity to run the Autocomplete Evaluation agent."""
     _setup_mlflow_with_auth("AUTOCOMPLETE EVAL ACTIVITY")
@@ -606,12 +659,22 @@ async def autocomplete_eval_activity(eval_input: dict) -> dict:
         return result
 
 @activity.defn
+@report_activity_decorator("Release")
 async def release_activity(eval_output: dict) -> dict:
     """Temporal activity to run the final Release agent."""
     _setup_mlflow_with_auth("RELEASE ACTIVITY")
     with mlflow.start_run(nested=True) as run:
         activity.logger.info(f"Executing Release activity... MLflow Run ID: {run.info.run_id}")
         mlflow.log_param("activity_type", "release_activity")
+
+        # Log complete Kubernetes deployment metadata context to MLflow
+        mlflow.log_param("k8s_namespace", "magellan-search-ops")
+        mlflow.log_param("k8s_stable_service", "magellan-backend-stable-svc")
+        mlflow.log_param("k8s_canary_service", "magellan-backend-canary-svc")
+        mlflow.log_param("k8s_canary_ingress", "magellan-backend-canary-ingress")
+        mlflow.log_param("k8s_canary_header_trigger", "X-OCS-Canary-Weight")
+        mlflow.log_param("k8s_canary_cookie_bypass", "canary_user")
+        mlflow.log_param("k8s_canary_initial_weight", "5")
 
         # Log Input details as artifacts
         input_temp_file = "release_input_eval.json"
@@ -629,6 +692,15 @@ async def release_activity(eval_output: dict) -> dict:
                 # The release agent just needs the final approval status
                 result = await agent.run_agent(eval_output)
                 
+                # Enrich the result dict with actual active Kubernetes specs for the feedback agent
+                result["k8s_context"] = {
+                    "namespace": "magellan-search-ops",
+                    "canary_ingress": "magellan-backend-canary-ingress",
+                    "canary_by_header": "X-OCS-Canary-Weight",
+                    "canary_by_cookie": "canary_user",
+                    "canary_initial_weight": "5%"
+                }
+
                 # Log Output params to Dashboard
                 mlflow.log_param("release_confirmation_status", result.get("status", result.get("confirmation_status", "success")))
                 mlflow.log_param("release_message", result.get("message", "Canary released successfully."))
@@ -642,6 +714,7 @@ async def release_activity(eval_output: dict) -> dict:
                 return result
 
 @activity.defn
+@report_activity_decorator("Semantic Root Cause Analysis")
 async def semantic_root_cause_activity(signal: dict) -> dict:
     """Temporal activity to run the Semantic Root Cause Analysis agent."""
     print("--- SEMANTIC RCA ACTIVITY: START ---")
@@ -697,6 +770,7 @@ async def semantic_root_cause_activity(signal: dict) -> dict:
         return result
 
 @activity.defn
+@report_activity_decorator("Semantic Fix Proposal")
 async def semantic_fix_proposal_activity(rca_output: dict) -> dict:
     """Temporal activity to run the Semantic Fix Proposal agent."""
     _setup_mlflow_with_auth("SEMANTIC FIX PROPOSAL ACTIVITY")
@@ -729,6 +803,7 @@ async def semantic_fix_proposal_activity(rca_output: dict) -> dict:
                 return result
 
 @activity.defn
+@report_activity_decorator("Feedback")
 async def feedback_activity(eval_output: dict) -> dict:
     """Temporal activity to run the Feedback agent."""
     _setup_mlflow_with_auth("FEEDBACK ACTIVITY")
@@ -765,9 +840,26 @@ async def feedback_activity(eval_output: dict) -> dict:
                     json.dump(result, f, indent=2)
                 mlflow.log_artifact(temp_file, "results")
                 os.remove(temp_file) # Clean up temporary file
+
+                # Report the final completion status back to the FastAPI backend
+                try:
+                    import httpx
+                    wf_id = activity.info().workflow_id
+                    with httpx.Client() as client:
+                        response = client.post(
+                            "http://localhost:8000/api/runbooks/complete-run",
+                            json={"workflow_id": wf_id, "result": result},
+                            timeout=5,
+                        )
+                        response.raise_for_status()
+                        activity.logger.info("✅ Direct Workflow completion notification successfully reported to backend from feedback activity.")
+                except Exception as e:
+                    activity.logger.error(f"❌ Direct Workflow completion notification failed to report to backend: {e}")
+
                 return result
 
 @activity.defn
+@report_activity_decorator("Semantic Evaluation")
 async def semantic_eval_activity(eval_input: dict) -> dict:
     """Temporal activity to run the Semantic Evaluation agent."""
     _setup_mlflow_with_auth("SEMANTIC EVAL ACTIVITY")
@@ -857,6 +949,7 @@ async def semantic_eval_activity(eval_input: dict) -> dict:
 
 
 @activity.defn
+@report_activity_decorator("Merchandising Root Cause Analysis")
 async def merchandising_root_cause_activity(signal: dict) -> dict:
     """Temporal activity to run the Merchandising Root Cause Analysis agent."""
     print("--- MERCHANDISING RCA ACTIVITY: START ---")
@@ -927,6 +1020,7 @@ async def merchandising_root_cause_activity(signal: dict) -> dict:
 
 
 @activity.defn
+@report_activity_decorator("Merchandising Fix Proposal")
 async def merchandising_fix_proposal_activity(rca_result: dict) -> dict:
     """Temporal activity to run the Merchandising Fix Proposal agent."""
     print("--- MERCHANDISING FIX ACTIVITY: START ---")
@@ -1004,6 +1098,7 @@ async def merchandising_fix_proposal_activity(rca_result: dict) -> dict:
 
 
 @activity.defn
+@report_activity_decorator("Merchandising Evaluation")
 async def merchandising_eval_activity(eval_input: dict) -> dict:
     """Temporal activity to run the Merchandising Evaluation agent."""
     print("--- MERCHANDISING EVAL ACTIVITY: START ---")

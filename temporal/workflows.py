@@ -106,6 +106,11 @@ class UnifiedSearchAiRepairWorkflow:
         """Signal method to approve a deployment that is pending review."""
         self._is_approved = True
 
+    @workflow.signal
+    def record_approval(self, payload=None):
+        """Signal method to approve a deployment (used by the backend interface)."""
+        self._is_approved = True
+
 @workflow.defn
 class SemanticAiRepairWorkflow:
     @workflow.run

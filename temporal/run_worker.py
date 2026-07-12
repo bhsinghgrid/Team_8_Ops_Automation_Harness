@@ -8,7 +8,7 @@ import os
 import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
-from temporal.workflows import UnifiedSearchAiRepairWorkflow
+from temporal.workflows import UnifiedSearchAiRepairWorkflow, SemanticAiRepairWorkflow
 from temporal.activities import root_cause_activity, fix_proposal_activity, eval_activity, feedback_activity
 from temporal.activities import autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity
 from temporal.activities import release_activity
@@ -34,7 +34,7 @@ async def main():
         worker = Worker(
             client,
             task_queue="search-ai-task-queue",
-            workflows=[UnifiedSearchAiRepairWorkflow],
+            workflows=[UnifiedSearchAiRepairWorkflow, SemanticAiRepairWorkflow],
             activities=[
                 root_cause_activity, fix_proposal_activity, eval_activity,
                 autocomplete_root_cause_activity, autocomplete_fix_proposal_activity, autocomplete_eval_activity,

@@ -1,0 +1,61 @@
+- generic [ref=f22e3]:
+  - complementary [ref=f22e4]:
+    - generic [ref=f22e5]:
+      - generic [ref=f22e6]: MGL
+      - generic [ref=f22e7]: Magellan Ops
+    - navigation [ref=f22e8]:
+      - list [ref=f22e9]:
+        - listitem [ref=f22e10]:
+          - button "Overview" [ref=f22e11] [cursor=pointer]
+        - listitem [ref=f22e15]:
+          - button "Ops Factory" [ref=f22e16] [cursor=pointer]
+        - listitem [ref=f22e20]:
+          - button "Ops Runbooks 8" [ref=f22e21] [cursor=pointer]:
+            - generic [ref=f22e26]: Ops Runbooks
+            - generic [ref=f22e27]: "8"
+        - listitem [ref=f22e28]:
+          - button "Runbook Registry" [ref=f22e29] [cursor=pointer]
+        - listitem [ref=f22e32]:
+          - button "Query Clusters" [ref=f22e33] [cursor=pointer]
+        - listitem [ref=f22e40]:
+          - button "Audit Trail" [ref=f22e41] [cursor=pointer]
+        - listitem [ref=f22e47]:
+          - button "Live Test" [ref=f22e48] [cursor=pointer]
+        - listitem [ref=f22e52]:
+          - button "Shadow Reports" [active] [ref=f22e53] [cursor=pointer]
+    - generic [ref=f22e57]:
+      - generic [ref=f22e60]:
+        - text: "API Source:"
+        - strong [ref=f22e61]: ONLINE
+      - generic [ref=f22e64]:
+        - text: "Temporal:"
+        - strong [ref=f22e65]: CONNECTED
+      - generic [ref=f22e69]:
+        - text: "Harness:"
+        - strong [ref=f22e70]: v1.2.4-stable
+  - main [ref=f22e71]:
+    - generic [ref=f22e72]:
+      - generic [ref=f22e73]:
+        - heading "Shadow Test Reports" [level=1] [ref=f22e74]
+        - paragraph [ref=f22e75]: View the results of simulated shadow tests.
+      - generic [ref=f22e76]:
+        - button "Notifications" [ref=f22e78] [cursor=pointer]
+        - button "Settings" [ref=f22e84] [cursor=pointer]
+        - generic "Logged in as Admin Operator" [ref=f22e89] [cursor=pointer]
+    - generic [ref=f22e93]:
+      - generic [ref=f22e94]:
+        - generic [ref=f22e95]:
+          - heading "Canary Release & Shadow Test Reports" [level=2] [ref=f22e96]
+          - generic [ref=f22e97]: MLflow Active Trace Engine
+        - paragraph [ref=f22e101]: The following ledger displays completed and running Temporal repair workflow releases and their side-by-side shadowed traffic simulations. Use the search bar to inspect individual query metrics and gating decisions.
+      - generic [ref=f22e102]:
+        - textbox "Search report ID, summary..." [ref=f22e104]
+        - generic [ref=f22e105]:
+          - generic [ref=f22e106]: "Gating Decision:"
+          - combobox [ref=f22e107] [cursor=pointer]:
+            - option "All Gating Statuses" [selected]
+            - option "PROMOTE_TO_CANARY (Pass)"
+            - option "ABORT_ROLLOUT (Fail)"
+      - generic [ref=f22e109]:
+        - strong [ref=f22e110]: "Fetch Error:"
+        - text: Failed to fetch

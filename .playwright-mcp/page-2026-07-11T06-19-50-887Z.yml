@@ -1,0 +1,127 @@
+- generic [ref=f2e3]:
+  - complementary [ref=f2e4]:
+    - generic [ref=f2e5]:
+      - generic [ref=f2e6]: MGL
+      - generic [ref=f2e7]: Magellan Ops
+    - navigation [ref=f2e8]:
+      - list [ref=f2e9]:
+        - listitem [ref=f2e10]:
+          - button "Overview" [ref=f2e11] [cursor=pointer]
+        - listitem [ref=f2e15]:
+          - button "Ops Factory" [ref=f2e16] [cursor=pointer]
+        - listitem [ref=f2e20]:
+          - button "Ops Runbooks 15" [ref=f2e196] [cursor=pointer]:
+            - generic [ref=f2e26]: Ops Runbooks
+            - generic [ref=f2e197]: "15"
+        - listitem [ref=f2e27]:
+          - button "Runbook Registry" [ref=f2e28] [cursor=pointer]
+        - listitem [ref=f2e31]:
+          - button "Query Clusters" [ref=f2e32] [cursor=pointer]
+        - listitem [ref=f2e39]:
+          - button "Audit Trail" [ref=f2e40] [cursor=pointer]
+        - listitem [ref=f2e46]:
+          - button "Live Test" [active] [ref=f2e47] [cursor=pointer]
+        - listitem [ref=f2e51]:
+          - button "Shadow Reports" [ref=f2e52] [cursor=pointer]
+    - generic [ref=f2e59]:
+      - text: "Harness:"
+      - strong [ref=f2e60]: v1.2.4-stable
+  - main [ref=f2e61]:
+    - generic [ref=f2e62]:
+      - generic [ref=f2e63]:
+        - heading "Live Workflow Test" [level=1] [ref=f2e198]
+        - paragraph [ref=f2e65]: Trigger a new workflow run with a custom JSON input signal.
+      - generic [ref=f2e66]:
+        - button "Notifications" [ref=f2e67] [cursor=pointer]
+        - button "Settings" [ref=f2e71] [cursor=pointer]
+    - generic [ref=f2e200]:
+      - generic [ref=f2e202]:
+        - generic [ref=f2e203]:
+          - generic [ref=f2e204]: Operator Playpen
+          - generic [ref=f2e205]: "API: ONLINE"
+        - heading "Autonomous Diagnostic Engine" [level=2] [ref=f2e208]
+        - paragraph [ref=f2e209]: Inject active search incidents directly into Temporal Orchestration to trigger recursive, sandboxed REPL diagnostic agents in real-time.
+      - generic [ref=f2e210]:
+        - generic [ref=f2e216]:
+          - generic [ref=f2e217]: FastAPI Backend URL
+          - strong [ref=f2e218]: http://localhost:8000
+          - generic [ref=f2e219]: ● Connected & Active
+        - generic [ref=f2e225]:
+          - generic [ref=f2e226]: Temporal Cluster
+          - strong [ref=f2e227]: localhost:7233 (default)
+          - generic [ref=f2e228]: ● Connected & Polling
+        - generic [ref=f2e232]:
+          - generic [ref=f2e233]: MLflow Experiments URI
+          - strong [ref=f2e234]: http://127.0.0.1:5001
+          - generic [ref=f2e235]: ● Logging Traces & Metrics
+      - generic [ref=f2e236]:
+        - heading "🎯 Select Target Anomaly Template" [level=3] [ref=f2e237]
+        - generic [ref=f2e239]:
+          - button "🌐 Catalog Catalog Quality Ingestion Diagnoses HTTP 404 SKU mapping and indexing failures for newly launched products." [ref=f2e240] [cursor=pointer]:
+            - generic [ref=f2e241]:
+              - generic [ref=f2e242]: 🌐
+              - generic [ref=f2e243]: Catalog
+            - heading "Catalog Quality Ingestion" [level=4] [ref=f2e244]
+            - paragraph [ref=f2e245]: Diagnoses HTTP 404 SKU mapping and indexing failures for newly launched products.
+          - button "⌨️ Autocomplete Autocomplete Prefix Misses Investigates stale autocomplete indices and prefix popularity weights." [ref=f2e246] [cursor=pointer]:
+            - generic [ref=f2e247]:
+              - generic [ref=f2e248]: ⌨️
+              - generic [ref=f2e249]: Autocomplete
+            - heading "Autocomplete Prefix Misses" [level=4] [ref=f2e250]
+            - paragraph [ref=f2e251]: Investigates stale autocomplete indices and prefix popularity weights.
+          - button "🧠 Semantic Vector Semantic Embedding Drift Analyzes cosine similarity drift inside LanceDB and vector index segment status." [ref=f2e252] [cursor=pointer]:
+            - generic [ref=f2e253]:
+              - generic [ref=f2e254]: 🧠
+              - generic [ref=f2e255]: Semantic Vector
+            - heading "Semantic Embedding Drift" [level=4] [ref=f2e256]
+            - paragraph [ref=f2e257]: Analyzes cosine similarity drift inside LanceDB and vector index segment status.
+          - button "📊 Merchandising Merchandising Rules Conflict Resolves overlapping query-boost and category burial conditions in Grid Dynamics Merchandiser." [ref=f2e258] [cursor=pointer]:
+            - generic [ref=f2e259]:
+              - generic [ref=f2e260]: 📊
+              - generic [ref=f2e261]: Merchandising
+            - heading "Merchandising Rules Conflict" [level=4] [ref=f2e262]
+            - paragraph [ref=f2e263]: Resolves overlapping query-boost and category burial conditions in Grid Dynamics Merchandiser.
+      - generic [ref=f2e264]:
+        - generic [ref=f2e265]:
+          - generic [ref=f2e266]:
+            - generic [ref=f2e267]: REM_INCIDENT_CONTEXT.json
+            - generic [ref=f2e269]:
+              - generic [ref=f2e270]:
+                - generic [ref=f2e271]: Autonomous Caching
+                - button [ref=f2e272] [cursor=pointer]
+              - generic [ref=f2e274]: Upload File
+          - generic [ref=f2e278]:
+            - generic [ref=f2e279]:
+              - generic [ref=f2e280]:
+                - generic [ref=f2e281]: "1"
+                - generic [ref=f2e282]: "2"
+                - generic [ref=f2e283]: "3"
+                - generic [ref=f2e284]: "4"
+                - generic [ref=f2e285]: "5"
+                - generic [ref=f2e286]: "6"
+                - generic [ref=f2e287]: "7"
+                - generic [ref=f2e288]: "8"
+                - generic [ref=f2e289]: "9"
+                - generic [ref=f2e290]: "10"
+                - generic [ref=f2e291]: "11"
+                - generic [ref=f2e292]: "12"
+                - generic [ref=f2e293]: "13"
+                - generic [ref=f2e294]: "14"
+                - generic [ref=f2e295]: "15"
+                - generic [ref=f2e296]: "16"
+                - generic [ref=f2e297]: "17"
+                - generic [ref=f2e298]: "18"
+                - generic [ref=f2e299]: "19"
+                - generic [ref=f2e300]: "20"
+                - generic [ref=f2e301]: "21"
+                - generic [ref=f2e302]: "22"
+                - generic [ref=f2e303]: "23"
+                - generic [ref=f2e304]: "24"
+                - generic [ref=f2e305]: "25"
+              - 'textbox "{ \"description\": \"Users are reporting low relevance for the query ''red running shoes''.\" }" [ref=f2e306]': "{ \"type\": \"catalog\", \"description\": \"ALERT: Search quality degradation batch of anomalous events.\", \"events\": [ { \"context\": { \"channel\": \"app\", \"device_type\": \"mobile\", \"locale\": \"de-DE\" }, \"error\": \"product_not_found\", \"query\": { \"text\": \"non-existent product sku SKU-2943\" }, \"response\": { \"latency_ms\": 63, \"result_count\": 0, \"results\": [], \"status_code\": 404 }, \"tenant\": \"sports_goods_tenant_002\" } ], \"use_cache\": true }"
+            - button "Fire Sandbox Signal" [ref=f2e307] [cursor=pointer]
+        - generic [ref=f2e311]:
+          - generic [ref=f2e312]: Live Operator Log Console
+          - generic [ref=f2e319]:
+            - paragraph [ref=f2e322]: Waiting for sandbox operator execution...
+            - paragraph [ref=f2e323]: Select an anomaly template above and click "Fire Sandbox Signal"

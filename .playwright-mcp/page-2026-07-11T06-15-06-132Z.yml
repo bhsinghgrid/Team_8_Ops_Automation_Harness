@@ -1,0 +1,129 @@
+- generic [ref=f1e3]:
+  - complementary [ref=f1e4]:
+    - generic [ref=f1e5]:
+      - generic [ref=f1e6]: MGL
+      - generic [ref=f1e7]: Magellan Ops
+    - navigation [ref=f1e8]:
+      - list [ref=f1e9]:
+        - listitem [ref=f1e10]:
+          - button "Overview" [ref=f1e11] [cursor=pointer]
+        - listitem [ref=f1e15]:
+          - button "Ops Factory" [active] [ref=f1e16] [cursor=pointer]
+        - listitem [ref=f1e20]:
+          - button "Ops Runbooks 15" [ref=f1e196] [cursor=pointer]:
+            - generic [ref=f1e26]: Ops Runbooks
+            - generic [ref=f1e197]: "15"
+        - listitem [ref=f1e27]:
+          - button "Runbook Registry" [ref=f1e28] [cursor=pointer]
+        - listitem [ref=f1e31]:
+          - button "Query Clusters" [ref=f1e32] [cursor=pointer]
+        - listitem [ref=f1e39]:
+          - button "Audit Trail" [ref=f1e40] [cursor=pointer]
+        - listitem [ref=f1e46]:
+          - button "Live Test" [ref=f1e47] [cursor=pointer]
+        - listitem [ref=f1e51]:
+          - button "Shadow Reports" [ref=f1e52] [cursor=pointer]
+    - generic [ref=f1e59]:
+      - text: "Harness:"
+      - strong [ref=f1e60]: v1.2.4-stable
+  - main [ref=f1e61]:
+    - generic [ref=f1e62]:
+      - generic [ref=f1e63]:
+        - heading "Automated Ops Factory" [level=1] [ref=f1e198]
+        - paragraph [ref=f1e65]: Observe dynamic self-healing data flows and automated agent assembly lines in real-time.
+      - generic [ref=f1e66]:
+        - button "Notifications" [ref=f1e67] [cursor=pointer]
+        - button "Settings" [ref=f1e71] [cursor=pointer]
+    - generic [ref=f1e200]:
+      - generic [ref=f1e201]:
+        - generic [ref=f1e202]:
+          - generic [ref=f1e203]: "FastAPI Server: CONNECTED"
+          - generic [ref=f1e212]:
+            - text: "Real Temporal Workflow Running:"
+            - code [ref=f1e213]: unified-search-repair-workflow-2b049129-8c1b-4616-8a6b-f76836e7ab8d
+        - button "Sync Data" [ref=f1e214] [cursor=pointer]
+      - generic [ref=f1e221]:
+        - generic [ref=f1e222]:
+          - text: Select Operational Incident Runbook
+          - generic [ref=f1e223]:
+            - button "Catalog Coverage & Schema Gap" [ref=f1e224] [cursor=pointer]
+            - button "Semantic Vector Sync Drift" [ref=f1e230] [cursor=pointer]
+            - button "Autocomplete Typo Gating" [ref=f1e234] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e237] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e243] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e249] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e255] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e261] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e267] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e273] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e279] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e285] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e291] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e297] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e303] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e309] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e315] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - RUNNING" [ref=f1e321] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e327] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e333] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e339] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e345] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e351] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e357] [cursor=pointer]
+            - button "UnifiedSearchAiRepairWorkflow - COMPLETED" [ref=f1e363] [cursor=pointer]
+        - generic [ref=f1e369]:
+          - generic [ref=f1e370]: critical Severity
+          - generic [ref=f1e371]: "Breach: Zero-Result Query Volume Spike"
+      - generic [ref=f1e372]:
+        - generic [ref=f1e373]:
+          - generic [ref=f1e375]:
+            - generic [ref=f1e376]: "1"
+            - generic [ref=f1e382]: Ingestion Loader
+          - generic [ref=f1e383]:
+            - generic [ref=f1e384]: "2"
+            - generic [ref=f1e389]: RCA Sandbox Assembly
+          - generic [ref=f1e390]:
+            - generic [ref=f1e391]: "3"
+            - generic [ref=f1e398]: Patch Reactor
+          - generic [ref=f1e399]:
+            - generic [ref=f1e400]: "4"
+            - generic [ref=f1e404]: Shadow Lab Evaluator
+          - generic [ref=f1e405]:
+            - generic [ref=f1e406]: "5"
+            - generic [ref=f1e409]: Canary Gate Control
+          - generic [ref=f1e410]:
+            - generic [ref=f1e411]: "6"
+            - generic [ref=f1e416]: Post-Release Auditor
+        - generic [ref=f1e417]:
+          - generic [ref=f1e418]:
+            - generic [ref=f1e419]: Ingested Query
+            - generic [ref=f1e420]: "\"retro leather sneakers\""
+          - generic [ref=f1e421]:
+            - generic [ref=f1e422]: Trigger Source
+            - generic [ref=f1e423]: clickstream-collector-3
+          - generic [ref=f1e424]:
+            - generic [ref=f1e425]: Breach Metric
+            - generic [ref=f1e426]: 42.8%
+          - generic [ref=f1e427]:
+            - generic [ref=f1e428]: Business Leakage
+            - generic [ref=f1e429]: $18,500 estimated revenue leakage
+      - generic [ref=f1e430]:
+        - generic [ref=f1e431]:
+          - generic [ref=f1e432]:
+            - generic [ref=f1e433]: Assembly Control
+            - button "Polling Live" [ref=f1e437] [cursor=pointer]
+          - generic [ref=f1e444]:
+            - generic [ref=f1e445]: Live Temporal Trigger
+            - paragraph [ref=f1e446]: Dispatch a real production-grade telemetry anomaly to the Temporal Orchestration server to run the AI Agents in real-time.
+            - button "Trigger Live Temporal Workflow" [ref=f1e447] [cursor=pointer]
+          - generic [ref=f1e451]:
+            - generic [ref=f1e452]:
+              - generic [ref=f1e453]: Temporal & Agent Process Logs
+              - generic [ref=f1e454]: LIVE STREAM
+            - generic [ref=f1e455]: "[factory] Ready. Select a scenario and start the pipeline to inspect real-time data."
+        - generic [ref=f1e461]:
+          - heading "Factory Assembly Standby" [level=3] [ref=f1e462]
+          - paragraph [ref=f1e463]:
+            - text: Select an operational scenario and click
+            - strong [ref=f1e464]: "\"Polling Live\""
+            - text: to run the automated pipeline.

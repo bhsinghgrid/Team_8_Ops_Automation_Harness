@@ -1,0 +1,119 @@
+- generic [ref=e3]:
+  - complementary [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]: MGL
+      - generic [ref=e7]: Magellan Ops
+    - navigation [ref=e8]:
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - button "Overview" [ref=e11] [cursor=pointer]
+        - listitem [ref=e15]:
+          - button "Ops Factory" [ref=e16] [cursor=pointer]
+        - listitem [ref=e20]:
+          - button "Ops Runbooks 14" [ref=e196] [cursor=pointer]:
+            - generic [ref=e26]: Ops Runbooks
+            - generic [ref=e197]: "14"
+        - listitem [ref=e27]:
+          - button "Runbook Registry" [ref=e28] [cursor=pointer]
+        - listitem [ref=e31]:
+          - button "Query Clusters" [ref=e32] [cursor=pointer]
+        - listitem [ref=e39]:
+          - button "Audit Trail" [ref=e40] [cursor=pointer]
+        - listitem [ref=e46]:
+          - button "Live Test" [ref=e47] [cursor=pointer]
+        - listitem [ref=e51]:
+          - button "Shadow Reports" [ref=e52] [cursor=pointer]
+    - generic [ref=e59]:
+      - text: "Harness:"
+      - strong [ref=e60]: v1.2.4-stable
+  - main [ref=e61]:
+    - generic [ref=e62]:
+      - generic [ref=e63]:
+        - heading "Live Workflow Test" [level=1] [ref=e355]
+        - paragraph [ref=e65]: Trigger a new workflow run with a custom JSON input signal.
+      - generic [ref=e66]:
+        - button "Notifications" [ref=e67] [cursor=pointer]
+        - button "Settings" [ref=e71] [cursor=pointer]
+    - generic [ref=e356]:
+      - generic [ref=e359]:
+        - generic [ref=e360]:
+          - text: Operator Playpen
+          - generic [ref=e361]: "API: ONLINE"
+        - heading "Autonomous Diagnostic Engine" [level=2] [ref=e362]
+        - paragraph [ref=e363]: Inject active search incidents directly into Temporal Orchestration to trigger recursive, sandboxed REPL diagnostic agents in real-time.
+      - generic [ref=e364]:
+        - generic [ref=e370]:
+          - text: FastAPI Backend URL
+          - strong [ref=e371]: http://localhost:8000
+          - generic [ref=e372]: ● Connected & Active
+        - generic [ref=e378]:
+          - text: Temporal Cluster
+          - strong [ref=e379]: localhost:7233 (default)
+          - text: ● Connected & Polling
+        - generic [ref=e383]:
+          - text: MLflow Experiments URI
+          - strong [ref=e384]: http://127.0.0.1:5001
+          - text: ● Logging Traces & Metrics
+      - generic [ref=e385]:
+        - heading "🎯 Select Target Anomaly Template" [level=3] [ref=e386]
+        - generic [ref=e387]:
+          - button "🌐Catalog Catalog Quality Ingestion Diagnoses HTTP 404 SKU mapping and indexing failures for newly launched products." [ref=e388]:
+            - generic [ref=e389]: 🌐Catalog
+            - heading "Catalog Quality Ingestion" [level=4] [ref=e390]
+            - paragraph [ref=e391]: Diagnoses HTTP 404 SKU mapping and indexing failures for newly launched products.
+          - button "⌨️Autocomplete Autocomplete Prefix Misses Investigates stale autocomplete indices and prefix popularity weights." [ref=e392]:
+            - generic [ref=e393]: ⌨️Autocomplete
+            - heading "Autocomplete Prefix Misses" [level=4] [ref=e394]
+            - paragraph [ref=e395]: Investigates stale autocomplete indices and prefix popularity weights.
+          - button "🧠Semantic Vector Semantic Embedding Drift Analyzes cosine similarity drift inside LanceDB and vector index segment status." [ref=e396]:
+            - generic [ref=e397]: 🧠Semantic Vector
+            - heading "Semantic Embedding Drift" [level=4] [ref=e398]
+            - paragraph [ref=e399]: Analyzes cosine similarity drift inside LanceDB and vector index segment status.
+          - button "📊Merchandising Merchandising Rules Conflict Resolves overlapping query-boost and category burial conditions in Grid Dynamics Merchandiser." [ref=e400]:
+            - generic [ref=e401]: 📊Merchandising
+            - heading "Merchandising Rules Conflict" [level=4] [ref=e402]
+            - paragraph [ref=e403]: Resolves overlapping query-boost and category burial conditions in Grid Dynamics Merchandiser.
+      - generic [ref=e404]:
+        - generic [ref=e405]:
+          - generic [ref=e406]:
+            - generic [ref=e407]: REM_INCIDENT_CONTEXT.json
+            - generic [ref=e408]:
+              - generic [ref=e409]:
+                - text: Autonomous Caching
+                - button [ref=e410]
+              - generic [ref=e411]:
+                - generic [ref=e412]: Upload File
+                - button "Upload File" [ref=e415]
+          - generic [ref=e416]:
+            - generic [ref=e417]:
+              - generic [ref=e418]:
+                - generic [ref=e419]: "1"
+                - generic [ref=e420]: "2"
+                - generic [ref=e421]: "3"
+                - generic [ref=e422]: "4"
+                - generic [ref=e423]: "5"
+                - generic [ref=e424]: "6"
+                - generic [ref=e425]: "7"
+                - generic [ref=e426]: "8"
+                - generic [ref=e427]: "9"
+                - generic [ref=e428]: "10"
+                - generic [ref=e429]: "11"
+                - generic [ref=e430]: "12"
+                - generic [ref=e431]: "13"
+                - generic [ref=e432]: "14"
+                - generic [ref=e433]: "15"
+                - generic [ref=e434]: "16"
+                - generic [ref=e435]: "17"
+                - generic [ref=e436]: "18"
+                - generic [ref=e437]: "19"
+                - generic [ref=e438]: "20"
+                - generic [ref=e439]: "21"
+                - generic [ref=e440]: "22"
+                - generic [ref=e441]: "23"
+                - generic [ref=e442]: "24"
+                - generic [ref=e443]: "25"
+              - 'textbox "{ \"description\": \"Users are reporting low relevance for the query ''red running shoes''.\" }" [ref=e444]': "{ \"type\": \"catalog\", \"description\": \"ALERT: Search quality degradation batch of anomalous events.\", \"events\": [ { \"context\": { \"channel\": \"app\", \"device_type\": \"mobile\", \"locale\": \"de-DE\" }, \"error\": \"product_not_found\", \"query\": { \"text\": \"non-existent product sku SKU-2943\" }, \"response\": { \"latency_ms\": 63, \"result_count\": 0, \"results\": [], \"status_code\": 404 }, \"tenant\": \"sports_goods_tenant_002\" } ], \"use_cache\": true }"
+            - button "Processing Remediation Run..." [disabled] [ref=e457]
+        - generic [ref=e448]:
+          - generic [ref=e449]: Live Operator Log Console
+          - generic [ref=e451]: "[11:41:11] ⚡ Initializing search-ops operator trigger context..."

@@ -1,0 +1,437 @@
+- generic [ref=f3e3]:
+  - complementary [ref=f3e4]:
+    - generic [ref=f3e5]:
+      - generic [ref=f3e6]: MGL
+      - generic [ref=f3e7]: Magellan Ops
+    - navigation [ref=f3e8]:
+      - list [ref=f3e9]:
+        - listitem [ref=f3e10]:
+          - button "Overview" [ref=f3e11] [cursor=pointer]
+        - listitem [ref=f3e15]:
+          - button "Ops Factory" [ref=f3e16] [cursor=pointer]
+        - listitem [ref=f3e20]:
+          - button "Ops Runbooks 15" [active] [ref=f3e196] [cursor=pointer]:
+            - generic [ref=f3e26]: Ops Runbooks
+            - generic [ref=f3e197]: "15"
+        - listitem [ref=f3e27]:
+          - button "Runbook Registry" [ref=f3e28] [cursor=pointer]
+        - listitem [ref=f3e31]:
+          - button "Query Clusters" [ref=f3e32] [cursor=pointer]
+        - listitem [ref=f3e39]:
+          - button "Audit Trail" [ref=f3e40] [cursor=pointer]
+        - listitem [ref=f3e46]:
+          - button "Live Test" [ref=f3e47] [cursor=pointer]
+        - listitem [ref=f3e51]:
+          - button "Shadow Reports" [ref=f3e52] [cursor=pointer]
+    - generic [ref=f3e59]:
+      - text: "Harness:"
+      - strong [ref=f3e60]: v1.2.4-stable
+  - main [ref=f3e61]:
+    - generic [ref=f3e62]:
+      - generic [ref=f3e63]:
+        - heading "Ops Runbook Queue" [level=1] [ref=f3e198]
+        - paragraph [ref=f3e65]: Active incidents triaged by Magellan's agent automation skills.
+      - generic [ref=f3e66]:
+        - button "Notifications" [ref=f3e67] [cursor=pointer]
+        - button "Settings" [ref=f3e71] [cursor=pointer]
+    - generic [ref=f3e200]:
+      - complementary [ref=f3e201]:
+        - generic [ref=f3e202]:
+          - generic [ref=f3e203]: Backend source
+          - generic [ref=f3e204]:
+            - generic [ref=f3e205]: Status
+            - strong [ref=f3e206]: connected
+          - generic [ref=f3e207]:
+            - generic [ref=f3e208]: API base
+            - strong [ref=f3e209]: http://localhost:8000
+          - generic [ref=f3e210]:
+            - generic [ref=f3e211]: Runbooks
+            - strong [ref=f3e212]: "22"
+          - generic [ref=f3e213]: Ops Runbooks are loaded from FastAPI.
+        - generic [ref=f3e214]:
+          - generic [ref=f3e215]: Search logs
+          - generic [ref=f3e216]:
+            - textbox "Query query..." [ref=f3e217]
+            - button "Clear" [ref=f3e218] [cursor=pointer]
+        - generic [ref=f3e219]:
+          - generic [ref=f3e220]: Supervisor search monitor
+          - generic [ref=f3e221]:
+            - generic [ref=f3e222]: Visible matches
+            - strong [ref=f3e223]: 22/22
+          - generic [ref=f3e224]:
+            - generic [ref=f3e225]: Active filters
+            - strong [ref=f3e226]: "6"
+          - generic [ref=f3e227]: No error. Search is idle.
+          - generic [ref=f3e228]: No search activity yet.
+        - generic [ref=f3e230]:
+          - generic [ref=f3e231]: Capability
+          - generic [ref=f3e232] [cursor=pointer]:
+            - generic [ref=f3e234]: Semantic search
+            - generic [ref=f3e235]: "1"
+          - generic [ref=f3e236] [cursor=pointer]:
+            - generic [ref=f3e238]: Smart autocomplete
+            - generic [ref=f3e239]: "1"
+          - generic [ref=f3e240] [cursor=pointer]:
+            - generic [ref=f3e242]: Merchandising
+            - generic [ref=f3e243]: "1"
+        - generic [ref=f3e244]:
+          - generic [ref=f3e245]: Signal Type
+          - generic [ref=f3e246] [cursor=pointer]: Catalog gap
+          - generic [ref=f3e249] [cursor=pointer]: Zero-result cluster
+          - generic [ref=f3e252] [cursor=pointer]: MXP rule conflict
+      - generic [ref=f3e255]:
+        - article [ref=f3e256] [cursor=pointer]:
+          - generic [ref=f3e257]: U
+          - generic [ref=f3e258]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e259]
+            - paragraph [ref=f3e260]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fcd-2543-780e-b643-56b3b439e9bb. Task queue: search-ai-task-queue."
+            - generic [ref=f3e261]:
+              - generic [ref=f3e262]: semantic search
+              - generic [ref=f3e263]: catalog gap
+              - generic [ref=f3e264]: low risk
+              - generic [ref=f3e265]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e266]:
+            - strong [ref=f3e267]: "82"
+            - generic [ref=f3e268]: Shadow Test
+        - article [ref=f3e269] [cursor=pointer]:
+          - generic [ref=f3e270]: U
+          - generic [ref=f3e271]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e272]
+            - paragraph [ref=f3e273]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-372e-744d-9073-d7548e6b007f. Task queue: search-ai-task-queue."
+            - generic [ref=f3e274]:
+              - generic [ref=f3e275]: semantic search
+              - generic [ref=f3e276]: catalog gap
+              - generic [ref=f3e277]: low risk
+              - generic [ref=f3e278]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e279]:
+            - strong [ref=f3e280]: "82"
+            - generic [ref=f3e281]: Shadow Test
+        - article [ref=f3e282] [cursor=pointer]:
+          - generic [ref=f3e283]: U
+          - generic [ref=f3e284]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e285]
+            - paragraph [ref=f3e286]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-3662-7dc3-96dc-9a7bbdd14e32. Task queue: search-ai-task-queue."
+            - generic [ref=f3e287]:
+              - generic [ref=f3e288]: semantic search
+              - generic [ref=f3e289]: catalog gap
+              - generic [ref=f3e290]: low risk
+              - generic [ref=f3e291]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e292]:
+            - strong [ref=f3e293]: "82"
+            - generic [ref=f3e294]: Shadow Test
+        - article [ref=f3e295] [cursor=pointer]:
+          - generic [ref=f3e296]: U
+          - generic [ref=f3e297]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e298]
+            - paragraph [ref=f3e299]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-3586-7bf2-9f36-1020add60eec. Task queue: search-ai-task-queue."
+            - generic [ref=f3e300]:
+              - generic [ref=f3e301]: semantic search
+              - generic [ref=f3e302]: catalog gap
+              - generic [ref=f3e303]: low risk
+              - generic [ref=f3e304]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e305]:
+            - strong [ref=f3e306]: "82"
+            - generic [ref=f3e307]: Shadow Test
+        - article [ref=f3e308] [cursor=pointer]:
+          - generic [ref=f3e309]: U
+          - generic [ref=f3e310]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e311]
+            - paragraph [ref=f3e312]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-3491-7f2e-a8db-9fcd729043f2. Task queue: search-ai-task-queue."
+            - generic [ref=f3e313]:
+              - generic [ref=f3e314]: semantic search
+              - generic [ref=f3e315]: catalog gap
+              - generic [ref=f3e316]: low risk
+              - generic [ref=f3e317]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e318]:
+            - strong [ref=f3e319]: "82"
+            - generic [ref=f3e320]: Shadow Test
+        - article [ref=f3e321] [cursor=pointer]:
+          - generic [ref=f3e322]: U
+          - generic [ref=f3e323]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e324]
+            - paragraph [ref=f3e325]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-328e-7dd3-b19e-713dcb591e81. Task queue: search-ai-task-queue."
+            - generic [ref=f3e326]:
+              - generic [ref=f3e327]: semantic search
+              - generic [ref=f3e328]: catalog gap
+              - generic [ref=f3e329]: low risk
+              - generic [ref=f3e330]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e331]:
+            - strong [ref=f3e332]: "82"
+            - generic [ref=f3e333]: Shadow Test
+        - article [ref=f3e334] [cursor=pointer]:
+          - generic [ref=f3e335]: U
+          - generic [ref=f3e336]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e337]
+            - paragraph [ref=f3e338]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-30af-768b-998b-7fa303238881. Task queue: search-ai-task-queue."
+            - generic [ref=f3e339]:
+              - generic [ref=f3e340]: semantic search
+              - generic [ref=f3e341]: catalog gap
+              - generic [ref=f3e342]: low risk
+              - generic [ref=f3e343]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e344]:
+            - strong [ref=f3e345]: "82"
+            - generic [ref=f3e346]: Shadow Test
+        - article [ref=f3e347] [cursor=pointer]:
+          - generic [ref=f3e348]: U
+          - generic [ref=f3e349]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e350]
+            - paragraph [ref=f3e351]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-2e61-7192-8469-8a23ebaf7fc7. Task queue: search-ai-task-queue."
+            - generic [ref=f3e352]:
+              - generic [ref=f3e353]: semantic search
+              - generic [ref=f3e354]: catalog gap
+              - generic [ref=f3e355]: low risk
+              - generic [ref=f3e356]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e357]:
+            - strong [ref=f3e358]: "82"
+            - generic [ref=f3e359]: Shadow Test
+        - article [ref=f3e360] [cursor=pointer]:
+          - generic [ref=f3e361]: U
+          - generic [ref=f3e362]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e363]
+            - paragraph [ref=f3e364]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-2c1c-7e82-87a5-a09621853b24. Task queue: search-ai-task-queue."
+            - generic [ref=f3e365]:
+              - generic [ref=f3e366]: semantic search
+              - generic [ref=f3e367]: catalog gap
+              - generic [ref=f3e368]: low risk
+              - generic [ref=f3e369]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e370]:
+            - strong [ref=f3e371]: "82"
+            - generic [ref=f3e372]: Shadow Test
+        - article [ref=f3e373] [cursor=pointer]:
+          - generic [ref=f3e374]: U
+          - generic [ref=f3e375]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e376]
+            - paragraph [ref=f3e377]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-2a20-737a-9ae5-ff5744290b27. Task queue: search-ai-task-queue."
+            - generic [ref=f3e378]:
+              - generic [ref=f3e379]: semantic search
+              - generic [ref=f3e380]: catalog gap
+              - generic [ref=f3e381]: low risk
+              - generic [ref=f3e382]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e383]:
+            - strong [ref=f3e384]: "82"
+            - generic [ref=f3e385]: Shadow Test
+        - article [ref=f3e386] [cursor=pointer]:
+          - generic [ref=f3e387]: U
+          - generic [ref=f3e388]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e389]
+            - paragraph [ref=f3e390]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-26c1-7ce4-919d-7981da040e8b. Task queue: search-ai-task-queue."
+            - generic [ref=f3e391]:
+              - generic [ref=f3e392]: semantic search
+              - generic [ref=f3e393]: catalog gap
+              - generic [ref=f3e394]: low risk
+              - generic [ref=f3e395]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e396]:
+            - strong [ref=f3e397]: "82"
+            - generic [ref=f3e398]: Shadow Test
+        - article [ref=f3e399] [cursor=pointer]:
+          - generic [ref=f3e400]: U
+          - generic [ref=f3e401]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e402]
+            - paragraph [ref=f3e403]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-239b-7e2c-880b-3540ce906db0. Task queue: search-ai-task-queue."
+            - generic [ref=f3e404]:
+              - generic [ref=f3e405]: semantic search
+              - generic [ref=f3e406]: catalog gap
+              - generic [ref=f3e407]: low risk
+              - generic [ref=f3e408]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e409]:
+            - strong [ref=f3e410]: "82"
+            - generic [ref=f3e411]: Shadow Test
+        - article [ref=f3e412] [cursor=pointer]:
+          - generic [ref=f3e413]: U
+          - generic [ref=f3e414]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e415]
+            - paragraph [ref=f3e416]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-1e32-7386-91b2-57176e590a73. Task queue: search-ai-task-queue."
+            - generic [ref=f3e417]:
+              - generic [ref=f3e418]: semantic search
+              - generic [ref=f3e419]: catalog gap
+              - generic [ref=f3e420]: low risk
+              - generic [ref=f3e421]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e422]:
+            - strong [ref=f3e423]: "82"
+            - generic [ref=f3e424]: Shadow Test
+        - article [ref=f3e425] [cursor=pointer]:
+          - generic [ref=f3e426]: U
+          - generic [ref=f3e427]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e428]
+            - paragraph [ref=f3e429]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-19ae-79f6-a494-ce698cc8e11c. Task queue: search-ai-task-queue."
+            - generic [ref=f3e430]:
+              - generic [ref=f3e431]: semantic search
+              - generic [ref=f3e432]: catalog gap
+              - generic [ref=f3e433]: low risk
+              - generic [ref=f3e434]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e435]:
+            - strong [ref=f3e436]: "82"
+            - generic [ref=f3e437]: Shadow Test
+        - article [ref=f3e438] [cursor=pointer]:
+          - generic [ref=f3e439]: U
+          - generic [ref=f3e440]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=4] [ref=f3e441]
+            - paragraph [ref=f3e442]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-1734-76fd-b4d1-6288ad67a4d2. Task queue: search-ai-task-queue."
+            - generic [ref=f3e443]:
+              - generic [ref=f3e444]: semantic search
+              - generic [ref=f3e445]: catalog gap
+              - generic [ref=f3e446]: low risk
+              - generic [ref=f3e447]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e448]:
+            - strong [ref=f3e449]: "82"
+            - generic [ref=f3e450]: Shadow Test
+        - article [ref=f3e451] [cursor=pointer]:
+          - generic [ref=f3e452]: U
+          - generic [ref=f3e453]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e454]
+            - paragraph [ref=f3e455]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4fb3-136d-7b56-b545-9087db99ca5a. Task queue: search-ai-task-queue."
+            - generic [ref=f3e456]:
+              - generic [ref=f3e457]: semantic search
+              - generic [ref=f3e458]: catalog gap
+              - generic [ref=f3e459]: low risk
+              - generic [ref=f3e460]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e461]:
+            - strong [ref=f3e462]: "98"
+            - generic [ref=f3e463]: Released
+        - article [ref=f3e464] [cursor=pointer]:
+          - generic [ref=f3e465]: U
+          - generic [ref=f3e466]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e467]
+            - paragraph [ref=f3e468]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4c71-f6f0-7148-b311-3dcfabd9b490. Task queue: search-ai-task-queue."
+            - generic [ref=f3e469]:
+              - generic [ref=f3e470]: semantic search
+              - generic [ref=f3e471]: catalog gap
+              - generic [ref=f3e472]: low risk
+              - generic [ref=f3e473]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e474]:
+            - strong [ref=f3e475]: "98"
+            - generic [ref=f3e476]: Released
+        - article [ref=f3e477] [cursor=pointer]:
+          - generic [ref=f3e478]: U
+          - generic [ref=f3e479]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e480]
+            - paragraph [ref=f3e481]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4bb7-a066-7111-bf5a-b200653b92b6. Task queue: search-ai-task-queue."
+            - generic [ref=f3e482]:
+              - generic [ref=f3e483]: semantic search
+              - generic [ref=f3e484]: catalog gap
+              - generic [ref=f3e485]: low risk
+              - generic [ref=f3e486]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e487]:
+            - strong [ref=f3e488]: "98"
+            - generic [ref=f3e489]: Released
+        - article [ref=f3e490] [cursor=pointer]:
+          - generic [ref=f3e491]: U
+          - generic [ref=f3e492]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e493]
+            - paragraph [ref=f3e494]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4ba3-8da9-79e3-8d53-b08343908d98. Task queue: search-ai-task-queue."
+            - generic [ref=f3e495]:
+              - generic [ref=f3e496]: semantic search
+              - generic [ref=f3e497]: catalog gap
+              - generic [ref=f3e498]: low risk
+              - generic [ref=f3e499]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e500]:
+            - strong [ref=f3e501]: "98"
+            - generic [ref=f3e502]: Released
+        - article [ref=f3e503] [cursor=pointer]:
+          - generic [ref=f3e504]: U
+          - generic [ref=f3e505]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e506]
+            - paragraph [ref=f3e507]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4b88-58f6-79d3-83f9-7ad3a8e86e5b. Task queue: search-ai-task-queue."
+            - generic [ref=f3e508]:
+              - generic [ref=f3e509]: semantic search
+              - generic [ref=f3e510]: catalog gap
+              - generic [ref=f3e511]: low risk
+              - generic [ref=f3e512]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e513]:
+            - strong [ref=f3e514]: "98"
+            - generic [ref=f3e515]: Released
+        - article [ref=f3e516] [cursor=pointer]:
+          - generic [ref=f3e517]: U
+          - generic [ref=f3e518]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e519]
+            - paragraph [ref=f3e520]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4ba1-d3c1-7841-b0a7-9e8586687be9. Task queue: search-ai-task-queue."
+            - generic [ref=f3e521]:
+              - generic [ref=f3e522]: semantic search
+              - generic [ref=f3e523]: catalog gap
+              - generic [ref=f3e524]: low risk
+              - generic [ref=f3e525]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e526]:
+            - strong [ref=f3e527]: "98"
+            - generic [ref=f3e528]: Released
+        - article [ref=f3e529] [cursor=pointer]:
+          - generic [ref=f3e530]: U
+          - generic [ref=f3e531]:
+            - heading "UnifiedSearchAiRepairWorkflow - COMPLETED" [level=4] [ref=f3e532]
+            - paragraph [ref=f3e533]: "Live Temporal workflow from backend service localhost:7233. Run ID: 019f4b89-c0ac-7207-8c98-f235e9529aea. Task queue: search-ai-task-queue."
+            - generic [ref=f3e534]:
+              - generic [ref=f3e535]: semantic search
+              - generic [ref=f3e536]: catalog gap
+              - generic [ref=f3e537]: low risk
+              - generic [ref=f3e538]: UnifiedSearchAiRepairWorkflow
+          - generic [ref=f3e539]:
+            - strong [ref=f3e540]: "98"
+            - generic [ref=f3e541]: Released
+      - complementary [ref=f3e542]:
+        - generic [ref=f3e543]:
+          - generic [ref=f3e544]:
+            - heading "UnifiedSearchAiRepairWorkflow - RUNNING" [level=3] [ref=f3e545]
+            - generic [ref=f3e546]: "ID: unified-search-repair-workflow-2b049129-8c1b-4616-8a6b-f76836e7ab8d"
+          - generic [ref=f3e547]: Shadow Test
+        - generic [ref=f3e548]:
+          - generic [ref=f3e549]:
+            - generic [ref=f3e550]: Responsible agent
+            - strong [ref=f3e551]: UnifiedSearchAiRepairWorkflow
+            - generic [ref=f3e552]: semantic search
+          - generic [ref=f3e553]:
+            - generic [ref=f3e554]: Approval state
+            - strong [ref=f3e555]: Pending
+            - generic [ref=f3e556]: required gate
+          - generic [ref=f3e557]:
+            - generic [ref=f3e558]: Temporal status
+            - strong [ref=f3e559]: Shadow Test
+            - generic [ref=f3e560]: "Status: RUNNING"
+          - generic [ref=f3e561]:
+            - generic [ref=f3e562]: Monitoring
+            - strong [ref=f3e563]: 2 healthy · 1 watch
+            - generic [ref=f3e564]: 0 blocked guardrails
+        - generic [ref=f3e565]:
+          - button "Why this" [ref=f3e566] [cursor=pointer]
+          - button "Controls" [ref=f3e567] [cursor=pointer]
+          - button "Result Preview" [ref=f3e568] [cursor=pointer]
+          - button "Run Log" [ref=f3e569] [cursor=pointer]
+        - generic [ref=f3e570]:
+          - generic [ref=f3e571]:
+            - strong [ref=f3e572]: Capability classification
+            - generic [ref=f3e573]: semantic search
+          - generic [ref=f3e574]:
+            - strong [ref=f3e575]: Offline eval confidence
+            - generic [ref=f3e578]: 60% metrics match score
+          - generic [ref=f3e579]:
+            - strong [ref=f3e580]: Potential Business Impact
+            - generic [ref=f3e583]: 38% exit rate reduction
+          - generic [ref=f3e584]:
+            - generic [ref=f3e585]:
+              - generic [ref=f3e586]: Root cause
+              - paragraph [ref=f3e587]: Segment corruption or uncommitted writes in LanceDB vector index.
+            - generic [ref=f3e588]:
+              - generic [ref=f3e589]: Business impact
+              - paragraph [ref=f3e590]: Outdated price or category attributes due to expired cache validation or high Redis TTL.
+            - generic [ref=f3e591]:
+              - generic [ref=f3e592]: Problem being fixed
+              - paragraph [ref=f3e593]: HTTP 404/Not Found issues detected on specific SKUs due to upstream ingestion failure.
+            - generic [ref=f3e594]:
+              - generic [ref=f3e595]: Fix summary
+              - paragraph [ref=f3e596]: The vector index failed to search newly added product segments correctly. Recalculated active product embeddings, triggered an index rebuild, and pruned the vector space.
+          - generic [ref=f3e597]:
+            - strong [ref=f3e598]: Fix Plan Steps
+            - list [ref=f3e599]:
+              - listitem [ref=f3e600]: 1. Extract the problematic query patterns and user clicks.
+              - listitem [ref=f3e601]: 2. Locate missing SKU codes inside LanceDB.
+              - listitem [ref=f3e602]: 3. Recalculate target vector space coordinates.
+              - listitem [ref=f3e603]: 4. Trigger safe canary release via NGINX with a 5% split traffic.
+          - generic [ref=f3e604]:
+            - strong [ref=f3e605]: Approval Policy
+            - generic [ref=f3e606]: Temporal backend workflow record. Multi-agent validation rules applied.
+          - generic [ref=f3e607]:
+            - strong [ref=f3e608]: System Evidence Notes
+            - paragraph [ref=f3e609]: Workflow ID unified-search-repair-workflow-2b049129-8c1b-4616-8a6b-f76836e7ab8d is returned from Temporal service at localhost:7233. Started at 2026-07-11 06:11:12.323529+00:00.
+        - generic [ref=f3e610]:
+          - button "Run Offline Evals" [ref=f3e611] [cursor=pointer]
+          - button "Deploy Canary" [disabled] [ref=f3e615]
+          - button "Approve & Continue Temporal" [ref=f3e617] [cursor=pointer]
+          - button "Emergency Rollback" [ref=f3e623] [cursor=pointer]

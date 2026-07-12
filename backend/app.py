@@ -111,18 +111,18 @@ async def get_all_shadow_reports() -> list[dict]:
     JSON files, and returns them as a single aggregated list.
     """
     reports = []
-    # Assumes the backend is run from the `MagellanFrontend` directory
-    output_dir = Path(__file__).parent.parent.parent / "evaluation/output"
+    # Assumes the backend is run from the project root directory
+    output_dir = Path(__file__).resolve().parent.parent / "evaluation/output"
     if not output_dir.exists():
         return []
 
-    for report_file in sorted(output_dir.glob("eval_*.json"), reverse=True):
+    for report_file in sorted(output_dir.glob("eval_report_*.json"), reverse=True):
         try:
             with open(report_file, "r") as f:
                 report_data = json.load(f)
                 # Ensure the report has a workflow_id for the frontend key
                 if 'workflow_id' not in report_data:
-                    report_data['workflow_id'] = report_file.stem.replace('eval_', '')
+                    report_data['workflow_id'] = report_file.stem.replace('eval_report_', '')
                 reports.append(report_data)
         except (json.JSONDecodeError, IOError):
             # Ignore files that are corrupted or cannot be read

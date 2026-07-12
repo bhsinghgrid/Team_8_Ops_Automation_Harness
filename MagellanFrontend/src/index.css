@@ -243,7 +243,7 @@ button, input, select, textarea {
 .content-area {
   flex: 1;
   overflow-y: auto;
-  padding: 2.25rem;
+  padding: 2.25rem 2.25rem 6rem 2.25rem; /* Large bottom padding so the last line/card can be scrolled up clearly */
   display: flex;
   flex-direction: column;
   gap: 1.75rem;
@@ -251,6 +251,21 @@ button, input, select, textarea {
   position: relative;
   z-index: 1;
   perspective: 1400px;
+}
+
+/* Custom scrollbar for main content area to make sure scrolling is clear and smooth */
+.content-area::-webkit-scrollbar {
+  width: 8px;
+}
+.content-area::-webkit-scrollbar-track {
+  background: rgba(30, 41, 59, 0.02);
+}
+.content-area::-webkit-scrollbar-thumb {
+  background: rgba(30, 41, 59, 0.2);
+  border-radius: 4px;
+}
+.content-area::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 41, 59, 0.35);
 }
 
 /* Header */
@@ -2074,6 +2089,7 @@ button, input, select, textarea {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  padding-bottom: 5rem; /* Extra padding so the last audit element can be scrolled fully into view */
 }
 
 .audit-card {
@@ -2083,9 +2099,9 @@ button, input, select, textarea {
   padding: 1.25rem;
   box-shadow: var(--shadow-3d);
   display: grid;
-  grid-template-columns: 140px 1fr auto;
+  grid-template-columns: 240px 1fr auto;
   gap: 1.5rem;
-  align-items: center;
+  align-items: flex-start; /* Aligns all columns cleanly to the top, preventing vertical clipping */
   backdrop-filter: blur(14px);
   transition: transform 0.18s ease, box-shadow 0.18s ease;
 }
@@ -2096,21 +2112,62 @@ button, input, select, textarea {
 }
 
 .audit-stamp {
-  font-family: var(--mono);
   font-size: 0.72rem;
   color: var(--text-muted);
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  height: 100%;
 }
 
 .audit-stamp strong {
   display: block;
   font-size: 0.85rem;
   color: var(--text-dark);
-  margin-bottom: 0.15rem;
+  white-space: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none; /* Hide scrollbar for standard look but keep it scrollable */
+  padding-bottom: 2px;
+  line-height: 1.25;
+}
+
+.audit-stamp strong::-webkit-scrollbar {
+  display: none;
+}
+
+.audit-stamp span {
+  display: block;
+  font-size: 0.65rem;
+  background: rgba(30, 41, 59, 0.04);
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  max-width: 100%;
+  white-space: nowrap;
+  overflow-x: auto;
+  line-height: 1.3;
+}
+
+/* Subtle, slim scrollbar custom styling for runbook id span */
+.audit-stamp span::-webkit-scrollbar {
+  height: 5px;
+}
+.audit-stamp span::-webkit-scrollbar-track {
+  background: transparent;
+}
+.audit-stamp span::-webkit-scrollbar-thumb {
+  background: rgba(30, 41, 59, 0.15);
+  border-radius: 2px;
+}
+.audit-stamp span::-webkit-scrollbar-thumb:hover {
+  background: rgba(30, 41, 59, 0.3);
 }
 
 .audit-stamp em {
   display: inline-block;
-  margin-top: 0.45rem;
+  margin-top: 0.15rem; /* Reduced margin to prevent label overflow */
   padding: 0.18rem 0.45rem;
   border-radius: 99px;
   background: var(--body-bg);
@@ -2120,6 +2177,7 @@ button, input, select, textarea {
   font-size: 0.58rem;
   text-transform: uppercase;
   letter-spacing: 0.05em;
+  width: fit-content; /* Ensure container fits contents nicely */
 }
 
 .audit-details h4 {

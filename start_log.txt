@@ -1,0 +1,151 @@
+--- Waiting for Temporal Server ---
+INFO:__main__:Waiting for Temporal server at localhost:7233...
+WARNING:__main__:Attempt 1/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 2/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 3/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 4/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 5/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 6/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 7/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 8/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 9/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 10/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 11/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 12/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 13/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 14/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 15/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 16/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 17/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 18/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 19/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 20/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 21/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 22/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 23/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 24/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 25/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 26/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 27/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 28/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 29/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 30/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 31/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 32/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 33/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 34/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 35/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 36/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 37/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 38/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 39/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 40/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 41/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 42/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 43/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 44/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 45/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 46/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 47/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 48/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 49/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 50/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 51/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 52/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 53/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 54/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 55/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 56/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 57/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 58/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 59/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+WARNING:__main__:Attempt 60/60: Temporal server not ready. Retrying in 2s. Error: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+ERROR:__main__:Failed to connect to Temporal server after 60 attempts.
+--- Starting Temporal Worker ---
+--- Starting FastAPI Server on port 8000 ---
+--- Running Unified Temporal Workflow ---
+Traceback (most recent call last):
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/bin/uvicorn", line 6, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/click/core.py", line 1524, in __call__
+    return self.main(*args, **kwargs)
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/click/core.py", line 1445, in main
+    rv = self.invoke(ctx)
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/click/core.py", line 1308, in invoke
+    return ctx.invoke(self.callback, **ctx.params)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/click/core.py", line 877, in invoke
+    return callback(*args, **kwargs)
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/uvicorn/main.py", line 441, in main
+    run(
+    ~~~^
+        app,
+        ^^^^
+    ...<48 lines>...
+        reset_contextvars=reset_contextvars,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/uvicorn/main.py", line 609, in run
+    config.load_app()
+    ~~~~~~~~~~~~~~~^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/uvicorn/config.py", line 415, in load_app
+    return import_from_string(self.app)
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/uvicorn/importer.py", line 22, in import_from_string
+    raise exc from None
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/uvicorn/importer.py", line 19, in import_from_string
+    module = importlib.import_module(module_str)
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/importlib/__init__.py", line 88, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+           ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "<frozen importlib._bootstrap>", line 1406, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 1371, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 1342, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 938, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 759, in exec_module
+  File "<frozen importlib._bootstrap>", line 491, in _call_with_frames_removed
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/fastapi_app.py", line 1, in <module>
+    from backend_app import app
+ModuleNotFoundError: No module named 'backend_app'
+Critical error in main: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
+Connecting to Temporal server at localhost:7233...
+Traceback (most recent call last):
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/temporal/run_unified_workflow.py", line 135, in <module>
+    asyncio.run(main())
+    ~~~~~~~~~~~^^^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 205, in run
+    return runner.run(main)
+           ~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/runners.py", line 128, in run
+    return self._loop.run_until_complete(task)
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.14/lib/python3.14/asyncio/base_events.py", line 719, in run_until_complete
+    return future.result()
+           ~~~~~~~~~~~~~^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/temporal/run_unified_workflow.py", line 20, in main
+    client = await Client.connect(temporal_address)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/temporalio/client/_client.py", line 246, in connect
+    service_client = await next_function(connect_config)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/temporalio/service.py", line 283, in connect
+    return await _BridgeServiceClient.connect(config)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/temporalio/service.py", line 380, in connect
+    await client._connected_client()
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/temporalio/service.py", line 399, in _connected_client
+    self._bridge_client = await temporalio.bridge.client.Client.connect(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<2 lines>...
+    )
+    ^
+  File "/Users/bhsingh/Downloads/Team_8_Ops_Automation_Harness-UPDATE_RUNBOOK/MagellanFrontend/.venv/lib/python3.14/site-packages/temporalio/bridge/client.py", line 111, in connect
+    await temporalio.bridge.temporal_sdk_bridge.connect_client(
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        runtime._ref, config
+        ^^^^^^^^^^^^^^^^^^^^
+    ),
+    ^
+RuntimeError: Failed client connect: Server connection error: tonic::transport::Error(Transport, ConnectError(ConnectError("tcp connect error", 127.0.0.1:7233, Os { code: 61, kind: ConnectionRefused, message: "Connection refused" })))
