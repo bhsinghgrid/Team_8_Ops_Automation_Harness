@@ -65,7 +65,6 @@ temporal/cat_workflow_test.py
 temporal/catalog_workflow.py
 temporal/catalog_workflows.py
 temporal/catalog_activities.py
-Merchandising/
 adk_test.py
 base2_agent.py
 base3_agent.py
