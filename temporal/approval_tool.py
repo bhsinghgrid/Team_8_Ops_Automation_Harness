@@ -2,6 +2,7 @@ import asyncio
 import sys
 from temporalio.client import Client
 
+
 async def main():
     if len(sys.argv) < 2:
         print("Usage: python -m temporal.approval_tool <WORKFLOW_ID> [approve/reject]")
