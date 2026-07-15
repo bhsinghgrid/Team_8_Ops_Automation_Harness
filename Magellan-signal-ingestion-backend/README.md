@@ -38,7 +38,6 @@ pip install -r requirements.txt
 ---
 
 ## 2. Generating Mock Data
-
 The system relies on mock search logs to simulate incoming data and test signal detection.
 
 ### Command
