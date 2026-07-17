@@ -432,6 +432,9 @@ export const OpsFactory: React.FC = () => {
   const [isPolling, setIsPolling] = useState(false);
   const [isTriggering, setIsTriggering] = useState(false);
   const [integrationStatus, setIntegrationStatus] = useState<'connected' | 'offline'>('offline');
+  const [needsApproval, setNeedsApproval] = useState(false);
+  const [approverName, setApproverName] = useState('Ops Team Lead');
+  const [approvalNotes, setApprovalNotes] = useState('Manually approved via Ops Factory.');
   
   const [isPlaying, setIsPlaying] = useState(false);
   const [currentStationIndex, setCurrentStationIndex] = useState(-1); // -1 = stopped/idle, 0 to 5 = stations
@@ -654,6 +657,23 @@ export const OpsFactory: React.FC = () => {
       alert(`Could not start live Temporal workflow: ${err instanceof Error ? err.message : String(err)}`);
     } finally {
       setIsTriggering(false);
+    }
+  };
+
+  const handleSendApproval = async () => {
+    if (!activeWorkflowId) return;
+    try {
+      const approvalWorkflowId = localStorage.getItem('magellan_active_workflow_id') || activeWorkflowId;
+      if (!approvalWorkflowId) {
+        addLog(`[approval] Error: No active workflow ID found for approval.`, 0);
+        return;
+      }
+      await addLog(`[approval] Submitting human approval signature from "${approverName}"...`, 0);
+      await api.approveRunbook(approvalWorkflowId, approverName, approvalNotes);
+      setNeedsApproval(false);
+      addLog(`[approval] Safety gate unlocked! Signaling Temporal workflow to resume.`, 500);
+    } catch (e: any) {
+      addLog(`[approval] Approval submission failed: ${e.message}`, 200);
     }
   };
 
@@ -1891,6 +1911,41 @@ export const OpsFactory: React.FC = () => {
                       </div>
                     </div>
                   </div>
+                </div>
+              )}
+
+              {/* Manual Approval Section */}
+              {currentStationIndex === 4 && needsApproval && activeWorkflowId && (
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '0.75rem', marginTop: '1.5rem', padding: '1rem', background: 'var(--card-solid)', borderRadius: '8px', border: '1px solid var(--border-color)' }}>
+                  <div style={{ fontSize: '0.85rem', fontWeight: 'bold', color: 'var(--primary)', display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                    <ShieldCheck size={16} />
+                    Human Approval Required
+                  </div>
+                  <p style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                    The automated evaluation detected metrics below the safety threshold. Please review and manually approve the deployment.
+                  </p>
+                  <input
+                    type="text"
+                    value={approverName}
+                    onChange={(e) => setApproverName(e.target.value)}
+                    placeholder="Your Name/Role (e.g., Search Lead)"
+                    style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid var(--border-color)', fontSize: '0.8rem', background: 'var(--input-bg)', color: 'var(--text-dark)' }}
+                  />
+                  <textarea
+                    value={approvalNotes}
+                    onChange={(e) => setApprovalNotes(e.target.value)}
+                    placeholder="Approval Notes (e.g., 'Override due to external factors')"
+                    rows={3}
+                    style={{ padding: '0.5rem', borderRadius: '4px', border: '1px solid var(--border-color)', fontSize: '0.8rem', background: 'var(--input-bg)', color: 'var(--text-dark)', resize: 'vertical' }}
+                  ></textarea>
+                  <button
+                    onClick={handleSendApproval}
+                    className="control-btn control-btn-primary"
+                    style={{ width: '100%', justifyContent: 'center', marginTop: '0.5rem' }}
+                  >
+                    <CheckCircle2 size={16} />
+                    Approve Deployment
+                  </button>
                 </div>
               )}
 

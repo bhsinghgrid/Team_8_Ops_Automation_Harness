@@ -93,6 +93,10 @@ test_semantic_rootcause.py
 .vexp/
 _shadow_agent_temp/
 shadow_agent/
+.playwright-mcp/
+.pytest_cache/
+.vite/
+migrate_repos.sh
 
 # ========================
 # Research PDFs and Docs

@@ -390,6 +390,7 @@ export const LiveTest: React.FC<LiveTestProps> = ({ setCurrentTab }) => {
                   const ndcg = shadow["ndcg@10"] !== undefined ? shadow["ndcg@10"] : 0.0;
                   
                   if (hasError || ndcg < 0.84) {
+                    setNeedsApproval(true); // Set needsApproval to true here
                     if (!isApprovedRef.current) {
                       await addLog(`⚠️ SAFETY GATE VIOLATION: Metric is below safety threshold (0.84)!`, 400);
                       await addLog(`📡 AUTOMATIC BYPASS ENABLED: Submitting automated operator approval signature to Temporal...`, 600);
@@ -403,6 +404,8 @@ export const LiveTest: React.FC<LiveTestProps> = ({ setCurrentTab }) => {
                         await addLog(`❌ Automatic approval signal failed: ${appErr.message}`, 200);
                       }
                     }
+                  } else {
+                    setNeedsApproval(false); // Reset if approval is not needed
                   }
                 } else if (lowerName.includes('release')) {
                   setActiveStep(5); // Canary Gate Control / Release
@@ -1344,6 +1347,32 @@ export const LiveTest: React.FC<LiveTestProps> = ({ setCurrentTab }) => {
               )}
             </button>
           </form>
+
+          {needsApproval && !isApproved && workflowId && (
+            <div className="flex items-center space-x-2 mt-4">
+              <button
+                onClick={handleSendApproval}
+                className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+              >
+                <CheckCircle2 className="-ml-1 mr-2 h-5 w-5" />
+                Manually Approve Deployment
+              </button>
+              <input
+                type="text"
+                value={approverName}
+                onChange={(e) => setApproverName(e.target.value)}
+                placeholder="Your Name/Role"
+                className="border border-gray-300 rounded-md shadow-sm px-3 py-2 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              />
+              <input
+                type="text"
+                value={approvalNotes}
+                onChange={(e) => setApprovalNotes(e.target.value)}
+                placeholder="Approval Notes"
+                className="border border-gray-300 rounded-md shadow-sm px-3 py-2 text-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500"
+              />
+            </div>
+          )}
         </div>
 
         {/* Right terminal / status col */}

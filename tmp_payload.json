@@ -1,0 +1,29 @@
+{
+  "signal_data": {
+    "type": "catalog",
+    "description": "ALERT: SLA breach. Low relevance scores detected under targeted catalog segments.",
+    "events": [
+      {
+        "context": { "channel": "app", "device_type": "mobile", "locale": "de-DE" },
+        "error": "product_not_found",
+        "query": { "text": "retro leather sneakers" },
+        "response": { 
+          "latency_ms": 63, 
+          "result_count": 5, 
+          "results": [
+            { "product_id": "PROD-999", "rank": 1, "score": 0.1 },
+            { "product_id": "PROD-102", "rank": 2, "score": 0.1 }
+          ], 
+          "status_code": 404 
+        },
+        "interaction": {
+          "clicks": [
+            { "product_id": "PROD-245", "rank": 1, "timestamp": "2026-07-03T17:15:18Z" }
+          ]
+        },
+        "tenant": "sports_goods_tenant_002"
+      }
+    ],
+    "use_cache": true
+  }
+}
